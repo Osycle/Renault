@@ -1,0 +1,59 @@
+/*
+	_content.css
+*/
+@import "../icomoon/style.scss";
+.icm{
+	vertical-align: middle;
+}
+html small{
+	font-weight: inherit;
+}
+
+small{
+	font-size: 85%;
+}
+
+.text-h4{
+	font-weight: 700;
+	font-size: 1.4rem;
+}
+
+.container-p, .container-p-2{
+	margin-left: auto;
+	margin-right: auto;
+}
+.container-p{
+	width: 100%;
+	@media (min-width: 1900px){
+		//max-width: 1800px;
+		padding-left: 35px;
+		padding-right: 35px;
+	}
+	@media (max-width: 1899px){
+		padding-left: 30px;
+		padding-right: 30px;
+	}
+	@media (max-width: 991px){
+		padding-right: 15px;
+		padding-left: 15px;	
+	}
+}
+.h-style-1{
+	position: relative;
+	line-height: 100%;
+	padding-bottom: 0.7em;
+	&:after{
+		content: "";
+		position: absolute;
+		width: 70px;
+		transition: all 0.5s ease;
+		height: 2px;
+		border-radius: 5px;
+		background-color: white;
+		bottom: 0;
+		left: 0;
+		@media (max-width: 991px){
+			//display: none;
+		}
+	}
+}

@@ -1,0 +1,83 @@
+/* 
+		_footer.scss
+*/
+
+/*
+										---FOOTER---
+*/
+
+
+.footer{
+	position: fixed;
+	z-index: 110;
+	bottom: 30px;
+	left: 0;
+	width: 100%;
+	pointer-events: none;
+	._wrapper{
+		display: flex;
+		justify-content: space-between;
+	}
+	@media (max-width: 991px){
+		position: relative;
+		background-color: black;
+		.footer-soc{
+			justify-content: center;
+		}
+		.footer-phone{
+			color: white;
+			margin-top: 40px;
+			justify-content: center;	
+		}
+		._wrapper{
+			padding-top: 20px;
+			padding-bottom: 20px;
+			flex-direction: column;
+		}
+	}
+}
+
+
+.footer-soc{
+	font-size: 10px;
+	display: flex;
+	align-items: center;
+	pointer-events: auto;
+	ul{
+		display: flex;
+		margin-left: -3px;
+		margin-right: -3px;
+		li{
+			font-size: 22px;
+			margin-left: 3px;
+			margin-right: 3px;
+		}
+	}
+}
+.footer-phone{
+	pointer-events: auto;
+	color: $color-1;
+	._phone{
+		font-size: rem(23);
+	}
+	._icon-content{
+		path{
+			fill: $color-1;
+		}
+		.icon{
+			font-size: 25px;
+		}
+	}
+}
+
+
+.map-canvas{
+	height: 420px;
+	width: 100%;
+}
+@media (max-width: 991px) {
+	.map-canvas{
+		height: 240px;
+		width: 100%;
+	}
+}
