@@ -60,6 +60,7 @@ gulp.task('scripts', ()=>{
 			app+'/js/plugins/ion.rangeSlider.min.js',
 			app+'/js/plugins/ResizeSensor.min.js',
 			app+'/js/plugins/theia-sticky-sidebar.min.js',
+			app+'/js/plugins/swiper-bundle.min.js',
 			//app+'/js/plugins/parallax-mouse.js',
 			//app+'/js/plugins/parallax.js',
 			app+'/js/plugins/flickity.js'
