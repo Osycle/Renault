@@ -29,8 +29,8 @@ $header-min-menu: 60px;
 		}
 	}
 	@media (max-width: 991px){
-    background-color: white !important;
-    box-shadow: 0 2px 9px -7px black;
+    
+    display: none;
 	}
 	.wrapper{
 		background-color: $color-2;

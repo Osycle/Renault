@@ -6752,6 +6752,22 @@ tbody.collapse.in {
   color: #fff;
   text-shadow: none; }
 
+.text-p1 {
+  font-size: 10px; }
+
+.text-p2 {
+  font-size: 12px; }
+
+.text-p3 {
+  font-size: 14px; }
+
+.text-pb4 {
+  font-size: 16px;
+  font-weight: 700; }
+
+.text-p5 {
+  font-size: 18px; }
+
 /*
 			---LIST---
 */
@@ -6891,7 +6907,7 @@ table {
 .hover-color-4 [role="button"]:hover {
   color: #95c12b; }
 
-.hover-underline a:hover {
+.hover-underline a:hover, .footer-menu ul li a a:hover {
   text-decoration: underline; }
 
 .hover-img img {
@@ -6905,13 +6921,13 @@ table {
     -webkit-filter: brightness(115%);
     filter: brightness(115%); }
 
-.ffamily-1 {
+.ff-1 {
   font-family: "Nouvel R"; }
 
-.ffamily-2 {
+.ff-2 {
   font-family: "Nouvel R"; }
 
-.ffamily-3 {
+.ff-3 {
   font-family: "Nouvel R"; }
 
 .btn-res, .btn-style button, .btn-def button, .btn-opacity button {
@@ -6964,18 +6980,18 @@ table {
   border-radius: 15px;
   border: 1px solid #8c8c8b; }
 
-.fuller, .claf, [data-flicker]:before, .checkbox-style-1:before, .cell-hover, .hover-content .cell-hover {
+.fuller, .claf, [data-flicker]:before, .checkbox-style-1:before {
   height: 100%;
   position: absolute;
   top: 0;
   left: 0; }
-  .fuller:not([class*="col-"]), .claf:not([class*="col-"]), :not([class*="col-"])[data-flicker]:before, .checkbox-style-1:not([class*="col-"]):before, .cell-hover:not([class*="col-"]) {
+  .fuller:not([class*="col-"]), .claf:not([class*="col-"]), :not([class*="col-"])[data-flicker]:before, .checkbox-style-1:not([class*="col-"]):before {
     width: 100%; }
 
 .claf, [data-flicker]:before, .checkbox-style-1:before {
   content: " "; }
 
-.clafclear, .arrow-pic:after, .radio-style-1:before, .radio-style-2:before {
+.clafclear, .radio-style-1:before, .radio-style-2:before, .hover-underline:before, .footer-menu ul li a:before {
   content: " ";
   height: 100%;
   width: 100%;
@@ -7071,63 +7087,15 @@ table {
       padding-left: 10px;
       padding-right: 10px; } }
 
-[class*='boxes-'].owl-carousel {
-  margin-left: 0;
-  margin-right: 0; }
-  [class*='boxes-'].owl-carousel figure, [class*='boxes-'].owl-carousel .cell {
-    width: 100%;
-    padding-left: 0;
-    padding-right: 0; }
-
-.arrow-pic {
-  position: relative; }
-  .arrow-pic:after {
-    width: 15px;
-    height: 15px;
-    bottom: -5px;
-    -webkit-transform: rotate(45deg) matrix(1, 0.2, 0.2, 1, 0, 0);
-    transform: rotate(45deg) matrix(1, 0.2, 0.2, 1, 0, 0);
-    background-color: white;
-    left: calc(50% - 10px);
-    z-index: 1; }
-
-.cell-hover {
-  opacity: 0;
-  padding-right: 5%;
-  padding-left: 5%;
-  background-color: rgba(255, 206, 51, 0.8);
-  pointer-events: none;
-  -webkit-transition: all 0.3s ease-in-out;
-  transition: all 0.3s ease-in-out;
+.cells {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center; }
-  .cell-hover * {
-    pointer-events: auto; }
-
-.hover-content {
-  position: relative; }
-  .hover-content .cell-hover {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-align: center;
-    -ms-flex-align: center;
-    align-items: center;
-    pointer-events: none;
-    color: white;
-    opacity: 0;
-    -webkit-transition: all 0.3s ease-in-out;
-    transition: all 0.3s ease-in-out; }
-    .hover-content .cell-hover > div {
-      width: 100%; }
-    .hover-content .cell-hover * {
-      pointer-events: auto; }
-  .hover-content:hover .cell-hover, .hover-content.hover .cell-hover {
-    opacity: 1; }
+  -webkit-box-flex: 1;
+  -ms-flex: 1 1;
+  flex: 1 1;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap; }
 
 .hover-style-1:hover {
   border-color: #efdf00 !important; }
@@ -7142,30 +7110,6 @@ table {
 .hover-style-1.reverse:before {
   background-color: #ffce33; }
 
-.focus-style-1 {
-  -webkit-transition: all 0.3s ease;
-  transition: all 0.3s ease;
-  -webkit-box-shadow: 0px 0px 0px 0px #e0e0e0, 0px 0px 0px 0px #000000;
-  box-shadow: 0px 0px 0px 0px #e0e0e0, 0px 0px 0px 0px #000000; }
-  .focus-style-1:focus {
-    -webkit-filter: brightness(105%);
-    filter: brightness(105%);
-    -webkit-box-shadow: -5px -5px 0px 0px #e0e0e0, 5px 5px 0px 0px #000000;
-    box-shadow: -5px -5px 0px 0px #e0e0e0, 5px 5px 0px 0px #000000;
-    border-radius: 0px; }
-
-.focus-style-2 {
-  -webkit-transition: all 0.3s ease;
-  transition: all 0.3s ease;
-  -webkit-box-shadow: 0px 0px 0px 0px #e0e0e0, 0px 0px 0px 0px #000000;
-  box-shadow: 0px 0px 0px 0px #e0e0e0, 0px 0px 0px 0px #000000; }
-  .focus-style-2:hover {
-    -webkit-filter: brightness(105%);
-    filter: brightness(105%);
-    -webkit-box-shadow: -5px -5px 0px 0px #e0e0e0, 5px 5px 0px 0px #000000;
-    box-shadow: -5px -5px 0px 0px #e0e0e0, 5px 5px 0px 0px #000000;
-    border-radius: 0px; }
-
 div.btn-style, div.btn-def, div.btn-opacity {
   display: block; }
 
@@ -7176,8 +7120,7 @@ div.btn-style, div.btn-def, div.btn-opacity {
   overflow: hidden;
   font-family: "Nouvel R";
   border-radius: 0;
-  font-weight: 600;
-  font-size: 10px; }
+  font-weight: 700; }
   .btn-style.text-wrap, .text-wrap.btn-def, .text-wrap.btn-opacity {
     white-space: wrap; }
   .btn-style button, .btn-def button, .btn-opacity button {
@@ -7191,7 +7134,7 @@ div.btn-style, div.btn-def, div.btn-opacity {
     align-items: center;
     color: inherit;
     line-height: 100%;
-    padding: 1rem 2rem; }
+    padding: 1.2rem 1.2rem; }
     .btn-style a:not([class*="flex"]), .btn-def a:not([class*="flex"]), .btn-opacity a:not([class*="flex"]), .btn-style button:not([class*="flex"]), .btn-def button:not([class*="flex"]), .btn-opacity button:not([class*="flex"]), .btn-style .btn-this:not([class*="flex"]), .btn-def .btn-this:not([class*="flex"]), .btn-opacity .btn-this:not([class*="flex"]) {
       display: block; }
     @media (max-width: 991px) {
@@ -7200,116 +7143,71 @@ div.btn-style, div.btn-def, div.btn-opacity {
         font-size: 1em; } }
   .btn-style i, .btn-def i, .btn-opacity i {
     vertical-align: middle; }
-  .btn-style.btn-icon a, .btn-icon.btn-def a, .btn-icon.btn-opacity a {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-align: center;
-    -ms-flex-align: center;
-    align-items: center; }
-  .btn-style.btn-icon i, .btn-icon.btn-def i, .btn-icon.btn-opacity i {
-    padding-left: 15px; }
+
+.btn-icon a {
+  position: relative;
+  padding-right: 32px;
+  padding-left: 56px; }
+
+.btn-icon svg {
+  fill: white;
+  position: absolute;
+  -webkit-transform: translateY(-50%);
+  transform: translateY(-50%);
+  top: 50%;
+  left: 16px;
+  width: 22px;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease; }
 
 .btn-def {
-  -webkit-transition: all 0.2s ease;
-  transition: all 0.2s ease;
-  position: relative; }
-  .btn-def small {
-    font-weight: 700;
-    font-size: 0.75em; }
-  .btn-def:not([class*="color-"]) {
-    color: white; }
-  .btn-def:not([class*="bg-color"]) {
-    background-color: #010; }
-  .btn-def:hover:not(.changecolor-none) {
-    background-color: #f9e900; }
-  .btn-def.style-2:hover {
-    color: white;
-    background-color: #efdf00; }
-  .btn-def.style-1 {
-    background-color: white;
-    color: black; }
-    .btn-def.style-1:hover {
-      color: white;
-      background-color: #efdf00; }
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+  position: relative;
+  background-color: black;
+  color: white; }
+  .btn-def:hover {
+    background-color: #efdf00;
+    color: #000000; }
   .btn-def:active {
     border-color: transparent;
     -webkit-transform: translateY(2px);
     transform: translateY(2px); }
-  .btn-def span {
-    vertical-align: middle; }
-  .btn-def i {
-    font-size: 0.9em;
-    padding-left: 15px; }
-  .btn-def.radius {
-    border-radius: 20px; }
-  .btn-def.reverse:not([class*="bg-color"]) {
-    color: #656666;
-    background-image: -webkit-gradient(linear, left bottom, left top, from(#e8e8e8), to(white));
-    background-image: linear-gradient(to top, #e8e8e8, white); }
-  .btn-def.reverse:hover {
-    background-image: -webkit-gradient(linear, left top, left bottom, from(#e8e8e8), to(white));
-    background-image: linear-gradient(to bottom, #e8e8e8, white); }
-
-.link-def {
-  font-family: "Nouvel R";
-  color: black;
-  font-style: 1em;
-  display: inline-block; }
-  .link-def a {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-align: center;
-    -ms-flex-align: center;
-    align-items: center;
-    text-transform: uppercase;
-    font-weight: 700; }
-  .link-def i {
-    width: 38px;
-    font-size: 1.2em;
-    height: 38px;
-    color: black;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    margin-left: 20px;
-    -webkit-box-align: center;
-    -ms-flex-align: center;
-    align-items: center;
-    -webkit-box-pack: center;
-    -ms-flex-pack: center;
-    justify-content: center;
-    background-color: #ffce33; }
+  .btn-def:hover svg {
+    fill: black; }
 
 .btn-opacity {
   background-color: transparent;
   border: 1px solid currentColor;
-  color: white;
+  color: black;
   -webkit-transition: all 0.3s ease-in-out;
-  transition: all 0.3s ease-in-out;
-  font-weight: 500;
-  -webkit-box-shadow: none;
-  box-shadow: none;
-  border-radius: 13px; }
-  .btn-opacity a, .btn-opacity button, .btn-opacity .this-btn {
-    -webkit-transition: none !important;
-    transition: none !important; }
-    .btn-opacity a:not([class*="p-v"]), .btn-opacity button:not([class*="p-v"]), .btn-opacity .this-btn:not([class*="p-v"]) {
-      padding-top: 0.85714rem;
-      padding-bottom: 0.85714rem; }
-  .btn-opacity.color-1 {
-    color: #efdf00;
-    border-color: #efdf00; }
+  transition: all 0.3s ease-in-out; }
+  .btn-opacity svg {
+    fill: black; }
   .btn-opacity:hover {
-    color: white;
     background-color: black;
-    border-color: black; }
-  .btn-opacity.reverse {
-    border-color: black;
-    color: black; }
-    .btn-opacity.reverse:hover {
-      color: white; }
+    color: white; }
+    .btn-opacity:hover svg {
+      fill: white; }
+
+.link-def {
+  color: black;
+  font-size: 12px;
+  font-weight: 700;
+  position: relative; }
+  .link-def a:after {
+    content: "";
+    -webkit-transform: rotate(45deg);
+    transform: rotate(45deg);
+    display: inline-block;
+    width: .6em;
+    height: .6em;
+    margin-left: 6px;
+    border: 2px solid #efdf00;
+    border-width: 2px 2px 0 0;
+    vertical-align: middle; }
+  .link-def a:hover:after {
+    border-color: #000000; }
 
 [data-flicker]:before {
   opacity: 0.1;
@@ -7409,7 +7307,7 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-text-size-adjust: none;
   text-size-adjust: none;
-  font-family: "Nouvel R";
+  font-family: "Nouvel R", sans-serif;
   overflow-x: hidden;
   color: #000;
   background-repeat: repeat-y; }
@@ -7458,20 +7356,19 @@ hr {
   margin-top: 15px;
   margin-bottom: 15px; }
   hr.style-1 {
-    height: 5px;
-    background-color: #efdf00;
+    height: 1px;
+    background-color: black;
     border: none;
-    width: 35%;
-    border-radius: 8px; }
+    width: 50px; }
 
 input:focus, button:focus {
   outline: transparent; }
 
 b {
-  font-weight: 600; }
+  font-weight: 700; }
 
 strong {
-  font-weight: 700; }
+  font-weight: 600; }
 
 bolder {
   font-weight: 900; }
@@ -7501,7 +7398,7 @@ h2,
 .h2, h3, h4, h5 {
   color: inherit;
   line-height: 140%;
-  font-weight: 600; }
+  font-weight: 700; }
 
 h1, .h1,
 h2,
@@ -7526,13 +7423,9 @@ h1, .h1 {
 
 h2,
 .h2 {
-  font-size: 2.5em;
-  margin-bottom: 15px; }
-  @media (max-width: 991px) {
-    
-    h2,
-    .h2 {
-      font-size: 1.85714em; } }
+  font-size: 28px;
+  margin-bottom: 15px;
+  text-transform: uppercase; }
 
 h3 {
   font-size: 1.71429em; }
@@ -7593,7 +7486,7 @@ main {
   main .line-height-def, main .line-height-def p {
     line-height: 100%; }
   main p {
-    line-height: 170%; }
+    line-height: 20px; }
 
 hr {
   border-color: rgba(165, 165, 165, 0.3); }
@@ -7639,15 +7532,6 @@ hr {
 
 html {
   font-size: 14px; }
-  @media (max-width: 1600px) {
-    html {
-      font-size: 12px; } }
-  @media (max-width: 1440px) {
-    html {
-      font-size: 10px; } }
-  @media (max-width: 1200px) {
-    html {
-      font-size: 9px; } }
   html .form-control {
     background-color: transparent;
     border: 0;
@@ -7809,9 +7693,7 @@ label {
       border-bottom: 1px solid #8c8c8b; }
   @media (max-width: 991px) {
     .header {
-      background-color: white !important;
-      -webkit-box-shadow: 0 2px 9px -7px black;
-      box-shadow: 0 2px 9px -7px black; } }
+      display: none; } }
   .header .wrapper {
     background-color: #000000; }
   .header .container-wrapper {
@@ -8406,8 +8288,22 @@ small {
   font-size: 85%; }
 
 .text-h4 {
+  font-size: 14px;
+  text-transform: uppercase; }
+
+.text-h4-b {
   font-weight: 700;
-  font-size: 1.4rem; }
+  font-size: 14px;
+  text-transform: uppercase; }
+
+.text-h3 {
+  font-size: 20px;
+  text-transform: uppercase; }
+
+.text-h3-b {
+  font-weight: 700;
+  font-size: 20px;
+  text-transform: uppercase; }
 
 .container-p, .container-p-2 {
   margin-left: auto;
@@ -8458,10 +8354,10 @@ small {
     left: 45px;
     width: 45%; }
     .swiper .slide-wrapper .text-content h1, .swiper .slide-wrapper .text-content .h1 {
-      font-size: 35px;
+      font-size: 2.5em;
       font-weight: 600; }
     .swiper .slide-wrapper .text-content p {
-      font-size: 20px; }
+      font-size: 1.42857em; }
 
 :root {
   --swiper-theme-color: #efdf00; }
@@ -8503,6 +8399,104 @@ small {
     -ms-flex-pack: center;
     justify-content: center; }
 
+.swiper-container-horizontal > .swiper-pagination-bullets .swiper-pagination-bullet {
+  margin: 0 6px; }
+
+.swiper-pagination {
+  padding: 15px 0; }
+  .swiper-pagination .swiper-pagination-bullet {
+    width: 13px;
+    height: 13px;
+    opacity: 1;
+    background-color: white;
+    position: relative; }
+    .swiper-pagination .swiper-pagination-bullet:before {
+      content: "";
+      position: absolute;
+      background-color: transparent;
+      width: 19px;
+      height: 19px;
+      display: block;
+      left: -3px;
+      top: -3px;
+      border-radius: 50%;
+      border: 1px solid #efdf00;
+      opacity: 0;
+      -webkit-transition: 0.3s ease;
+      transition: 0.3s ease; }
+  .swiper-pagination .swiper-pagination-bullet-active {
+    background-color: #efdf00; }
+    .swiper-pagination .swiper-pagination-bullet-active:before {
+      opacity: 1; }
+
+.hover-underline, .footer-menu ul li a {
+  position: relative;
+  line-height: 100%; }
+  .hover-underline *, .footer-menu ul li a * {
+    vertical-align: middle; }
+  .hover-underline:before, .footer-menu ul li a:before {
+    height: 1px;
+    background-color: #000;
+    bottom: -5px;
+    left: 0;
+    width: 0;
+    -webkit-transition: 0.35s ease;
+    transition: 0.35s ease; }
+  .hover-underline:hover:before, .footer-menu ul li a:hover:before {
+    width: 100%; }
+
+@media (max-width: 991px) {
+  .bnr .swiper-slide .img-content {
+    position: absolute;
+    max-width: none;
+    height: 100%; }
+    .bnr .swiper-slide .img-content img {
+      width: auto; }
+  .bnr .swiper-slide .text-content {
+    top: 30px;
+    width: 100%;
+    font-size: 0.8em;
+    -webkit-transform: none;
+    transform: none;
+    position: relative; } }
+
+.accordion-def .panel {
+  margin-bottom: 0;
+  border-bottom: 1px solid #f2f1f2;
+  -webkit-box-shadow: none;
+  box-shadow: none; }
+
+.accordion-def [data-toggle="collapse"] {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  font-weight: bold;
+  font-size: 14px;
+  line-height: 17px;
+  text-transform: uppercase;
+  padding: 15px 15px; }
+  .accordion-def [data-toggle="collapse"] .fa, .accordion-def [data-toggle="collapse"] .select2-container--default [class*="_arrow"], .select2-container--default .accordion-def [data-toggle="collapse"] [class*="_arrow"] {
+    font-size: 25px;
+    -webkit-transform: rotate(180deg);
+    transform: rotate(180deg); }
+  .accordion-def [data-toggle="collapse"][aria-expanded="true"] {
+    background-color: black;
+    color: white; }
+    .accordion-def [data-toggle="collapse"][aria-expanded="true"] .fa, .accordion-def [data-toggle="collapse"][aria-expanded="true"] .select2-container--default [class*="_arrow"], .select2-container--default .accordion-def [data-toggle="collapse"][aria-expanded="true"] [class*="_arrow"] {
+      -webkit-transform: rotate(0);
+      transform: rotate(0);
+      color: #efdf00; }
+
+.accordion-def-body {
+  padding: 35px 20px;
+  background-color: #f2f1f2;
+  color: #656666; }
+  .accordion-def-body p {
+    font-size: 11px; }
+
 /* 
 		_footer.scss
 */
@@ -8510,70 +8504,43 @@ small {
 										---FOOTER---
 */
 .footer {
-  position: relative;
-  z-index: 110;
-  bottom: 30px;
-  left: 0;
-  width: 100%;
-  pointer-events: none; }
-  .footer ._wrapper {
+  position: relative; }
+
+.footer-top {
+  background-color: #000000; }
+
+.footer-bottom {
+  font-size: 12px; }
+
+.footer-menu {
+  padding: 5px 0; }
+  .footer-menu ul li a:before {
+    bottom: -2px; }
+
+.footer-copy {
+  font-size: 10px; }
+  .footer-copy ul {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    -webkit-box-pack: justify;
-    -ms-flex-pack: justify;
-    justify-content: space-between; }
-  @media (max-width: 991px) {
-    .footer {
-      position: relative;
-      background-color: black; }
-      .footer .footer-soc {
-        -webkit-box-pack: center;
-        -ms-flex-pack: center;
-        justify-content: center; }
-      .footer .footer-phone {
-        color: white;
-        margin-top: 40px;
-        -webkit-box-pack: center;
-        -ms-flex-pack: center;
-        justify-content: center; }
-      .footer ._wrapper {
-        padding-top: 20px;
-        padding-bottom: 20px;
-        -webkit-box-orient: vertical;
-        -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-        flex-direction: column; } }
-
-.footer-soc {
-  font-size: 10px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  pointer-events: auto; }
-  .footer-soc ul {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    margin-left: -3px;
-    margin-right: -3px; }
-    .footer-soc ul li {
-      font-size: 22px;
-      margin-left: 3px;
-      margin-right: 3px; }
-
-.footer-phone {
-  pointer-events: auto;
-  color: #efdf00; }
-  .footer-phone ._phone {
-    font-size: 1.64286rem; }
-  .footer-phone ._icon-content path {
-    fill: #efdf00; }
-  .footer-phone ._icon-content .icon {
-    font-size: 25px; }
+    -webkit-box-align: baseline;
+    -ms-flex-align: baseline;
+    align-items: baseline;
+    margin-right: 16px;
+    color: #3E3F40; }
+    .footer-copy ul a {
+      display: block;
+      padding: 7px 10px;
+      font-size: 12px; }
+    .footer-copy ul li {
+      position: relative; }
+      .footer-copy ul li:not(:last-child):before {
+        content: "";
+        position: absolute;
+        right: 0;
+        top: 7px;
+        height: 12px;
+        border-left: 1px solid black; }
 
 .map-canvas {
   height: 420px;
@@ -9310,2404 +9277,2404 @@ header .menu:nth-child(3) li:nth-child(1), header .menu:nth-child(3) li:nth-chil
   .mobile\:mr-0 {
     margin-right: 0px; } }
 
-.ph-5 {
+.ph-1 {
   padding-left: 5px;
   padding-right: 5px; }
 
-.pv-5 {
+.pv-1 {
   padding-top: 5px;
   padding-bottom: 5px; }
 
-.pt-5 {
+.pt-1 {
   padding-top: 5px; }
 
-.pb-5 {
+.pb-1 {
   padding-bottom: 5px; }
 
-.pl-5 {
+.pl-1 {
   padding-left: 5px; }
 
-.pr-5 {
+.pr-1 {
   padding-right: 5px; }
 
-.mh-5 {
+.mh-1 {
   margin-left: 5px;
   margin-right: 5px; }
 
-.mv-5 {
+.mv-1 {
   margin-top: 5px;
   margin-bottom: 5px; }
 
-.mt-5 {
+.mt-1 {
   margin-top: 5px; }
 
-.mb-5 {
+.mb-1 {
   margin-bottom: 5px; }
 
-.ml-5 {
+.ml-1 {
   margin-left: 5px; }
 
-.mr-5 {
+.mr-1 {
   margin-right: 5px; }
 
 @media (min-width: 992px) {
-  .desktop\:ph-5 {
+  .desktop\:ph-1 {
     padding-left: 5px;
     padding-right: 5px; }
-  .desktop\:pv-5 {
+  .desktop\:pv-1 {
     padding-top: 5px;
     padding-bottom: 5px; }
-  .desktop\:pt-5 {
+  .desktop\:pt-1 {
     padding-top: 5px; }
-  .desktop\:pb-5 {
+  .desktop\:pb-1 {
     padding-bottom: 5px; }
-  .desktop\:pl-5 {
+  .desktop\:pl-1 {
     padding-left: 5px; }
-  .desktop\:pr-5 {
+  .desktop\:pr-1 {
     padding-right: 5px; }
-  .desktop\:mh-5 {
+  .desktop\:mh-1 {
     margin-left: 5px;
     margin-right: 5px; }
-  .desktop\:mv-5 {
+  .desktop\:mv-1 {
     margin-top: 5px;
     margin-bottom: 5px; }
-  .desktop\:mt-5 {
+  .desktop\:mt-1 {
     margin-top: 5px; }
-  .desktop\:mb-5 {
+  .desktop\:mb-1 {
     margin-bottom: 5px; }
-  .desktop\:ml-5 {
+  .desktop\:ml-1 {
     margin-left: 5px; }
-  .desktop\:mr-5 {
+  .desktop\:mr-1 {
     margin-right: 5px; } }
 
 @media (max-width: 991px) {
-  .mobile\:ph-5 {
+  .mobile\:ph-1 {
     padding-left: 5px;
     padding-right: 5px; }
-  .mobile\:pv-5 {
+  .mobile\:pv-1 {
     padding-top: 5px;
     padding-bottom: 5px; }
-  .mobile\:pt-5 {
+  .mobile\:pt-1 {
     padding-top: 5px; }
-  .mobile\:pb-5 {
+  .mobile\:pb-1 {
     padding-bottom: 5px; }
-  .mobile\:pl-5 {
+  .mobile\:pl-1 {
     padding-left: 5px; }
-  .mobile\:pr-5 {
+  .mobile\:pr-1 {
     padding-right: 5px; }
-  .mobile\:mh-5 {
+  .mobile\:mh-1 {
     margin-left: 5px;
     margin-right: 5px; }
-  .mobile\:mv-5 {
+  .mobile\:mv-1 {
     margin-top: 5px;
     margin-bottom: 5px; }
-  .mobile\:mt-5 {
+  .mobile\:mt-1 {
     margin-top: 5px; }
-  .mobile\:mb-5 {
+  .mobile\:mb-1 {
     margin-bottom: 5px; }
-  .mobile\:ml-5 {
+  .mobile\:ml-1 {
     margin-left: 5px; }
-  .mobile\:mr-5 {
+  .mobile\:mr-1 {
     margin-right: 5px; } }
 
-.ph-10 {
+.ph-2 {
   padding-left: 10px;
   padding-right: 10px; }
 
-.pv-10 {
+.pv-2 {
   padding-top: 10px;
   padding-bottom: 10px; }
 
-.pt-10 {
+.pt-2 {
   padding-top: 10px; }
 
-.pb-10 {
+.pb-2 {
   padding-bottom: 10px; }
 
-.pl-10 {
+.pl-2 {
   padding-left: 10px; }
 
-.pr-10 {
+.pr-2 {
   padding-right: 10px; }
 
-.mh-10 {
+.mh-2 {
   margin-left: 10px;
   margin-right: 10px; }
 
-.mv-10 {
+.mv-2 {
   margin-top: 10px;
   margin-bottom: 10px; }
 
-.mt-10 {
+.mt-2 {
   margin-top: 10px; }
 
-.mb-10 {
+.mb-2 {
   margin-bottom: 10px; }
 
-.ml-10 {
+.ml-2 {
   margin-left: 10px; }
 
-.mr-10 {
+.mr-2 {
   margin-right: 10px; }
 
 @media (min-width: 992px) {
-  .desktop\:ph-10 {
+  .desktop\:ph-2 {
     padding-left: 10px;
     padding-right: 10px; }
-  .desktop\:pv-10 {
+  .desktop\:pv-2 {
     padding-top: 10px;
     padding-bottom: 10px; }
-  .desktop\:pt-10 {
+  .desktop\:pt-2 {
     padding-top: 10px; }
-  .desktop\:pb-10 {
+  .desktop\:pb-2 {
     padding-bottom: 10px; }
-  .desktop\:pl-10 {
+  .desktop\:pl-2 {
     padding-left: 10px; }
-  .desktop\:pr-10 {
+  .desktop\:pr-2 {
     padding-right: 10px; }
-  .desktop\:mh-10 {
+  .desktop\:mh-2 {
     margin-left: 10px;
     margin-right: 10px; }
-  .desktop\:mv-10 {
+  .desktop\:mv-2 {
     margin-top: 10px;
     margin-bottom: 10px; }
-  .desktop\:mt-10 {
+  .desktop\:mt-2 {
     margin-top: 10px; }
-  .desktop\:mb-10 {
+  .desktop\:mb-2 {
     margin-bottom: 10px; }
-  .desktop\:ml-10 {
+  .desktop\:ml-2 {
     margin-left: 10px; }
-  .desktop\:mr-10 {
+  .desktop\:mr-2 {
     margin-right: 10px; } }
 
 @media (max-width: 991px) {
-  .mobile\:ph-10 {
+  .mobile\:ph-2 {
     padding-left: 10px;
     padding-right: 10px; }
-  .mobile\:pv-10 {
+  .mobile\:pv-2 {
     padding-top: 10px;
     padding-bottom: 10px; }
-  .mobile\:pt-10 {
+  .mobile\:pt-2 {
     padding-top: 10px; }
-  .mobile\:pb-10 {
+  .mobile\:pb-2 {
     padding-bottom: 10px; }
-  .mobile\:pl-10 {
+  .mobile\:pl-2 {
     padding-left: 10px; }
-  .mobile\:pr-10 {
+  .mobile\:pr-2 {
     padding-right: 10px; }
-  .mobile\:mh-10 {
+  .mobile\:mh-2 {
     margin-left: 10px;
     margin-right: 10px; }
-  .mobile\:mv-10 {
+  .mobile\:mv-2 {
     margin-top: 10px;
     margin-bottom: 10px; }
-  .mobile\:mt-10 {
+  .mobile\:mt-2 {
     margin-top: 10px; }
-  .mobile\:mb-10 {
+  .mobile\:mb-2 {
     margin-bottom: 10px; }
-  .mobile\:ml-10 {
+  .mobile\:ml-2 {
     margin-left: 10px; }
-  .mobile\:mr-10 {
+  .mobile\:mr-2 {
     margin-right: 10px; } }
 
-.ph-15 {
+.ph-3 {
   padding-left: 15px;
   padding-right: 15px; }
 
-.pv-15 {
+.pv-3 {
   padding-top: 15px;
   padding-bottom: 15px; }
 
-.pt-15 {
+.pt-3 {
   padding-top: 15px; }
 
-.pb-15 {
+.pb-3 {
   padding-bottom: 15px; }
 
-.pl-15 {
+.pl-3 {
   padding-left: 15px; }
 
-.pr-15 {
+.pr-3 {
   padding-right: 15px; }
 
-.mh-15 {
+.mh-3 {
   margin-left: 15px;
   margin-right: 15px; }
 
-.mv-15 {
+.mv-3 {
   margin-top: 15px;
   margin-bottom: 15px; }
 
-.mt-15 {
+.mt-3 {
   margin-top: 15px; }
 
-.mb-15 {
+.mb-3 {
   margin-bottom: 15px; }
 
-.ml-15 {
+.ml-3 {
   margin-left: 15px; }
 
-.mr-15 {
+.mr-3 {
   margin-right: 15px; }
 
 @media (min-width: 992px) {
-  .desktop\:ph-15 {
+  .desktop\:ph-3 {
     padding-left: 15px;
     padding-right: 15px; }
-  .desktop\:pv-15 {
+  .desktop\:pv-3 {
     padding-top: 15px;
     padding-bottom: 15px; }
-  .desktop\:pt-15 {
+  .desktop\:pt-3 {
     padding-top: 15px; }
-  .desktop\:pb-15 {
+  .desktop\:pb-3 {
     padding-bottom: 15px; }
-  .desktop\:pl-15 {
+  .desktop\:pl-3 {
     padding-left: 15px; }
-  .desktop\:pr-15 {
+  .desktop\:pr-3 {
     padding-right: 15px; }
-  .desktop\:mh-15 {
+  .desktop\:mh-3 {
     margin-left: 15px;
     margin-right: 15px; }
-  .desktop\:mv-15 {
+  .desktop\:mv-3 {
     margin-top: 15px;
     margin-bottom: 15px; }
-  .desktop\:mt-15 {
+  .desktop\:mt-3 {
     margin-top: 15px; }
-  .desktop\:mb-15 {
+  .desktop\:mb-3 {
     margin-bottom: 15px; }
-  .desktop\:ml-15 {
+  .desktop\:ml-3 {
     margin-left: 15px; }
-  .desktop\:mr-15 {
+  .desktop\:mr-3 {
     margin-right: 15px; } }
 
 @media (max-width: 991px) {
-  .mobile\:ph-15 {
+  .mobile\:ph-3 {
     padding-left: 15px;
     padding-right: 15px; }
-  .mobile\:pv-15 {
+  .mobile\:pv-3 {
     padding-top: 15px;
     padding-bottom: 15px; }
-  .mobile\:pt-15 {
+  .mobile\:pt-3 {
     padding-top: 15px; }
-  .mobile\:pb-15 {
+  .mobile\:pb-3 {
     padding-bottom: 15px; }
-  .mobile\:pl-15 {
+  .mobile\:pl-3 {
     padding-left: 15px; }
-  .mobile\:pr-15 {
+  .mobile\:pr-3 {
     padding-right: 15px; }
-  .mobile\:mh-15 {
+  .mobile\:mh-3 {
     margin-left: 15px;
     margin-right: 15px; }
-  .mobile\:mv-15 {
+  .mobile\:mv-3 {
     margin-top: 15px;
     margin-bottom: 15px; }
-  .mobile\:mt-15 {
+  .mobile\:mt-3 {
     margin-top: 15px; }
-  .mobile\:mb-15 {
+  .mobile\:mb-3 {
     margin-bottom: 15px; }
-  .mobile\:ml-15 {
+  .mobile\:ml-3 {
     margin-left: 15px; }
-  .mobile\:mr-15 {
+  .mobile\:mr-3 {
     margin-right: 15px; } }
 
-.ph-20 {
+.ph-4 {
   padding-left: 20px;
   padding-right: 20px; }
 
-.pv-20 {
+.pv-4 {
   padding-top: 20px;
   padding-bottom: 20px; }
 
-.pt-20 {
+.pt-4 {
   padding-top: 20px; }
 
-.pb-20 {
+.pb-4 {
   padding-bottom: 20px; }
 
-.pl-20 {
+.pl-4 {
   padding-left: 20px; }
 
-.pr-20 {
+.pr-4 {
   padding-right: 20px; }
 
-.mh-20 {
+.mh-4 {
   margin-left: 20px;
   margin-right: 20px; }
 
-.mv-20 {
+.mv-4 {
   margin-top: 20px;
   margin-bottom: 20px; }
 
-.mt-20 {
+.mt-4 {
   margin-top: 20px; }
 
-.mb-20 {
+.mb-4 {
   margin-bottom: 20px; }
 
-.ml-20 {
+.ml-4 {
   margin-left: 20px; }
 
-.mr-20 {
+.mr-4 {
   margin-right: 20px; }
 
 @media (min-width: 992px) {
-  .desktop\:ph-20 {
+  .desktop\:ph-4 {
     padding-left: 20px;
     padding-right: 20px; }
-  .desktop\:pv-20 {
+  .desktop\:pv-4 {
     padding-top: 20px;
     padding-bottom: 20px; }
-  .desktop\:pt-20 {
+  .desktop\:pt-4 {
     padding-top: 20px; }
-  .desktop\:pb-20 {
+  .desktop\:pb-4 {
     padding-bottom: 20px; }
-  .desktop\:pl-20 {
+  .desktop\:pl-4 {
     padding-left: 20px; }
-  .desktop\:pr-20 {
+  .desktop\:pr-4 {
     padding-right: 20px; }
-  .desktop\:mh-20 {
+  .desktop\:mh-4 {
     margin-left: 20px;
     margin-right: 20px; }
-  .desktop\:mv-20 {
+  .desktop\:mv-4 {
     margin-top: 20px;
     margin-bottom: 20px; }
-  .desktop\:mt-20 {
+  .desktop\:mt-4 {
     margin-top: 20px; }
-  .desktop\:mb-20 {
+  .desktop\:mb-4 {
     margin-bottom: 20px; }
-  .desktop\:ml-20 {
+  .desktop\:ml-4 {
     margin-left: 20px; }
-  .desktop\:mr-20 {
+  .desktop\:mr-4 {
     margin-right: 20px; } }
 
 @media (max-width: 991px) {
-  .mobile\:ph-20 {
+  .mobile\:ph-4 {
     padding-left: 20px;
     padding-right: 20px; }
-  .mobile\:pv-20 {
+  .mobile\:pv-4 {
     padding-top: 20px;
     padding-bottom: 20px; }
-  .mobile\:pt-20 {
+  .mobile\:pt-4 {
     padding-top: 20px; }
-  .mobile\:pb-20 {
+  .mobile\:pb-4 {
     padding-bottom: 20px; }
-  .mobile\:pl-20 {
+  .mobile\:pl-4 {
     padding-left: 20px; }
-  .mobile\:pr-20 {
+  .mobile\:pr-4 {
     padding-right: 20px; }
-  .mobile\:mh-20 {
+  .mobile\:mh-4 {
     margin-left: 20px;
     margin-right: 20px; }
-  .mobile\:mv-20 {
+  .mobile\:mv-4 {
     margin-top: 20px;
     margin-bottom: 20px; }
-  .mobile\:mt-20 {
+  .mobile\:mt-4 {
     margin-top: 20px; }
-  .mobile\:mb-20 {
+  .mobile\:mb-4 {
     margin-bottom: 20px; }
-  .mobile\:ml-20 {
+  .mobile\:ml-4 {
     margin-left: 20px; }
-  .mobile\:mr-20 {
+  .mobile\:mr-4 {
     margin-right: 20px; } }
 
-.ph-25 {
+.ph-5 {
   padding-left: 25px;
   padding-right: 25px; }
 
-.pv-25 {
+.pv-5 {
   padding-top: 25px;
   padding-bottom: 25px; }
 
-.pt-25 {
+.pt-5 {
   padding-top: 25px; }
 
-.pb-25 {
+.pb-5 {
   padding-bottom: 25px; }
 
-.pl-25 {
+.pl-5 {
   padding-left: 25px; }
 
-.pr-25 {
+.pr-5 {
   padding-right: 25px; }
 
-.mh-25 {
+.mh-5 {
   margin-left: 25px;
   margin-right: 25px; }
 
-.mv-25 {
+.mv-5 {
   margin-top: 25px;
   margin-bottom: 25px; }
 
-.mt-25 {
+.mt-5 {
   margin-top: 25px; }
 
-.mb-25 {
+.mb-5 {
   margin-bottom: 25px; }
 
-.ml-25 {
+.ml-5 {
   margin-left: 25px; }
 
-.mr-25 {
+.mr-5 {
   margin-right: 25px; }
 
 @media (min-width: 992px) {
-  .desktop\:ph-25 {
+  .desktop\:ph-5 {
     padding-left: 25px;
     padding-right: 25px; }
-  .desktop\:pv-25 {
+  .desktop\:pv-5 {
     padding-top: 25px;
     padding-bottom: 25px; }
-  .desktop\:pt-25 {
+  .desktop\:pt-5 {
     padding-top: 25px; }
-  .desktop\:pb-25 {
+  .desktop\:pb-5 {
     padding-bottom: 25px; }
-  .desktop\:pl-25 {
+  .desktop\:pl-5 {
     padding-left: 25px; }
-  .desktop\:pr-25 {
+  .desktop\:pr-5 {
     padding-right: 25px; }
-  .desktop\:mh-25 {
+  .desktop\:mh-5 {
     margin-left: 25px;
     margin-right: 25px; }
-  .desktop\:mv-25 {
+  .desktop\:mv-5 {
     margin-top: 25px;
     margin-bottom: 25px; }
-  .desktop\:mt-25 {
+  .desktop\:mt-5 {
     margin-top: 25px; }
-  .desktop\:mb-25 {
+  .desktop\:mb-5 {
     margin-bottom: 25px; }
-  .desktop\:ml-25 {
+  .desktop\:ml-5 {
     margin-left: 25px; }
-  .desktop\:mr-25 {
+  .desktop\:mr-5 {
     margin-right: 25px; } }
 
 @media (max-width: 991px) {
-  .mobile\:ph-25 {
+  .mobile\:ph-5 {
     padding-left: 25px;
     padding-right: 25px; }
-  .mobile\:pv-25 {
+  .mobile\:pv-5 {
     padding-top: 25px;
     padding-bottom: 25px; }
-  .mobile\:pt-25 {
+  .mobile\:pt-5 {
     padding-top: 25px; }
-  .mobile\:pb-25 {
+  .mobile\:pb-5 {
     padding-bottom: 25px; }
-  .mobile\:pl-25 {
+  .mobile\:pl-5 {
     padding-left: 25px; }
-  .mobile\:pr-25 {
+  .mobile\:pr-5 {
     padding-right: 25px; }
-  .mobile\:mh-25 {
+  .mobile\:mh-5 {
     margin-left: 25px;
     margin-right: 25px; }
-  .mobile\:mv-25 {
+  .mobile\:mv-5 {
     margin-top: 25px;
     margin-bottom: 25px; }
-  .mobile\:mt-25 {
+  .mobile\:mt-5 {
     margin-top: 25px; }
-  .mobile\:mb-25 {
+  .mobile\:mb-5 {
     margin-bottom: 25px; }
-  .mobile\:ml-25 {
+  .mobile\:ml-5 {
     margin-left: 25px; }
-  .mobile\:mr-25 {
+  .mobile\:mr-5 {
     margin-right: 25px; } }
 
-.ph-30 {
+.ph-6 {
   padding-left: 30px;
   padding-right: 30px; }
 
-.pv-30 {
+.pv-6 {
   padding-top: 30px;
   padding-bottom: 30px; }
 
-.pt-30 {
+.pt-6 {
   padding-top: 30px; }
 
-.pb-30 {
+.pb-6 {
   padding-bottom: 30px; }
 
-.pl-30 {
+.pl-6 {
   padding-left: 30px; }
 
-.pr-30 {
+.pr-6 {
   padding-right: 30px; }
 
-.mh-30 {
+.mh-6 {
   margin-left: 30px;
   margin-right: 30px; }
 
-.mv-30 {
+.mv-6 {
   margin-top: 30px;
   margin-bottom: 30px; }
 
-.mt-30 {
+.mt-6 {
   margin-top: 30px; }
 
-.mb-30 {
+.mb-6 {
   margin-bottom: 30px; }
 
-.ml-30 {
+.ml-6 {
   margin-left: 30px; }
 
-.mr-30 {
+.mr-6 {
   margin-right: 30px; }
 
 @media (min-width: 992px) {
-  .desktop\:ph-30 {
+  .desktop\:ph-6 {
     padding-left: 30px;
     padding-right: 30px; }
-  .desktop\:pv-30 {
+  .desktop\:pv-6 {
     padding-top: 30px;
     padding-bottom: 30px; }
-  .desktop\:pt-30 {
+  .desktop\:pt-6 {
     padding-top: 30px; }
-  .desktop\:pb-30 {
+  .desktop\:pb-6 {
     padding-bottom: 30px; }
-  .desktop\:pl-30 {
+  .desktop\:pl-6 {
     padding-left: 30px; }
-  .desktop\:pr-30 {
+  .desktop\:pr-6 {
     padding-right: 30px; }
-  .desktop\:mh-30 {
+  .desktop\:mh-6 {
     margin-left: 30px;
     margin-right: 30px; }
-  .desktop\:mv-30 {
+  .desktop\:mv-6 {
     margin-top: 30px;
     margin-bottom: 30px; }
-  .desktop\:mt-30 {
+  .desktop\:mt-6 {
     margin-top: 30px; }
-  .desktop\:mb-30 {
+  .desktop\:mb-6 {
     margin-bottom: 30px; }
-  .desktop\:ml-30 {
+  .desktop\:ml-6 {
     margin-left: 30px; }
-  .desktop\:mr-30 {
+  .desktop\:mr-6 {
     margin-right: 30px; } }
 
 @media (max-width: 991px) {
-  .mobile\:ph-30 {
+  .mobile\:ph-6 {
     padding-left: 30px;
     padding-right: 30px; }
-  .mobile\:pv-30 {
+  .mobile\:pv-6 {
     padding-top: 30px;
     padding-bottom: 30px; }
-  .mobile\:pt-30 {
+  .mobile\:pt-6 {
     padding-top: 30px; }
-  .mobile\:pb-30 {
+  .mobile\:pb-6 {
     padding-bottom: 30px; }
-  .mobile\:pl-30 {
+  .mobile\:pl-6 {
     padding-left: 30px; }
-  .mobile\:pr-30 {
+  .mobile\:pr-6 {
     padding-right: 30px; }
-  .mobile\:mh-30 {
+  .mobile\:mh-6 {
     margin-left: 30px;
     margin-right: 30px; }
-  .mobile\:mv-30 {
+  .mobile\:mv-6 {
     margin-top: 30px;
     margin-bottom: 30px; }
-  .mobile\:mt-30 {
+  .mobile\:mt-6 {
     margin-top: 30px; }
-  .mobile\:mb-30 {
+  .mobile\:mb-6 {
     margin-bottom: 30px; }
-  .mobile\:ml-30 {
+  .mobile\:ml-6 {
     margin-left: 30px; }
-  .mobile\:mr-30 {
+  .mobile\:mr-6 {
     margin-right: 30px; } }
 
-.ph-35 {
+.ph-7 {
   padding-left: 35px;
   padding-right: 35px; }
 
-.pv-35 {
+.pv-7 {
   padding-top: 35px;
   padding-bottom: 35px; }
 
-.pt-35 {
+.pt-7 {
   padding-top: 35px; }
 
-.pb-35 {
+.pb-7 {
   padding-bottom: 35px; }
 
-.pl-35 {
+.pl-7 {
   padding-left: 35px; }
 
-.pr-35 {
+.pr-7 {
   padding-right: 35px; }
 
-.mh-35 {
+.mh-7 {
   margin-left: 35px;
   margin-right: 35px; }
 
-.mv-35 {
+.mv-7 {
   margin-top: 35px;
   margin-bottom: 35px; }
 
-.mt-35 {
+.mt-7 {
   margin-top: 35px; }
 
-.mb-35 {
+.mb-7 {
   margin-bottom: 35px; }
 
-.ml-35 {
+.ml-7 {
   margin-left: 35px; }
 
-.mr-35 {
+.mr-7 {
   margin-right: 35px; }
 
 @media (min-width: 992px) {
-  .desktop\:ph-35 {
+  .desktop\:ph-7 {
     padding-left: 35px;
     padding-right: 35px; }
-  .desktop\:pv-35 {
+  .desktop\:pv-7 {
     padding-top: 35px;
     padding-bottom: 35px; }
-  .desktop\:pt-35 {
+  .desktop\:pt-7 {
     padding-top: 35px; }
-  .desktop\:pb-35 {
+  .desktop\:pb-7 {
     padding-bottom: 35px; }
-  .desktop\:pl-35 {
+  .desktop\:pl-7 {
     padding-left: 35px; }
-  .desktop\:pr-35 {
+  .desktop\:pr-7 {
     padding-right: 35px; }
-  .desktop\:mh-35 {
+  .desktop\:mh-7 {
     margin-left: 35px;
     margin-right: 35px; }
-  .desktop\:mv-35 {
+  .desktop\:mv-7 {
     margin-top: 35px;
     margin-bottom: 35px; }
-  .desktop\:mt-35 {
+  .desktop\:mt-7 {
     margin-top: 35px; }
-  .desktop\:mb-35 {
+  .desktop\:mb-7 {
     margin-bottom: 35px; }
-  .desktop\:ml-35 {
+  .desktop\:ml-7 {
     margin-left: 35px; }
-  .desktop\:mr-35 {
+  .desktop\:mr-7 {
     margin-right: 35px; } }
 
 @media (max-width: 991px) {
-  .mobile\:ph-35 {
+  .mobile\:ph-7 {
     padding-left: 35px;
     padding-right: 35px; }
-  .mobile\:pv-35 {
+  .mobile\:pv-7 {
     padding-top: 35px;
     padding-bottom: 35px; }
-  .mobile\:pt-35 {
+  .mobile\:pt-7 {
     padding-top: 35px; }
-  .mobile\:pb-35 {
+  .mobile\:pb-7 {
     padding-bottom: 35px; }
-  .mobile\:pl-35 {
+  .mobile\:pl-7 {
     padding-left: 35px; }
-  .mobile\:pr-35 {
+  .mobile\:pr-7 {
     padding-right: 35px; }
-  .mobile\:mh-35 {
+  .mobile\:mh-7 {
     margin-left: 35px;
     margin-right: 35px; }
-  .mobile\:mv-35 {
+  .mobile\:mv-7 {
     margin-top: 35px;
     margin-bottom: 35px; }
-  .mobile\:mt-35 {
+  .mobile\:mt-7 {
     margin-top: 35px; }
-  .mobile\:mb-35 {
+  .mobile\:mb-7 {
     margin-bottom: 35px; }
-  .mobile\:ml-35 {
+  .mobile\:ml-7 {
     margin-left: 35px; }
-  .mobile\:mr-35 {
+  .mobile\:mr-7 {
     margin-right: 35px; } }
 
-.ph-40 {
+.ph-8 {
   padding-left: 40px;
   padding-right: 40px; }
 
-.pv-40 {
+.pv-8 {
   padding-top: 40px;
   padding-bottom: 40px; }
 
-.pt-40 {
+.pt-8 {
   padding-top: 40px; }
 
-.pb-40 {
+.pb-8 {
   padding-bottom: 40px; }
 
-.pl-40 {
+.pl-8 {
   padding-left: 40px; }
 
-.pr-40 {
+.pr-8 {
   padding-right: 40px; }
 
-.mh-40 {
+.mh-8 {
   margin-left: 40px;
   margin-right: 40px; }
 
-.mv-40 {
+.mv-8 {
   margin-top: 40px;
   margin-bottom: 40px; }
 
-.mt-40 {
+.mt-8 {
   margin-top: 40px; }
 
-.mb-40 {
+.mb-8 {
   margin-bottom: 40px; }
 
-.ml-40 {
+.ml-8 {
   margin-left: 40px; }
 
-.mr-40 {
+.mr-8 {
   margin-right: 40px; }
 
 @media (min-width: 992px) {
-  .desktop\:ph-40 {
+  .desktop\:ph-8 {
     padding-left: 40px;
     padding-right: 40px; }
-  .desktop\:pv-40 {
+  .desktop\:pv-8 {
     padding-top: 40px;
     padding-bottom: 40px; }
-  .desktop\:pt-40 {
+  .desktop\:pt-8 {
     padding-top: 40px; }
-  .desktop\:pb-40 {
+  .desktop\:pb-8 {
     padding-bottom: 40px; }
-  .desktop\:pl-40 {
+  .desktop\:pl-8 {
     padding-left: 40px; }
-  .desktop\:pr-40 {
+  .desktop\:pr-8 {
     padding-right: 40px; }
-  .desktop\:mh-40 {
+  .desktop\:mh-8 {
     margin-left: 40px;
     margin-right: 40px; }
-  .desktop\:mv-40 {
+  .desktop\:mv-8 {
     margin-top: 40px;
     margin-bottom: 40px; }
-  .desktop\:mt-40 {
+  .desktop\:mt-8 {
     margin-top: 40px; }
-  .desktop\:mb-40 {
+  .desktop\:mb-8 {
     margin-bottom: 40px; }
-  .desktop\:ml-40 {
+  .desktop\:ml-8 {
     margin-left: 40px; }
-  .desktop\:mr-40 {
+  .desktop\:mr-8 {
     margin-right: 40px; } }
 
 @media (max-width: 991px) {
-  .mobile\:ph-40 {
+  .mobile\:ph-8 {
     padding-left: 40px;
     padding-right: 40px; }
-  .mobile\:pv-40 {
+  .mobile\:pv-8 {
     padding-top: 40px;
     padding-bottom: 40px; }
-  .mobile\:pt-40 {
+  .mobile\:pt-8 {
     padding-top: 40px; }
-  .mobile\:pb-40 {
+  .mobile\:pb-8 {
     padding-bottom: 40px; }
-  .mobile\:pl-40 {
+  .mobile\:pl-8 {
     padding-left: 40px; }
-  .mobile\:pr-40 {
+  .mobile\:pr-8 {
     padding-right: 40px; }
-  .mobile\:mh-40 {
+  .mobile\:mh-8 {
     margin-left: 40px;
     margin-right: 40px; }
-  .mobile\:mv-40 {
+  .mobile\:mv-8 {
     margin-top: 40px;
     margin-bottom: 40px; }
-  .mobile\:mt-40 {
+  .mobile\:mt-8 {
     margin-top: 40px; }
-  .mobile\:mb-40 {
+  .mobile\:mb-8 {
     margin-bottom: 40px; }
-  .mobile\:ml-40 {
+  .mobile\:ml-8 {
     margin-left: 40px; }
-  .mobile\:mr-40 {
+  .mobile\:mr-8 {
     margin-right: 40px; } }
 
-.ph-45 {
+.ph-9 {
   padding-left: 45px;
   padding-right: 45px; }
 
-.pv-45 {
+.pv-9 {
   padding-top: 45px;
   padding-bottom: 45px; }
 
-.pt-45 {
+.pt-9 {
   padding-top: 45px; }
 
-.pb-45 {
+.pb-9 {
   padding-bottom: 45px; }
 
-.pl-45 {
+.pl-9 {
   padding-left: 45px; }
 
-.pr-45 {
+.pr-9 {
   padding-right: 45px; }
 
-.mh-45 {
+.mh-9 {
   margin-left: 45px;
   margin-right: 45px; }
 
-.mv-45 {
+.mv-9 {
   margin-top: 45px;
   margin-bottom: 45px; }
 
-.mt-45 {
+.mt-9 {
   margin-top: 45px; }
 
-.mb-45 {
+.mb-9 {
   margin-bottom: 45px; }
 
-.ml-45 {
+.ml-9 {
   margin-left: 45px; }
 
-.mr-45 {
+.mr-9 {
   margin-right: 45px; }
 
 @media (min-width: 992px) {
-  .desktop\:ph-45 {
+  .desktop\:ph-9 {
     padding-left: 45px;
     padding-right: 45px; }
-  .desktop\:pv-45 {
+  .desktop\:pv-9 {
     padding-top: 45px;
     padding-bottom: 45px; }
-  .desktop\:pt-45 {
+  .desktop\:pt-9 {
     padding-top: 45px; }
-  .desktop\:pb-45 {
+  .desktop\:pb-9 {
     padding-bottom: 45px; }
-  .desktop\:pl-45 {
+  .desktop\:pl-9 {
     padding-left: 45px; }
-  .desktop\:pr-45 {
+  .desktop\:pr-9 {
     padding-right: 45px; }
-  .desktop\:mh-45 {
+  .desktop\:mh-9 {
     margin-left: 45px;
     margin-right: 45px; }
-  .desktop\:mv-45 {
+  .desktop\:mv-9 {
     margin-top: 45px;
     margin-bottom: 45px; }
-  .desktop\:mt-45 {
+  .desktop\:mt-9 {
     margin-top: 45px; }
-  .desktop\:mb-45 {
+  .desktop\:mb-9 {
     margin-bottom: 45px; }
-  .desktop\:ml-45 {
+  .desktop\:ml-9 {
     margin-left: 45px; }
-  .desktop\:mr-45 {
+  .desktop\:mr-9 {
     margin-right: 45px; } }
 
 @media (max-width: 991px) {
-  .mobile\:ph-45 {
+  .mobile\:ph-9 {
     padding-left: 45px;
     padding-right: 45px; }
-  .mobile\:pv-45 {
+  .mobile\:pv-9 {
     padding-top: 45px;
     padding-bottom: 45px; }
-  .mobile\:pt-45 {
+  .mobile\:pt-9 {
     padding-top: 45px; }
-  .mobile\:pb-45 {
+  .mobile\:pb-9 {
     padding-bottom: 45px; }
-  .mobile\:pl-45 {
+  .mobile\:pl-9 {
     padding-left: 45px; }
-  .mobile\:pr-45 {
+  .mobile\:pr-9 {
     padding-right: 45px; }
-  .mobile\:mh-45 {
+  .mobile\:mh-9 {
     margin-left: 45px;
     margin-right: 45px; }
-  .mobile\:mv-45 {
+  .mobile\:mv-9 {
     margin-top: 45px;
     margin-bottom: 45px; }
-  .mobile\:mt-45 {
+  .mobile\:mt-9 {
     margin-top: 45px; }
-  .mobile\:mb-45 {
+  .mobile\:mb-9 {
     margin-bottom: 45px; }
-  .mobile\:ml-45 {
+  .mobile\:ml-9 {
     margin-left: 45px; }
-  .mobile\:mr-45 {
+  .mobile\:mr-9 {
     margin-right: 45px; } }
 
-.ph-50 {
+.ph-10 {
   padding-left: 50px;
   padding-right: 50px; }
 
-.pv-50 {
+.pv-10 {
   padding-top: 50px;
   padding-bottom: 50px; }
 
-.pt-50 {
+.pt-10 {
   padding-top: 50px; }
 
-.pb-50 {
+.pb-10 {
   padding-bottom: 50px; }
 
-.pl-50 {
+.pl-10 {
   padding-left: 50px; }
 
-.pr-50 {
+.pr-10 {
   padding-right: 50px; }
 
-.mh-50 {
+.mh-10 {
   margin-left: 50px;
   margin-right: 50px; }
 
-.mv-50 {
+.mv-10 {
   margin-top: 50px;
   margin-bottom: 50px; }
 
-.mt-50 {
+.mt-10 {
   margin-top: 50px; }
 
-.mb-50 {
+.mb-10 {
   margin-bottom: 50px; }
 
-.ml-50 {
+.ml-10 {
   margin-left: 50px; }
 
-.mr-50 {
+.mr-10 {
   margin-right: 50px; }
 
 @media (min-width: 992px) {
-  .desktop\:ph-50 {
+  .desktop\:ph-10 {
     padding-left: 50px;
     padding-right: 50px; }
-  .desktop\:pv-50 {
+  .desktop\:pv-10 {
     padding-top: 50px;
     padding-bottom: 50px; }
-  .desktop\:pt-50 {
+  .desktop\:pt-10 {
     padding-top: 50px; }
-  .desktop\:pb-50 {
+  .desktop\:pb-10 {
     padding-bottom: 50px; }
-  .desktop\:pl-50 {
+  .desktop\:pl-10 {
     padding-left: 50px; }
-  .desktop\:pr-50 {
+  .desktop\:pr-10 {
     padding-right: 50px; }
-  .desktop\:mh-50 {
+  .desktop\:mh-10 {
     margin-left: 50px;
     margin-right: 50px; }
-  .desktop\:mv-50 {
+  .desktop\:mv-10 {
     margin-top: 50px;
     margin-bottom: 50px; }
-  .desktop\:mt-50 {
+  .desktop\:mt-10 {
     margin-top: 50px; }
-  .desktop\:mb-50 {
+  .desktop\:mb-10 {
     margin-bottom: 50px; }
-  .desktop\:ml-50 {
+  .desktop\:ml-10 {
     margin-left: 50px; }
-  .desktop\:mr-50 {
+  .desktop\:mr-10 {
     margin-right: 50px; } }
 
 @media (max-width: 991px) {
-  .mobile\:ph-50 {
+  .mobile\:ph-10 {
     padding-left: 50px;
     padding-right: 50px; }
-  .mobile\:pv-50 {
+  .mobile\:pv-10 {
     padding-top: 50px;
     padding-bottom: 50px; }
-  .mobile\:pt-50 {
+  .mobile\:pt-10 {
     padding-top: 50px; }
-  .mobile\:pb-50 {
+  .mobile\:pb-10 {
     padding-bottom: 50px; }
-  .mobile\:pl-50 {
+  .mobile\:pl-10 {
     padding-left: 50px; }
-  .mobile\:pr-50 {
+  .mobile\:pr-10 {
     padding-right: 50px; }
-  .mobile\:mh-50 {
+  .mobile\:mh-10 {
     margin-left: 50px;
     margin-right: 50px; }
-  .mobile\:mv-50 {
+  .mobile\:mv-10 {
     margin-top: 50px;
     margin-bottom: 50px; }
-  .mobile\:mt-50 {
+  .mobile\:mt-10 {
     margin-top: 50px; }
-  .mobile\:mb-50 {
+  .mobile\:mb-10 {
     margin-bottom: 50px; }
-  .mobile\:ml-50 {
+  .mobile\:ml-10 {
     margin-left: 50px; }
-  .mobile\:mr-50 {
+  .mobile\:mr-10 {
     margin-right: 50px; } }
 
-.ph-55 {
+.ph-11 {
   padding-left: 55px;
   padding-right: 55px; }
 
-.pv-55 {
+.pv-11 {
   padding-top: 55px;
   padding-bottom: 55px; }
 
-.pt-55 {
+.pt-11 {
   padding-top: 55px; }
 
-.pb-55 {
+.pb-11 {
   padding-bottom: 55px; }
 
-.pl-55 {
+.pl-11 {
   padding-left: 55px; }
 
-.pr-55 {
+.pr-11 {
   padding-right: 55px; }
 
-.mh-55 {
+.mh-11 {
   margin-left: 55px;
   margin-right: 55px; }
 
-.mv-55 {
+.mv-11 {
   margin-top: 55px;
   margin-bottom: 55px; }
 
-.mt-55 {
+.mt-11 {
   margin-top: 55px; }
 
-.mb-55 {
+.mb-11 {
   margin-bottom: 55px; }
 
-.ml-55 {
+.ml-11 {
   margin-left: 55px; }
 
-.mr-55 {
+.mr-11 {
   margin-right: 55px; }
 
 @media (min-width: 992px) {
-  .desktop\:ph-55 {
+  .desktop\:ph-11 {
     padding-left: 55px;
     padding-right: 55px; }
-  .desktop\:pv-55 {
+  .desktop\:pv-11 {
     padding-top: 55px;
     padding-bottom: 55px; }
-  .desktop\:pt-55 {
+  .desktop\:pt-11 {
     padding-top: 55px; }
-  .desktop\:pb-55 {
+  .desktop\:pb-11 {
     padding-bottom: 55px; }
-  .desktop\:pl-55 {
+  .desktop\:pl-11 {
     padding-left: 55px; }
-  .desktop\:pr-55 {
+  .desktop\:pr-11 {
     padding-right: 55px; }
-  .desktop\:mh-55 {
+  .desktop\:mh-11 {
     margin-left: 55px;
     margin-right: 55px; }
-  .desktop\:mv-55 {
+  .desktop\:mv-11 {
     margin-top: 55px;
     margin-bottom: 55px; }
-  .desktop\:mt-55 {
+  .desktop\:mt-11 {
     margin-top: 55px; }
-  .desktop\:mb-55 {
+  .desktop\:mb-11 {
     margin-bottom: 55px; }
-  .desktop\:ml-55 {
+  .desktop\:ml-11 {
     margin-left: 55px; }
-  .desktop\:mr-55 {
+  .desktop\:mr-11 {
     margin-right: 55px; } }
 
 @media (max-width: 991px) {
-  .mobile\:ph-55 {
+  .mobile\:ph-11 {
     padding-left: 55px;
     padding-right: 55px; }
-  .mobile\:pv-55 {
+  .mobile\:pv-11 {
     padding-top: 55px;
     padding-bottom: 55px; }
-  .mobile\:pt-55 {
+  .mobile\:pt-11 {
     padding-top: 55px; }
-  .mobile\:pb-55 {
+  .mobile\:pb-11 {
     padding-bottom: 55px; }
-  .mobile\:pl-55 {
+  .mobile\:pl-11 {
     padding-left: 55px; }
-  .mobile\:pr-55 {
+  .mobile\:pr-11 {
     padding-right: 55px; }
-  .mobile\:mh-55 {
+  .mobile\:mh-11 {
     margin-left: 55px;
     margin-right: 55px; }
-  .mobile\:mv-55 {
+  .mobile\:mv-11 {
     margin-top: 55px;
     margin-bottom: 55px; }
-  .mobile\:mt-55 {
+  .mobile\:mt-11 {
     margin-top: 55px; }
-  .mobile\:mb-55 {
+  .mobile\:mb-11 {
     margin-bottom: 55px; }
-  .mobile\:ml-55 {
+  .mobile\:ml-11 {
     margin-left: 55px; }
-  .mobile\:mr-55 {
+  .mobile\:mr-11 {
     margin-right: 55px; } }
 
-.ph-60 {
+.ph-12 {
   padding-left: 60px;
   padding-right: 60px; }
 
-.pv-60 {
+.pv-12 {
   padding-top: 60px;
   padding-bottom: 60px; }
 
-.pt-60 {
+.pt-12 {
   padding-top: 60px; }
 
-.pb-60 {
+.pb-12 {
   padding-bottom: 60px; }
 
-.pl-60 {
+.pl-12 {
   padding-left: 60px; }
 
-.pr-60 {
+.pr-12 {
   padding-right: 60px; }
 
-.mh-60 {
+.mh-12 {
   margin-left: 60px;
   margin-right: 60px; }
 
-.mv-60 {
+.mv-12 {
   margin-top: 60px;
   margin-bottom: 60px; }
 
-.mt-60 {
+.mt-12 {
   margin-top: 60px; }
 
-.mb-60 {
+.mb-12 {
   margin-bottom: 60px; }
 
-.ml-60 {
+.ml-12 {
   margin-left: 60px; }
 
-.mr-60 {
+.mr-12 {
   margin-right: 60px; }
 
 @media (min-width: 992px) {
-  .desktop\:ph-60 {
+  .desktop\:ph-12 {
     padding-left: 60px;
     padding-right: 60px; }
-  .desktop\:pv-60 {
+  .desktop\:pv-12 {
     padding-top: 60px;
     padding-bottom: 60px; }
-  .desktop\:pt-60 {
+  .desktop\:pt-12 {
     padding-top: 60px; }
-  .desktop\:pb-60 {
+  .desktop\:pb-12 {
     padding-bottom: 60px; }
-  .desktop\:pl-60 {
+  .desktop\:pl-12 {
     padding-left: 60px; }
-  .desktop\:pr-60 {
+  .desktop\:pr-12 {
     padding-right: 60px; }
-  .desktop\:mh-60 {
+  .desktop\:mh-12 {
     margin-left: 60px;
     margin-right: 60px; }
-  .desktop\:mv-60 {
+  .desktop\:mv-12 {
     margin-top: 60px;
     margin-bottom: 60px; }
-  .desktop\:mt-60 {
+  .desktop\:mt-12 {
     margin-top: 60px; }
-  .desktop\:mb-60 {
+  .desktop\:mb-12 {
     margin-bottom: 60px; }
-  .desktop\:ml-60 {
+  .desktop\:ml-12 {
     margin-left: 60px; }
-  .desktop\:mr-60 {
+  .desktop\:mr-12 {
     margin-right: 60px; } }
 
 @media (max-width: 991px) {
-  .mobile\:ph-60 {
+  .mobile\:ph-12 {
     padding-left: 60px;
     padding-right: 60px; }
-  .mobile\:pv-60 {
+  .mobile\:pv-12 {
     padding-top: 60px;
     padding-bottom: 60px; }
-  .mobile\:pt-60 {
+  .mobile\:pt-12 {
     padding-top: 60px; }
-  .mobile\:pb-60 {
+  .mobile\:pb-12 {
     padding-bottom: 60px; }
-  .mobile\:pl-60 {
+  .mobile\:pl-12 {
     padding-left: 60px; }
-  .mobile\:pr-60 {
+  .mobile\:pr-12 {
     padding-right: 60px; }
-  .mobile\:mh-60 {
+  .mobile\:mh-12 {
     margin-left: 60px;
     margin-right: 60px; }
-  .mobile\:mv-60 {
+  .mobile\:mv-12 {
     margin-top: 60px;
     margin-bottom: 60px; }
-  .mobile\:mt-60 {
+  .mobile\:mt-12 {
     margin-top: 60px; }
-  .mobile\:mb-60 {
+  .mobile\:mb-12 {
     margin-bottom: 60px; }
-  .mobile\:ml-60 {
+  .mobile\:ml-12 {
     margin-left: 60px; }
-  .mobile\:mr-60 {
+  .mobile\:mr-12 {
     margin-right: 60px; } }
 
-.ph-65 {
+.ph-13 {
   padding-left: 65px;
   padding-right: 65px; }
 
-.pv-65 {
+.pv-13 {
   padding-top: 65px;
   padding-bottom: 65px; }
 
-.pt-65 {
+.pt-13 {
   padding-top: 65px; }
 
-.pb-65 {
+.pb-13 {
   padding-bottom: 65px; }
 
-.pl-65 {
+.pl-13 {
   padding-left: 65px; }
 
-.pr-65 {
+.pr-13 {
   padding-right: 65px; }
 
-.mh-65 {
+.mh-13 {
   margin-left: 65px;
   margin-right: 65px; }
 
-.mv-65 {
+.mv-13 {
   margin-top: 65px;
   margin-bottom: 65px; }
 
-.mt-65 {
+.mt-13 {
   margin-top: 65px; }
 
-.mb-65 {
+.mb-13 {
   margin-bottom: 65px; }
 
-.ml-65 {
+.ml-13 {
   margin-left: 65px; }
 
-.mr-65 {
+.mr-13 {
   margin-right: 65px; }
 
 @media (min-width: 992px) {
-  .desktop\:ph-65 {
+  .desktop\:ph-13 {
     padding-left: 65px;
     padding-right: 65px; }
-  .desktop\:pv-65 {
+  .desktop\:pv-13 {
     padding-top: 65px;
     padding-bottom: 65px; }
-  .desktop\:pt-65 {
+  .desktop\:pt-13 {
     padding-top: 65px; }
-  .desktop\:pb-65 {
+  .desktop\:pb-13 {
     padding-bottom: 65px; }
-  .desktop\:pl-65 {
+  .desktop\:pl-13 {
     padding-left: 65px; }
-  .desktop\:pr-65 {
+  .desktop\:pr-13 {
     padding-right: 65px; }
-  .desktop\:mh-65 {
+  .desktop\:mh-13 {
     margin-left: 65px;
     margin-right: 65px; }
-  .desktop\:mv-65 {
+  .desktop\:mv-13 {
     margin-top: 65px;
     margin-bottom: 65px; }
-  .desktop\:mt-65 {
+  .desktop\:mt-13 {
     margin-top: 65px; }
-  .desktop\:mb-65 {
+  .desktop\:mb-13 {
     margin-bottom: 65px; }
-  .desktop\:ml-65 {
+  .desktop\:ml-13 {
     margin-left: 65px; }
-  .desktop\:mr-65 {
+  .desktop\:mr-13 {
     margin-right: 65px; } }
 
 @media (max-width: 991px) {
-  .mobile\:ph-65 {
+  .mobile\:ph-13 {
     padding-left: 65px;
     padding-right: 65px; }
-  .mobile\:pv-65 {
+  .mobile\:pv-13 {
     padding-top: 65px;
     padding-bottom: 65px; }
-  .mobile\:pt-65 {
+  .mobile\:pt-13 {
     padding-top: 65px; }
-  .mobile\:pb-65 {
+  .mobile\:pb-13 {
     padding-bottom: 65px; }
-  .mobile\:pl-65 {
+  .mobile\:pl-13 {
     padding-left: 65px; }
-  .mobile\:pr-65 {
+  .mobile\:pr-13 {
     padding-right: 65px; }
-  .mobile\:mh-65 {
+  .mobile\:mh-13 {
     margin-left: 65px;
     margin-right: 65px; }
-  .mobile\:mv-65 {
+  .mobile\:mv-13 {
     margin-top: 65px;
     margin-bottom: 65px; }
-  .mobile\:mt-65 {
+  .mobile\:mt-13 {
     margin-top: 65px; }
-  .mobile\:mb-65 {
+  .mobile\:mb-13 {
     margin-bottom: 65px; }
-  .mobile\:ml-65 {
+  .mobile\:ml-13 {
     margin-left: 65px; }
-  .mobile\:mr-65 {
+  .mobile\:mr-13 {
     margin-right: 65px; } }
 
-.ph-70 {
+.ph-14 {
   padding-left: 70px;
   padding-right: 70px; }
 
-.pv-70 {
+.pv-14 {
   padding-top: 70px;
   padding-bottom: 70px; }
 
-.pt-70 {
+.pt-14 {
   padding-top: 70px; }
 
-.pb-70 {
+.pb-14 {
   padding-bottom: 70px; }
 
-.pl-70 {
+.pl-14 {
   padding-left: 70px; }
 
-.pr-70 {
+.pr-14 {
   padding-right: 70px; }
 
-.mh-70 {
+.mh-14 {
   margin-left: 70px;
   margin-right: 70px; }
 
-.mv-70 {
+.mv-14 {
   margin-top: 70px;
   margin-bottom: 70px; }
 
-.mt-70 {
+.mt-14 {
   margin-top: 70px; }
 
-.mb-70 {
+.mb-14 {
   margin-bottom: 70px; }
 
-.ml-70 {
+.ml-14 {
   margin-left: 70px; }
 
-.mr-70 {
+.mr-14 {
   margin-right: 70px; }
 
 @media (min-width: 992px) {
-  .desktop\:ph-70 {
+  .desktop\:ph-14 {
     padding-left: 70px;
     padding-right: 70px; }
-  .desktop\:pv-70 {
+  .desktop\:pv-14 {
     padding-top: 70px;
     padding-bottom: 70px; }
-  .desktop\:pt-70 {
+  .desktop\:pt-14 {
     padding-top: 70px; }
-  .desktop\:pb-70 {
+  .desktop\:pb-14 {
     padding-bottom: 70px; }
-  .desktop\:pl-70 {
+  .desktop\:pl-14 {
     padding-left: 70px; }
-  .desktop\:pr-70 {
+  .desktop\:pr-14 {
     padding-right: 70px; }
-  .desktop\:mh-70 {
+  .desktop\:mh-14 {
     margin-left: 70px;
     margin-right: 70px; }
-  .desktop\:mv-70 {
+  .desktop\:mv-14 {
     margin-top: 70px;
     margin-bottom: 70px; }
-  .desktop\:mt-70 {
+  .desktop\:mt-14 {
     margin-top: 70px; }
-  .desktop\:mb-70 {
+  .desktop\:mb-14 {
     margin-bottom: 70px; }
-  .desktop\:ml-70 {
+  .desktop\:ml-14 {
     margin-left: 70px; }
-  .desktop\:mr-70 {
+  .desktop\:mr-14 {
     margin-right: 70px; } }
 
 @media (max-width: 991px) {
-  .mobile\:ph-70 {
+  .mobile\:ph-14 {
     padding-left: 70px;
     padding-right: 70px; }
-  .mobile\:pv-70 {
+  .mobile\:pv-14 {
     padding-top: 70px;
     padding-bottom: 70px; }
-  .mobile\:pt-70 {
+  .mobile\:pt-14 {
     padding-top: 70px; }
-  .mobile\:pb-70 {
+  .mobile\:pb-14 {
     padding-bottom: 70px; }
-  .mobile\:pl-70 {
+  .mobile\:pl-14 {
     padding-left: 70px; }
-  .mobile\:pr-70 {
+  .mobile\:pr-14 {
     padding-right: 70px; }
-  .mobile\:mh-70 {
+  .mobile\:mh-14 {
     margin-left: 70px;
     margin-right: 70px; }
-  .mobile\:mv-70 {
+  .mobile\:mv-14 {
     margin-top: 70px;
     margin-bottom: 70px; }
-  .mobile\:mt-70 {
+  .mobile\:mt-14 {
     margin-top: 70px; }
-  .mobile\:mb-70 {
+  .mobile\:mb-14 {
     margin-bottom: 70px; }
-  .mobile\:ml-70 {
+  .mobile\:ml-14 {
     margin-left: 70px; }
-  .mobile\:mr-70 {
+  .mobile\:mr-14 {
     margin-right: 70px; } }
 
-.ph-75 {
+.ph-15 {
   padding-left: 75px;
   padding-right: 75px; }
 
-.pv-75 {
+.pv-15 {
   padding-top: 75px;
   padding-bottom: 75px; }
 
-.pt-75 {
+.pt-15 {
   padding-top: 75px; }
 
-.pb-75 {
+.pb-15 {
   padding-bottom: 75px; }
 
-.pl-75 {
+.pl-15 {
   padding-left: 75px; }
 
-.pr-75 {
+.pr-15 {
   padding-right: 75px; }
 
-.mh-75 {
+.mh-15 {
   margin-left: 75px;
   margin-right: 75px; }
 
-.mv-75 {
+.mv-15 {
   margin-top: 75px;
   margin-bottom: 75px; }
 
-.mt-75 {
+.mt-15 {
   margin-top: 75px; }
 
-.mb-75 {
+.mb-15 {
   margin-bottom: 75px; }
 
-.ml-75 {
+.ml-15 {
   margin-left: 75px; }
 
-.mr-75 {
+.mr-15 {
   margin-right: 75px; }
 
 @media (min-width: 992px) {
-  .desktop\:ph-75 {
+  .desktop\:ph-15 {
     padding-left: 75px;
     padding-right: 75px; }
-  .desktop\:pv-75 {
+  .desktop\:pv-15 {
     padding-top: 75px;
     padding-bottom: 75px; }
-  .desktop\:pt-75 {
+  .desktop\:pt-15 {
     padding-top: 75px; }
-  .desktop\:pb-75 {
+  .desktop\:pb-15 {
     padding-bottom: 75px; }
-  .desktop\:pl-75 {
+  .desktop\:pl-15 {
     padding-left: 75px; }
-  .desktop\:pr-75 {
+  .desktop\:pr-15 {
     padding-right: 75px; }
-  .desktop\:mh-75 {
+  .desktop\:mh-15 {
     margin-left: 75px;
     margin-right: 75px; }
-  .desktop\:mv-75 {
+  .desktop\:mv-15 {
     margin-top: 75px;
     margin-bottom: 75px; }
-  .desktop\:mt-75 {
+  .desktop\:mt-15 {
     margin-top: 75px; }
-  .desktop\:mb-75 {
+  .desktop\:mb-15 {
     margin-bottom: 75px; }
-  .desktop\:ml-75 {
+  .desktop\:ml-15 {
     margin-left: 75px; }
-  .desktop\:mr-75 {
+  .desktop\:mr-15 {
     margin-right: 75px; } }
 
 @media (max-width: 991px) {
-  .mobile\:ph-75 {
+  .mobile\:ph-15 {
     padding-left: 75px;
     padding-right: 75px; }
-  .mobile\:pv-75 {
+  .mobile\:pv-15 {
     padding-top: 75px;
     padding-bottom: 75px; }
-  .mobile\:pt-75 {
+  .mobile\:pt-15 {
     padding-top: 75px; }
-  .mobile\:pb-75 {
+  .mobile\:pb-15 {
     padding-bottom: 75px; }
-  .mobile\:pl-75 {
+  .mobile\:pl-15 {
     padding-left: 75px; }
-  .mobile\:pr-75 {
+  .mobile\:pr-15 {
     padding-right: 75px; }
-  .mobile\:mh-75 {
+  .mobile\:mh-15 {
     margin-left: 75px;
     margin-right: 75px; }
-  .mobile\:mv-75 {
+  .mobile\:mv-15 {
     margin-top: 75px;
     margin-bottom: 75px; }
-  .mobile\:mt-75 {
+  .mobile\:mt-15 {
     margin-top: 75px; }
-  .mobile\:mb-75 {
+  .mobile\:mb-15 {
     margin-bottom: 75px; }
-  .mobile\:ml-75 {
+  .mobile\:ml-15 {
     margin-left: 75px; }
-  .mobile\:mr-75 {
+  .mobile\:mr-15 {
     margin-right: 75px; } }
 
-.ph-80 {
+.ph-16 {
   padding-left: 80px;
   padding-right: 80px; }
 
-.pv-80 {
+.pv-16 {
   padding-top: 80px;
   padding-bottom: 80px; }
 
-.pt-80 {
+.pt-16 {
   padding-top: 80px; }
 
-.pb-80 {
+.pb-16 {
   padding-bottom: 80px; }
 
-.pl-80 {
+.pl-16 {
   padding-left: 80px; }
 
-.pr-80 {
+.pr-16 {
   padding-right: 80px; }
 
-.mh-80 {
+.mh-16 {
   margin-left: 80px;
   margin-right: 80px; }
 
-.mv-80 {
+.mv-16 {
   margin-top: 80px;
   margin-bottom: 80px; }
 
-.mt-80 {
+.mt-16 {
   margin-top: 80px; }
 
-.mb-80 {
+.mb-16 {
   margin-bottom: 80px; }
 
-.ml-80 {
+.ml-16 {
   margin-left: 80px; }
 
-.mr-80 {
+.mr-16 {
   margin-right: 80px; }
 
 @media (min-width: 992px) {
-  .desktop\:ph-80 {
+  .desktop\:ph-16 {
     padding-left: 80px;
     padding-right: 80px; }
-  .desktop\:pv-80 {
+  .desktop\:pv-16 {
     padding-top: 80px;
     padding-bottom: 80px; }
-  .desktop\:pt-80 {
+  .desktop\:pt-16 {
     padding-top: 80px; }
-  .desktop\:pb-80 {
+  .desktop\:pb-16 {
     padding-bottom: 80px; }
-  .desktop\:pl-80 {
+  .desktop\:pl-16 {
     padding-left: 80px; }
-  .desktop\:pr-80 {
+  .desktop\:pr-16 {
     padding-right: 80px; }
-  .desktop\:mh-80 {
+  .desktop\:mh-16 {
     margin-left: 80px;
     margin-right: 80px; }
-  .desktop\:mv-80 {
+  .desktop\:mv-16 {
     margin-top: 80px;
     margin-bottom: 80px; }
-  .desktop\:mt-80 {
+  .desktop\:mt-16 {
     margin-top: 80px; }
-  .desktop\:mb-80 {
+  .desktop\:mb-16 {
     margin-bottom: 80px; }
-  .desktop\:ml-80 {
+  .desktop\:ml-16 {
     margin-left: 80px; }
-  .desktop\:mr-80 {
+  .desktop\:mr-16 {
     margin-right: 80px; } }
 
 @media (max-width: 991px) {
-  .mobile\:ph-80 {
+  .mobile\:ph-16 {
     padding-left: 80px;
     padding-right: 80px; }
-  .mobile\:pv-80 {
+  .mobile\:pv-16 {
     padding-top: 80px;
     padding-bottom: 80px; }
-  .mobile\:pt-80 {
+  .mobile\:pt-16 {
     padding-top: 80px; }
-  .mobile\:pb-80 {
+  .mobile\:pb-16 {
     padding-bottom: 80px; }
-  .mobile\:pl-80 {
+  .mobile\:pl-16 {
     padding-left: 80px; }
-  .mobile\:pr-80 {
+  .mobile\:pr-16 {
     padding-right: 80px; }
-  .mobile\:mh-80 {
+  .mobile\:mh-16 {
     margin-left: 80px;
     margin-right: 80px; }
-  .mobile\:mv-80 {
+  .mobile\:mv-16 {
     margin-top: 80px;
     margin-bottom: 80px; }
-  .mobile\:mt-80 {
+  .mobile\:mt-16 {
     margin-top: 80px; }
-  .mobile\:mb-80 {
+  .mobile\:mb-16 {
     margin-bottom: 80px; }
-  .mobile\:ml-80 {
+  .mobile\:ml-16 {
     margin-left: 80px; }
-  .mobile\:mr-80 {
+  .mobile\:mr-16 {
     margin-right: 80px; } }
 
-.ph-85 {
+.ph-17 {
   padding-left: 85px;
   padding-right: 85px; }
 
-.pv-85 {
+.pv-17 {
   padding-top: 85px;
   padding-bottom: 85px; }
 
-.pt-85 {
+.pt-17 {
   padding-top: 85px; }
 
-.pb-85 {
+.pb-17 {
   padding-bottom: 85px; }
 
-.pl-85 {
+.pl-17 {
   padding-left: 85px; }
 
-.pr-85 {
+.pr-17 {
   padding-right: 85px; }
 
-.mh-85 {
+.mh-17 {
   margin-left: 85px;
   margin-right: 85px; }
 
-.mv-85 {
+.mv-17 {
   margin-top: 85px;
   margin-bottom: 85px; }
 
-.mt-85 {
+.mt-17 {
   margin-top: 85px; }
 
-.mb-85 {
+.mb-17 {
   margin-bottom: 85px; }
 
-.ml-85 {
+.ml-17 {
   margin-left: 85px; }
 
-.mr-85 {
+.mr-17 {
   margin-right: 85px; }
 
 @media (min-width: 992px) {
-  .desktop\:ph-85 {
+  .desktop\:ph-17 {
     padding-left: 85px;
     padding-right: 85px; }
-  .desktop\:pv-85 {
+  .desktop\:pv-17 {
     padding-top: 85px;
     padding-bottom: 85px; }
-  .desktop\:pt-85 {
+  .desktop\:pt-17 {
     padding-top: 85px; }
-  .desktop\:pb-85 {
+  .desktop\:pb-17 {
     padding-bottom: 85px; }
-  .desktop\:pl-85 {
+  .desktop\:pl-17 {
     padding-left: 85px; }
-  .desktop\:pr-85 {
+  .desktop\:pr-17 {
     padding-right: 85px; }
-  .desktop\:mh-85 {
+  .desktop\:mh-17 {
     margin-left: 85px;
     margin-right: 85px; }
-  .desktop\:mv-85 {
+  .desktop\:mv-17 {
     margin-top: 85px;
     margin-bottom: 85px; }
-  .desktop\:mt-85 {
+  .desktop\:mt-17 {
     margin-top: 85px; }
-  .desktop\:mb-85 {
+  .desktop\:mb-17 {
     margin-bottom: 85px; }
-  .desktop\:ml-85 {
+  .desktop\:ml-17 {
     margin-left: 85px; }
-  .desktop\:mr-85 {
+  .desktop\:mr-17 {
     margin-right: 85px; } }
 
 @media (max-width: 991px) {
-  .mobile\:ph-85 {
+  .mobile\:ph-17 {
     padding-left: 85px;
     padding-right: 85px; }
-  .mobile\:pv-85 {
+  .mobile\:pv-17 {
     padding-top: 85px;
     padding-bottom: 85px; }
-  .mobile\:pt-85 {
+  .mobile\:pt-17 {
     padding-top: 85px; }
-  .mobile\:pb-85 {
+  .mobile\:pb-17 {
     padding-bottom: 85px; }
-  .mobile\:pl-85 {
+  .mobile\:pl-17 {
     padding-left: 85px; }
-  .mobile\:pr-85 {
+  .mobile\:pr-17 {
     padding-right: 85px; }
-  .mobile\:mh-85 {
+  .mobile\:mh-17 {
     margin-left: 85px;
     margin-right: 85px; }
-  .mobile\:mv-85 {
+  .mobile\:mv-17 {
     margin-top: 85px;
     margin-bottom: 85px; }
-  .mobile\:mt-85 {
+  .mobile\:mt-17 {
     margin-top: 85px; }
-  .mobile\:mb-85 {
+  .mobile\:mb-17 {
     margin-bottom: 85px; }
-  .mobile\:ml-85 {
+  .mobile\:ml-17 {
     margin-left: 85px; }
-  .mobile\:mr-85 {
+  .mobile\:mr-17 {
     margin-right: 85px; } }
 
-.ph-90 {
+.ph-18 {
   padding-left: 90px;
   padding-right: 90px; }
 
-.pv-90 {
+.pv-18 {
   padding-top: 90px;
   padding-bottom: 90px; }
 
-.pt-90 {
+.pt-18 {
   padding-top: 90px; }
 
-.pb-90 {
+.pb-18 {
   padding-bottom: 90px; }
 
-.pl-90 {
+.pl-18 {
   padding-left: 90px; }
 
-.pr-90 {
+.pr-18 {
   padding-right: 90px; }
 
-.mh-90 {
+.mh-18 {
   margin-left: 90px;
   margin-right: 90px; }
 
-.mv-90 {
+.mv-18 {
   margin-top: 90px;
   margin-bottom: 90px; }
 
-.mt-90 {
+.mt-18 {
   margin-top: 90px; }
 
-.mb-90 {
+.mb-18 {
   margin-bottom: 90px; }
 
-.ml-90 {
+.ml-18 {
   margin-left: 90px; }
 
-.mr-90 {
+.mr-18 {
   margin-right: 90px; }
 
 @media (min-width: 992px) {
-  .desktop\:ph-90 {
+  .desktop\:ph-18 {
     padding-left: 90px;
     padding-right: 90px; }
-  .desktop\:pv-90 {
+  .desktop\:pv-18 {
     padding-top: 90px;
     padding-bottom: 90px; }
-  .desktop\:pt-90 {
+  .desktop\:pt-18 {
     padding-top: 90px; }
-  .desktop\:pb-90 {
+  .desktop\:pb-18 {
     padding-bottom: 90px; }
-  .desktop\:pl-90 {
+  .desktop\:pl-18 {
     padding-left: 90px; }
-  .desktop\:pr-90 {
+  .desktop\:pr-18 {
     padding-right: 90px; }
-  .desktop\:mh-90 {
+  .desktop\:mh-18 {
     margin-left: 90px;
     margin-right: 90px; }
-  .desktop\:mv-90 {
+  .desktop\:mv-18 {
     margin-top: 90px;
     margin-bottom: 90px; }
-  .desktop\:mt-90 {
+  .desktop\:mt-18 {
     margin-top: 90px; }
-  .desktop\:mb-90 {
+  .desktop\:mb-18 {
     margin-bottom: 90px; }
-  .desktop\:ml-90 {
+  .desktop\:ml-18 {
     margin-left: 90px; }
-  .desktop\:mr-90 {
+  .desktop\:mr-18 {
     margin-right: 90px; } }
 
 @media (max-width: 991px) {
-  .mobile\:ph-90 {
+  .mobile\:ph-18 {
     padding-left: 90px;
     padding-right: 90px; }
-  .mobile\:pv-90 {
+  .mobile\:pv-18 {
     padding-top: 90px;
     padding-bottom: 90px; }
-  .mobile\:pt-90 {
+  .mobile\:pt-18 {
     padding-top: 90px; }
-  .mobile\:pb-90 {
+  .mobile\:pb-18 {
     padding-bottom: 90px; }
-  .mobile\:pl-90 {
+  .mobile\:pl-18 {
     padding-left: 90px; }
-  .mobile\:pr-90 {
+  .mobile\:pr-18 {
     padding-right: 90px; }
-  .mobile\:mh-90 {
+  .mobile\:mh-18 {
     margin-left: 90px;
     margin-right: 90px; }
-  .mobile\:mv-90 {
+  .mobile\:mv-18 {
     margin-top: 90px;
     margin-bottom: 90px; }
-  .mobile\:mt-90 {
+  .mobile\:mt-18 {
     margin-top: 90px; }
-  .mobile\:mb-90 {
+  .mobile\:mb-18 {
     margin-bottom: 90px; }
-  .mobile\:ml-90 {
+  .mobile\:ml-18 {
     margin-left: 90px; }
-  .mobile\:mr-90 {
+  .mobile\:mr-18 {
     margin-right: 90px; } }
 
-.ph-95 {
+.ph-19 {
   padding-left: 95px;
   padding-right: 95px; }
 
-.pv-95 {
+.pv-19 {
   padding-top: 95px;
   padding-bottom: 95px; }
 
-.pt-95 {
+.pt-19 {
   padding-top: 95px; }
 
-.pb-95 {
+.pb-19 {
   padding-bottom: 95px; }
 
-.pl-95 {
+.pl-19 {
   padding-left: 95px; }
 
-.pr-95 {
+.pr-19 {
   padding-right: 95px; }
 
-.mh-95 {
+.mh-19 {
   margin-left: 95px;
   margin-right: 95px; }
 
-.mv-95 {
+.mv-19 {
   margin-top: 95px;
   margin-bottom: 95px; }
 
-.mt-95 {
+.mt-19 {
   margin-top: 95px; }
 
-.mb-95 {
+.mb-19 {
   margin-bottom: 95px; }
 
-.ml-95 {
+.ml-19 {
   margin-left: 95px; }
 
-.mr-95 {
+.mr-19 {
   margin-right: 95px; }
 
 @media (min-width: 992px) {
-  .desktop\:ph-95 {
+  .desktop\:ph-19 {
     padding-left: 95px;
     padding-right: 95px; }
-  .desktop\:pv-95 {
+  .desktop\:pv-19 {
     padding-top: 95px;
     padding-bottom: 95px; }
-  .desktop\:pt-95 {
+  .desktop\:pt-19 {
     padding-top: 95px; }
-  .desktop\:pb-95 {
+  .desktop\:pb-19 {
     padding-bottom: 95px; }
-  .desktop\:pl-95 {
+  .desktop\:pl-19 {
     padding-left: 95px; }
-  .desktop\:pr-95 {
+  .desktop\:pr-19 {
     padding-right: 95px; }
-  .desktop\:mh-95 {
+  .desktop\:mh-19 {
     margin-left: 95px;
     margin-right: 95px; }
-  .desktop\:mv-95 {
+  .desktop\:mv-19 {
     margin-top: 95px;
     margin-bottom: 95px; }
-  .desktop\:mt-95 {
+  .desktop\:mt-19 {
     margin-top: 95px; }
-  .desktop\:mb-95 {
+  .desktop\:mb-19 {
     margin-bottom: 95px; }
-  .desktop\:ml-95 {
+  .desktop\:ml-19 {
     margin-left: 95px; }
-  .desktop\:mr-95 {
+  .desktop\:mr-19 {
     margin-right: 95px; } }
 
 @media (max-width: 991px) {
-  .mobile\:ph-95 {
+  .mobile\:ph-19 {
     padding-left: 95px;
     padding-right: 95px; }
-  .mobile\:pv-95 {
+  .mobile\:pv-19 {
     padding-top: 95px;
     padding-bottom: 95px; }
-  .mobile\:pt-95 {
+  .mobile\:pt-19 {
     padding-top: 95px; }
-  .mobile\:pb-95 {
+  .mobile\:pb-19 {
     padding-bottom: 95px; }
-  .mobile\:pl-95 {
+  .mobile\:pl-19 {
     padding-left: 95px; }
-  .mobile\:pr-95 {
+  .mobile\:pr-19 {
     padding-right: 95px; }
-  .mobile\:mh-95 {
+  .mobile\:mh-19 {
     margin-left: 95px;
     margin-right: 95px; }
-  .mobile\:mv-95 {
+  .mobile\:mv-19 {
     margin-top: 95px;
     margin-bottom: 95px; }
-  .mobile\:mt-95 {
+  .mobile\:mt-19 {
     margin-top: 95px; }
-  .mobile\:mb-95 {
+  .mobile\:mb-19 {
     margin-bottom: 95px; }
-  .mobile\:ml-95 {
+  .mobile\:ml-19 {
     margin-left: 95px; }
-  .mobile\:mr-95 {
+  .mobile\:mr-19 {
     margin-right: 95px; } }
 
-.ph-100 {
+.ph-20 {
   padding-left: 100px;
   padding-right: 100px; }
 
-.pv-100 {
+.pv-20 {
   padding-top: 100px;
   padding-bottom: 100px; }
 
-.pt-100 {
+.pt-20 {
   padding-top: 100px; }
 
-.pb-100 {
+.pb-20 {
   padding-bottom: 100px; }
 
-.pl-100 {
+.pl-20 {
   padding-left: 100px; }
 
-.pr-100 {
+.pr-20 {
   padding-right: 100px; }
 
-.mh-100 {
+.mh-20 {
   margin-left: 100px;
   margin-right: 100px; }
 
-.mv-100 {
+.mv-20 {
   margin-top: 100px;
   margin-bottom: 100px; }
 
-.mt-100 {
+.mt-20 {
   margin-top: 100px; }
 
-.mb-100 {
+.mb-20 {
   margin-bottom: 100px; }
 
-.ml-100 {
+.ml-20 {
   margin-left: 100px; }
 
-.mr-100 {
+.mr-20 {
   margin-right: 100px; }
 
 @media (min-width: 992px) {
-  .desktop\:ph-100 {
+  .desktop\:ph-20 {
     padding-left: 100px;
     padding-right: 100px; }
-  .desktop\:pv-100 {
+  .desktop\:pv-20 {
     padding-top: 100px;
     padding-bottom: 100px; }
-  .desktop\:pt-100 {
+  .desktop\:pt-20 {
     padding-top: 100px; }
-  .desktop\:pb-100 {
+  .desktop\:pb-20 {
     padding-bottom: 100px; }
-  .desktop\:pl-100 {
+  .desktop\:pl-20 {
     padding-left: 100px; }
-  .desktop\:pr-100 {
+  .desktop\:pr-20 {
     padding-right: 100px; }
-  .desktop\:mh-100 {
+  .desktop\:mh-20 {
     margin-left: 100px;
     margin-right: 100px; }
-  .desktop\:mv-100 {
+  .desktop\:mv-20 {
     margin-top: 100px;
     margin-bottom: 100px; }
-  .desktop\:mt-100 {
+  .desktop\:mt-20 {
     margin-top: 100px; }
-  .desktop\:mb-100 {
+  .desktop\:mb-20 {
     margin-bottom: 100px; }
-  .desktop\:ml-100 {
+  .desktop\:ml-20 {
     margin-left: 100px; }
-  .desktop\:mr-100 {
+  .desktop\:mr-20 {
     margin-right: 100px; } }
 
 @media (max-width: 991px) {
-  .mobile\:ph-100 {
+  .mobile\:ph-20 {
     padding-left: 100px;
     padding-right: 100px; }
-  .mobile\:pv-100 {
+  .mobile\:pv-20 {
     padding-top: 100px;
     padding-bottom: 100px; }
-  .mobile\:pt-100 {
+  .mobile\:pt-20 {
     padding-top: 100px; }
-  .mobile\:pb-100 {
+  .mobile\:pb-20 {
     padding-bottom: 100px; }
-  .mobile\:pl-100 {
+  .mobile\:pl-20 {
     padding-left: 100px; }
-  .mobile\:pr-100 {
+  .mobile\:pr-20 {
     padding-right: 100px; }
-  .mobile\:mh-100 {
+  .mobile\:mh-20 {
     margin-left: 100px;
     margin-right: 100px; }
-  .mobile\:mv-100 {
+  .mobile\:mv-20 {
     margin-top: 100px;
     margin-bottom: 100px; }
-  .mobile\:mt-100 {
+  .mobile\:mt-20 {
     margin-top: 100px; }
-  .mobile\:mb-100 {
+  .mobile\:mb-20 {
     margin-bottom: 100px; }
-  .mobile\:ml-100 {
+  .mobile\:ml-20 {
     margin-left: 100px; }
-  .mobile\:mr-100 {
+  .mobile\:mr-20 {
     margin-right: 100px; } }
 
-.ph-105 {
+.ph-21 {
   padding-left: 105px;
   padding-right: 105px; }
 
-.pv-105 {
+.pv-21 {
   padding-top: 105px;
   padding-bottom: 105px; }
 
-.pt-105 {
+.pt-21 {
   padding-top: 105px; }
 
-.pb-105 {
+.pb-21 {
   padding-bottom: 105px; }
 
-.pl-105 {
+.pl-21 {
   padding-left: 105px; }
 
-.pr-105 {
+.pr-21 {
   padding-right: 105px; }
 
-.mh-105 {
+.mh-21 {
   margin-left: 105px;
   margin-right: 105px; }
 
-.mv-105 {
+.mv-21 {
   margin-top: 105px;
   margin-bottom: 105px; }
 
-.mt-105 {
+.mt-21 {
   margin-top: 105px; }
 
-.mb-105 {
+.mb-21 {
   margin-bottom: 105px; }
 
-.ml-105 {
+.ml-21 {
   margin-left: 105px; }
 
-.mr-105 {
+.mr-21 {
   margin-right: 105px; }
 
 @media (min-width: 992px) {
-  .desktop\:ph-105 {
+  .desktop\:ph-21 {
     padding-left: 105px;
     padding-right: 105px; }
-  .desktop\:pv-105 {
+  .desktop\:pv-21 {
     padding-top: 105px;
     padding-bottom: 105px; }
-  .desktop\:pt-105 {
+  .desktop\:pt-21 {
     padding-top: 105px; }
-  .desktop\:pb-105 {
+  .desktop\:pb-21 {
     padding-bottom: 105px; }
-  .desktop\:pl-105 {
+  .desktop\:pl-21 {
     padding-left: 105px; }
-  .desktop\:pr-105 {
+  .desktop\:pr-21 {
     padding-right: 105px; }
-  .desktop\:mh-105 {
+  .desktop\:mh-21 {
     margin-left: 105px;
     margin-right: 105px; }
-  .desktop\:mv-105 {
+  .desktop\:mv-21 {
     margin-top: 105px;
     margin-bottom: 105px; }
-  .desktop\:mt-105 {
+  .desktop\:mt-21 {
     margin-top: 105px; }
-  .desktop\:mb-105 {
+  .desktop\:mb-21 {
     margin-bottom: 105px; }
-  .desktop\:ml-105 {
+  .desktop\:ml-21 {
     margin-left: 105px; }
-  .desktop\:mr-105 {
+  .desktop\:mr-21 {
     margin-right: 105px; } }
 
 @media (max-width: 991px) {
-  .mobile\:ph-105 {
+  .mobile\:ph-21 {
     padding-left: 105px;
     padding-right: 105px; }
-  .mobile\:pv-105 {
+  .mobile\:pv-21 {
     padding-top: 105px;
     padding-bottom: 105px; }
-  .mobile\:pt-105 {
+  .mobile\:pt-21 {
     padding-top: 105px; }
-  .mobile\:pb-105 {
+  .mobile\:pb-21 {
     padding-bottom: 105px; }
-  .mobile\:pl-105 {
+  .mobile\:pl-21 {
     padding-left: 105px; }
-  .mobile\:pr-105 {
+  .mobile\:pr-21 {
     padding-right: 105px; }
-  .mobile\:mh-105 {
+  .mobile\:mh-21 {
     margin-left: 105px;
     margin-right: 105px; }
-  .mobile\:mv-105 {
+  .mobile\:mv-21 {
     margin-top: 105px;
     margin-bottom: 105px; }
-  .mobile\:mt-105 {
+  .mobile\:mt-21 {
     margin-top: 105px; }
-  .mobile\:mb-105 {
+  .mobile\:mb-21 {
     margin-bottom: 105px; }
-  .mobile\:ml-105 {
+  .mobile\:ml-21 {
     margin-left: 105px; }
-  .mobile\:mr-105 {
+  .mobile\:mr-21 {
     margin-right: 105px; } }
 
-.ph-110 {
+.ph-22 {
   padding-left: 110px;
   padding-right: 110px; }
 
-.pv-110 {
+.pv-22 {
   padding-top: 110px;
   padding-bottom: 110px; }
 
-.pt-110 {
+.pt-22 {
   padding-top: 110px; }
 
-.pb-110 {
+.pb-22 {
   padding-bottom: 110px; }
 
-.pl-110 {
+.pl-22 {
   padding-left: 110px; }
 
-.pr-110 {
+.pr-22 {
   padding-right: 110px; }
 
-.mh-110 {
+.mh-22 {
   margin-left: 110px;
   margin-right: 110px; }
 
-.mv-110 {
+.mv-22 {
   margin-top: 110px;
   margin-bottom: 110px; }
 
-.mt-110 {
+.mt-22 {
   margin-top: 110px; }
 
-.mb-110 {
+.mb-22 {
   margin-bottom: 110px; }
 
-.ml-110 {
+.ml-22 {
   margin-left: 110px; }
 
-.mr-110 {
+.mr-22 {
   margin-right: 110px; }
 
 @media (min-width: 992px) {
-  .desktop\:ph-110 {
+  .desktop\:ph-22 {
     padding-left: 110px;
     padding-right: 110px; }
-  .desktop\:pv-110 {
+  .desktop\:pv-22 {
     padding-top: 110px;
     padding-bottom: 110px; }
-  .desktop\:pt-110 {
+  .desktop\:pt-22 {
     padding-top: 110px; }
-  .desktop\:pb-110 {
+  .desktop\:pb-22 {
     padding-bottom: 110px; }
-  .desktop\:pl-110 {
+  .desktop\:pl-22 {
     padding-left: 110px; }
-  .desktop\:pr-110 {
+  .desktop\:pr-22 {
     padding-right: 110px; }
-  .desktop\:mh-110 {
+  .desktop\:mh-22 {
     margin-left: 110px;
     margin-right: 110px; }
-  .desktop\:mv-110 {
+  .desktop\:mv-22 {
     margin-top: 110px;
     margin-bottom: 110px; }
-  .desktop\:mt-110 {
+  .desktop\:mt-22 {
     margin-top: 110px; }
-  .desktop\:mb-110 {
+  .desktop\:mb-22 {
     margin-bottom: 110px; }
-  .desktop\:ml-110 {
+  .desktop\:ml-22 {
     margin-left: 110px; }
-  .desktop\:mr-110 {
+  .desktop\:mr-22 {
     margin-right: 110px; } }
 
 @media (max-width: 991px) {
-  .mobile\:ph-110 {
+  .mobile\:ph-22 {
     padding-left: 110px;
     padding-right: 110px; }
-  .mobile\:pv-110 {
+  .mobile\:pv-22 {
     padding-top: 110px;
     padding-bottom: 110px; }
-  .mobile\:pt-110 {
+  .mobile\:pt-22 {
     padding-top: 110px; }
-  .mobile\:pb-110 {
+  .mobile\:pb-22 {
     padding-bottom: 110px; }
-  .mobile\:pl-110 {
+  .mobile\:pl-22 {
     padding-left: 110px; }
-  .mobile\:pr-110 {
+  .mobile\:pr-22 {
     padding-right: 110px; }
-  .mobile\:mh-110 {
+  .mobile\:mh-22 {
     margin-left: 110px;
     margin-right: 110px; }
-  .mobile\:mv-110 {
+  .mobile\:mv-22 {
     margin-top: 110px;
     margin-bottom: 110px; }
-  .mobile\:mt-110 {
+  .mobile\:mt-22 {
     margin-top: 110px; }
-  .mobile\:mb-110 {
+  .mobile\:mb-22 {
     margin-bottom: 110px; }
-  .mobile\:ml-110 {
+  .mobile\:ml-22 {
     margin-left: 110px; }
-  .mobile\:mr-110 {
+  .mobile\:mr-22 {
     margin-right: 110px; } }
 
-.ph-115 {
+.ph-23 {
   padding-left: 115px;
   padding-right: 115px; }
 
-.pv-115 {
+.pv-23 {
   padding-top: 115px;
   padding-bottom: 115px; }
 
-.pt-115 {
+.pt-23 {
   padding-top: 115px; }
 
-.pb-115 {
+.pb-23 {
   padding-bottom: 115px; }
 
-.pl-115 {
+.pl-23 {
   padding-left: 115px; }
 
-.pr-115 {
+.pr-23 {
   padding-right: 115px; }
 
-.mh-115 {
+.mh-23 {
   margin-left: 115px;
   margin-right: 115px; }
 
-.mv-115 {
+.mv-23 {
   margin-top: 115px;
   margin-bottom: 115px; }
 
-.mt-115 {
+.mt-23 {
   margin-top: 115px; }
 
-.mb-115 {
+.mb-23 {
   margin-bottom: 115px; }
 
-.ml-115 {
+.ml-23 {
   margin-left: 115px; }
 
-.mr-115 {
+.mr-23 {
   margin-right: 115px; }
 
 @media (min-width: 992px) {
-  .desktop\:ph-115 {
+  .desktop\:ph-23 {
     padding-left: 115px;
     padding-right: 115px; }
-  .desktop\:pv-115 {
+  .desktop\:pv-23 {
     padding-top: 115px;
     padding-bottom: 115px; }
-  .desktop\:pt-115 {
+  .desktop\:pt-23 {
     padding-top: 115px; }
-  .desktop\:pb-115 {
+  .desktop\:pb-23 {
     padding-bottom: 115px; }
-  .desktop\:pl-115 {
+  .desktop\:pl-23 {
     padding-left: 115px; }
-  .desktop\:pr-115 {
+  .desktop\:pr-23 {
     padding-right: 115px; }
-  .desktop\:mh-115 {
+  .desktop\:mh-23 {
     margin-left: 115px;
     margin-right: 115px; }
-  .desktop\:mv-115 {
+  .desktop\:mv-23 {
     margin-top: 115px;
     margin-bottom: 115px; }
-  .desktop\:mt-115 {
+  .desktop\:mt-23 {
     margin-top: 115px; }
-  .desktop\:mb-115 {
+  .desktop\:mb-23 {
     margin-bottom: 115px; }
-  .desktop\:ml-115 {
+  .desktop\:ml-23 {
     margin-left: 115px; }
-  .desktop\:mr-115 {
+  .desktop\:mr-23 {
     margin-right: 115px; } }
 
 @media (max-width: 991px) {
-  .mobile\:ph-115 {
+  .mobile\:ph-23 {
     padding-left: 115px;
     padding-right: 115px; }
-  .mobile\:pv-115 {
+  .mobile\:pv-23 {
     padding-top: 115px;
     padding-bottom: 115px; }
-  .mobile\:pt-115 {
+  .mobile\:pt-23 {
     padding-top: 115px; }
-  .mobile\:pb-115 {
+  .mobile\:pb-23 {
     padding-bottom: 115px; }
-  .mobile\:pl-115 {
+  .mobile\:pl-23 {
     padding-left: 115px; }
-  .mobile\:pr-115 {
+  .mobile\:pr-23 {
     padding-right: 115px; }
-  .mobile\:mh-115 {
+  .mobile\:mh-23 {
     margin-left: 115px;
     margin-right: 115px; }
-  .mobile\:mv-115 {
+  .mobile\:mv-23 {
     margin-top: 115px;
     margin-bottom: 115px; }
-  .mobile\:mt-115 {
+  .mobile\:mt-23 {
     margin-top: 115px; }
-  .mobile\:mb-115 {
+  .mobile\:mb-23 {
     margin-bottom: 115px; }
-  .mobile\:ml-115 {
+  .mobile\:ml-23 {
     margin-left: 115px; }
-  .mobile\:mr-115 {
+  .mobile\:mr-23 {
     margin-right: 115px; } }
 
-.ph-120 {
+.ph-24 {
   padding-left: 120px;
   padding-right: 120px; }
 
-.pv-120 {
+.pv-24 {
   padding-top: 120px;
   padding-bottom: 120px; }
 
-.pt-120 {
+.pt-24 {
   padding-top: 120px; }
 
-.pb-120 {
+.pb-24 {
   padding-bottom: 120px; }
 
-.pl-120 {
+.pl-24 {
   padding-left: 120px; }
 
-.pr-120 {
+.pr-24 {
   padding-right: 120px; }
 
-.mh-120 {
+.mh-24 {
   margin-left: 120px;
   margin-right: 120px; }
 
-.mv-120 {
+.mv-24 {
   margin-top: 120px;
   margin-bottom: 120px; }
 
-.mt-120 {
+.mt-24 {
   margin-top: 120px; }
 
-.mb-120 {
+.mb-24 {
   margin-bottom: 120px; }
 
-.ml-120 {
+.ml-24 {
   margin-left: 120px; }
 
-.mr-120 {
+.mr-24 {
   margin-right: 120px; }
 
 @media (min-width: 992px) {
-  .desktop\:ph-120 {
+  .desktop\:ph-24 {
     padding-left: 120px;
     padding-right: 120px; }
-  .desktop\:pv-120 {
+  .desktop\:pv-24 {
     padding-top: 120px;
     padding-bottom: 120px; }
-  .desktop\:pt-120 {
+  .desktop\:pt-24 {
     padding-top: 120px; }
-  .desktop\:pb-120 {
+  .desktop\:pb-24 {
     padding-bottom: 120px; }
-  .desktop\:pl-120 {
+  .desktop\:pl-24 {
     padding-left: 120px; }
-  .desktop\:pr-120 {
+  .desktop\:pr-24 {
     padding-right: 120px; }
-  .desktop\:mh-120 {
+  .desktop\:mh-24 {
     margin-left: 120px;
     margin-right: 120px; }
-  .desktop\:mv-120 {
+  .desktop\:mv-24 {
     margin-top: 120px;
     margin-bottom: 120px; }
-  .desktop\:mt-120 {
+  .desktop\:mt-24 {
     margin-top: 120px; }
-  .desktop\:mb-120 {
+  .desktop\:mb-24 {
     margin-bottom: 120px; }
-  .desktop\:ml-120 {
+  .desktop\:ml-24 {
     margin-left: 120px; }
-  .desktop\:mr-120 {
+  .desktop\:mr-24 {
     margin-right: 120px; } }
 
 @media (max-width: 991px) {
-  .mobile\:ph-120 {
+  .mobile\:ph-24 {
     padding-left: 120px;
     padding-right: 120px; }
-  .mobile\:pv-120 {
+  .mobile\:pv-24 {
     padding-top: 120px;
     padding-bottom: 120px; }
-  .mobile\:pt-120 {
+  .mobile\:pt-24 {
     padding-top: 120px; }
-  .mobile\:pb-120 {
+  .mobile\:pb-24 {
     padding-bottom: 120px; }
-  .mobile\:pl-120 {
+  .mobile\:pl-24 {
     padding-left: 120px; }
-  .mobile\:pr-120 {
+  .mobile\:pr-24 {
     padding-right: 120px; }
-  .mobile\:mh-120 {
+  .mobile\:mh-24 {
     margin-left: 120px;
     margin-right: 120px; }
-  .mobile\:mv-120 {
+  .mobile\:mv-24 {
     margin-top: 120px;
     margin-bottom: 120px; }
-  .mobile\:mt-120 {
+  .mobile\:mt-24 {
     margin-top: 120px; }
-  .mobile\:mb-120 {
+  .mobile\:mb-24 {
     margin-bottom: 120px; }
-  .mobile\:ml-120 {
+  .mobile\:ml-24 {
     margin-left: 120px; }
-  .mobile\:mr-120 {
+  .mobile\:mr-24 {
     margin-right: 120px; } }
 
 @media (max-width: 991px) {
@@ -11723,24 +11690,8 @@ header .menu:nth-child(3) li:nth-child(1), header .menu:nth-child(3) li:nth-chil
 .p-0 {
   padding: 0; }
 
-.ph-0 {
-  padding-left: 0;
-  padding-right: 0; }
-
-.pv-0 {
-  padding-top: 0;
-  padding-bottom: 0; }
-
 .m-0 {
   margin: 0; }
-
-.mh-0 {
-  margin-left: 0;
-  margin-right: 0; }
-
-.mv-0 {
-  margin-top: 0;
-  margin-bottom: 0; }
 
 .mh-auto {
   margin-left: auto;
@@ -11772,123 +11723,123 @@ header .menu:nth-child(3) li:nth-child(1), header .menu:nth-child(3) li:nth-chil
   margin-top: 0px;
   margin-bottom: 0px; }
 
-.prg-mv-5 p {
+.prg-mv-1 p {
   margin-top: 5px;
   margin-bottom: 5px; }
 
-.prg-mh-5 p {
+.prg-mh-1 p {
   margin-left: 5px;
   margin-right: 5px; }
 
-.prg-mb-5 p {
+.prg-mb-1 p {
   margin-bottom: 5px; }
 
-.li-mv-5 li {
+.li-mv-1 li {
   margin-top: 5px;
   margin-bottom: 5px; }
 
-.prg-mv-10 p {
+.prg-mv-2 p {
   margin-top: 10px;
   margin-bottom: 10px; }
 
-.prg-mh-10 p {
+.prg-mh-2 p {
   margin-left: 10px;
   margin-right: 10px; }
 
-.prg-mb-10 p {
+.prg-mb-2 p {
   margin-bottom: 10px; }
 
-.li-mv-10 li {
+.li-mv-2 li {
   margin-top: 10px;
   margin-bottom: 10px; }
 
-.prg-mv-15 p {
+.prg-mv-3 p {
   margin-top: 15px;
   margin-bottom: 15px; }
 
-.prg-mh-15 p {
+.prg-mh-3 p {
   margin-left: 15px;
   margin-right: 15px; }
 
-.prg-mb-15 p {
+.prg-mb-3 p {
   margin-bottom: 15px; }
 
-.li-mv-15 li {
+.li-mv-3 li {
   margin-top: 15px;
   margin-bottom: 15px; }
 
-.prg-mv-20 p {
+.prg-mv-4 p {
   margin-top: 20px;
   margin-bottom: 20px; }
 
-.prg-mh-20 p {
+.prg-mh-4 p {
   margin-left: 20px;
   margin-right: 20px; }
 
-.prg-mb-20 p {
+.prg-mb-4 p {
   margin-bottom: 20px; }
 
-.li-mv-20 li {
+.li-mv-4 li {
   margin-top: 20px;
   margin-bottom: 20px; }
 
-.prg-mv-25 p {
+.prg-mv-5 p {
   margin-top: 25px;
   margin-bottom: 25px; }
 
-.prg-mh-25 p {
+.prg-mh-5 p {
   margin-left: 25px;
   margin-right: 25px; }
 
-.prg-mb-25 p {
+.prg-mb-5 p {
   margin-bottom: 25px; }
 
-.li-mv-25 li {
+.li-mv-5 li {
   margin-top: 25px;
   margin-bottom: 25px; }
 
-.prg-mv-30 p {
+.prg-mv-6 p {
   margin-top: 30px;
   margin-bottom: 30px; }
 
-.prg-mh-30 p {
+.prg-mh-6 p {
   margin-left: 30px;
   margin-right: 30px; }
 
-.prg-mb-30 p {
+.prg-mb-6 p {
   margin-bottom: 30px; }
 
-.li-mv-30 li {
+.li-mv-6 li {
   margin-top: 30px;
   margin-bottom: 30px; }
 
-.prg-mv-35 p {
+.prg-mv-7 p {
   margin-top: 35px;
   margin-bottom: 35px; }
 
-.prg-mh-35 p {
+.prg-mh-7 p {
   margin-left: 35px;
   margin-right: 35px; }
 
-.prg-mb-35 p {
+.prg-mb-7 p {
   margin-bottom: 35px; }
 
-.li-mv-35 li {
+.li-mv-7 li {
   margin-top: 35px;
   margin-bottom: 35px; }
 
-.prg-mv-40 p {
+.prg-mv-8 p {
   margin-top: 40px;
   margin-bottom: 40px; }
 
-.prg-mh-40 p {
+.prg-mh-8 p {
   margin-left: 40px;
   margin-right: 40px; }
 
-.prg-mb-40 p {
+.prg-mb-8 p {
   margin-bottom: 40px; }
 
-.li-mv-40 li {
+.li-mv-8 li {
   margin-top: 40px;
   margin-bottom: 40px; }
 
@@ -11904,99 +11855,99 @@ header .menu:nth-child(3) li:nth-child(1), header .menu:nth-child(3) li:nth-chil
   margin-left: 0px;
   margin-right: 0px; }
 
-.figure-mv-5 figure, .figure-mv-5 .cell {
+.figure-mv-1 figure, .figure-mv-1 .cell {
   margin-top: 5px;
   margin-bottom: 5px; }
 
-.figure-mh-5 figure, .figure-mh-5 .cell {
+.figure-mh-1 figure, .figure-mh-1 .cell {
   margin-left: 5px;
   margin-right: 5px; }
 
-.figure-mv-10 figure, .figure-mv-10 .cell {
+.figure-mv-2 figure, .figure-mv-2 .cell {
   margin-top: 10px;
   margin-bottom: 10px; }
 
-.figure-mh-10 figure, .figure-mh-10 .cell {
+.figure-mh-2 figure, .figure-mh-2 .cell {
   margin-left: 10px;
   margin-right: 10px; }
 
-.figure-mv-15 figure, .figure-mv-15 .cell {
+.figure-mv-3 figure, .figure-mv-3 .cell {
   margin-top: 15px;
   margin-bottom: 15px; }
 
-.figure-mh-15 figure, .figure-mh-15 .cell {
+.figure-mh-3 figure, .figure-mh-3 .cell {
   margin-left: 15px;
   margin-right: 15px; }
 
-.figure-mv-20 figure, .figure-mv-20 .cell {
+.figure-mv-4 figure, .figure-mv-4 .cell {
   margin-top: 20px;
   margin-bottom: 20px; }
 
-.figure-mh-20 figure, .figure-mh-20 .cell {
+.figure-mh-4 figure, .figure-mh-4 .cell {
   margin-left: 20px;
   margin-right: 20px; }
 
-.figure-mv-25 figure, .figure-mv-25 .cell {
+.figure-mv-5 figure, .figure-mv-5 .cell {
   margin-top: 25px;
   margin-bottom: 25px; }
 
-.figure-mh-25 figure, .figure-mh-25 .cell {
+.figure-mh-5 figure, .figure-mh-5 .cell {
   margin-left: 25px;
   margin-right: 25px; }
 
-.figure-mv-30 figure, .figure-mv-30 .cell {
+.figure-mv-6 figure, .figure-mv-6 .cell {
   margin-top: 30px;
   margin-bottom: 30px; }
 
-.figure-mh-30 figure, .figure-mh-30 .cell {
+.figure-mh-6 figure, .figure-mh-6 .cell {
   margin-left: 30px;
   margin-right: 30px; }
 
-.figure-mv-35 figure, .figure-mv-35 .cell {
+.figure-mv-7 figure, .figure-mv-7 .cell {
   margin-top: 35px;
   margin-bottom: 35px; }
 
-.figure-mh-35 figure, .figure-mh-35 .cell {
+.figure-mh-7 figure, .figure-mh-7 .cell {
   margin-left: 35px;
   margin-right: 35px; }
 
-.figure-mv-40 figure, .figure-mv-40 .cell {
+.figure-mv-8 figure, .figure-mv-8 .cell {
   margin-top: 40px;
   margin-bottom: 40px; }
 
-.figure-mh-40 figure, .figure-mh-40 .cell {
+.figure-mh-8 figure, .figure-mh-8 .cell {
   margin-left: 40px;
   margin-right: 40px; }
 
-.figure-mv-45 figure, .figure-mv-45 .cell {
+.figure-mv-9 figure, .figure-mv-9 .cell {
   margin-top: 45px;
   margin-bottom: 45px; }
 
-.figure-mh-45 figure, .figure-mh-45 .cell {
+.figure-mh-9 figure, .figure-mh-9 .cell {
   margin-left: 45px;
   margin-right: 45px; }
 
-.figure-mv-50 figure, .figure-mv-50 .cell {
+.figure-mv-10 figure, .figure-mv-10 .cell {
   margin-top: 50px;
   margin-bottom: 50px; }
 
-.figure-mh-50 figure, .figure-mh-50 .cell {
+.figure-mh-10 figure, .figure-mh-10 .cell {
   margin-left: 50px;
   margin-right: 50px; }
 
-.figure-mv-55 figure, .figure-mv-55 .cell {
+.figure-mv-11 figure, .figure-mv-11 .cell {
   margin-top: 55px;
   margin-bottom: 55px; }
 
-.figure-mh-55 figure, .figure-mh-55 .cell {
+.figure-mh-11 figure, .figure-mh-11 .cell {
   margin-left: 55px;
   margin-right: 55px; }
 
-.figure-mv-60 figure, .figure-mv-60 .cell {
+.figure-mv-12 figure, .figure-mv-12 .cell {
   margin-top: 60px;
   margin-bottom: 60px; }
 
-.figure-mh-60 figure, .figure-mh-60 .cell {
+.figure-mh-12 figure, .figure-mh-12 .cell {
   margin-left: 60px;
   margin-right: 60px; }
 
@@ -12655,9 +12606,6 @@ header .menu:nth-child(3) li:nth-child(1), header .menu:nth-child(3) li:nth-chil
     -ms-flex-preferred-size: 100%;
     flex-basis: 100%; } }
 
-.fw-0 {
-  font-weight: 0; }
-
 .fw-1 {
   font-weight: 100; }
 
@@ -12684,6 +12632,42 @@ header .menu:nth-child(3) li:nth-child(1), header .menu:nth-child(3) li:nth-chil
 
 .fw-9 {
   font-weight: 900; }
+
+.fs-1-em {
+  font-size: 0.8em; }
+
+.fs-2-em {
+  font-size: 0.9em; }
+
+.fs-3-em {
+  font-size: 1em; }
+
+.fs-4-em {
+  font-size: 1.1em; }
+
+.fs-5-em {
+  font-size: 1.2em; }
+
+.fs-6-em {
+  font-size: 1.3em; }
+
+.fs-7-em {
+  font-size: 1.4em; }
+
+.fs-8-em {
+  font-size: 1.5em; }
+
+.fs-9-em {
+  font-size: 1.6em; }
+
+.fs-10-em {
+  font-size: 1.7em; }
+
+.fs-11-em {
+  font-size: 1.8em; }
+
+.fs-12-em {
+  font-size: 1.9em; }
 
 .radius-0 {
   border-radius: 0px; }
