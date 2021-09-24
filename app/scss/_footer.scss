@@ -19,7 +19,7 @@
 }
 .footer-menu{
 	padding: 5px 0;
-	ul li a{
+	ul:not([class]) a{
 		@extend .hover-underline;
 		&:before{
 			bottom: -2px;
@@ -45,7 +45,8 @@
     			content: "";
     			position: absolute;
     			right: 0;
-    			top: 7px;
+    			top: 50%;
+    			transform: translateY(-50%);
     			height: 12px;
     			border-left: 1px solid black;
     		}
@@ -53,7 +54,16 @@
     }
 	}
 }
-
+.footer-icons{
+	figure{
+		width: 230px;
+	}
+	@media (max-width: 991px){
+		figure{
+			//width: 50%;
+		}
+	}
+}
 .map-canvas{
 	height: 420px;
 	width: 100%;

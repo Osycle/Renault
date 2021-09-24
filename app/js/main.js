@@ -93,27 +93,35 @@
 
 		//MIN-MENU
 		$("#min-menu").mmenu({
-			extensions: [
-				"wrapper-bg", // wrapper-bg black
-				//"theme-dark",
-				"theme-white",
+			//extensions: [
+				//"wrapper-bg",
+				//"theme-black",
+				//"theme-white",
 				//"fullscreen",
-				"listview-50",
-				"fx-panels-slide-up",
-				"fx-listitems-drop",
-				"border-offset",
-				"position-front",
-				"position-right"
+				//"listview-50",
+				//"fx-panels-slide-up",
+				//"fx-listitems-drop",
+				//"border-offset",
+				//"position-front",
+				//"position-right",
+			//],
+			extensions 	: [ 
+				"position-bottom", 
+				"fullscreen", 
+				"theme-black",
+				"border-full" 
 			],
 			navbar: {
-				title: ""
+				title: "Меню"
 			},
 			navbars: [{
-					height: 0,
+					height: 2,
 					content: [
-						// '<div class="close-btn close-content bar">' +
-						// '<a  href="#page" ><span class="icon-bar"></span><span class="icon-bar"></span></a>' +
-						// '</div>'
+						'<div class="close-btn">' +
+						'<a  href="#page" >'+
+						'<svg viewBox="0 0 30 30"><path d="M29.999 2.512L27.5.012 14.999 12.504 2.498.012l-2.497 2.5L12.5 15.001.001 27.488l2.497 2.5 12.501-12.49L27.5 29.988l2.497-2.5-12.499-12.487z"></path></svg>'+
+						'</a>' +
+						'</div>'
 					]
 				},
 				{

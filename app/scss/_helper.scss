@@ -155,6 +155,17 @@
 }
 
 
+.jc-center	{justify-content: center;}
+.jc-between	{justify-content: space-between;}
+.jc-start		{justify-content: flex-start;}
+.jc-end			{justify-content: flex-end;}
+
+.ai-center	{align-items: center;}
+.ai-start		{align-items: flex-start;}
+.ai-end			{align-items: flex-end;}
+
+.fd-column	{flex-direction: column;}
+.fw-wrap		{flex-wrap: wrap;}
 
 @media (min-width: 992px){
 	.desktop\:jc-center		{justify-content: center;}
@@ -166,7 +177,8 @@
 	.desktop\:ai-start		{align-items: flex-start;}
 	.desktop\:ai-end			{align-items: flex-end;}
 
-	.desktop\:fd-columm		{flex-direction: column;}
+	.desktop\:fd-column		{flex-direction: column;}
+	.desktop\:fw-wrap		{flex-wrap: wrap;}
 }
 @media (max-width: 991px){
 	.mobile\:jc-center		{justify-content: center;}
@@ -178,34 +190,30 @@
 	.mobile\:ai-start			{align-items: flex-start;}
 	.mobile\:ai-end				{align-items: flex-end;}
 
-	.mobile\:fd-columm		{flex-direction: column;}
+	.mobile\:fd-column		{flex-direction: column;}
+	.mobile\:fw-wrap		{flex-wrap: wrap;}
 }
-
-.jc-center	{justify-content: center;}
-.jc-between	{justify-content: space-between;}
-.jc-start		{justify-content: flex-start;}
-.jc-end			{justify-content: flex-end;}
-
-.ai-center	{align-items: center;}
-.ai-start		{align-items: flex-start;}
-.ai-end			{align-items: flex-end;}
-
-.fd-columm	{flex-direction: column;}
 
 
 
 @for $i from 0 through 12{
 	.fb-xs-#{$i} {flex-basis: ( ($i*100) /12)#{"%"};}
-	@media (min-width:768px){
-		.fb-sm-#{$i} {flex-basis: ( ($i*100) /12)#{"%"};}
-	}	
-	@media (min-width:992px){
-		.fb-md-#{$i} {flex-basis: ( ($i*100) /12)#{"%"};}
-	}	
-	@media (min-width:1200px){
-		.fb-lg-#{$i} {flex-basis: ( ($i*100) /12)#{"%"};}
-	}	
 }
+@media (min-width:768px){
+	@for $i from 0 through 12{
+		.fb-sm-#{$i} {flex-basis: ( ($i*100) /12)#{"%"};}
+	}
+}	
+@media (min-width:992px){
+	@for $i from 0 through 12{
+		.fb-md-#{$i} {flex-basis: ( ($i*100) /12)#{"%"};}
+	}
+}	
+@media (min-width:1200px){
+	@for $i from 0 through 12{
+		.fb-lg-#{$i} {flex-basis: ( ($i*100) /12)#{"%"};}
+	}
+}	
 
 @for $i from 1 through 6{
 	.row-#{$i}{
