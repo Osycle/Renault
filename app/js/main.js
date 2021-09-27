@@ -137,6 +137,31 @@
 			speedAsDuration: true
 		});
 
+   $(document).on("click", ".header a:not([subdown-click])", function(){
+      if($("[subdown-click].subdown-active").length)
+        $("[subdown-click].subdown-active").trigger("click");
+    })
+		$(document).on("click", "[subdown-click]", function(){
+			var that = $(this)
+			var num = that.attr("subdown-click");
+      ($("[subdown]")).removeClass("subdown-active");
+			if(that.hasClass("bg-shadow")){
+				$("a[subdown-click='"+num+"']").trigger("click");
+				return;
+			}
+			if(!that.hasClass("subdown-active")){
+				$("a[subdown-click]").removeClass("subdown-active");
+				that.add($("[subdown="+num+"]")).addClass("subdown-active");
+				$("body").addClass("subdown-active");
+			}else{
+				that.add($("[subdown="+num+"]")).removeClass("subdown-active");
+				$("body").removeClass("subdown-active");
+			}
+		})
+		$(document).on("click", ".subdown-wrapper", function(e){
+			if($(e.target).hasClass("subdown-wrapper"))
+				$("[subdown-click].subdown-active").trigger("click");
+    })
 
 
 	});

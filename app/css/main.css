@@ -6991,7 +6991,7 @@ table {
 .claf, [data-flicker]:before, .checkbox-style-1:before {
   content: " "; }
 
-.clafclear, .radio-style-1:before, .radio-style-2:before, .hover-underline:before, .footer-menu ul:not([class]) a:before {
+.clafclear, .radio-style-1:before, .radio-style-2:before, .subdown .bg-shadow, .hover-underline:before, .footer-menu ul:not([class]) a:before {
   content: " ";
   height: 100%;
   width: 100%;
@@ -7800,6 +7800,16 @@ label {
 .menu-main li {
   text-transform: uppercase;
   font-weight: 700; }
+  .menu-main li:hover:before, .menu-main li.hover:before, .menu-main li.subdown-active:before {
+    opacity: 1;
+    -webkit-transform: scaleX(1);
+    transform: scaleX(1); }
+  .menu-main li:hover .sub-menu-1, .menu-main li.hover .sub-menu-1, .menu-main li.subdown-active .sub-menu-1 {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+    opacity: 1; }
+  .menu-main li:hover, .menu-main li:hover li, .menu-main li:hover a, .menu-main li:hover .sub-menu-1, .menu-main li.hover, .menu-main li.hover li, .menu-main li.hover a, .menu-main li.hover .sub-menu-1, .menu-main li.subdown-active, .menu-main li.subdown-active li, .menu-main li.subdown-active a, .menu-main li.subdown-active .sub-menu-1 {
+    pointer-events: auto; }
 
 /*
 										 ---MIN-MENU---
@@ -8001,6 +8011,117 @@ label {
   .btn-close .icon-bar:nth-child(2) {
     -webkit-transform: rotate(-45deg);
     transform: rotate(-45deg); }
+
+.subdown {
+  position: absolute;
+  left: 0;
+  top: 148px;
+  white-space: normal;
+  text-align: left;
+  width: 100vw;
+  height: calc(100vh - 80px);
+  border-top: 1px solid #f2f1f2;
+  -webkit-transition: 0.3s ease;
+  transition: 0.3s ease;
+  opacity: 0;
+  pointer-events: none;
+  -webkit-transform: translateY(10px);
+  transform: translateY(10px);
+  z-index: 1; }
+  .subdown.subdown-active {
+    opacity: 1;
+    pointer-events: auto;
+    -webkit-transform: scale(1);
+    transform: scale(1); }
+  .subdown .bg-shadow {
+    background-color: rgba(239, 223, 0, 0.4);
+    left: 0;
+    top: 0;
+    z-index: -1;
+    width: 100vw;
+    height: 100vh; }
+  .subdown .subdown-wrapper {
+    z-index: 1;
+    height: 100%;
+    overflow-y: auto; }
+  .subdown .footer-soc .fa-paper-plane {
+    border: 2px solid currentColor; }
+
+.subdown-footer-items {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex; }
+  .subdown-footer-items figure {
+    color: white;
+    position: relative;
+    width: 100%; }
+    .subdown-footer-items figure .img-content {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      left: 0;
+      top: 0;
+      background-position: center;
+      background-size: cover;
+      padding-bottom: 25%; }
+    .subdown-footer-items figure .desc-content {
+      padding: 65px 80px; }
+  @media (max-width: 1600px) {
+    .subdown-footer-items h2, .subdown-footer-items .h2 {
+      font-size: 2.14286em;
+      line-height: 114%;
+      letter-spacing: -.02em; } }
+
+.subdown-item {
+  background-color: white; }
+
+.subdown-item-wrapper {
+  padding: 60px 0;
+  margin-left: auto;
+  margin-right: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between; }
+
+.subdown-menu-items {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-left: -15px;
+  margin-right: -15px;
+  padding-right: 60px;
+  -webkit-box-flex: 1;
+  -ms-flex: 1;
+  flex: 1; }
+  .subdown-menu-items .item-title {
+    color: black;
+    font-weight: 700; }
+  .subdown-menu-items .item {
+    -ms-flex-preferred-size: 25%;
+    flex-basis: 25%;
+    padding-left: 15px;
+    padding-right: 15px;
+    margin-bottom: 30px; }
+  .subdown-menu-items li {
+    display: block;
+    margin-top: 13px;
+    margin-bottom: 13px; }
+  .subdown-menu-items a {
+    display: inline-block; }
+    .subdown-menu-items a:before {
+      bottom: -1px; }
+  .subdown-menu-items.boxes-2 {
+    max-height: 450px;
+    display: block;
+    -webkit-columns: 2;
+    -moz-columns: 2;
+    columns: 2; }
+    .subdown-menu-items.boxes-2 .item {
+      -ms-flex-preferred-size: 50%;
+      flex-basis: 50%; }
 
 /*
 	_content.css
