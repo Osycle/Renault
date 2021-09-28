@@ -9,19 +9,22 @@ var gulp 					= require('gulp'),
 		cssnano					= require('gulp-cssnano'),
 		rename					= require('gulp-rename'),
 		autoprefixer		= require('gulp-autoprefixer');
-		
+
 var fileinclude = require('gulp-file-include');
 var app = "app";
 
+
+
 gulp.task('fileinclude', function() {
-  gulp.src(['index.html'])
+  return gulp.src(['./app/src/**/*.html', '!./app/src/**/_*.html'])
     .pipe(fileinclude({
       prefix: '@@',
-      basepath: '@file'
+      // basepath: './app/'
     }))
-    .pipe(gulp.dest('./'));
+    .pipe(gulp.dest('./app/'))
+    .pipe( browserSync.reload({stream:true}) )
+    
 });
-
 
 
 
@@ -42,36 +45,17 @@ gulp.task('sass', (done)=>{
 gulp.task('scripts', ()=>{
 	return gulp.src([
 			app+'/js/plugins/jquery.min.js',
-			//app+'/js/plugins/jquery-ui.js',
-			//app+'/js/plugins/skrollr.min.js',
-			//app+'/js/plugins/smoothscroll.js',
 			app+'/js/plugins/bootstrap.min.js',
-			//app+'/js/plugins/howler.js', 
-			//app+'/js/plugins/TweenMax.min.js',
-			//app+'/js/plugins/EasePack.min.js', 
-			//app+'/js/plugins/TextPlugin.min.js',
-			//app+'/js/plugins/konva.min.js',
-			//app+'/js/plugins/KonvaPlugin.js',
-			//app+'/js/plugins/jquery.fractionslider.js',
-			//app+'/js/plugins/pana-accordion.js',
-			//app+'/js/plugins/jquery.vi.js',
 			app+'/js/plugins/aos.js',
-			//app+'/js/plugins/wow.js',
 			app+'/js/plugins/owl.carousel.min.js',
 			app+'/js/plugins/jquery.fancybox.js',
-			//app+'/js/plugins/jquery.jcarousel.js',
-			//app+'/js/plugins/classie.js',
-			//app+'/js/plugins/masonry.pkgd.min.js',
 			app+'/js/plugins/select2.min.js',
-			//app+'/js/plugins/jquery.elevateZoom.min.js',
 			app+'/js/plugins/jquery.mmenu.all.js',
 			app+'/js/plugins/smooth-scroll.js',
 			app+'/js/plugins/ion.rangeSlider.min.js',
 			app+'/js/plugins/ResizeSensor.min.js',
 			app+'/js/plugins/theia-sticky-sidebar.min.js',
 			app+'/js/plugins/swiper-bundle.min.js',
-			//app+'/js/plugins/parallax-mouse.js',
-			//app+'/js/plugins/parallax.js',
 			app+'/js/plugins/flickity.js'
 		])
 		.pipe( concat('scripts.min.js') )
@@ -100,17 +84,21 @@ gulp.task('browser-sync', (done)=>{
 	}
 );
 
+	
+
+
+
 
 gulp.task('watch', (done)=>{
 		//gulp.task('default', gulp.series('watch', 'sass', 'browser-sync'));
 		gulp.watch(app+'/scss/**/*.+(scss|sass)', gulp.parallel('sass'));
-		gulp.watch(app+'/*.html').on("change", browserSync.reload, 'fileinclude');
-		gulp.watch(app+'/**/*.php', browserSync.reload);
-		gulp.watch(app+'/templates/**/*.tpl', browserSync.reload);
-		gulp.watch(app+'/js/**/*.js', browserSync.reload);
+		gulp.watch(app+'/**/*.html', gulp.parallel('fileinclude'));
+		//.on("change", function(){browserSync.reload(function(){console.log(111)})} );
+		gulp.watch(app+'/js/**/*.js');
 		done();
 	}
 );
+
 
 
 //gulp.task('default', gulp.series('watch', 'sass'));
