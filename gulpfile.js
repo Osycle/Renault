@@ -10,8 +10,17 @@ var gulp 					= require('gulp'),
 		rename					= require('gulp-rename'),
 		autoprefixer		= require('gulp-autoprefixer');
 		
+var fileinclude = require('gulp-file-include');
 var app = "app";
 
+gulp.task('fileinclude', function() {
+  gulp.src(['index.html'])
+    .pipe(fileinclude({
+      prefix: '@@',
+      basepath: '@file'
+    }))
+    .pipe(gulp.dest('./'));
+});
 
 
 
@@ -90,10 +99,12 @@ gulp.task('browser-sync', (done)=>{
 		done();
 	}
 );
+
+
 gulp.task('watch', (done)=>{
 		//gulp.task('default', gulp.series('watch', 'sass', 'browser-sync'));
 		gulp.watch(app+'/scss/**/*.+(scss|sass)', gulp.parallel('sass'));
-		gulp.watch(app+'/*.html').on("change", browserSync.reload);
+		gulp.watch(app+'/*.html').on("change", browserSync.reload, 'fileinclude');
 		gulp.watch(app+'/**/*.php', browserSync.reload);
 		gulp.watch(app+'/templates/**/*.tpl', browserSync.reload);
 		gulp.watch(app+'/js/**/*.js', browserSync.reload);
@@ -103,5 +114,5 @@ gulp.task('watch', (done)=>{
 
 
 //gulp.task('default', gulp.series('watch', 'sass'));
-gulp.task('watch', gulp.series('watch','browser-sync', 'scripts'));
+gulp.task('watch', gulp.series('watch','browser-sync', 'scripts', 'fileinclude'));
 

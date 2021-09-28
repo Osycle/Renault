@@ -137,7 +137,7 @@
 			speedAsDuration: true
 		});
 
-   $(document).on("click", ".header a:not([subdown-click])", function(){
+   $(document).on("click", ".header a:not([subdown-click]), [subdown-click-close]", function(){
       if($("[subdown-click].subdown-active").length)
         $("[subdown-click].subdown-active").trigger("click");
     })
