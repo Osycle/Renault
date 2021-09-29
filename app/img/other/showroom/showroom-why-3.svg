@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="82px" height="82px" viewBox="0 0 82 82" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>round_dealer-yellow</title>
+    <defs>
+        <circle id="path-1" cx="40" cy="40" r="40"></circle>
+        <circle id="path-3" cx="40" cy="40" r="40"></circle>
+        <filter id="filter-5">
+            <feColorMatrix in="SourceGraphic" type="matrix" values="0 0 0 0 0.000000 0 0 0 0 0.000000 0 0 0 0 0.000000 0 0 0 1.000000 0"></feColorMatrix>
+        </filter>
+        <path d="M17.3090909,17.576097 C18.2787879,15.8767507 19.2,14.1288515 20.1212121,12.1381886 C19.2,10.1475256 18.2787879,8.39962653 17.260606,6.70028011 C16.2909091,8.39962653 15.3696969,10.1475256 14.4484849,12.1381886 C15.3696969,14.1288515 16.2909091,15.8767507 17.3090909,17.576097 Z M12.4121211,12.1381886 C13.7212121,9.37068163 14.9333333,7.08870215 16.1454545,5.19514472 C16.9212121,5.09803921 17.6969697,5.09803921 18.4727272,5.19514472 C19.9757575,7.47712423 21.1393939,9.71055083 22.2060605,12.1381886 C21.1393939,14.5658263 19.9757575,16.7992531 18.4727272,19.0812325 C17.6969697,19.178338 16.9212121,19.178338 16.1454545,19.0812325 C14.9333333,17.187675 13.7212121,14.9056956 12.4121211,12.1381886 Z M8.58181813,33.015873 L26.0363636,33.015873 L26.0363636,1.65079364 L8.58181813,1.65079364 L8.58181813,33.015873 Z M6.88484848,33.015873 L6.88484848,-1.33226763e-15 L27.7333333,-1.33226763e-15 L27.7333333,33.015873 L34.6666666,33.015873 L34.6666666,34.6666666 L-1.33226763e-15,34.6666666 L-1.33226763e-15,33.015873 L6.88484848,33.015873 Z" id="path-6"></path>
+    </defs>
+    <g id="Icons-2021" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="round_dealer-yellow" transform="translate(1.000000, 1.000000)">
+            <g id="Oval-5" stroke="#000000" stroke-width="2">
+                <circle id="path-1" cx="40" cy="40" r="40"></circle>
+            </g>
+            <g id="colors/yellow-Clipped">
+                <mask id="mask-2" fill="white">
+                    <use xlink:href="#path-1"></use>
+                </mask>
+                <g id="path-1"></g>
+                <g id="colors/yellow" mask="url(#mask-2)">
+                    <rect id="Rectangle" x="0" y="0" width="80" height="80"></rect>
+                </g>
+            </g>
+            <g id="Borne/Renault-Clipped">
+                <mask id="mask-4" fill="white">
+                    <use xlink:href="#path-3"></use>
+                </mask>
+                <g id="path-1"></g>
+                <g filter="url(#filter-5)" id="Borne/Renault">
+                    <g mask="url(#mask-4)">
+                        <g transform="translate(24.000000, 24.000000)" id="Group">
+                            <g transform="translate(0.000000, 0.000000)" id="colors/dark-Clipped">
+                                <mask id="mask-7" fill="white">
+                                    <use xlink:href="#path-6"></use>
+                                </mask>
+                                <g id="path-3"></g>
+                                <g id="colors/dark" mask="url(#mask-7)" fill="#1F2532" fill-rule="nonzero">
+                                    <g transform="translate(-2.666667, -2.666667)" id="Rectangle">
+                                        <rect x="0" y="0" width="40" height="40"></rect>
+                                    </g>
+                                </g>
+                            </g>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

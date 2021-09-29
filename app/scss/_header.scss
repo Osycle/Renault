@@ -15,6 +15,7 @@ $header-min-menu: 60px;
 	left: 0;
 	position: relative;
 	pointer-events: none;
+	font-size: 1.4rem;
 	*{
 		pointer-events: auto;
 	}
@@ -160,7 +161,7 @@ $header-min-menu: 60px;
 	opacity: 1;
 	width: 100%;
 	transform: unset; transform: none;
-	position: absolute;
+	position: relative;
 	top: 0;
 	z-index: 100;
 	color: black;
@@ -386,6 +387,7 @@ $header-min-menu: 60px;
 
 .subdown{
 	//background-color: white;
+	font-size: 1.4rem;
 	position: absolute;
 	left: 0;
 	top: 148px;
@@ -449,7 +451,7 @@ $header-min-menu: 60px;
 	}
 	@media (max-width: 1600px){
 		h2{
-			font-size: em(30);
+			font-size: 3.0rem;
 			line-height: 114%;
 			letter-spacing: -.02em;
 		}

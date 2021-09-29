@@ -311,7 +311,7 @@ $screen-desktop:             $screen-md-min !default;
 
 // Large screen / wide desktop
 //** Deprecated `$screen-lg` as of v3.0.1
-$screen-lg:                  1200px !default;
+$screen-lg:                  1280px !default;
 $screen-lg-min:              $screen-lg !default;
 //** Deprecated `$screen-lg-desktop` as of v3.0.1
 $screen-lg-desktop:          $screen-lg-min !default;
@@ -355,13 +355,13 @@ $container-md:                 $container-desktop !default;
 
 // Large screen / wide desktop
 
-$container-large-desktop:      (1170px + $grid-gutter-width) !default;
+$container-large-desktop:      (1250px + $grid-gutter-width) !default;
 //** For `$screen-lg-min` and up.
 $container-lg:                 $container-large-desktop !default;
 
 $container-sm-value:           720;
 $container-md-value:           940;
-$container-lg-value:           1170;
+$container-lg-value:           1250;
 
 //== Navbar
 //

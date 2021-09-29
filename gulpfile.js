@@ -92,7 +92,7 @@ gulp.task('browser-sync', (done)=>{
 gulp.task('watch', (done)=>{
 		//gulp.task('default', gulp.series('watch', 'sass', 'browser-sync'));
 		gulp.watch(app+'/scss/**/*.+(scss|sass)', gulp.parallel('sass'));
-		gulp.watch(app+'/**/*.html', gulp.parallel('fileinclude'));
+		gulp.watch(app+'/src/**/*.html', gulp.parallel('fileinclude'));
 		//.on("change", function(){browserSync.reload(function(){console.log(111)})} );
 		gulp.watch(app+'/js/**/*.js');
 		done();

@@ -6,41 +6,14 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta name="description" content="">
-	<link rel="shortcut icon" href="img/favicon/favicon.ico" type="image/x-icon">
-	<link rel="apple-touch-icon" href="img/favicon/favicon.png">
-	<link rel="stylesheet" href="css/fonts.css">
-	<link rel="stylesheet" href="fonts/NouvelR/stylesheet.css">
-	<link rel="stylesheet" type="text/css" href="css/slick.css"/>
-	<link rel="stylesheet" type="text/css" href="css/slick-theme.css"/>
-	<link rel="stylesheet" href="css/plugins.css">
-	<link rel="stylesheet" href="css/main.css">
-	<link rel="stylesheet" href="css/additional.css">
-
-	<link rel="apple-touch-icon" sizes="57x57" href="img/favicon/apple-icon-57x57.png">
-	<link rel="apple-touch-icon" sizes="60x60" href="img/favicon/apple-icon-60x60.png">
-	<link rel="apple-touch-icon" sizes="72x72" href="img/favicon/apple-icon-72x72.png">
-	<link rel="apple-touch-icon" sizes="76x76" href="img/favicon/apple-icon-76x76.png">
-	<link rel="apple-touch-icon" sizes="114x114" href="img/favicon/apple-icon-114x114.png">
-	<link rel="apple-touch-icon" sizes="120x120" href="img/favicon/apple-icon-120x120.png">
-	<link rel="apple-touch-icon" sizes="144x144" href="img/favicon/apple-icon-144x144.png">
-	<link rel="apple-touch-icon" sizes="152x152" href="img/favicon/apple-icon-152x152.png">
-	<link rel="apple-touch-icon" sizes="180x180" href="img/favicon/apple-icon-180x180.png">
-	<link rel="icon" type="image/png" sizes="192x192"  href="img/favicon/android-icon-192x192.png">
-	<link rel="icon" type="image/png" sizes="32x32" href="img/favicon/favicon-32x32.png">
-	<link rel="icon" type="image/png" sizes="96x96" href="img/favicon/favicon-96x96.png">
-	<link rel="icon" type="image/png" sizes="16x16" href="img/favicon/favicon-16x16.png">
-	<link rel="manifest" href="img/favicon/manifest.json">
-	<meta name="msapplication-TileColor" content="#ffffff">
-	<meta name="msapplication-TileImage" content="img/favicon/ms-icon-144x144.png">
-	<meta name="theme-color" content="#ffffff">
+	@@include('components/_favicons.html')
 	<title>Title</title>
 </head>
 
 <body>
 
 	<div id="page">
-
-		@@include('./_header.html')
+		@@include('components/_header.html')
 		<main class="main" data-aos="fade">
 			<section class="bnr">
 				<!-- Slider main container -->
@@ -160,7 +133,7 @@
 			</section>
 			<section class="index-models">
 				<div class="container pv-5">
-					<div class="index-models-items boxes-3 figure-mv-6">
+					<div class="index-models-items boxes-3 figure-mv-6 desktop:ph-9">
 						<figure>
 							<a href="">
 								<div class="img-content">
@@ -168,7 +141,7 @@
 								</div>
 							</a>
 							<div class="desc-content">
-								<div class="text-h4-b"><a href="">Renault arkana</a></div>
+								<div class="text-x3-bu"><a href="">Renault arkana</a></div>
 								<div>Цена от <span class="price-content fs-5-em">1286 000 ₽</span></div>
 							</div>
 							<div class="link-content link-def mt-1 flex">
@@ -183,7 +156,7 @@
 								</div>
 							</a>
 							<div class="desc-content">
-								<div class="text-h4-b"><a href="">RENAULT KAPTUR</a></div>
+								<div class="text-x3-bu"><a href="">RENAULT KAPTUR</a></div>
 								<div>Цена от <span class="price-content fs-5-em">1286 000 ₽</span></div>
 							</div>
 							<div class="link-content link-def mt-1 flex">
@@ -198,7 +171,7 @@
 								</div>
 							</a>
 							<div class="desc-content">
-								<div class="text-h4-b"><a href="">НОВЫЙ RENAULT DUSTER</a></div>
+								<div class="text-x3-bu"><a href="">НОВЫЙ RENAULT DUSTER</a></div>
 								<div>Цена от <span class="price-content fs-5-em">1286 000 ₽</span></div>
 							</div>
 							<div class="link-content link-def mt-1 flex">
@@ -213,7 +186,7 @@
 								</div>
 							</a>
 							<div class="desc-content">
-								<div class="text-h4-b"><a href="">RENAULT SANDERO STEPWAY</a></div>
+								<div class="text-x3-bu"><a href="">RENAULT SANDERO STEPWAY</a></div>
 								<div>Цена от <span class="price-content fs-5-em">1286 000 ₽</span></div>
 							</div>
 							<div class="link-content link-def mt-1 flex">
@@ -228,7 +201,7 @@
 								</div>
 							</a>
 							<div class="desc-content">
-								<div class="text-h4-b"><a href="">RENAULT SANDERO</a></div>
+								<div class="text-x3-bu"><a href="">RENAULT SANDERO</a></div>
 								<div>Цена от <span class="price-content fs-5-em">1286 000 ₽</span></div>
 							</div>
 							<div class="link-content link-def mt-1 flex">
@@ -243,7 +216,7 @@
 								</div>
 							</a>
 							<div class="desc-content">
-								<div class="text-h4-b"><a href="">RENAULT LOGAN STEPWAY</a></div>
+								<div class="text-x3-bu"><a href="">RENAULT LOGAN STEPWAY</a></div>
 								<div>Цена от <span class="price-content fs-5-em">1286 000 ₽</span></div>
 							</div>
 							<div class="link-content link-def mt-1 flex">
@@ -258,7 +231,7 @@
 								</div>
 							</a>
 							<div class="desc-content">
-								<div class="text-h4-b"><a href="">RENAULT LOGAN</a></div>
+								<div class="text-x3-bu"><a href="">RENAULT LOGAN</a></div>
 								<div>Цена от <span class="price-content fs-5-em">1286 000 ₽</span></div>
 							</div>
 							<div class="link-content link-def mt-1 flex">
@@ -273,7 +246,7 @@
 								</div>
 							</a>
 							<div class="desc-content">
-								<div class="text-h4-b"><a href="">RENAULT MASTER</a></div>
+								<div class="text-x3-bu"><a href="">RENAULT MASTER</a></div>
 								<div>Цена от <span class="price-content fs-5-em">1286 000 ₽</span></div>
 							</div>
 							<div class="link-content link-def mt-1 flex">
@@ -311,7 +284,7 @@
 								<img src="/img/other/index/index-offer-1.png" width="100%">
 							</div>
 							<div class="desc-content">
-								<div class="text-pb4 text-center mv-3">Кредит 9,9% на 3 года</div>
+								<div class="text-x4-b text-center mv-3">Кредит 9,9% на 3 года</div>
 								<hr class="style-1">
 								<p>Узнайте больше о выгодных кредитных предложениях и станьте счастливым обладателем нового автомобиля Renault. Одобрение кредита можно получить как в дилерском центре, так и онлайн.</p>
 								<div class="text-center">
@@ -326,7 +299,7 @@
 								<img src="/img/other/index/index-offer-2.png" width="100%">
 							</div>
 							<div class="desc-content">
-								<div class="text-pb4 text-center mv-3">Программа "Поехали"</div>
+								<div class="text-x4-b text-center mv-3">Программа "Поехали"</div>
 								<hr class="style-1">
 								<p>Воспользуйтесь уникальными преимуществами программы, чтобы приобрести новый Renault. Когда программа закончится, у вас будет возможность воспользоваться одной из трех выгодных опций.</p>
 								<div class="text-center">
@@ -341,7 +314,7 @@
 								<img src="/img/other/index/index-offer-3.png" width="100%">
 							</div>
 							<div class="desc-content">
-								<div class="text-pb4 text-center mv-3">Trade-in</div>
+								<div class="text-x4-b text-center mv-3">Trade-in</div>
 								<hr class="style-1">
 								<p>Введите параметры вашего автомобиля на сайте, чтобы получить подробную информацию о его стоимости. Также вы узнаете о дополнительных выгодах при покупке нового Renault.</p>
 								<div class="text-center">
@@ -356,7 +329,7 @@
 								<img src="/img/other/index/index-offer-4.png" width="100%">
 							</div>
 							<div class="desc-content">
-								<div class="text-pb4 text-center mv-3">Лизинговые программы</div>
+								<div class="text-x4-b text-center mv-3">Лизинговые программы</div>
 								<hr class="style-1">
 								<p>Быстрая и выгодная программа лизинга для вашего бизнеса. Подберите наиболее подходящую для ваших задач модель Renault и получите персональный расчет ежемесячного платежа.</p>
 								<div class="text-center">
@@ -380,7 +353,7 @@
 								<img src="/img/other/index/index-services-1.png" width="100%">
 							</div>
 							<div class="desc-content">
-								<div class="text-pb4 text-center mv-3">Запасные части</div>
+								<div class="text-x4-b text-center mv-3">Запасные части</div>
 								<hr class="style-1">
 								<p>Оригинальные запасные части Renault и крепления ничем не отличаются от заводских, благодаря этому гарантируется минимальный срок монтажа. Откройте гид, чтобы узнать подробнее!</p>
 								<div class="text-center">
@@ -395,7 +368,7 @@
 								<img src="/img/other/index/index-services-2.png" width="100%">
 							</div>
 							<div class="desc-content">
-								<div class="text-pb4 text-center mv-3">Техническое обслуживание</div>
+								<div class="text-x4-b text-center mv-3">Техническое обслуживание</div>
 								<hr class="style-1">
 								<p>Профессиональные сотрудники сервисных центров Renault позаботятся о вашем автомобиле. Выберите подходящий пакет обслуживания, при необходимости добавьте дополнительные работы и запишитесь на сервис онлайн.</p>
 								<div class="text-center">
@@ -410,7 +383,7 @@
 								<img src="/img/other/index/index-services-3.png" width="100%">
 							</div>
 							<div class="desc-content">
-								<div class="text-pb4 text-center mv-3">Аксессуары</div>
+								<div class="text-x4-b text-center mv-3">Аксессуары</div>
 								<hr class="style-1">
 								<p>Оригинальные аксессуары Renault — лучший выбор для того, чтобы выразить свой стиль, а также сделать ежедневные поездки еще комфортнее.</p>
 								<div class="text-center">
@@ -425,7 +398,7 @@
 								<img src="/img/other/index/index-services-4.png" width="100%">
 							</div>
 							<div class="desc-content">
-								<div class="text-pb4 text-center mv-3">Специальные предложения</div>
+								<div class="text-x4-b text-center mv-3">Специальные предложения</div>
 								<hr class="style-1">
 								<p>Проходите техническое обслуживание вашего Renault с дополнительной выгодой! Узнайте подробнее об актуальных акциях и получите приятный бонус при посещении сервисного центра.</p>
 								<div class="text-center">
@@ -449,7 +422,7 @@
 								<img src="/img/other/index/index-onlineservices-1.png" width="100%">
 							</div>
 							<div class="desc-content">
-								<div class="text-pb4 mv-3">Домашний тест-драйв</div>
+								<div class="text-x4-b mv-3">Домашний тест-драйв</div>
 								<hr class="style-1 ml-0">
 								<p>Получите возможность испытать новый Renault на знакомом маршруте. Выберите дату, время и путь — и наш сотрудник доставит автомобиль прямо к вашему дому.</p>
 								<div class="text-center">
@@ -464,7 +437,7 @@
 								<img src="/img/other/index/index-onlineservices-2.png" width="100%">
 							</div>
 							<div class="desc-content">
-								<div class="text-pb4 mv-3">Онлайн-запись на сервис</div>
+								<div class="text-x4-b mv-3">Онлайн-запись на сервис</div>
 								<hr class="style-1 ml-0">
 								<p>Запланируйте свой визит в дилерский центр всего в несколько кликов и получите дополнительную выгоду на сервисные работы.</p>
 								<div class="text-center">
@@ -479,7 +452,7 @@
 								<img src="/img/other/index/index-onlineservices-3.png" width="100%">
 							</div>
 							<div class="desc-content">
-								<div class="text-pb4 mv-3">Полное одобрение кредита онлайн</div>
+								<div class="text-x4-b mv-3">Полное одобрение кредита онлайн</div>
 								<hr class="style-1 ml-0">
 								<p>Подайте заявку на кредит и получите решение банка дистанционно. Просто заполните форму на сайте или воспользуйтесь учетной записью на портале «Госуслуги».</p>
 								<div class="text-center">
@@ -494,7 +467,7 @@
 								<img src="/img/other/index/index-onlineservices-4.png" width="100%">
 							</div>
 							<div class="desc-content">
-								<div class="text-pb4 mv-3">Оцените свой автомобиль по программе Trade-in онлайн</div>
+								<div class="text-x4-b mv-3">Оцените свой автомобиль по программе Trade-in онлайн</div>
 								<hr class="style-1 ml-0">
 								<p>Заполните форму на сайте, чтобы узнать оценку вашего текущего автомобиля при сдаче в Trade–in и рассчитать выгоду для покупки нового Renault.</p>
 								<div class="text-center">
@@ -518,7 +491,7 @@
 								<img src="/img/other/index/index-news-1.png" width="100%">
 							</div>
 							<div class="desc-content">
-								<div class="text-pb4 mv-3">Renault Россия улучшает систему обслуживания автомобилей</div>
+								<div class="text-x4-b mv-3">Renault Россия улучшает систему обслуживания автомобилей</div>
 								<hr class="style-1 ml-0">
 								<p>С 1 июня по 31 июля официальной дилерской сети Renault Россия стартует сервисная кампания, которая предлагает клиентам большой спектр выгодных предложений, включая комплексную диагностику и, в случае необходимости, замену ключевых механизмов в автомобиле.</p>
 								<div class="text-center">
@@ -533,7 +506,7 @@
 								<img src="/img/other/index/index-news-2.png" width="100%">
 							</div>
 							<div class="desc-content">
-								<div class="text-pb4 mv-3">Renault Россия и ситидрайв сообщают о начале сотрудничества</div>
+								<div class="text-x4-b mv-3">Renault Россия и ситидрайв сообщают о начале сотрудничества</div>
 								<hr class="style-1 ml-0">
 								<p>Первой моделью в парке Ситидрайва стал купе-кроссовер Renault ARKANA в комплектации Drive с обогревом лобового стекла и подогревом рулевого колеса, что особенно актуально для осенне-зимнего сезона. К концу года их количество достигнет более 500 автомобилей, они предназначены для жителей Москвы и Московской области</p>
 								<div class="text-center">
@@ -548,7 +521,7 @@
 								<img src="/img/other/index/index-news-3.png" width="100%">
 							</div>
 							<div class="desc-content">
-								<div class="text-pb4 mv-3">Новый Renault DUSTER</div>
+								<div class="text-x4-b mv-3">Новый Renault DUSTER</div>
 								<hr class="style-1 ml-0">
 								<p>Легендарный внедорожник получил новый современный дизайн экстерьера, абсолютно новый интерьер и новый яркий цвет металлик, оранжевый Atacama, сохранившийся при этом свой знаменитый внедорожный характер.</p>
 								<div class="text-center">
@@ -563,7 +536,7 @@
 								<img src="/img/other/index/index-news-4.png" width="100%">
 							</div>
 							<div class="desc-content">
-								<div class="text-pb4 mv-3">Подпишитесь на новости Renault</div>
+								<div class="text-x4-b mv-3">Подпишитесь на новости Renault</div>
 								<hr class="style-1 ml-0">
 								<p>Вы будете первыми узнавать о наших премьерах на мировых автосалонах, получать анонсы мероприятий во всех городах России и знакомиться со специальными предложениями компании. Для этого достаточно заполнить небольшую форму, указав свои контактные данные. Будьте в курсе!</p>
 								<div class="text-center">
@@ -586,7 +559,7 @@
 							<img src="/img/other/index/index-dealers.png">
 						</div>
 						<div class="desc-content fb-md-6 ph-3 mv-3">
-							<div class="text-h3-b mb-5">Найти ближайший дилерский центр</div>
+							<div class="text-x5-bu mb-5">Найти ближайший дилерский центр</div>
 							<p>Сеть официальных центров Renault насчитывает более 140 дилеров и распространена по всей России — от Калининграда до Хабаровска. Renault Россия постоянно расширяет географию центров и делает их еще комфортнее — в соответствии с новыми стандартами оформления Renault Store Evolution. Только в официальном дилерском центре вы можете приобрести автомобиль по выгодной цене и получить качественное обслуживание.</p>
 							<div class="text-center mv-6">
 								<span class="btn-def">
@@ -597,152 +570,12 @@
 					</div>
 				</div>
 			</section>
-			<section>
-				<div class="container">
-					<div class="accordion-def" id="accordion">
-					  <div class="panel">
-					    <a role="button" data-toggle="collapse" data-parent="#accordion" href="#prc-1">
-					    	<span>ЮРИДИЧЕСКАЯ ИНФОРМАЦИЯ</span><i class="fa fa-angle-up"></i>
-					    </a>
-					    <div id="prc-1" class="panel-collapse collapse">
-					      <div class="accordion-def-body">
-									<p><sup>1&nbsp;</sup>Акция «Домашний Тест-драйв» (далее - «Акция») действует исключительно на территории Российской Федерации, на специально созданной интернет платформе на сайте Renault.ru (далее - «Сайт»). Список официальных дилеров Renault, принимающих участие в Акции ограничен. Организаторы Акции оставляют за собой право в одностороннем порядке изменить список дилеров, участвующих в Акции. К записи на тест-драйв допускается клиент - физическое лицо, который в период проведения Акции заказал тест-драйв на Сайте, выбрав категорию «Домашний Тест-драйв», имеющее действующее водительское удостоверение. Предложение не является офертой и может быть изменено. Акция дает клиенту возможность выбрать дату, временной слот и маршрут тест-драйва (маршрут доступный для тест-драйва устанавливается дилерским центром Renault). Количество доступных слотов для записи и автомобилей для тест-драйва строго ограничено, в связи с чем действие Акции может быть приостановлено в любое время. Дополнительная информация предоставляется по телефону 8 800 200-80-80 (звонок по РФ бесплатный).</p> 
-									<p><sup>2&nbsp;</sup>&nbsp;Цена указана в рублях, с учетом НДС на комплексную диагностику, которая включает в себя восемь проверок: уровней эксплуатационных жидкостей, наружного освещения и регулировки света фар, осмотр ветрового стекла и щеток стеклоочистителя, повреждения кузова и лакокрасочного покрытия, системы кондиционирования и состояния салонного фильтра, тормозной системы с использованием диагностического стенда (проверка износа колодок и дисков), состояния протектора шин, подвески на подъемнике с осмотром элементов днища. Во избежание сомнений Дилер вправе самостоятельно установить стоимость диагностики ниже максимальной цены, рекомендованной ЗАО «РЕНО РОССИЯ» к непревышению, а также Дилер самостоятельно и по своему усмотрению определяет свою политику скидок. Предложение ограничено. Не является публичной офертой.</p> 
-									<p><sup>3&nbsp;</sup>&nbsp;Предложение распространяется на ряд Комплекс-Сервисов по замене тормозной системы, амортизаторов, сцепления, ремня ГРМ, системы кондиционирования, кузова. Каждый Комплекс-Сервис включает в себя оригинальные запасные части, работы по их замене, а также 10 обязательных контрольных проверок автомобиля. Указанная выгода представляет собой скидку от указанной конкретным Дилером фактической розничной цены за замену запасных частей, установленной таким Дилером. Во избежание сомнений Дилер вправе самостоятельно установить стоимость запасных частей, сервисного обслуживания и ремонта ниже максимальных цен, рекомендованных ЗАО «РЕНО РОССИЯ» к непревышению, а также Дилер самостоятельно и по своему усмотрению определяет свою политику скидок. Предложение ограничено. Не является публичной офертой.</p> 
-									<p>Начальные цены модельного ряда:</p> 
-									<p><b>Renault LOGAN</b><br> Указана максимальная рекомендованная розничная цена на автомобиль Renault LOGAN в комплектации ACCESS (Аксесс) 1,6 л, 82 л. с., МКП5 2021 года производства. Количество автомобилей у дилеров ограничено. Не оферта. Действует с 08.09.2021 по 30.09.2021. Подробности – на <a href="/">renault.ru</a>.<br> <b>Renault LOGAN STEPWAY</b><br> Указана максимальная рекомендованная розничная цена на автомобиль Renault LOGAN STEPWAY в комплектации Life (Лайф) 1,6 л, 82 л. с., МКП5 2021 года производства. Количество автомобилей у дилеров ограничено. Не оферта. Действует с 08.09.2021 по 30.09.2021. Подробности – на <a href="/">renault.ru</a>.<br> <b>Renault SANDERO</b><br> Указана максимальная рекомендованная розничная цена на автомобиль Renault SANDERO в комплектации ACCESS (Аксесс) 1,6 л, 82 л. с., МКП5 2021 года производства. Количество автомобилей у дилеров ограничено. Не оферта. Действует с 08.09.2021 по 30.09.2021. Подробности – на <a href="/">renault.ru</a>.</p> 
-									<p><b>Renault SANDERO STEPWAY</b></p> 
-									<p>Указана максимальная рекомендованная розничная цена на автомобиль Renault SANDERO STEPWAY в комплектации Life (Лайф) 1,6 л, 82 л. с., МКП5 2021 года производства. Количество автомобилей у дилеров ограничено. Не оферта. Предложение действует с 08.09.2021 по 30.09.2021. Подробности — на <a href="/">renault.ru</a>.</p> 
-									<p><b>Renault Новый DUSTER</b><br> Указана максимальная рекомендованная розничная цена на автомобиль Renault Duster 2021 года производства в комплектации Access (Аксесс) 1,6 л., 114 л.с., 4x2 МКП5. Количество автомобилей у дилеров ограничено. Не оферта. Действует с 08.09.2021 по 30.09.2021. Подробности – на <a href="/">renault.ru</a>.<br> <b>Renault KAPTUR</b><br> Указанна максимальная рекомендованная розничная цена на автомобиль Renault KAPTUR в комплектации Life (Лайф) 1,6 л., 114 л.с., МКП5 2021 года производства. Количество автомобилей у дилеров ограничено. Не оферта. Действует с 08.09.2021 по 30.09.2021. Подробности – на <a href="/">renault.ru</a>.<br> <b>Renault ARKANA</b><br> Указана максимальная рекомендованная розничная цена на автомобиль Renault ARKANA 2021 года производства в комплектации Life (Лайф) 1,6 л., 114 л.с., 4x2 МКП5. Количество автомобилей у дилеров ограничено. Не оферта. Действует с 08.09.2021 по 30.09.2021. Подробности – на <a href="/">renault.ru</a>.<br> <b>Renault MASTER</b><br> Указана максимальная рекомендованная розничная цена на автомобиль Renault Master в комплектации Fourgon L1 H1 (Фургон L1 H1) 2,3 л. МКП6, 125 л.с. Количество автомобилей у дилеров ограничено. Не оферта. Действует с 08.09.2021 по 30.09.2021. Подробности – на <a href="/">renault.ru</a>.<br> </p>
-					      </div>
-					    </div>
-					  </div>
-					</div>
-				</div>
-			</section>
-			<br><br><br>
+			@@include('components/_yur-accordion.html')
 		</main>
-
-		<footer id="footer" class="footer">
-			<div class="footer-top">
-				<div class="container-p pv-2">
-					<div class="footer-icons flex fw-wrap mobile:jc-center jc-between color-white text-center figure-mv-3">
-						<figure>
-							<a href="">
-								<div class="img-content mb-3">
-									<img src="/img/icons/footer-1.svg">
-								</div>
-								<div class="desc-content">
-									<div class="mb-1"><b>Найдите ближайший</b></div>
-									<div>официальный дилерский центр Renault</div>
-								</div>
-							</a>
-						</figure>
-						<figure>
-							<a href="">
-								<div class="img-content mb-3">
-									<img src="/img/icons/footer-2.svg">
-								</div>
-								<div class="desc-content">
-									<div class="mb-1"><b>Пройдите тест-драйв</b></div>
-									<div>на автомобиле Renault</div>
-								</div>
-							</a>
-						</figure>
-						<figure>
-							<a href="">
-								<div class="img-content mb-3">
-									<img src="/img/icons/footer-3.svg">
-								</div>
-								<div class="desc-content">
-									<div class="mb-1"><b>Запишитесь на сервис</b></div>
-									<div>прямо на сайте</div>
-								</div>
-							</a>
-						</figure>
-						<figure>
-							<a href="">
-								<div class="img-content mb-3">
-									<img src="/img/icons/footer-4.svg">
-								</div>
-								<div class="desc-content">
-									<div class="mb-1"><b>Оцените свой автомобиль</b></div>
-									<div>перед покупкой нового по программе Trade-in</div>
-								</div>
-							</a>
-						</figure>
-						<figure>
-							<a href="">
-								<div class="img-content mb-3">
-									<img src="/img/icons/footer-5.svg">
-								</div>
-								<div class="desc-content">
-									<div class="mb-1"><b>Центр поддержки клиентов</b></div>
-									<div>8 800 200-80-80</div>
-								</div>
-							</a>
-						</figure>
-					</div>
-				</div>
-			</div>
-			<div class="footer-bottom">
-				<div class="container-p pv-3">
-					<div class="footer-menu cells">
-						<div class="fb-md-3 fb-xs-6 mv-3">
-							<div class="fw-7 mb-3">Покупателям</div>
-							<ul>
-								<li><a href="">Модельный ряд</a></li>
-								<li><a href="">Специальные предложения и акции</a></li>
-								<li><a href="">Покупка в кредит</a></li>
-								<li><a href="">Автомобили с пробегом</a></li>
-								<li><a href="">Корпоративным клиентам</a></li>
-							</ul>
-						</div>
-						<div class="fb-md-3 fb-xs-6 mv-3">
-							<div class="fw-7 mb-3">Владельцам</div>
-							<ul>
-								<li><a href="">Сервис Renault</a></li>
-								<li><a href="">Сервисные акции</a></li>
-								<li><a href="">Renault Assistance</a></li>
-							</ul>
-						</div>
-						<div class="fb-md-3 fb-xs-6 mv-3">
-							<div class="fw-7 mb-3">О компании</div>
-							<ul>
-								<li><a href="">Renault в России</a></li>
-								<li><a href="">Новости</a></li>
-								<li><a href="">Контакты</a></li>
-								<li><a href="">Часто задаваемые вопросы</a></li>
-								<li><a href="">Подписаться на новости</a></li>
-							</ul>
-						</div>
-						<div class="fb-md-3 fb-xs-6 mv-3">
-							<div class="fw-7 mb-2">Renault в социальных сетях</div>
-							<ul class="list-inline li-mv-1">
-								<li><a href=""><img src="/img/icons/footer-soc-fs.svg"></a></li>
-								<li><a href=""><img src="/img/icons/footer-soc-instagram.svg"></a></li>
-								<li><a href=""><img src="/img/icons/footer-soc-ok.svg"></a></li>
-								<li><a href=""><img src="/img/icons/footer-soc-wk.svg"></a></li>
-								<li><a href=""><img src="/img/icons/footer-soc-yt.svg"></a></li>
-							</ul>
-						</div>
-					</div>
-				</div>
-				<hr class="mv-0">
-				<div class="footer-copy pv-2 desktop:ph-8">
-					<ul>
-						<li><a href="">Персональные данные</a></li>
-						<li><a href="">Юридическая информация</a></li>
-						<li><a href="">Стать дилером Renault</a></li>
-					</ul>
-				</div>
-			</div>
-		</footer>
+		@@include('components/_footer.html')
 	</div>
 	<!-- SCRIPTS -->
-	<script src="js/scripts.min.js"></script>
-	<script src="js/plugins/vue.js"></script>
-	<script src="js/main.js"></script>
+	@@include('components/_scripts.html')
 </body>
 
 </html>
