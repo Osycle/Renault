@@ -95,6 +95,7 @@
 	.prg-mb-#{$i} {p{margin-bottom: 5*$i+px;}}
 
 	.li-mv-#{$i} {li{margin-top: 5*$i+px;margin-bottom: 5*$i+px;}}
+	.li-mh-#{$i} {li{margin-left: 5*$i+px;margin-right: 5*$i+px;}}
 }
 .li-inline-block{li{display: inline-block;}}
 
