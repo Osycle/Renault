@@ -19,7 +19,7 @@ gulp.task('fileinclude', function() {
   return gulp.src(['./app/src/**/*.html', '!./app/src/**/_*.html'])
     .pipe(fileinclude({
       prefix: '@@',
-      // basepath: './app/'
+      basepath: './'
     }))
     .pipe(gulp.dest('./app/'))
     .pipe( browserSync.reload({stream:true}) )
@@ -56,6 +56,7 @@ gulp.task('scripts', ()=>{
 			app+'/js/plugins/ResizeSensor.min.js',
 			app+'/js/plugins/theia-sticky-sidebar.min.js',
 			app+'/js/plugins/swiper-bundle.min.js',
+			app+'/js/plugins/jquery.responsiveTabs.js',
 			app+'/js/plugins/flickity.js'
 		])
 		.pipe( concat('scripts.min.js') )

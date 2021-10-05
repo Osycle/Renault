@@ -451,7 +451,7 @@ table {
 	box-shadow: 0 0 22px -3px rgba(black, 0.1);
 }
 .shadow-box-1{
-	box-shadow: 0 0 20px -3px rgba(black, 0.1);
+	box-shadow: 0 2px 4px 0 rgba(black, 0.1);
 }
 .shadow-row{
 	box-shadow: 0 5px 15px -15px rgba(black, 0.8);
@@ -585,7 +585,7 @@ div.btn-style{
 }
 .btn-style{
 	display: inline-block;
-	white-space: nowrap;
+	//white-space: nowrap;
 	text-align: center;	
 	overflow: hidden;
 	font-family: $font-family-1;

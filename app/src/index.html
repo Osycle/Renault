@@ -6,14 +6,14 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta name="description" content="">
-	@@include('components/_favicons.html')
+	@@include('./app/src/components/_favicons.html')
 	<title>Renault Uzbekistan</title>
 </head>
 
 <body>
 
 	<div id="page">
-		@@include('components/_header.html')
+		@@include('./app/src/components/_header.html')
 		<main class="main" data-aos="fade">
 			<section class="bnr">
 				<!-- Slider main container -->
@@ -131,14 +131,14 @@
 				  <div class="swiper-scrollbar hide"></div>
 				</div>
 			</section>
-			<section class="index-models">
+			<section>
 				<div class="container pv-5">
-					<div class="index-models-items boxes-3 figure-mv-6 desktop:ph-9">
+					<div class="boxes-3 figure-mv-6 desktop:ph-9 img-ratio-1">
 						<figure>
 							<a href="">
-								<div class="img-content">
+								<picture>
 									<img src="/img/other/index/index-models-1.png">
-								</div>
+								</picture>
 							</a>
 							<div class="desc-content">
 								<div class="text-x3-bu"><a href="">Renault arkana</a></div>
@@ -151,9 +151,9 @@
 						</figure>
 						<figure>
 							<a href="">
-								<div class="img-content">
+								<picture>
 									<img src="/img/other/index/index-models-2.png">
-								</div>
+								</picture>
 							</a>
 							<div class="desc-content">
 								<div class="text-x3-bu"><a href="">RENAULT KAPTUR</a></div>
@@ -166,9 +166,9 @@
 						</figure>
 						<figure>
 							<a href="">
-								<div class="img-content">
+								<picture>
 									<img src="/img/other/index/index-models-3.png">
-								</div>
+								</picture>
 							</a>
 							<div class="desc-content">
 								<div class="text-x3-bu"><a href="">НОВЫЙ RENAULT DUSTER</a></div>
@@ -182,9 +182,9 @@
 <!-- 
 						<figure>
 							<a href="">
-								<div class="img-content">
+								<picture>
 									<img src="/img/other/index/index-models-4.png">
-								</div>
+								</picture>
 							</a>
 							<div class="desc-content">
 								<div class="text-x3-bu"><a href="">RENAULT SANDERO STEPWAY</a></div>
@@ -197,9 +197,9 @@
 						</figure>
 						<figure>
 							<a href="">
-								<div class="img-content">
+								<picture>
 									<img src="/img/other/index/index-models-5.png">
-								</div>
+								</picture>
 							</a>
 							<div class="desc-content">
 								<div class="text-x3-bu"><a href="">RENAULT SANDERO</a></div>
@@ -212,9 +212,9 @@
 						</figure>
 						<figure>
 							<a href="">
-								<div class="img-content">
+								<picture>
 									<img src="/img/other/index/index-models-6.png">
-								</div>
+								</picture>
 							</a>
 							<div class="desc-content">
 								<div class="text-x3-bu"><a href="">RENAULT LOGAN STEPWAY</a></div>
@@ -227,9 +227,9 @@
 						</figure>
 						<figure>
 							<a href="">
-								<div class="img-content">
+								<picture>
 									<img src="/img/other/index/index-models-7.png">
-								</div>
+								</picture>
 							</a>
 							<div class="desc-content">
 								<div class="text-x3-bu"><a href="">RENAULT LOGAN</a></div>
@@ -242,9 +242,9 @@
 						</figure>
 						<figure>
 							<a href="">
-								<div class="img-content">
+								<picture>
 									<img src="/img/other/index/index-models-8.png">
-								</div>
+								</picture>
 							</a>
 							<div class="desc-content">
 								<div class="text-x3-bu"><a href="">RENAULT MASTER</a></div>
@@ -275,16 +275,16 @@
 					</div>
 				</div>
 			</section>
-			<section class="index-offers">
+			<section>
 				<div class="container pv-5">
 					<div class="entry-header mb-7 text-center">
 						<h2>Специальные предложения</h2>
 					</div>
-					<div class="index-offers-items boxes-4 figure-mv-3">
+					<div class="boxes-4 figure-mv-3 img-ratio-1">
 						<figure>
-							<div class="img-content">
+							<picture>
 								<img src="/img/other/index/index-offer-1.png" width="100%">
-							</div>
+							</picture>
 							<div class="desc-content">
 								<div class="text-x4-b text-center mv-3">Кредит 9,9% на 3 года</div>
 								<hr class="style-1">
@@ -297,9 +297,9 @@
 							</div>
 						</figure>
 						<figure>
-							<div class="img-content">
+							<picture>
 								<img src="/img/other/index/index-offer-2.png" width="100%">
-							</div>
+							</picture>
 							<div class="desc-content">
 								<div class="text-x4-b text-center mv-3">Программа "Поехали"</div>
 								<hr class="style-1">
@@ -312,9 +312,9 @@
 							</div>
 						</figure>
 						<figure>
-							<div class="img-content">
+							<picture>
 								<img src="/img/other/index/index-offer-3.png" width="100%">
-							</div>
+							</picture>
 							<div class="desc-content">
 								<div class="text-x4-b text-center mv-3">Trade-in</div>
 								<hr class="style-1">
@@ -327,9 +327,9 @@
 							</div>
 						</figure>
 						<figure>
-							<div class="img-content">
+							<picture>
 								<img src="/img/other/index/index-offer-4.png" width="100%">
-							</div>
+							</picture>
 							<div class="desc-content">
 								<div class="text-x4-b text-center mv-3">Лизинговые программы</div>
 								<hr class="style-1">
@@ -349,11 +349,11 @@
 					<div class="entry-header mb-7 text-center">
 						<h2>СЕРВИС И ОБСЛУЖИВАНИЕ</h2>
 					</div>
-					<div class="index-services-items boxes-4 figure-mv-3">
+					<div class="index-services-items boxes-4 figure-mv-3 img-ratio-1">
 						<figure>
-							<div class="img-content">
+							<picture>
 								<img src="/img/other/index/index-services-1.png" width="100%">
-							</div>
+							</picture>
 							<div class="desc-content">
 								<div class="text-x4-b text-center mv-3">Запасные части</div>
 								<hr class="style-1">
@@ -366,9 +366,9 @@
 							</div>
 						</figure>
 						<figure>
-							<div class="img-content">
+							<picture>
 								<img src="/img/other/index/index-services-2.png" width="100%">
-							</div>
+							</picture>
 							<div class="desc-content">
 								<div class="text-x4-b text-center mv-3">Техническое обслуживание</div>
 								<hr class="style-1">
@@ -381,9 +381,9 @@
 							</div>
 						</figure>
 						<figure>
-							<div class="img-content">
+							<picture>
 								<img src="/img/other/index/index-services-3.png" width="100%">
-							</div>
+							</picture>
 							<div class="desc-content">
 								<div class="text-x4-b text-center mv-3">Аксессуары</div>
 								<hr class="style-1">
@@ -396,9 +396,9 @@
 							</div>
 						</figure>
 						<figure>
-							<div class="img-content">
+							<picture>
 								<img src="/img/other/index/index-services-4.png" width="100%">
-							</div>
+							</picture>
 							<div class="desc-content">
 								<div class="text-x4-b text-center mv-3">Специальные предложения</div>
 								<hr class="style-1">
@@ -418,11 +418,11 @@
 					<div class="entry-header mb-7 text-center">
 						<h2>ОНЛАЙН-СЕРВИСЫ</h2>
 					</div>
-					<div class="index-onlineservices-items boxes-4 figure-mv-3">
+					<div class="index-onlineservices-items boxes-4 figure-mv-3 img-ratio-1">
 						<figure>
-							<div class="img-content">
+							<picture>
 								<img src="/img/other/index/index-onlineservices-1.png" width="100%">
-							</div>
+							</picture>
 							<div class="desc-content">
 								<div class="text-x4-b mv-3">Домашний тест-драйв</div>
 								<hr class="style-1 ml-0">
@@ -435,9 +435,9 @@
 							</div>
 						</figure>
 						<figure>
-							<div class="img-content">
+							<picture>
 								<img src="/img/other/index/index-onlineservices-2.png" width="100%">
-							</div>
+							</picture>
 							<div class="desc-content">
 								<div class="text-x4-b mv-3">Онлайн-запись на сервис</div>
 								<hr class="style-1 ml-0">
@@ -450,9 +450,9 @@
 							</div>
 						</figure>
 						<figure>
-							<div class="img-content">
+							<picture>
 								<img src="/img/other/index/index-onlineservices-3.png" width="100%">
-							</div>
+							</picture>
 							<div class="desc-content">
 								<div class="text-x4-b mv-3">Полное одобрение кредита онлайн</div>
 								<hr class="style-1 ml-0">
@@ -465,9 +465,9 @@
 							</div>
 						</figure>
 						<figure>
-							<div class="img-content">
+							<picture>
 								<img src="/img/other/index/index-onlineservices-4.png" width="100%">
-							</div>
+							</picture>
 							<div class="desc-content">
 								<div class="text-x4-b mv-3">Оцените свой автомобиль по программе Trade-in онлайн</div>
 								<hr class="style-1 ml-0">
@@ -487,11 +487,11 @@
 					<div class="entry-header mb-7 text-center">
 						<h2>НОВОСТИ</h2>
 					</div>
-					<div class="index-news-items boxes-4 figure-mv-3">
+					<div class="index-news-items boxes-4 figure-mv-3 img-ratio-1">
 						<figure>
-							<div class="img-content">
+							<picture>
 								<img src="/img/other/index/index-news-1.png" width="100%">
-							</div>
+							</picture>
 							<div class="desc-content">
 								<div class="text-x4-b mv-3">Renault Россия улучшает систему обслуживания автомобилей</div>
 								<hr class="style-1 ml-0">
@@ -504,9 +504,9 @@
 							</div>
 						</figure>
 						<figure>
-							<div class="img-content">
+							<picture>
 								<img src="/img/other/index/index-news-2.png" width="100%">
-							</div>
+							</picture>
 							<div class="desc-content">
 								<div class="text-x4-b mv-3">Renault Россия и ситидрайв сообщают о начале сотрудничества</div>
 								<hr class="style-1 ml-0">
@@ -519,9 +519,9 @@
 							</div>
 						</figure>
 						<figure>
-							<div class="img-content">
+							<picture>
 								<img src="/img/other/index/index-news-3.png" width="100%">
-							</div>
+							</picture>
 							<div class="desc-content">
 								<div class="text-x4-b mv-3">Новый Renault DUSTER</div>
 								<hr class="style-1 ml-0">
@@ -534,9 +534,9 @@
 							</div>
 						</figure>
 						<figure>
-							<div class="img-content">
+							<picture>
 								<img src="/img/other/index/index-news-4.png" width="100%">
-							</div>
+							</picture>
 							<div class="desc-content">
 								<div class="text-x4-b mv-3">Подпишитесь на новости Renault</div>
 								<hr class="style-1 ml-0">
@@ -572,12 +572,12 @@
 					</div>
 				</div>
 			</section>
-			@@include('components/_yur-accordion.html')
+			@@include('./app/src/components/_yur-accordion.html')
 		</main>
-		@@include('components/_footer.html')
+		@@include('./app/src/components/_footer.html')
 	</div>
 	<!-- SCRIPTS -->
-	@@include('components/_scripts.html')
+	@@include('./app/src/components/_scripts.html')
 </body>
 
 </html>

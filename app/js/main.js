@@ -61,17 +61,21 @@
 			$(that.attr("href")).toggleClass(activeClass);
 		})
 
+
+
+
+
+		//theiaStickySidebar
 		$('.sidebar-wrapper').theiaStickySidebar({
       additionalMarginTop: 30
     });
 
-		$(".menu-items a").on("click", function(){
-			location.href = $(this).attr("href");
-			console.log(location.hash, $(this).attr("href"))
-			if( location.pathname+location.hash == $(this).attr("href") )
-				location.reload();
-		})
-    
+		//responsiveTabs
+    $('#responsiveTabsDemo').responsiveTabs({
+    	startCollapsed: 'accordion'
+		});
+
+
 
 		/*FANCYBOX*/
 		if ($("[data-fancybox]").length != 0)
