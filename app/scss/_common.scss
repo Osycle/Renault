@@ -559,24 +559,17 @@ table {
 
 
 
-.hover-style-1{
-	&:hover{
-		border-color: $color-1 !important;
-	}
-	&:hover{
-		&:before{
-			transform: scale(1);	
-		}
-	}
-	&.reverse{
+.hover-img-scale{
+	img{
+		transition: transform 0.3s ease;
+	}	
+	a, .this-link{
 		&:hover{
-			border-color: $color-1 !important;
-		}
-		&:before{
-			background-color: $color-3;
+			img{
+				transform: scale(1.08);
+			}
 		}
 	}
-
 }
 
 
@@ -645,7 +638,7 @@ div.btn-style{
 	color: white;
 	font-size: 1.6rem;
 	//hover
-	&:hover{
+	&:hover, &.hovered{
 		background-color: $color-1;
 		color: $color-2;
 	}
@@ -683,7 +676,8 @@ div.btn-style{
 	color: black;
 	font-weight: 700;
 	position: relative;
-	a{
+	a, .this-link{
+		padding-right: 15px;
 		&:after{
 			content: "";
 	    transform: rotate(45deg);
@@ -694,6 +688,9 @@ div.btn-style{
 	    border: 2px solid $color-1;
 	    border-width: 2px 2px 0 0;
 	    vertical-align: middle;
+	    position: absolute;
+	    top: calc(50% - .3em);
+	    right: 0;
 		}
 		&:hover{
 			&:after{
@@ -1026,8 +1023,7 @@ main{
 	overflow: inherit;
 	z-index: 1;
 	@media (max-width: 991px){
-		overflow: hidden;
-		padding-bottom: 30px;
+		
 	}
 	ul:not([class]){
 		text-align: left;
