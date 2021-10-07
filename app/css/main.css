@@ -7454,7 +7454,7 @@ div.btn-style, div.btn-def, div.btn-opacity {
       border-width: 2px 2px 0 0;
       vertical-align: middle;
       position: absolute;
-      top: calc(50% - .3em);
+      top: calc(50% - 0.2em);
       right: 0; }
     .link-def a:hover:after, .link-def .this-link:hover:after {
       border-color: #000000; }
