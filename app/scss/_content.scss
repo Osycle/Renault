@@ -762,3 +762,361 @@ small{
 		}
 	}
 }
+
+
+
+
+
+
+
+$yellow: #efdf00;
+
+body {
+  font-family: "NouvelR";
+}
+
+* {
+  box-sizing: border-box;
+}
+
+
+.slider {
+  margin: 0 auto;
+  max-width: 1170px;
+  overflow: hidden;
+  .view {
+    height: 499px;
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+
+    &.animate {
+      .info.active {
+
+      }
+    }
+  }
+
+}
+.background {
+  width: 2775px;
+  height: 500px;
+  position: absolute;
+  transform: translate(-50%, 0);
+  left: 50%;  
+  .bg {
+    opacity: 0;
+    position: absolute;
+    top: 0;
+    height: 100%;
+    
+    &--active {
+      opacity: 1;
+      left: 0;
+      z-index: 1;
+    }
+    &--next {
+      opacity: 1;
+      left: 100%;
+    }
+  }
+  &.animated {
+    .bg {
+      transition: all 2s;
+    }
+    .bg--active {
+      left: -100%;
+    }
+    .bg--next {
+      left: 0;
+    }
+  }
+}
+
+.car {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  opacity: 0;
+  transition: all .5s;
+  &--active {
+    opacity: 1;
+    z-index: 1;
+  }
+
+  &__image {
+    transition: all 1s;
+  }
+  &__wheel {
+    position: absolute;
+    bottom: 10px;
+    // transition: all .3s;
+    &-1 {
+      left: 120px;
+    }
+    &-2 {
+      left: 598px;
+    }
+    &.spin {
+    }
+  }
+  &.animate {
+    // &.car--active {
+    //   opacity: 0;
+    // }
+    // &.car--next {
+    //   opacity: 1;
+    // }
+    .car__image {
+      animation: movingCar 2s;
+    }
+    .car__wheel {
+      animation: rotateWheel 2s;
+    }
+  }
+}
+
+.info {
+  position: absolute;
+  height: 100%;
+  width: 33.3333%;
+  background: rgba(0, 0, 0, .85);
+  top: 100%;
+  color: #fff;
+  padding: 20px 30px;
+  transition: all 1s;
+  z-index: 5;
+  // display: flex;
+  // flex-direction: column;
+
+  &.active {
+    top: 0;
+  }
+
+  a {
+    color: #fff;
+  }
+
+  &-list {
+    &__item {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      &-icon {
+        flex: 0 0 60px;
+      }
+      &-title {
+        border-left: 1px solid $yellow;
+        padding-left: 14px;
+        font-weight: bold;
+        font-size: 20px;
+      }
+      &-description {
+        margin-top: 36px;
+        font-size: 16px;
+        line-height: 23px;
+        width: 100%;
+      }
+      &-teaser {
+        margin-top: 16px;
+        font-size: 16px;
+        line-height: 23px;
+        width: 100%;
+        a {
+          font-size: 12px;
+          text-decoration: none;
+          border-bottom: 1px dotted #fff;
+          img {
+            margin-left: 5px;
+          }
+        }
+      }
+
+      & + & {
+        margin-top: 35px;
+      }
+    }
+  }
+
+  &-1 {
+    left: 0;
+  }
+  &-2 {
+    left: 33.3333%;
+  }
+  &-3 {
+    left: 66.6666%;
+  }
+}
+.thumbs {
+  display: flex;
+  background: #e5e5e5;
+  border: 2px solid #e5e5e5;
+
+  &__item {
+    flex: 0 0 33.3333%;
+    padding: 12px 15px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    cursor: pointer;
+    &.active {
+      background: #fff;
+    }
+  }
+  &__title {
+    font-size: 20px;
+    line-height: 24px;
+    text-transform: uppercase;
+    padding-left: 15px;
+  }
+  &__car {
+    margin-right: 5px;
+  }
+  &__progressbar {
+    margin-top: 18px;
+    height: 3px;
+    width: 100%;
+    background-color: #bebebe;
+    display: flex;
+    justify-content: flex-end;
+    span {
+      // opacity: 0;
+      // width: 0%;
+      content: '';
+      height: 100%;
+      display: block;
+      background: $yellow;
+      
+      .active & {
+        width: 100%;
+      }
+      .animate & {
+        animation: progress 4s linear forwards;
+      }
+    }
+    &.active span {
+      width: 100%;
+    }
+  }
+}
+
+.play-btn {
+  position: absolute;
+  top: 50%;
+  right: 70px;
+  transform: translate(0, -50%);
+  border-radius: 50%;
+  width: 98px;
+  height: 98px;
+  background-color: $yellow;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all .3s;
+  z-index: 3;
+  img {
+    margin-left: 10px;
+  }
+  &:hover {
+    box-shadow: 0 0 0 10px $yellow;
+    img {
+      display: none;
+    }
+    &:before {
+      content: "поехали!";
+      display: block;
+      // text-transform: uppercase;
+      font-size: 14px;
+    }
+  }
+}
+
+
+// keyframes/animations
+@keyframes rotateWheel {
+  from {transform: rotate(0deg)}
+  to {transform: rotate(1440deg)}
+}
+
+@keyframes movingCar {
+  0% {transform: rotate(0deg)}
+  15% {transform: rotate(-0.5deg)}
+  40% {transform: rotate(0deg)}
+  80% {transform: rotate(0deg)}
+  93% {transform: rotate(0.3deg)}
+  100% {transform: rotate(0deg)}
+}
+
+@keyframes progress {
+  0% {width: 100%;}
+  100% {width: 0%;}
+}
+
+
+// media 
+@media (max-width: 1140px) {
+  .thumbs__item {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .info-list__item-teaser {
+    line-height: 1;
+  }
+}
+/*
+820 => 100vw (768)
+119 => 
+
+
+*/
+@media (max-width: 768px) {
+  .info {
+    width: 100%;
+    left: 0;
+  }
+  .slider {
+    .view {
+      height: 380px;
+    }
+  }
+  .background {
+    width: 2111.1111px;
+    height: 380px;
+  }
+  .car {
+    &__image {
+      width: 100vw;
+    }
+    &__wheel-1 {
+      left: 15vw;
+    }
+    &__wheel-2 {
+      left: 73vw;
+    }
+    &__wheel {
+      width: 14.51vw;
+      bottom: .8vw;
+    }
+  }
+  .info-list {
+    &__item {
+      &-title {
+        font-size: 18px;
+      }
+      &-teaser {
+        font-size: 14px;
+        margin-top: 10px;
+      }
+      & + & {
+        margin-top: 25px;
+      }
+    }
+  }
+  .play-btn {
+    display: none;
+  }
+}

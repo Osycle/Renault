@@ -122,16 +122,23 @@
 /* BOX */
 @for $i from 0 through 10 {
 	.box-xs-#{$i} { width: 10*$i#{"%"};}
+}
+@for $i from 0 through 10 {
 	@media (min-width:768px){
 		.box-sm-#{$i} {width: 10*$i#{"%"};}
 	}
+}
+@for $i from 0 through 10 {
 	@media (min-width:992px){
 		.box-md-#{$i} {width: 10*$i#{"%"};}
 	}
+}
+@for $i from 0 through 10 {
 	@media (min-width:1200px){
 		.box-lg-#{$i} {width: 10*$i#{"%"};}
 	}
 }
+
 
 
 
