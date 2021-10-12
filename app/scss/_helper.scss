@@ -243,7 +243,7 @@
 	}
 }	
 
-@for $i from 1 through 6{
+@for $i from 0 through 10{
 	.row-#{$i}{
 		margin-left: -5*$i#{"px"};
 		margin-right: -5*$i#{"px"};

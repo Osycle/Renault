@@ -51,26 +51,7 @@
 		    el: '.swiper-scrollbar',
 		  },
 		});
-		// const swiper = new Swiper('.credit-swiper', {
-		//   // Optional parameters
-		//   direction: 'horizontal',
-		//   loop: false,
 
-		//   // If we need pagination
-		//   pagination: {
-		//     el: '.swiper-pagination',
-		//   },
-
-		//   // Navigation arrows
-		//   navigation: {
-		//     nextEl: '.swiper-btn-next',
-		//     prevEl: '.swiper-btn-prev',
-		//   },
-		//   // And if we need scrollbar
-		//   scrollbar: {
-		//     el: '.swiper-scrollbar',
-		//   },
-		// });
 
 
 		$('[data-toggle="click"]').on("click", function(e){
@@ -83,6 +64,27 @@
 
 
 
+    window.l_ante = $("#range").ionRangeSlider({
+    	skin: "round",
+      min: 0,
+      max: 1140000, //1140000
+      from: 0,
+      to: 0,
+      //from_min: 0,
+      //from_max: 627000, //627000
+      postfix: " сум",
+      step: 1,
+      grid: true,
+      grid_num: 20,
+      //grid_snap: false,
+      prettify_enabled: true,
+      prettify_separator: " ",
+      grid_margin: false,
+      force_edges: true,
+      onChange: function (data) {
+      	console.log(data)
+      },
+    }).data("ionRangeSlider");
 
 
 		//theiaStickySidebar
@@ -192,8 +194,17 @@
 
 
 
-
-		//$(".credit-slider .")
+  // Pass single element
+  const multiDefault = function(){
+    const elements = document.querySelectorAll('.js-choice');
+    elements.forEach(el => {
+      const choices = new Choices(el, {
+        searchEnabled: false,
+        itemSelectText: ''
+      });
+    })
+  }
+  multiDefault();
 
 
 

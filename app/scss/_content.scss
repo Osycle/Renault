@@ -1120,3 +1120,149 @@ $yellow: #efdf00;
 
 
 
+
+
+
+
+
+
+
+.irs--round{
+	.irs-min, .irs-max{
+
+	}
+	.irs-bar{
+		background-color: $color-1;
+	}
+	.irs-handle{
+		border-color: $color-1;
+	}
+	.irs-single{
+		background-color: $color-1;
+		border-radius: 0;	
+		padding: 7px 11px;
+		transform: translate(0px, -10px);
+		color: black;
+		&:before{
+			border-top-color: $color-1;
+		}
+	}
+	.irs-grid{
+		.irs-grid-text{
+			color: transparent;
+			visibility: visible !important;
+			top: 20px;
+			&:before{
+				content: " ";
+				position: absolute;
+				width: 100%;
+				color: #808080;
+				font-size: 14px;
+			}
+			&:nth-child(2){
+				&:before{
+					transform: translateX(-50%);
+				}
+			}
+			&:nth-last-child(1){
+				&:before{
+					transform: translateX(50%);
+				}
+			}
+		}
+		@for $i from 0 through 20 {
+			.js-grid-text-#{$i}{
+				&:before{
+					content: ""+((5*$i)+"%");
+					//content: "1";
+				}
+			}
+		}
+	}
+}
+
+.credit-calc{
+	background-color: $color-gray-1;
+	padding: 30px;
+	.wrapper{
+		
+	}
+}
+.credit-calc__models{
+	background-color: white;
+}
+.credit-calc__models-items{
+	display: flex;
+	justify-content: center;
+	padding-top: 25px;
+	padding-bottom: 25px;
+	figure{
+		width: 100%;
+		max-width: 230px;
+		&.active{
+			.title-content{
+				border-color: $color-1;
+			}
+		}
+		&:hover{
+			cursor: pointer;
+		}
+	}
+	.img-content{
+		position: relative;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		overflow: hidden;
+		img{
+			position: absolute;
+			object-fit: cover;
+			height: 100%;
+			width: 200px;
+		}
+		&:before{
+			content: '';
+    	display: block;
+    	padding-top: 45%;
+    	width: 100%;
+    	height: 100%;
+		}
+	}
+	.desc-content{
+		text-align: center;
+		margin-top: 5px;
+	}
+	.title-content{
+		font-size: 16px;
+  	font-weight: 700;
+  	height: 3.6em;
+  	line-height: 1.2;
+  	display: inline-block;
+  	padding: 5px 0;
+  	border-bottom: 3px solid transparent;
+	}
+}
+.credit-calc__conf{
+	background-color: white;
+	padding: 40px 25px;
+	.price-content{
+		font-size: 24px;
+		background-color: $color-1;
+		text-align: center;
+		color: black;
+		font-weight: 700;
+		padding: 7px 15px;
+		big{
+			font-size: 36px;
+		}
+	}
+	select{
+		max-width: 230px;
+	}
+	.choices{
+		//width: 230px;
+		.choices__inner{
+			height: 50px;
+		}
+	}
+}

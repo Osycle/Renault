@@ -9789,6 +9789,178 @@ small {
   100% {
     width: 0%; } }
 
+.irs--round .irs-bar {
+  background-color: #efdf00; }
+
+.irs--round .irs-handle {
+  border-color: #efdf00; }
+
+.irs--round .irs-single {
+  background-color: #efdf00;
+  border-radius: 0;
+  padding: 7px 11px;
+  -webkit-transform: translate(0px, -10px);
+  transform: translate(0px, -10px);
+  color: black; }
+  .irs--round .irs-single:before {
+    border-top-color: #efdf00; }
+
+.irs--round .irs-grid .irs-grid-text {
+  color: transparent;
+  visibility: visible !important;
+  top: 20px; }
+  .irs--round .irs-grid .irs-grid-text:before {
+    content: " ";
+    position: absolute;
+    width: 100%;
+    color: #808080;
+    font-size: 14px; }
+  .irs--round .irs-grid .irs-grid-text:nth-child(2):before {
+    -webkit-transform: translateX(-50%);
+    transform: translateX(-50%); }
+  .irs--round .irs-grid .irs-grid-text:nth-last-child(1):before {
+    -webkit-transform: translateX(50%);
+    transform: translateX(50%); }
+
+.irs--round .irs-grid .js-grid-text-0:before {
+  content: "0%"; }
+
+.irs--round .irs-grid .js-grid-text-1:before {
+  content: "5%"; }
+
+.irs--round .irs-grid .js-grid-text-2:before {
+  content: "10%"; }
+
+.irs--round .irs-grid .js-grid-text-3:before {
+  content: "15%"; }
+
+.irs--round .irs-grid .js-grid-text-4:before {
+  content: "20%"; }
+
+.irs--round .irs-grid .js-grid-text-5:before {
+  content: "25%"; }
+
+.irs--round .irs-grid .js-grid-text-6:before {
+  content: "30%"; }
+
+.irs--round .irs-grid .js-grid-text-7:before {
+  content: "35%"; }
+
+.irs--round .irs-grid .js-grid-text-8:before {
+  content: "40%"; }
+
+.irs--round .irs-grid .js-grid-text-9:before {
+  content: "45%"; }
+
+.irs--round .irs-grid .js-grid-text-10:before {
+  content: "50%"; }
+
+.irs--round .irs-grid .js-grid-text-11:before {
+  content: "55%"; }
+
+.irs--round .irs-grid .js-grid-text-12:before {
+  content: "60%"; }
+
+.irs--round .irs-grid .js-grid-text-13:before {
+  content: "65%"; }
+
+.irs--round .irs-grid .js-grid-text-14:before {
+  content: "70%"; }
+
+.irs--round .irs-grid .js-grid-text-15:before {
+  content: "75%"; }
+
+.irs--round .irs-grid .js-grid-text-16:before {
+  content: "80%"; }
+
+.irs--round .irs-grid .js-grid-text-17:before {
+  content: "85%"; }
+
+.irs--round .irs-grid .js-grid-text-18:before {
+  content: "90%"; }
+
+.irs--round .irs-grid .js-grid-text-19:before {
+  content: "95%"; }
+
+.irs--round .irs-grid .js-grid-text-20:before {
+  content: "100%"; }
+
+.credit-calc {
+  background-color: #f2f1f2;
+  padding: 30px; }
+
+.credit-calc__models {
+  background-color: white; }
+
+.credit-calc__models-items {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  padding-top: 25px;
+  padding-bottom: 25px; }
+  .credit-calc__models-items figure {
+    width: 100%;
+    max-width: 230px; }
+    .credit-calc__models-items figure.active .title-content {
+      border-color: #efdf00; }
+    .credit-calc__models-items figure:hover {
+      cursor: pointer; }
+  .credit-calc__models-items .img-content {
+    position: relative;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    overflow: hidden; }
+    .credit-calc__models-items .img-content img {
+      position: absolute;
+      -o-object-fit: cover;
+      object-fit: cover;
+      height: 100%;
+      width: 200px; }
+    .credit-calc__models-items .img-content:before {
+      content: '';
+      display: block;
+      padding-top: 45%;
+      width: 100%;
+      height: 100%; }
+  .credit-calc__models-items .desc-content {
+    text-align: center;
+    margin-top: 5px; }
+  .credit-calc__models-items .title-content {
+    font-size: 16px;
+    font-weight: 700;
+    height: 3.6em;
+    line-height: 1.2;
+    display: inline-block;
+    padding: 5px 0;
+    border-bottom: 3px solid transparent; }
+
+.credit-calc__conf {
+  background-color: white;
+  padding: 40px 25px; }
+  .credit-calc__conf .price-content {
+    font-size: 24px;
+    background-color: #efdf00;
+    text-align: center;
+    color: black;
+    font-weight: 700;
+    padding: 7px 15px; }
+    .credit-calc__conf .price-content big {
+      font-size: 36px; }
+  .credit-calc__conf select {
+    max-width: 230px; }
+  .credit-calc__conf .choices .choices__inner {
+    height: 50px; }
+
 /* 
 		_footer.scss
 */
@@ -13683,6 +13855,10 @@ html .fancybox-show-thumbs .fancybox-thumbs {
     -ms-flex-preferred-size: 100%;
     flex-basis: 100%; } }
 
+.row-0 {
+  margin-left: 0px;
+  margin-right: 0px; }
+
 .row-1 {
   margin-left: -5px;
   margin-right: -5px; }
@@ -13706,6 +13882,22 @@ html .fancybox-show-thumbs .fancybox-thumbs {
 .row-6 {
   margin-left: -30px;
   margin-right: -30px; }
+
+.row-7 {
+  margin-left: -35px;
+  margin-right: -35px; }
+
+.row-8 {
+  margin-left: -40px;
+  margin-right: -40px; }
+
+.row-9 {
+  margin-left: -45px;
+  margin-right: -45px; }
+
+.row-10 {
+  margin-left: -50px;
+  margin-right: -50px; }
 
 .fw-1 {
   font-weight: 100; }
