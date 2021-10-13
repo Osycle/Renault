@@ -239,3 +239,26 @@ html{
         display: block;
     }
 }
+
+
+//multiselect
+
+.multiselect{
+	.multiselect__tags{
+		border-radius: 0;
+		min-height: 50px;
+		display: flex;
+		align-items: center;
+		padding: 5px 35px 5px 5px;
+	}
+	.multiselect__single{
+		margin-bottom: 0;
+	}
+	.multiselect__select{
+		height: 100%;
+	}
+	.multiselect__option--highlight{
+		background-color: $color-gray-1;
+		color: black;
+	}
+}

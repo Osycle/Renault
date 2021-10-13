@@ -49,7 +49,6 @@ gulp.task('scripts', ()=>{
 			app+'/js/plugins/aos.js',
 			app+'/js/plugins/owl.carousel.min.js',
 			app+'/js/plugins/jquery.fancybox.js',
-			app+'/js/plugins/select2.min.js',
 			app+'/js/plugins/jquery.mmenu.all.js',
 			app+'/js/plugins/smooth-scroll.js',
 			app+'/js/plugins/ion.rangeSlider.min.js',

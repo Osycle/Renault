@@ -1129,52 +1129,63 @@ $yellow: #efdf00;
 
 .irs--round{
 	.irs-min, .irs-max{
-
+		border-radius: 0;
 	}
 	.irs-bar{
 		background-color: $color-1;
 	}
 	.irs-handle{
 		border-color: $color-1;
+		border: 8px solid #efefef;
+		border-radius: 50%;
+		box-shadow: 0 6px 3px rgba(black, 0.35);
+    width: 30px;
+    height: 30px;
+    margin-top: -5px;
+		background: linear-gradient(#d6d5d1, #fff);
 	}
 	.irs-single{
 		background-color: $color-1;
 		border-radius: 0;	
 		padding: 7px 11px;
-		transform: translate(0px, -10px);
+		//transform: translate(0px, -10px);
+		margin-top: -15px;
 		color: black;
 		&:before{
 			border-top-color: $color-1;
 		}
 	}
 	.irs-grid{
-		.irs-grid-text{
-			color: transparent;
-			visibility: visible !important;
-			top: 20px;
-			&:before{
-				content: " ";
-				position: absolute;
-				width: 100%;
-				color: #808080;
-				font-size: 14px;
-			}
-			&:nth-child(2){
+		@media (min-width: 1280px){
+			.irs-grid-text{
+				color: transparent;
+				visibility: visible !important;
+				top: 20px;
 				&:before{
-					transform: translateX(-50%);
+					content: " ";
+					position: absolute;
+					width: 100%;
+					color: #808080;
+					font-size: 14px;
+				}
+				&:nth-child(2){
+					&:before{
+						transform: translateX(-50%);
+					}
+				}
+				&:nth-last-child(1){
+					&:before{
+						transform: translateX(50%);
+					}
 				}
 			}
-			&:nth-last-child(1){
-				&:before{
-					transform: translateX(50%);
-				}
-			}
-		}
-		@for $i from 0 through 20 {
-			.js-grid-text-#{$i}{
-				&:before{
-					content: ""+((5*$i)+"%");
-					//content: "1";
+		
+			@for $i from 0 through 20 {
+				.js-grid-text-#{$i}{
+					&:before{
+						content: ""+((5*$i)+"%");
+						//content: "1";
+					}
 				}
 			}
 		}
@@ -1266,3 +1277,4 @@ $yellow: #efdf00;
 		}
 	}
 }
+

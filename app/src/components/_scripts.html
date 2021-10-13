@@ -1,17 +1,43 @@
 
 
 <!-- CSS -->
+
+<link rel="stylesheet" href="css/fonts.css">
+<link rel="stylesheet" href="fonts/NouvelR/stylesheet.css">
+<link rel="stylesheet" href="css/plugins.css">
 <link rel="stylesheet" type="text/css" href="/js/plugins/jquery-ui/jquery-ui.min.css">
-<!-- Include Choices CSS -->
-<link rel="stylesheet" href="/js/plugins/choices-js/public/assets/styles/choices.css"/>
+<link rel="stylesheet" href="/js/plugins/choices-js/public/assets/styles/choices.css"/> <!-- Choices CSS -->
+<link rel="stylesheet" href="/js/plugins/vue-multiselect/vue-multiselect.css"> <!-- multiselect -->
+<link rel="stylesheet" href="css/main.css">
+
+<link rel="stylesheet" href="css/additional.css">
+
+
+
+
 
 
 
 
 <!-- SCRIPTS -->
 <script src="/js/scripts.min.js"></script>
+<script src="/js/plugins/jquery-ui/jquery-ui.min.js"></script> <!-- JQUERY UI -->
+<script src="/js/plugins/choices-js/public/assets/scripts/choices.min.js"></script><!-- Choices JS -->
 <script src="/js/plugins/vue.js"></script>
-<script src="/js/plugins/jquery-ui/jquery-ui.min.js"></script>
-<!-- Include Choices JavaScript (latest) -->
-<script src="/js/plugins/choices-js/public/assets/scripts/choices.min.js"></script>
+<script src="/js/plugins/vue-multiselect/vue-multiselect.min.js"></script> 
 <script src="/js/main.js"></script>
+
+<script type="text/javascript">
+  // Подключение vue компонентов
+  Vue.component('multiselect', window.VueMultiselect.default)
+  Vue.filter('spaceBetweenNum', (price)=>{ 
+    if(!price)
+      return 0;
+    price += "";
+    var pattern = /(-?\d+)(\d{3})/;
+    while (pattern.test(price))
+      price = price.replace(pattern, "$1 $2");
+    
+    return price;      
+  })
+</script>

@@ -22,14 +22,7 @@
 		$('[data-toggle="tooltip"]').tooltip({
 			html: true
 		})
-		/* SELECT2 */
-		if ( $(".js-select").length )
-			$(".js-select").select2({
-				placeholder: "Выберите...",
-				minimumResultsForSearch: Infinity,
-				allowClear: false
-			});
-		
+
 
 		new Swiper('.swiper', {
 		  // Optional parameters
@@ -64,27 +57,6 @@
 
 
 
-    window.l_ante = $("#range").ionRangeSlider({
-    	skin: "round",
-      min: 0,
-      max: 1140000, //1140000
-      from: 0,
-      to: 0,
-      //from_min: 0,
-      //from_max: 627000, //627000
-      postfix: " сум",
-      step: 1,
-      grid: true,
-      grid_num: 20,
-      //grid_snap: false,
-      prettify_enabled: true,
-      prettify_separator: " ",
-      grid_margin: false,
-      force_edges: true,
-      onChange: function (data) {
-      	console.log(data)
-      },
-    }).data("ionRangeSlider");
 
 
 		//theiaStickySidebar
@@ -205,8 +177,6 @@
     })
   }
   multiDefault();
-
-
 
 
 

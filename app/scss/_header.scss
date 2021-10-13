@@ -110,12 +110,14 @@ $header-min-menu: 60px;
 		margin-bottom: 10px;
 	}
 	ul{
-		display: grid;
+		display: flex;
     grid-template-rows: 1fr;
-    grid-template-columns: repeat(3, 75px);
     text-align: center;
     grid-column-gap: 4px;
     font-size: 12px;
+	}
+	li{
+		min-width: 75px;
 	}
 	a{
 		display: flex;
@@ -577,6 +579,7 @@ $header-min-menu: 60px;
 		}
 	}
 	figure{
+		position: relative;
 		margin-top: 15px;
 		margin-bottom: 30px;
 		padding: 0 5px;
@@ -584,5 +587,17 @@ $header-min-menu: 60px;
 		@media (max-width: 1440px){
 			width: 240px;
 		}
+	}
+}
+
+.soon-text{
+	background-color: $color-1;
+	color: black;
+	padding: 5px 6px;
+	font-weight: 400;
+	&.top-right{
+		position: absolute;
+		top: 0;
+		right: 0;
 	}
 }

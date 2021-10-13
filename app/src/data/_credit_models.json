@@ -1,0 +1,148 @@
+[
+  {
+    "full_name": "renault KAPTUR",
+    "image": "/img/models/kaptur_90.png",
+    "versions": [
+      {
+        "name": "Life",
+        "complectations": [
+          {
+            "price": "1140000",
+            "name": "1,6 л, 114 л.с., 4х2, МКП5"
+          },
+          {
+            "price": "1195000",
+            "name": "1,6 л, 114 л.с., 4х2, CVT X-Tronic"
+          }
+        ]
+      },
+      {
+        "name": "Drive",
+        "complectations": [
+          {
+            "price": "1210000",
+            "name": "1,6 л, 114 л.с., 4х2, МКП5"
+          },
+          {
+            "price": "1265000",
+            "name": "1,6 л, 114 л.с., 4х2, CVT X-Tronic"
+          },
+          {
+            "price": "1375000",
+            "name": "TCe 150, 150 л.с., 4х2, CVT X-Tronic"
+          },
+          {
+            "price": "1450000",
+            "name": "TCe 150, 150 л.с., 4х4, CVT X-Tronic"
+          }
+        ]
+      },
+      {
+        "name": "Style",
+        "complectations": [
+          {
+            "price": "1352000",
+            "name": "1,6 л, 114 л.с., 4х2, CVT X-Tronic"
+          }
+        ]
+      },
+      {
+        "name": "Style TCe 150",
+        "complectations": [
+          {
+            "price": "1462000",
+            "name": "TCe 150, 150 л.с., 4х2, CVT X-Tronic"
+          },
+          {
+            "price": "1537000",
+            "name": "TCe 150, 150 л.с., 4х4, CVT X-Tronic"
+          }
+        ]
+      },
+      {
+        "name": "Prime",
+        "complectations": [
+          {
+            "price": "1557000",
+            "name": "TCe 150, 150 л.с., 4х2, CVT X-Tronic"
+          },
+          {
+            "price": "1632000",
+            "name": "TCe 150, 150 л.с., 4х4, CVT X-Tronic"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "full_name": "Renault ARKANA",
+    "image": "/img/models/arkana_90.png",
+    "versions": [
+      {
+        "name": "Life",
+        "complectations": [
+          {
+            "price": "1211000",
+            "name": "1,6 л, 114 л.с., МКП5, 4х2"
+          },
+          {
+            "price": "1266000",
+            "name": "1,6 л, 114 л.с., 4х2, CVT X-Tronic"
+          }
+        ]
+      },
+      {
+        "name": "Drive",
+        "complectations": [
+          {
+            "price": "1291000",
+            "name": "1,6 л, 114 л.с., МКП5, 4х2"
+          },
+          {
+            "price": "1346000",
+            "name": "1,6 л, 114 л.с., 4х2, CVT X-Tronic"
+          },
+          {
+            "price": "1371000",
+            "name": "1,6 л, 114 л.с., МКП6, 4х4"
+          }
+        ]
+      },
+      {
+        "name": "Drive TCe 150",
+        "complectations": [
+          {
+            "price": "1456000",
+            "name": "TCe 150, 150 л.с., 4х2, CVT X-Tronic"
+          }
+        ]
+      },
+      {
+        "name": "Style",
+        "complectations": [
+          {
+            "price": "1446000",
+            "name": "1,6 л, 114 л.с., 4х2, CVT X-Tronic"
+          },
+          {
+            "price": "1471000",
+            "name": "1,6 л, 114 л.с., МКП6, 4х4"
+          }
+        ]
+      },
+      {
+        "name": "Style TCe 150",
+        "complectations": [
+          {
+            "price": "1556000",
+            "name": "TCe 150, 150 л.с., 4х2, CVT X-Tronic"
+          },
+          {
+            "price": "1636000",
+            "name": "TCe 150, 150 л.с., 4х4, CVT X-Tronic"
+          }
+        ]
+      }
+    ]
+  }
+]
