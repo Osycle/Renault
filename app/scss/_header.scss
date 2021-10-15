@@ -117,7 +117,10 @@ $header-min-menu: 60px;
     font-size: 12px;
 	}
 	li{
-		min-width: 75px;
+		min-width: 95px;
+		@media (min-width: 991px){
+			margin-left: 5px;
+		}
 	}
 	a{
 		display: flex;
@@ -461,6 +464,8 @@ $header-min-menu: 60px;
 }
 .subdown-item{
 	background-color: white;
+	min-height: 600px;
+	box-shadow: 0 2px 4px 0 rgba(black, 0.1);
 }
 .subdown-item-wrapper{
 	margin-left: auto;

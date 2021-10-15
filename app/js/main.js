@@ -4,8 +4,6 @@
 
 (function() {
 	$(function() {
-		//$("img").attr("src", "img/other/short-news-5.jpg");
-		//$("[style*='background-image']").attr("style", "background-image: url('img/other/short-news-5.jpg')");
 
 		/*AOS*/
 		if( "AOS" in window ){

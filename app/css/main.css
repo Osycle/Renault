@@ -7441,7 +7441,8 @@ div.btn-style, div.btn-def, div.btn-opacity {
   font-weight: 700;
   position: relative; }
   .link-def a, .link-def .this-link {
-    padding-right: 15px; }
+    padding-right: 15px;
+    position: relative; }
     .link-def a:after, .link-def .this-link:after {
       content: "";
       -webkit-transform: rotate(45deg);
@@ -8034,7 +8035,10 @@ label {
     grid-column-gap: 4px;
     font-size: 12px; }
   .header-icons li {
-    min-width: 75px; }
+    min-width: 95px; }
+    @media (min-width: 991px) {
+      .header-icons li {
+        margin-left: 5px; } }
   .header-icons a {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -8324,7 +8328,10 @@ label {
       letter-spacing: -.02em; } }
 
 .subdown-item {
-  background-color: white; }
+  background-color: white;
+  min-height: 600px;
+  -webkit-box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.1);
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.1); }
 
 .subdown-item-wrapper {
   margin-left: auto;
@@ -14082,6 +14089,9 @@ html .fancybox-show-thumbs .fancybox-thumbs {
 
 .inline-block {
   display: inline-block; }
+
+.ws-nowrap {
+  white-space: nowrap; }
 
 .overflow-hidden {
   overflow: hidden; }

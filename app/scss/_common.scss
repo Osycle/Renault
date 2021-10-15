@@ -678,6 +678,7 @@ div.btn-style{
 	position: relative;
 	a, .this-link{
 		padding-right: 15px;
+		position: relative;
 		&:after{
 			content: "";
 	    transform: rotate(45deg);
