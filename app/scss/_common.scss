@@ -840,6 +840,8 @@ div.btn-style{
 	line-height: 100%;
 }
 
+
+
 .parag-gray{
 	p:not([class*="color"]){
 		color: #666666;
@@ -854,6 +856,8 @@ body{
 	font-family: $font-family-1, sans-serif;
 	overflow-x: hidden;
 	color: #000;
+	line-height: 1.45;
+	direction: ltr;
 	//height: auto;
 	//background-image: url('../img/bg/bg-body.jpg');
 	//background-color: $color-gray-1;

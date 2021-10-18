@@ -2,34 +2,41 @@
 
 <!-- CSS -->
 
-<link rel="stylesheet" href="css/fonts.css">
-<link rel="stylesheet" href="fonts/NouvelR/stylesheet.css">
-<link rel="stylesheet" href="css/plugins.css">
+<link rel="stylesheet" href="/css/fonts.css">
+<link rel="stylesheet" href="/fonts/NouvelR/stylesheet.css">
+<link rel="stylesheet" href="/css/plugins.css">
 <link rel="stylesheet" type="text/css" href="/js/plugins/jquery-ui/jquery-ui.min.css">
 <link rel="stylesheet" href="/js/plugins/choices-js/public/assets/styles/choices.css"/> <!-- Choices CSS -->
-<link rel="stylesheet" href="/js/plugins/vue-multiselect/vue-multiselect.css"> <!-- multiselect -->
-<link rel="stylesheet" href="css/main.css">
+<link rel="stylesheet" href="/css/main.css">
 
-<link rel="stylesheet" href="css/additional.css">
-
+<link rel="stylesheet" href="/css/additional.css">
 
 
 
 
-
-
+<!-- Vue link -->
+<script src="/js/vue/vue.js"></script>
+<!-- multiselect -->
+<script src="/js/vue/vue-multiselect/vue-multiselect.min.js"></script>
+<link rel="stylesheet" href="/js/vue/vue-multiselect/vue-multiselect.css">
+<!-- splitpanes -->
+<script src="/js/vue/splitpanes/splitpanes.umd.min.js"></script>
+<link rel="stylesheet" href="/js/vue/splitpanes/splitpanes.css">
+<!-- <script src="https://unpkg.com/splitpanes"></script> -->
+<!-- <link href="https://unpkg.com/splitpanes/dist/splitpanes.css" rel="stylesheet"> -->
 
 <!-- SCRIPTS -->
 <script src="/js/scripts.min.js"></script>
 <script src="/js/plugins/jquery-ui/jquery-ui.min.js"></script> <!-- JQUERY UI -->
 <script src="/js/plugins/choices-js/public/assets/scripts/choices.min.js"></script><!-- Choices JS -->
-<script src="/js/plugins/vue.js"></script>
-<script src="/js/plugins/vue-multiselect/vue-multiselect.min.js"></script> 
+
+
 <script src="/js/main.js"></script>
 
 <script type="text/javascript">
   // Подключение vue компонентов
   Vue.component('multiselect', window.VueMultiselect.default)
+
   Vue.filter('spaceBetweenNum', (price)=>{ 
     if(!price)
       return 0;

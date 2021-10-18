@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="description" content="">
+	@@include('./app/src/components/_favicons.html')
+	<title>Renault Uzbekistan</title>
+</head>
+
+<body>
+
+	<div id="page">
+		@@include('./app/src/components/_header.html')
+		<main class="main" data-aos="fade" id="main">
+			<div class="nav-sub">
+				<div class="wrapper link-li-1 jc-between flex ai-center ph-3">
+					<ul class="jc-start fs-2-em">
+						<li class="active"><a href="/personal-cars/newduster.html">Новый DUSTER</a></li>
+						<li><a href="/personal-cars/newduster/equipment.html">Оборудование</a></li>
+						<li><a href="/personal-cars/newduster/technologies-4x4.html">Технологии 4x4</a></li>
+						<li><a href="/personal-cars/newduster/off-road.html">Пакет OFF-ROAD</a></li>
+						<li><a href="">Аксессуары</a></li>
+					</ul>
+					<div class="btn-content box-md-4 jc-end flex ai-center hidden-xs hidden-sm">
+						<span class="btn-def mr-2 hovered">
+							<a href="">конфигуратор</a>
+						</span>
+						<span class="btn-opacity">
+							<a href="">купить онлайн</a>
+						</span>
+					</div>
+				</div>
+			</div>
+			<div class="bnr-page full-style">
+				<div class="wrapper">
+					<div class="entry-header">
+						<div class="img-content">
+							<picture>
+								<img src="/img/other/newduster/newduster-bnr.webp">
+							</picture>
+						</div>
+					</div>					
+				</div>
+			</div>
+			<section class="sibls">
+				<div class="container pv-8">
+					<div class="sibls-items boxes-3">
+						<div class="cell">
+							<div class="text-x13-bu lh-2 mb-2">НОВЫЙ RENAULT DUSTER</div>
+							<div class="color-gray-5 text-x5">Кредит — проще, чем вы думаете!</div>
+						</div>
+						<div class="cell">
+							<div class="text-x8-b mb-2">6 500 руб. / месяц</div>
+							<span class="btn-opacity">
+								<a href="">кредит</a>
+							</span>
+						</div>
+						<div class="cell">
+							<div class="text-x8-b mb-2">Цена от 1 017 000 ₽</div>
+							<span class="btn-def btn-icon">
+								<a href="">
+									<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 185.343 185.343"><path d="M51.707 185.343a10.692 10.692 0 01-7.593-3.149 10.724 10.724 0 010-15.175l74.352-74.347L44.114 18.32c-4.194-4.194-4.194-10.987 0-15.175 4.194-4.194 10.987-4.194 15.18 0l81.934 81.934c4.194 4.194 4.194 10.987 0 15.175l-81.934 81.939a10.678 10.678 0 01-7.587 3.15z"></path></svg>
+									пройти тест-драйв
+								</a>
+							</span>
+						</div>
+					</div>
+				</div>
+			</section>
+			<section>
+				<div class="container pv-8">
+					<div class="entry-header box-lg-7 text-center mh-auto">
+						<h2>Легендарный внедорожник в новом дизайне </h2>
+						<div>Новый Renault DUSTER — это полностью новый кузов, полностью новый интерьер и самые современные опции. Новый DUSTER — это легендарная надежность и уверенность за рулем в сочетании с новым уровнем комфорта. А еще, Новый DUSTER — это две индивидуальности.</div>
+					</div>
+				</div>
+				<div class="splitblock">
+					<div class="curtain">
+						<div class="hr"></div>
+						<div class="head">
+								<div class="tab left" @click="activate(1)" :class="{inactive: activeTab===2}">
+										<p><span>Внедорожная версия подчеркивает брутальную сущность полноприводного автомобиля, не&nbsp;знающего преград. Это практичность, воплощенная в&nbsp;каждой детали.</span></p>
+										<h2>
+											<span>Внедорожный</span>
+											<span>характер</span>
+										</h2>
+								</div>
+								<div class="line":class="{right: activeTab===2}" @click="toggleActiveTab" >
+										<img src="/img/other/newduster/line.svg" alt="" class="forDesktop">
+										<img src="/img/other/newduster/line-mobile.svg" alt="" class="forMobile">
+								</div>
+								<div class="tab right" @click="activate(2)" :class="{inactive: activeTab===1}">
+										<h2>
+											<span>Новый стильный</span>
+											<span>характер</span>
+										</h2>
+										<p>
+												<span>
+													 Новая максимальная комплектация выводит комфорт на&nbsp;новый уровень. Стиль и&nbsp;современные технологии, совмещенные с&nbsp;универсальностью и&nbsp;выдающейся проходимостью.
+												</span>
+										</p>
+								</div>
+						</div>
+						<div class="car">
+							<splitpanes class="default-theme" @resize="resize($event)" :class="{animated: animated}">
+								<pane :key="1" :size="paneSize">
+									<div>
+										<div class="img-block">
+											<img src="/img/other/newduster/split-img-1.png" alt="">
+											<div class="dots">
+												<div class="dot" @click="activateDot(1)" :class="{active: activeDot===1}">
+													<div class="popup">
+														<p>Черная решетка радиатора</p>
+													</div>
+												</div>
+												<div class="dot" @click="activateDot(2)" :class="{active: activeDot===2}">
+													<div class="popup">
+														<p>Черные легкосплавные диски 16”</p>
+													</div>
+												</div>
+												<div class="dot" @click="activateDot(3)" :class="{active: activeDot===3}">
+													<div class="popup">
+														<p>Боковые молдинги с&nbsp;надписью DUSTER</p>
+													</div>
+												</div>
+												<div class="dot" @click="activateDot(4)" :class="{active: activeDot===4}">
+													<div class="popup">
+														<p>Пластиковые расширители арок</p>
+													</div>
+												</div>
+												<div class="dot" @click="activateDot(5)" :class="{active: activeDot===5}">
+													<div class="popup">
+														<p> Передний бампер с&nbsp;пластиковой накладкой</p>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</pane>
+								<pane :key="2" :size="100 - paneSize">
+									<div class="right">
+										<div class="img-block">
+											<img src="/img/other/newduster/split-img-2.png" alt="">
+											<div class="dots">
+												<div class="dot" @click="activateDot(21)" :class="{active: activeDot===21}">
+													<div class="popup">
+														<img src="/img/other/newduster/dotL1.jpg" alt="">
+														<p>Задние фонари со&nbsp;светодиодными элементами</p>
+													</div>
+												</div>
+						
+												<div class="dot" @click="activateDot(22)" :class="{active: activeDot===22}">
+													<div class="popup">
+														<p>Двухцветные легкосплавные диски 17”</p>
+													</div>
+												</div>
+												<div class="dot" @click="activateDot(23)" :class="{active: activeDot===23}">
+													<div class="popup">
+														<p>Светодиодные ходовые огни</p>
+													</div>
+												</div>
+												<div class="dot" @click="activateDot(24)" :class="{active: activeDot===24}">
+													<div class="popup">
+														<p>Серебристые рейлинги с&nbsp;надписью DUSTER</p>
+													</div>
+												</div>
+												<div class="dot" @click="activateDot(25)" :class="{active: activeDot===25}">
+													<div class="popup">
+														<p>Решетка радиатора с&nbsp;хромированными вставками</p>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</pane>
+						
+							</splitpanes>
+						</div>
+				</div>
+				</div>
+			</section>
+			@@include('./app/src/components/_yur-accordion.html')
+		</main>
+		@@include('./app/src/components/_footer.html')
+	</div>
+	<!-- SCRIPTS -->
+	@@include('./app/src/components/_scripts.html')
+</body>
+<script>
+var _splitpanes = splitpanes,
+    Splitpanes = _splitpanes.Splitpanes,
+    Pane = _splitpanes.Pane;
+new Vue({
+  el: '#main',
+  components: {
+    Splitpanes: Splitpanes,
+    Pane: Pane
+  },
+  data: function data() {
+    return {
+      animated: false,
+      activeTab: 1,
+      paneSize: 80,
+      activeDot: null
+    };
+  },
+  methods: {
+    activate: function activate(num) {
+      var _this = this;
+
+      this.activeTab = num;
+      setTimeout(function () {
+        if (num === 1) {
+          _this.paneSize = 80;
+        } else if (num === 2) {
+          _this.paneSize = 20;
+        }
+      });
+      this.animated = true;
+      setTimeout(function () {
+        _this.animated = false;
+      }, 1500);
+    },
+    resize: function resize(e) {
+      this.paneSize = e[0].size;
+
+      if (e[0].size < 50) {
+        this.activeTab = 2;
+      } else {
+        this.activeTab = 1;
+      }
+    },
+    activateDot: function activateDot(num) {
+      var _this2 = this;
+
+      this.activeDot = num;
+      setTimeout(function () {
+        window.onclick = function (e) {
+          console.log(e.target.classList.contains('dot'));
+
+          if (e.target.classList.contains('dot')) {
+            return;
+          }
+
+          _this2.activeDot = null;
+          window.onclick = null;
+        };
+      });
+    },
+    toggleActiveTab: function toggleActiveTab() {
+      var _this3 = this;
+
+      this.animated = true;
+      setTimeout(function () {
+        _this3.animated = false;
+      }, 1500);
+
+      if (this.activeTab === 1) {
+        this.activeTab = 2;
+        this.paneSize = 20;
+      } else {
+        this.activeTab = 1;
+        this.paneSize = 80;
+      }
+    }
+  }
+});
+</script>
+</html>

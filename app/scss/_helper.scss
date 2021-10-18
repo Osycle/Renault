@@ -321,6 +321,11 @@
 }
 
 
+@for $i from 0 through 10 {
+	.lh-#{$i}{
+		line-height: (100+5*$i)#{"%"};
+	}
+}
 
 
 
