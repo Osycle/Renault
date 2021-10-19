@@ -9094,6 +9094,9 @@ small {
       .bnr-page .wrapper .entry-header {
         padding: 30px 25px; } }
 
+.bnr-page .desc-content {
+  position: relative; }
+
 .bnr-page .img-content {
   position: absolute;
   display: -webkit-box;
@@ -9410,7 +9413,7 @@ small {
   -ms-flex-pack: center;
   justify-content: center; }
   .credit-steps-items figure {
-    max-width: 235px;
+    max-width: 355px;
     text-align: center; }
     .credit-steps-items figure:nth-child(1) .img-content:before {
       display: none; }
@@ -9429,7 +9432,7 @@ small {
     align-items: center;
     margin-bottom: 15px; }
     .credit-steps-items .img-content img {
-      width: 70%; }
+      width: 55%; }
     .credit-steps-items .img-content:before, .credit-steps-items .img-content:after {
       height: 1px;
       background-color: black;
@@ -9998,7 +10001,7 @@ small {
   font-size: 16px; }
   @media (max-width: 991px) {
     .splitblock {
-      font-size: 2.2vw; } }
+      font-size: 2vw; } }
   .splitblock img {
     max-width: none; }
   .splitblock .curtain {
@@ -10007,6 +10010,7 @@ small {
     height: 843px; }
     .splitblock .curtain h2, .splitblock .curtain .h2 {
       min-width: 20em;
+      font-size: inherit;
       font-weight: 700;
       letter-spacing: 0.07em;
       -webkit-transition: 0.5s;
@@ -10021,7 +10025,11 @@ small {
         display: block;
         width: -moz-fit-content;
         width: -webkit-fit-content;
-        width: fit-content; }
+        width: fit-content;
+        font-size: 28px; }
+        @media (max-width: 991px) {
+          .splitblock .curtain h2 span, .splitblock .curtain .h2 span {
+            font-size: 17px; } }
         .splitblock .curtain h2 span:after, .splitblock .curtain .h2 span:after {
           content: "";
           position: absolute;
@@ -10033,6 +10041,8 @@ small {
           opacity: 0;
           -webkit-transition: opacity 0.3s;
           transition: opacity 0.3s; }
+    .splitblock .curtain p {
+      line-height: 130%; }
     .splitblock .curtain .hr {
       border-top: 1px dotted #828282; }
     .splitblock .curtain .head {
@@ -10069,6 +10079,7 @@ small {
       .splitblock .curtain .tab p {
         width: 26em;
         margin-top: 0.2em;
+        font-size: inherit;
         line-height: 1.2;
         overflow: hidden;
         text-align: right;
@@ -10076,7 +10087,8 @@ small {
         transition: 0.5s; }
         .splitblock .curtain .tab p span {
           display: block;
-          width: 26em; }
+          width: 26em;
+          font-size: 16px; }
     .splitblock .curtain .tab.left h2, .splitblock .curtain .tab.left .h2 {
       width: 16em; }
     .splitblock .curtain .tab.right {
@@ -10328,7 +10340,6 @@ small {
       .splitblock .curtain .tab p {
         width: auto;
         opacity: 1;
-        font-size: 2em;
         -webkit-transition: opacity 0.2s;
         transition: opacity 0.2s; }
         .splitblock .curtain .tab p span {
@@ -10394,7 +10405,7 @@ small {
         right: 13em;
         width: 5em;
         height: 5em;
-        font-size: 1.205em;
+        font-size: 1.1em;
         background-size: 150% auto; }
         .splitblock .curtain .car .dot:nth-of-type(2) {
           top: 14.5em;
@@ -10417,8 +10428,6 @@ small {
     .splitblock .curtain .splitpanes__pane:nth-of-type(1) > div {
       height: 40.3125em; } }
   @media screen and (max-width: 1024px) and (min-width: 900px) {
-    .splitblock html {
-      font-size: 12px; }
     .splitblock .curtain .car {
       padding: 0 2.7em; }
       .splitblock .curtain .car img {

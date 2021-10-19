@@ -406,6 +406,7 @@ small {
     }
   }
   .desc-content {
+    position: relative;
   }
   .img-content {
     position: absolute;
@@ -692,7 +693,7 @@ small {
   display: flex;
   justify-content: center;
   figure {
-    max-width: 235px;
+    max-width: 355px;
     text-align: center;
     &:nth-child(1) {
       .img-content {
@@ -716,7 +717,7 @@ small {
     align-items: center;
     margin-bottom: 15px;
     img {
-      width: 70%;
+      width: 55%;
     }
     &:before,
     &:after {
@@ -1311,7 +1312,7 @@ $yellow: #efdf00;
 .splitblock {
 	font-size: 16px;
 	@media (max-width: 991px){
-		font-size: 2.2vw;
+		font-size: 2vw;
 	}
 	img{
 		max-width: none;
@@ -1323,7 +1324,7 @@ $yellow: #efdf00;
     h2 {
       min-width: 20em;
 			//font-size: inherit;
-      //font-size: 2.25em;
+      font-size: inherit;
       font-weight: 700;
       letter-spacing: 0.07em;
       transition: 0.5s;
@@ -1334,6 +1335,10 @@ $yellow: #efdf00;
         display: block;
         width: -moz-fit-content;
         width: fit-content;
+        font-size: 28px;
+        @media (max-width: 991px){
+          font-size: 17px;
+        }
         &:after {
           content: "";
           position: absolute;
@@ -1347,6 +1352,9 @@ $yellow: #efdf00;
           transition: opacity 0.3s;
         }
       }
+    }
+    p{
+      line-height: 130%;
     }
     .hr {
       border-top: 1px dotted #828282;
@@ -1375,7 +1383,7 @@ $yellow: #efdf00;
       p {
         width: 26em;
         margin-top: 0.2em;
-        //font-size: 0.9375em;
+        font-size: inherit;
         line-height: 1.2;
         overflow: hidden;
         text-align: right;
@@ -1383,6 +1391,7 @@ $yellow: #efdf00;
         span {
           display: block;
           width: 26em;
+          font-size: 16px;
         }
       }
     }
@@ -1710,7 +1719,6 @@ $yellow: #efdf00;
         p {
           width: auto;
           opacity: 1;
-          font-size: 2em;
           transition: opacity 0.2s;
           span {
             width: 100%;
@@ -1795,7 +1803,7 @@ $yellow: #efdf00;
           right: 13em;
           width: 5em;
           height: 5em;
-          font-size: 1.205em;
+          font-size: 1.1em;
           background-size: 150% auto;
           &:nth-of-type(2) {
             top: 14.5em;
@@ -1834,9 +1842,6 @@ $yellow: #efdf00;
     }
   }
   @media screen and (max-width: 1024px) and (min-width: 900px) {
-    html {
-      font-size: 12px;
-    }
     .curtain {
       .car {
         padding: 0 2.7em;
