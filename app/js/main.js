@@ -43,7 +43,33 @@
 		  },
 		});
 
-
+		var swiper_def = new Swiper('.swiper-def', {
+		  // Optional parameters
+		  direction: 'horizontal',
+		  loop: false,
+			slidesPerView: 1,
+			spaceBetween: 25,
+			//autoHeight: true,
+			breakpoints: {
+				991: {
+					slidesPerView: 3
+				}
+			},
+			
+		  // If we need pagination
+		  pagination: {
+		    el: '.swiper-pagination',
+		  },
+		  // Navigation arrows
+		  navigation: {
+		    nextEl: '.swiper-btn-next',
+		    prevEl: '.swiper-btn-prev',
+		  },
+		  // And if we need scrollbar
+		  scrollbar: {
+		    el: '.swiper-scrollbar',
+		  },
+		});
 
 		$('[data-toggle="click"]').on("click", function(e){
 			var that = $(this);

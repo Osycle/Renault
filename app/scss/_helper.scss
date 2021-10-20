@@ -203,6 +203,13 @@
 	.desktop\:fd-row					{flex-direction: row;}
 	.desktop\:fd-row-reverse	{flex-direction: row-reverse;}
 	.desktop\:fw-wrap					{flex-wrap: wrap;}
+
+	@for $i from 0 through 10{
+		.desktop\:row-#{$i}{
+			margin-left: -5*$i#{"px"};
+			margin-right: -5*$i#{"px"};
+		}
+	}
 }
 @media (max-width: 991px){
 	.mobile\:flex						{display: flex}
@@ -220,6 +227,14 @@
 	.mobile\:fd-row					{flex-direction: row;}
 	.mobile\:fd-row-reverse	{flex-direction: row-reverse;}
 	.mobile\:fw-wrap				{flex-wrap: wrap;}
+
+	@for $i from 0 through 10{
+		.mobile\:row-#{$i}{
+			margin-left: -5*$i#{"px"};
+			margin-right: -5*$i#{"px"};
+		}
+	}
+	
 }
 
 

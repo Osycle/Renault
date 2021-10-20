@@ -129,6 +129,77 @@ small {
 :root {
   --swiper-theme-color: #efdf00;
 }
+.swiper-def{
+  overflow: hidden;
+  position: relative;
+  padding-left: 20px;
+  padding-right: 20px;
+  .swiper-btns {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+    display: flex;
+    justify-content: space-between;
+    z-index: 1;
+    width: 100%;
+    pointer-events: none;
+    * {
+      pointer-events: auto;
+    }
+    svg {
+      color: white;
+    }
+    .swiper-button{
+      width: 30px;
+      height: 60px;
+      background-color: rgba($color-2, 0.8);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      &:after{
+        transform: scale(.3);
+      }
+    }
+
+  }
+  .swiper-pagination {
+    margin-top: 15px;
+    padding: 15px 0;
+    position: relative;
+    bottom: auto;
+    .swiper-pagination-bullet {
+      width: 13px;
+      height: 13px;
+      opacity: 1;
+      background-color: white;
+      position: relative;
+      &:before {
+        content: "";
+        position: absolute;
+        background-color: transparent;
+        width: 19px;
+        height: 19px;
+        display: block;
+        left: -3px;
+        top: -3px;
+        border-radius: 50%;
+        border: 1px solid $color-1;
+        //transform: scale(1.7);
+        opacity: 0;
+        transition: 0.3s ease;
+      }
+    }
+    .swiper-pagination-bullet-active {
+      background-color: $color-1;
+      &:before {
+        opacity: 1;
+      }
+    }
+  }
+}
+
+
 .swiper {
   //display: block;
   position: relative;
@@ -511,6 +582,9 @@ small {
       width: 48px;
       height: 48px;
       fill: #fff;
+    }
+    @media (min-width: 991px){
+      width: 100%;
     }
   }
 }
@@ -1309,575 +1383,27 @@ $yellow: #efdf00;
 }
 
 
-.splitblock {
-	font-size: 16px;
-	@media (max-width: 991px){
-		font-size: 2vw;
-	}
-	img{
-		max-width: none;
-	}
-  .curtain {
-    max-width: 1280px;
-    margin: 0 auto;
-		height: 843px;
-    h2 {
-      min-width: 20em;
-			//font-size: inherit;
-      font-size: inherit;
-      font-weight: 700;
-      letter-spacing: 0.07em;
-      transition: 0.5s;
-      display: flex;
-      flex-wrap: wrap;
-      span {
-        position: relative;
-        display: block;
-        width: -moz-fit-content;
-        width: fit-content;
-        font-size: 28px;
-        @media (max-width: 991px){
-          font-size: 17px;
-        }
-        &:after {
-          content: "";
-          position: absolute;
-          top: 102%;
-          left: -0.2em;
-          height: 2px;
-          right: -0.2em;
-          background: url("../img/other/newduster/dashed.svg") repeat-x left center/auto
-            100%;
-          opacity: 0;
-          transition: opacity 0.3s;
-        }
-      }
-    }
-    p{
-      line-height: 130%;
-    }
-    .hr {
-      border-top: 1px dotted #828282;
-    }
-    .head {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      height: 12em;
-      overflow: hidden;
-      padding: 3.5em 3em 5em;
-			h2, p{
-				text-transform: none;
-				margin-top: 0;
-				margin-bottom: 0;
-				line-height: 1;
-			}
-			
-    }
-    .tab {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      width: 64.2%;
-      transition: 0.5s;
-      p {
-        width: 26em;
-        margin-top: 0.2em;
-        font-size: inherit;
-        line-height: 1.2;
-        overflow: hidden;
-        text-align: right;
-        transition: 0.5s;
-        span {
-          display: block;
-          width: 26em;
-          font-size: 16px;
-        }
-      }
-    }
-    .tab.left {
-      h2 {
-        width: 16em;
-      }
-    }
-    .tab.right {
-      -ms-flex-pack: start;
-      justify-content: flex-start;
-      margin-left: 3em;
-      width: 66%;
-      h2 {
-        min-width: 20em;
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: flex-end;
-        margin-right: 1em;
-      }
-      p {
-        width: 43em;
-        text-align: left;
-        span {
-          width: 28em;
-        }
-      }
-    }
-    .tab.inactive {
-      cursor: pointer;
-      width: 22%;
-      &:hover {
-        transform: scale(1.1);
-      }
-      h2 {
-        padding-bottom: 0.5em;
-        color: #828282;
-        transform: scale(0.6);
-        span {
-          &:after {
-            opacity: 1;
-          }
-        }
-      }
-      p {
-        width: 0;
-      }
-    }
-    .tab.inactive.left {
-      width: 18.6%;
-    }
-    .tab.inactive.right {
-      margin-left: 0;
-    }
-    .line {
-      position: relative;
-      width: 5%;
-      cursor: pointer;
-      img {
-        display: block;
-      }
-      &:before {
-        content: "";
-        position: absolute;
-        top: 50%;
-        left: 0;
-        transform: translateY(-50%);
-        height: 1.5em;
-        width: 6em;
-      }
-      &:after {
-        content: "";
-        position: absolute;
-        top: 50%;
-        left: 0;
-        transform: translate(-50%, -50%);
-        width: 2em;
-        height: 2em;
-        background: url("../img/other/newduster/head-dot.svg") no-repeat center
-          center/contain;
-        transition: left 0.5s, transform 0.5s;
-      }
-    }
-    .line.right {
-      &:after {
-        left: 105%;
-        transform: translate(50%, -50%);
-      }
-    }
-    .car {
-      overflow: hidden;
-      .img-block {
-        position: relative;
-        width: 80em;
-        height: 100%;
-      }
-      .right {
-        position: relative;
-        height: 40.3125em;
-        .img-block {
-          position: absolute;
-          top: 0;
-          bottom: 0;
-          right: 0;
-        }
-        .dot {
-          top: 15em;
-          right: 67em;
-          &:nth-of-type(2) {
-            top: 27.2em;
-            right: 49.6em;
-          }
-          &:nth-of-type(3) {
-            top: 15em;
-            right: 34em;
-          }
-          &:nth-of-type(4) {
-            top: 3.4em;
-            right: 54em;
-          }
-          &:nth-of-type(5) {
-            top: 15.7em;
-            right: 14.5em;
-          }
-        }
-      }
-      .dot {
-        position: absolute;
-        top: 14em;
-        right: 26em;
-        width: 5em;
-        height: 5em;
-        background: url("../img/other/newduster/dot.svg") no-repeat center center/100%
-          auto;
-        cursor: pointer;
-        &:after {
-          content: "";
-          position: absolute;
-          top: 0;
-          left: 0;
-          right: 0;
-          bottom: 0;
-          background: url("../img/other/newduster/active-dot.svg") no-repeat center
-            center/100% auto;
-          opacity: 0;
-          transition: opacity 0.3s;
-          will-change: opacity;
-        }
-        &:nth-of-type(2) {
-          top: 27.7em;
-          right: 65.5em;
-        }
-        &:nth-of-type(3) {
-          top: 22.7em;
-          right: 56.5em;
-        }
-        &:nth-of-type(4) {
-          top: 16.4em;
-          right: 47.5em;
-        }
-        &:nth-of-type(5) {
-          top: 24em;
-          right: 28.5em;
-        }
-        > img {
-          display: block;
-          width: 100%;
-          height: 100%;
-        }
-        .popup {
-          position: absolute;
-          top: calc(50% - 10px);
-          left: calc(50% + 10px);
-          z-index: 10;
-          opacity: 0;
-          font-family: "NouvelR", Arial;
-          font-weight: 700;
-          background: white;
-          border-radius: 0.3em;
-          pointer-events: none;
-          transition: opacity 0.5s;
-          &:before {
-            content: "";
-            position: absolute;
-            top: 0;
-            right: 98%;
-            z-index: -1;
-            border: 10px solid white;
-            border-left-color: transparent;
-            border-top-color: transparent;
-            border-bottom-color: transparent;
-          }
-          img {
-            width: 100%;
-          }
-          p {
-            padding: 1em;
-          }
-        }
-      }
-      .dot.active {
-        z-index: 10;
-        background-image: url("../img/other/newduster/dotTr.svg");
-        &:after {
-          opacity: 1;
-        }
-        .popup {
-          opacity: 1;
-          pointer-events: all;
-        }
-      }
-      .splitpanes__pane {
-        &:nth-of-type(1) {
-          > div {
-            height: 40.3125em;
-          }
-        }
-      }
-      .default-theme.splitpanes--vertical {
-        > .splitpanes__splitter {
-          width: 1px;
-          border: none;
-          background: url("../img/other/newduster/vertical_line.svg") no-repeat center
-            center/cover;
-          &:after {
-            display: none;
-          }
-          &:before {
-            left: calc(50% + 1px);
-            top: 50%;
-            transform: translate(-50%, -50%);
-            width: 2em;
-            height: 1.3em;
-            z-index: 10;
-            background: url("../img/other/newduster/drag.svg") no-repeat center
-              center/contain;
-          }
-        }
-      }
-      .default-theme {
-        .splitpanes--vertical {
-          > .splitpanes__splitter {
-            width: 1px;
-            border: none;
-            background: url("../img/other/newduster/vertical_line.svg") no-repeat center
-              center/cover;
-            &:after {
-              display: none;
-            }
-            &:before {
-              left: calc(50% + 1px);
-              top: 50%;
-              transform: translate(-50%, -50%);
-              width: 2em;
-              height: 1.3em;
-              z-index: 10;
-              background: url("../img/other/newduster/drag.svg") no-repeat center
-                center/contain;
-            }
-          }
-        }
-      }
-      .splitpanes--vertical.animated {
-        .splitpanes__pane {
-          transition: 1s;
-        }
-      }
-    }
+.model-complectations-items{
+  background-color: $color-gray-1;
+  .swiper-slide{
+    height: auto;
   }
-  .forMobile {
-    display: none !important;
+  .desc-content{
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    justify-content: space-between;
   }
-  @media screen and (max-width: 767px) {
-    .curtain {
-      .tab.right {
-        h2 {
-          min-width: 20em;
-        }
-      }
-    }
+  figure{
+    height: 100%;
+    padding: 10px;
+    box-shadow: 0 3px 10px 0 rgba(black, 0.1);
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    
   }
-  @media screen and (max-width: 900px) {
-    html {
-      font-size: 2.2vw;
-    }
-    .forMobile {
-      display: block !important;
-    }
-    .forDesktop {
-      display: none !important;
-    }
-    .curtain {
-      .head {
-        position: relative;
-        height: 5em;
-        box-sizing: content-box;
-        padding: 3em 2.5em 18em;
-        .line {
-          width: 10%;
-          &:after {
-            display: none;
-          }
-          img {
-            width: 100%;
-          }
-        }
-        p {
-          position: absolute;
-          top: 8.5em;
-          left: 0;
-          right: 0;
-          width: auto;
-          padding: 0 2em;
-          margin-top: 2em;
-          text-align: left;
-        }
-        .left {
-          h2 {
-            min-width: 16em;
-          }
-        }
-      }
-      .tab {
-        width: 40%;
-        p {
-          width: auto;
-          opacity: 1;
-          transition: opacity 0.2s;
-          span {
-            width: 100%;
-          }
-        }
-      }
-      .tab.inactive {
-        width: 20%;
-        h2 {
-          transform: scale(0.7);
-        }
-        p {
-          width: auto;
-          opacity: 0;
-        }
-        &:hover {
-          transform: none;
-        }
-      }
-      .tab.inactive.left {
-        width: 30%;
-      }
-      .tab.right {
-        justify-content: flex-end;
-        width: 43%;
-        margin-left: 0;
-        h2 {
-          margin-right: 0;
-        }
-        p {
-          width: 100%;
-          span {
-            width: 100%;
-          }
-        }
-      }
-      .car {
-        height: 23.125em;
-        .splitpanes__pane {
-          > div {
-            height: 100%;
-          }
-        }
-        .right {
-          height: 25em;
-          .img-block {
-            width: 100vw;
-          }
-          .dot {
-            top: 7em;
-            right: 37em;
-            &:nth-of-type(2) {
-              top: 14.5em;
-              right: 26.5em;
-            }
-            &:nth-of-type(3) {
-              top: 7.3em;
-              right: 17.5em;
-            }
-            &:nth-of-type(4) {
-              top: 0.4em;
-              right: 29em;
-            }
-            &:nth-of-type(5) {
-              top: 8.4em;
-              right: 12em;
-            }
-          }
-        }
-        .img-block {
-          width: 100vw;
-          height: 100%;
-        }
-        img {
-          width: 100%;
-          height: auto;
-          -o-object-fit: contain;
-          object-fit: contain;
-        }
-        .dot {
-          top: 7em;
-          right: 13em;
-          width: 5em;
-          height: 5em;
-          font-size: 1.1em;
-          background-size: 150% auto;
-          &:nth-of-type(2) {
-            top: 14.5em;
-            right: 36.5em;
-          }
-          &:nth-of-type(3) {
-            top: 12.1em;
-            right: 31.5em;
-          }
-          &:nth-of-type(4) {
-            top: 8.4em;
-            right: 26em;
-          }
-          &:nth-of-type(5) {
-            top: 12.4em;
-            right: 15em;
-          }
-          &:after {
-            background-size: 150% auto;
-          }
-          img {
-            display: none;
-          }
-        }
-        .dot.active {
-          background-size: 180% auto;
-        }
-      }
-      .splitpanes__pane {
-        &:nth-of-type(1) {
-          > div {
-            height: 40.3125em;
-          }
-        }
-      }
-    }
-  }
-  @media screen and (max-width: 1024px) and (min-width: 900px) {
-    .curtain {
-      .car {
-        padding: 0 2.7em;
-        img {
-          width: 100%;
-        }
-      }
-      .line.right {
-        &:after {
-          left: 125%;
-        }
-      }
-    }
-  }
-  @media screen and (max-width: 1023px) and (min-width: 500px) {
-    .curtain {
-      .tab.right {
-        h2 {
-          min-width: 18em;
-        }
-      }
-      .head {
-        p {
-          top: 8em;
-        }
-        padding-bottom: 8em;
-      }
-      .tab {
-        p {
-          font-size: 14px;
-          line-height: 1.5;
-        }
-      }
-      h2 {
-        font-size: 25px;
-      }
-    }
+  .img-content{
+    background-color: $color-gray-1;
   }
 }

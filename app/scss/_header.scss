@@ -203,7 +203,16 @@ $header-min-menu: 60px;
 	}
 }
 #min-menu{
-
+	color: white;
+	.mm-listview{
+		font-weight: 600;
+	}
+	.item-title{
+		padding: 5px 10px;
+    background-color: #2c2b2b;
+    color: #e1e1e1;
+    font-size: 12px;
+	}
 	.close-btn{
 		display: inline-block;
 		position: absolute;

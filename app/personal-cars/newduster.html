@@ -26,6 +26,51 @@
 	<meta name="msapplication-TileColor" content="#ffffff">
 	<meta name="msapplication-TileImage" content="/img/favicon/ms-icon-144x144.png">
 	<meta name="theme-color" content="#ffffff">
+	
+<!-- CSS -->
+
+<link rel="stylesheet" href="/css/fonts.css">
+<link rel="stylesheet" href="/fonts/NouvelR/stylesheet.css">
+<link rel="stylesheet" href="/css/plugins.css">
+<link rel="stylesheet" type="text/css" href="/js/plugins/jquery-ui/jquery-ui.min.css">
+<link rel="stylesheet" href="/js/plugins/choices-js/public/assets/styles/choices.css"/> <!-- Choices CSS -->
+<link rel="stylesheet" href="/css/main.css">
+
+<link rel="stylesheet" href="/css/additional.css">
+
+
+
+
+<!-- Vue link -->
+<script src="/js/vue/vue.js"></script>
+<!-- multiselect -->
+<script src="/js/vue/vue-multiselect/vue-multiselect.min.js"></script>
+<link rel="stylesheet" href="/js/vue/vue-multiselect/vue-multiselect.css">
+<!-- splitpanes -->
+<script src="/js/vue/splitpanes/splitpanes.umd.min.js"></script>
+<link rel="stylesheet" href="/js/vue/splitpanes/splitpanes.css">
+
+
+<!-- SCRIPTS -->
+<script src="/js/scripts.min.js"></script>
+<script src="/js/plugins/jquery-ui/jquery-ui.min.js"></script> <!-- JQUERY UI -->
+<script src="/js/plugins/choices-js/public/assets/scripts/choices.min.js"></script><!-- Choices JS -->
+
+<script type="text/javascript">
+  // Подключение vue компонентов
+  Vue.component('multiselect', window.VueMultiselect.default)
+
+  Vue.filter('spaceBetweenNum', (price)=>{ 
+    if(!price)
+      return 0;
+    price += "";
+    var pattern = /(-?\d+)(\d{3})/;
+    while (pattern.test(price))
+      price = price.replace(pattern, "$1 $2");
+    
+    return price;      
+  })
+</script>
 	<title>Renault Uzbekistan</title>
 </head>
 
@@ -59,8 +104,8 @@
                 <ul class="menu-main list-inline">
                   <li><a href="javascript:;" subdown-click="subdown-menu-1">Модельный ряд</a></li>
                   <li><a href="javascript:;" subdown-click="subdown-menu-3">Покупателям</a></li>
-                  <li><a href="javascript:;" subdown-click="subdown-menu-4">Владельцам</a></li>
-                  <li><a href="">О компании</a></li>
+                  <!-- <li><a href="javascript:;" subdown-click="subdown-menu-4">Владельцам</a></li> -->
+                  <!-- <li><a href="">О компании</a></li> -->
                 </ul>
               </div>
               <div class="header-icons">
@@ -93,10 +138,19 @@
     <!-- MIN MENU -->
     <div id="min-menu" data-aos="fade">
       <ul>
-        <li><a href="">Модельный ряд</a></li>
-        <li><a href="">Покупателям</a></li>
-        <li><a href="">Владельцам</a></li>
-        <li><a href="">О компании</a></li>
+        <li>
+          <a href="">Модельный ряд</a>
+          <ul>
+            <li><a href="/personal-cars/arkana.html">ARKANA</a></li>
+            <li><a href="/personal-cars/kaptur.html">KAPTUR</a></li>
+            <li><a href="/personal-cars/newduster.html">НОВЫЙ RENAULT DUSTER</a></li>
+          </ul>
+        </li>
+        <!-- <div class="item-title">Покупателям</div> -->
+        <li><a title="Кредитные программы" href="/finance.html">Кредитные программы</a></li>
+        <li><a title="Кредитные программы" href="/leasing.html">Лизинговые программы</a></li>
+        <li><a title="Классический кредит" href="/classic-credit.html">Классический кредит</a></li>
+        <li><a title="Классический кредит" href="/trade-in.html">Trade-in</a></li>
       </ul>
     </div>
     <!-- MIN MENU HEADER -->
@@ -132,11 +186,13 @@
                   <div class="menu-models-title">НОВИНКИ</div>
                   <div class="menu-models-items box-xs-10">
                     <figure>
-                      <div class="img-content">
-                        <img src="/img/other/menu-models-1.png">
-                        <span class="soon-text top-right">Скоро</span>
-                      </div>
-                      <div class="mt-1">НОВЫЙ RENAULT DUSTER</div>
+                      <a href="/personal-cars/newduster.html">
+                        <div class="img-content">
+                          <img src="/img/other/menu-models-1.png">
+                          <span class="soon-text top-right">Скоро</span>
+                        </div>
+                        <div class="mt-1">НОВЫЙ RENAULT DUSTER</div>
+                        </a>
                     </figure>
                   </div>
                 </div>
@@ -144,16 +200,20 @@
                   <div class="menu-models-title">Кроссоверы и внедорожники</div>
                   <div class="menu-models-items box-xs-10">
                     <figure>
-                      <div class="img-content">
-                        <img src="/img/other/menu-models-3.png">
-                      </div>
-                      <div class="mt-1">RENAULT ARKANA</div>
+                      <a href="/personal-cars/arkana.html">
+                        <div class="img-content">
+                          <img src="/img/other/menu-models-3.png">
+                        </div>
+                        <div class="mt-1">RENAULT ARKANA</div>
+                      </a>
                     </figure>
                     <figure>
-                      <div class="img-content">
-                        <img src="/img/other/menu-models-4.png">
-                      </div>
-                      <div class="mt-1">RENAULT KAPTUR</div>
+                      <a href="/personal-cars/kaptur.html">
+                        <div class="img-content">
+                          <img src="/img/other/menu-models-4.png">
+                        </div>
+                        <div class="mt-1">RENAULT KAPTUR</div>
+                      </a>
                     </figure>
                   </div>
                 </div>
@@ -204,7 +264,7 @@
                     <div class="item-title">Renault Finance</div>
                     <ul class="item-list">
                       <li><a title="Кредитные программы" href="/finance.html">Кредитные программы</a></li>
-                      <li><a title="Классический кредит" href="/finance/classic-credit.html">Классический кредит</a></li>
+                      <li><a title="Классический кредит" href="/classic-credit.html">Классический кредит</a></li>
                       <li><a title="Программа 'Поехали'" href="/finance/credit-go.html">Программа 'Поехали'</a></li>
                       <li><a title="Получить одобрение кредита онлайн" href="/finance/credit-approval.html">Получить одобрение кредита онлайн</a></li>
                     </ul>
@@ -325,10 +385,6 @@
 				<div class="wrapper link-li-1 jc-between flex ai-center ph-3">
 					<ul class="jc-start fs-2-em">
 						<li class="active"><a href="/personal-cars/newduster.html">Новый DUSTER</a></li>
-						<li><a href="/personal-cars/newduster/equipment.html">Оборудование</a></li>
-						<li><a href="/personal-cars/newduster/technologies-4x4.html">Технологии 4x4</a></li>
-						<li><a href="/personal-cars/newduster/off-road.html">Пакет OFF-ROAD</a></li>
-						<li><a href="">Аксессуары</a></li>
 					</ul>
 					<div class="btn-content box-md-4 jc-end flex ai-center hidden-xs hidden-sm">
 						<span class="btn-def mr-2 hovered">
@@ -365,7 +421,7 @@
 							</span>
 						</div>
 						<div class="cell">
-							<div class="text-x8-b mb-2">Цена от 1 017 000 ₽</div>
+							<div class="text-x8-b mb-2">Цена от 225 108 500 сум</div>
 							<span class="btn-def btn-icon">
 								<a href="">
 									<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 185.343 185.343"><path d="M51.707 185.343a10.692 10.692 0 01-7.593-3.149 10.724 10.724 0 010-15.175l74.352-74.347L44.114 18.32c-4.194-4.194-4.194-10.987 0-15.175 4.194-4.194 10.987-4.194 15.18 0l81.934 81.934c4.194 4.194 4.194 10.987 0 15.175l-81.934 81.939a10.678 10.678 0 01-7.587 3.15z"></path></svg>
@@ -383,31 +439,21 @@
 						<div>Новый Renault DUSTER — это полностью новый кузов, полностью новый интерьер и самые современные опции. Новый DUSTER — это легендарная надежность и уверенность за рулем в сочетании с новым уровнем комфорта. А еще, Новый DUSTER — это две индивидуальности.</div>
 					</div>
 				</div>
-				<div class="splitblock">
+				<div id="curtain">
 					<div class="curtain">
 						<div class="hr"></div>
 						<div class="head">
 								<div class="tab left" @click="activate(1)" :class="{inactive: activeTab===2}">
 										<p><span>Внедорожная версия подчеркивает брутальную сущность полноприводного автомобиля, не&nbsp;знающего преград. Это практичность, воплощенная в&nbsp;каждой детали.</span></p>
-										<h2>
-											<span>Внедорожный</span>
-											<span>характер</span>
-										</h2>
+										<h2><span>Внедорожный</span><span>характер</span></h2>
 								</div>
 								<div class="line":class="{right: activeTab===2}" @click="toggleActiveTab" >
 										<img src="/img/other/newduster/line.svg" alt="" class="forDesktop">
 										<img src="/img/other/newduster/line-mobile.svg" alt="" class="forMobile">
 								</div>
 								<div class="tab right" @click="activate(2)" :class="{inactive: activeTab===1}">
-										<h2>
-											<span>Новый стильный</span>
-											<span>характер</span>
-										</h2>
-										<p>
-												<span>
-													 Новая максимальная комплектация выводит комфорт на&nbsp;новый уровень. Стиль и&nbsp;современные технологии, совмещенные с&nbsp;универсальностью и&nbsp;выдающейся проходимостью.
-												</span>
-										</p>
+										<h2><span>Новый стильный</span><span>характер</span></h2>
+										<p><span>Новая максимальная комплектация выводит комфорт на&nbsp;новый уровень. Стиль и&nbsp;современные технологии, совмещенные с&nbsp;универсальностью и&nbsp;выдающейся проходимостью.</span></p>
 								</div>
 						</div>
 						<div class="car">
@@ -482,11 +528,12 @@
 										</div>
 									</div>
 								</pane>
-						
 							</splitpanes>
 						</div>
+					</div>
 				</div>
-				</div>
+				<link rel="stylesheet" href="/src/personal-cars/css/curtain.css">
+				<script src="/src/personal-cars/js/curtain.js"></script>
 			</section>
 			<section>
 				<div class="container pv-8">
@@ -512,7 +559,7 @@
 						</figure>
 						<figure>
 							<picture>
-								<img src="/img/other/newduster/newduster-about-1.webp" width="100%">
+								<img src="/img/other/newduster/newduster-about-2.webp" width="100%">
 							</picture>
 							<div class="desc-content">
 								<div class="text-x4-b mv-3">Новый уровень комфорта</div>
@@ -527,7 +574,7 @@
 						</figure>
 						<figure>
 							<picture>
-								<img src="/img/other/newduster/newduster-about-1.webp" width="100%">
+								<img src="/img/other/newduster/newduster-about-3.webp" width="100%">
 							</picture>
 							<div class="desc-content">
 								<div class="text-x4-b mv-3">Современные технологии 4х4</div>
@@ -542,7 +589,7 @@
 						</figure>
 						<figure>
 							<picture>
-								<img src="/img/other/newduster/newduster-about-1.webp" width="100%">
+								<img src="/img/other/newduster/newduster-about-4.webp" width="100%">
 							</picture>
 							<div class="desc-content">
 								<div class="text-x4-b mv-3">Максимальная подготовка для России</div>
@@ -558,7 +605,222 @@
 					</div>
 				</div>
 			</section>
-						<section>
+			<section>
+				<div id="duster2" class="duster2">
+					<div class="duster2-passability">
+						<div class="duster2-crop">
+							<div class="duster2-crop__image-wrapper left">
+								<div class="duster2-crop__image hidden-xs hidden-sm" style="background-image: url(/img/other/newduster/passability_car.jpg);"></div>
+								<div class="duster2-crop__image hidden-md hidden-lg" style="background-image: url(/img/other/newduster/passability_car-mobile.jpg);"></div>
+								<div class="duster2-crop__image dark hidden-xs hidden-sm" style="background-image: url(/img/other/newduster/passability_car_dark.jpg);"></div>
+								<div class="duster2-crop__image dark hidden-md hidden-lg" style="background-image: url(/img/other/newduster/passability_car_dark-mobile.jpg);"></div>
+								<div class="duster2-crop__line hidden-xs hidden-sm" style="background: url(/img/other/newduster/passability_lines.png) no-repeat left bottom/contain;"></div>
+								<div class="duster2-crop__line hidden-md hidden-lg" style="background: url(/img/other/newduster/passability_lines-mobile.png) no-repeat left bottom/contain;"></div>
+							</div>
+							<div class="duster2-description right">
+								<h4 class="magic-letters">Легендарная</h4>
+								<h3 class="magic-letters">проходимость</h3>
+								<hr class="magic-letters">
+								<p class="magic-letters">Новый Renault DUSTER сохранил непревзойденную геометрическую проходимость. Дорожный просвет 210&nbsp;мм в&nbsp;комбинации с&nbsp;углами въезда (31&nbsp;градус) и&nbsp;съезда (33&nbsp;градуса) подтверждают статус внедорожника, который не&nbsp;знает преград. Но&nbsp;помимо базовых внедорожных характеристик, появилось и&nbsp;новое оборудование для уникального внедорожного опыта.</p>
+								<a href="" class="duster2 btn">подробнее</a>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="container pv-10">
+					<div class="entry-header box-lg-7 text-center mh-auto">
+						<h2>ЛЕГЕНДАРНЫЙ ВНЕДОРОЖНИК В НОВОМ ИСПОЛНЕНИИ</h2>
+						<div>Новый Renault DUSTER — это абсолютно новый кузов, который сохранил узнаваемые пропорции внедорожника предыдущего поколения, наделив сбалансированный дизайн современными элементами.</div>
+					</div>
+				</div>
+
+				<div id="duster2" class="duster2">
+					<div class="duster2-design">
+						<div class="duster2-crop">
+							<div class="duster2-crop__image-wrapper right">
+								<div class="duster2-crop__image hidden-xs hidden-sm" style="background-image: url(/img/other/newduster/design_car_dark.jpg);"></div>
+								<div class="duster2-crop__image hidden-md hidden-lg" style="background-image: url(/img/other/newduster/design_car_dark-mobile.jpg);"></div>
+								<div class="duster2-crop__image dark hidden-xs hidden-sm" style="background-image: url(/img/other/newduster/design_car_dark.jpg);"></div>
+								<div class="duster2-crop__image dark hidden-md hidden-lg" style="background-image: url(/img/other/newduster/design_car_dark-mobile.jpg);"></div>
+							</div>
+							<div class="duster2-description left">
+								<h4 class="magic-letters">Современный</h4>
+								<h3 class="magic-letters">дизайн</h3>
+								<hr class="magic-letters">
+								<p class="magic-letters">Современный дизайн Нового DUSTER подчеркивают новая оптика, новые пропорции и&nbsp;новые цвета кузова. Яркий оранжевый Atacama настраивает на&nbsp;приключения, а&nbsp;стильный серо-коричневый Tenakuru подчеркивает каждую линию нового кузова. Новые передние светодиодные дневные ходовые огни, как и&nbsp;задние огни со&nbsp;светодиодами в&nbsp;форме квадрата точно станут визитной карточкой Нового DUSTER.</p>
+							</div>
+						</div>
+					</div>
+				</div>
+				<link rel="stylesheet" href="/src/personal-cars/css/duster2.css">
+				<script src="/src/personal-cars/js/duster2.js"></script>
+			</section>
+			<section>
+				<div class="container pv-8">
+					<div class="entry-header box-lg-7 mt-3 text-center mh-auto">
+						<h2>КОМПЛЕКТАЦИИ НОВОГО RENAULT DUSTER</h2>
+					</div>
+				</div>
+				<div class="model-complectations-items">
+					<div class="container pv-8">
+						<div class="swiper-def">
+							<!-- Additional required wrapper -->
+							<div class="swiper-wrapper model-complectations-items">
+								<!-- Slides -->
+								<div class="swiper-slide">
+									<figure>
+										<div class="img-content">
+											<picture>
+												<img src="/img/other/newduster/complectations-items-1.png" alt="">
+											</picture>
+										</div>
+										<div class="desc-content ph-5">
+											<div class="text-content">
+												<div class="title-content text-center mv-3">
+													<div class="text-x8-b">Life</div>
+													<div class="text-x3">Life</div>
+													<div class="text-x3">Цена от 225 108 500 сум</div>
+												</div>
+												<div class="mv-6">
+													<div class="mb-1">Двигатели:</div>
+													<div class="text-x4-b">1,6 л, 117 л. с., 4х4, МКП6</div>
+													<div class="text-x4-b">TCe 150 л.с., 4х4, CVT X-Tronic</div>
+												</div>
+											</div>
+											<div class="btn-content mv-3 mobile:ph-5 desktop:ph-7">
+												<div class="btn-def hovered mv-2">
+													<a href="">выбрать</a>
+												</div>
+												<div class="btn-opacity mv-2">
+													<a href="">рассчитать кредит</a>
+												</div>
+											</div>
+										</div>
+									</figure>
+								</div>
+								<div class="swiper-slide">
+									<figure>
+										<div class="img-content">
+											<picture>
+												<img src="/img/other/newduster/complectations-items-2.png" alt="">
+											</picture>
+										</div>
+										<div class="desc-content ph-5">
+											<div class="text-content">
+												<div class="title-content text-center mv-3">
+													<div class="text-x8-b">Drive</div>
+													<div class="text-x3">Drive</div>
+													<div class="text-x3">Цена от 258 257 000 сум</div>
+												</div>
+												<div class="mv-6">
+													<div class="mb-1">Двигатели:</div>
+													<div class="text-x4-b">TCe 150, 150 л. с., 4х4, МКП6</div>
+												</div>
+											</div>
+											<div class="btn-content mv-3 mobile:ph-5 desktop:ph-7">
+												<div class="btn-def hovered mv-2">
+													<a href="">выбрать</a>
+												</div>
+												<div class="btn-opacity mv-2">
+													<a href="">рассчитать кредит</a>
+												</div>
+											</div>
+										</div>
+									</figure>
+								</div>
+								<div class="swiper-slide">
+									<figure>
+										<div class="img-content">
+											<picture>
+												<img src="/img/other/newduster/complectations-items-3.png" alt="">
+											</picture>
+										</div>
+										<div class="desc-content ph-5">
+											<div class="text-content">
+												<div class="title-content text-center mv-3">
+													<div class="text-x8-b">Style</div>
+													<div class="text-x3">Style</div>
+													<div class="text-x3">Цена от 277 844 700 сум</div>
+												</div>
+												<div class="mv-6">
+													<div class="mb-1">Двигатели:</div>
+													<div class="text-x4-b">TCe 150, 150 л. с., 4х4, CVT X-Tronic</div>
+												</div>
+											</div>
+											<div class="btn-content mv-3 mobile:ph-5 desktop:ph-7">
+												<div class="btn-def hovered mv-2">
+													<a href="">выбрать</a>
+												</div>
+												<div class="btn-opacity mv-2">
+													<a href="">рассчитать кредит</a>
+												</div>
+											</div>
+										</div>
+									</figure>
+								</div>
+
+							</div>
+							<!-- If we need pagination -->
+							<div class="swiper-pagination"></div>
+						
+							<!-- If we need navigation buttons -->
+							<!-- <div class="swiper-btns">
+								<div class="swiper-button swiper-button-prev"></div>
+								<div class="swiper-button swiper-button-next"></div>
+							</div> -->
+						
+						</div>
+					</div>
+				</div>
+			</section>
+			<section class="offers-icolinks">
+				<div class="container pv-10">
+					<div class="offers-icolinks-items fs-1">
+						<figure>
+							<a href="/files/duster-20211013.pdf" download>
+								<div class="wrapper">
+									<picture>
+										<img src="/img/other/newduster/icolinks-brochure.svg">
+									</picture>
+									<div class="desc-content">брошюра</div>
+								</div>
+							</a>
+						</figure>
+						<figure>
+							<a href="/files/duster-20211013.pdf" download>
+								<div class="wrapper">
+									<picture>
+										<img src="/img/other/newduster/icolinks-brochure.svg">
+									</picture>
+									<div class="desc-content">прайс-лист Новый Renault DUSTER</div>
+								</div>
+							</a>
+						</figure>
+						<!-- <figure>
+							<a href="">
+								<div class="wrapper">
+									<picture>
+										<img src="/img/other/newduster/icolinks-pdf.svg">
+									</picture>
+									<div class="desc-content">руководство по эксплуатации</div>
+								</div>
+							</a>
+						</figure>
+						<figure>
+							<a href="">
+								<div class="wrapper">
+									<picture>
+										<img src="/img/other/newduster/icolinks-steering.svg">
+									</picture>
+									<div class="desc-content">каталог аксессуаров</div>
+								</div>
+							</a>
+						</figure> -->
+					</div>
+				</div>
+			</section>
+						<!-- <section>
 				<div class="container pv-8">
 					<div class="accordion-def desktop:ph-4" id="yur-accordion">
 					  <div class="panel">
@@ -567,20 +829,13 @@
 					    </a>
 					    <div id="yur-accordion-1" class="panel-collapse collapse">
 					      <div class="accordion-def-body">
-									<p><sup>1&nbsp;</sup>Акция «Домашний Тест-драйв» (далее - «Акция») действует исключительно на территории Российской Федерации, на специально созданной интернет платформе на сайте Renault.ru (далее - «Сайт»). Список официальных дилеров Renault, принимающих участие в Акции ограничен. Организаторы Акции оставляют за собой право в одностороннем порядке изменить список дилеров, участвующих в Акции. К записи на тест-драйв допускается клиент - физическое лицо, который в период проведения Акции заказал тест-драйв на Сайте, выбрав категорию «Домашний Тест-драйв», имеющее действующее водительское удостоверение. Предложение не является офертой и может быть изменено. Акция дает клиенту возможность выбрать дату, временной слот и маршрут тест-драйва (маршрут доступный для тест-драйва устанавливается дилерским центром Renault). Количество доступных слотов для записи и автомобилей для тест-драйва строго ограничено, в связи с чем действие Акции может быть приостановлено в любое время. Дополнительная информация предоставляется по телефону 8 800 200-80-80 (звонок по РФ бесплатный).</p> 
-									<p><sup>2&nbsp;</sup>&nbsp;Цена указана в рублях, с учетом НДС на комплексную диагностику, которая включает в себя восемь проверок: уровней эксплуатационных жидкостей, наружного освещения и регулировки света фар, осмотр ветрового стекла и щеток стеклоочистителя, повреждения кузова и лакокрасочного покрытия, системы кондиционирования и состояния салонного фильтра, тормозной системы с использованием диагностического стенда (проверка износа колодок и дисков), состояния протектора шин, подвески на подъемнике с осмотром элементов днища. Во избежание сомнений Дилер вправе самостоятельно установить стоимость диагностики ниже максимальной цены, рекомендованной ЗАО «РЕНО РОССИЯ» к непревышению, а также Дилер самостоятельно и по своему усмотрению определяет свою политику скидок. Предложение ограничено. Не является публичной офертой.</p> 
-									<p><sup>3&nbsp;</sup>&nbsp;Предложение распространяется на ряд Комплекс-Сервисов по замене тормозной системы, амортизаторов, сцепления, ремня ГРМ, системы кондиционирования, кузова. Каждый Комплекс-Сервис включает в себя оригинальные запасные части, работы по их замене, а также 10 обязательных контрольных проверок автомобиля. Указанная выгода представляет собой скидку от указанной конкретным Дилером фактической розничной цены за замену запасных частей, установленной таким Дилером. Во избежание сомнений Дилер вправе самостоятельно установить стоимость запасных частей, сервисного обслуживания и ремонта ниже максимальных цен, рекомендованных ЗАО «РЕНО РОССИЯ» к непревышению, а также Дилер самостоятельно и по своему усмотрению определяет свою политику скидок. Предложение ограничено. Не является публичной офертой.</p> 
-									<p>Начальные цены модельного ряда:</p> 
-									<p><b>Renault LOGAN</b><br> Указана максимальная рекомендованная розничная цена на автомобиль Renault LOGAN в комплектации ACCESS (Аксесс) 1,6 л, 82 л. с., МКП5 2021 года производства. Количество автомобилей у дилеров ограничено. Не оферта. Действует с 08.09.2021 по 30.09.2021. Подробности – на <a href="/">renault.ru</a>.<br> <b>Renault LOGAN STEPWAY</b><br> Указана максимальная рекомендованная розничная цена на автомобиль Renault LOGAN STEPWAY в комплектации Life (Лайф) 1,6 л, 82 л. с., МКП5 2021 года производства. Количество автомобилей у дилеров ограничено. Не оферта. Действует с 08.09.2021 по 30.09.2021. Подробности – на <a href="/">renault.ru</a>.<br> <b>Renault SANDERO</b><br> Указана максимальная рекомендованная розничная цена на автомобиль Renault SANDERO в комплектации ACCESS (Аксесс) 1,6 л, 82 л. с., МКП5 2021 года производства. Количество автомобилей у дилеров ограничено. Не оферта. Действует с 08.09.2021 по 30.09.2021. Подробности – на <a href="/">renault.ru</a>.</p> 
-									<p><b>Renault SANDERO STEPWAY</b></p> 
-									<p>Указана максимальная рекомендованная розничная цена на автомобиль Renault SANDERO STEPWAY в комплектации Life (Лайф) 1,6 л, 82 л. с., МКП5 2021 года производства. Количество автомобилей у дилеров ограничено. Не оферта. Предложение действует с 08.09.2021 по 30.09.2021. Подробности — на <a href="/">renault.ru</a>.</p> 
-									<p><b>Renault Новый DUSTER</b><br> Указана максимальная рекомендованная розничная цена на автомобиль Renault Duster 2021 года производства в комплектации Access (Аксесс) 1,6 л., 114 л.с., 4x2 МКП5. Количество автомобилей у дилеров ограничено. Не оферта. Действует с 08.09.2021 по 30.09.2021. Подробности – на <a href="/">renault.ru</a>.<br> <b>Renault KAPTUR</b><br> Указанна максимальная рекомендованная розничная цена на автомобиль Renault KAPTUR в комплектации Life (Лайф) 1,6 л., 114 л.с., МКП5 2021 года производства. Количество автомобилей у дилеров ограничено. Не оферта. Действует с 08.09.2021 по 30.09.2021. Подробности – на <a href="/">renault.ru</a>.<br> <b>Renault ARKANA</b><br> Указана максимальная рекомендованная розничная цена на автомобиль Renault ARKANA 2021 года производства в комплектации Life (Лайф) 1,6 л., 114 л.с., 4x2 МКП5. Количество автомобилей у дилеров ограничено. Не оферта. Действует с 08.09.2021 по 30.09.2021. Подробности – на <a href="/">renault.ru</a>.<br> <b>Renault MASTER</b><br> Указана максимальная рекомендованная розничная цена на автомобиль Renault Master в комплектации Fourgon L1 H1 (Фургон L1 H1) 2,3 л. МКП6, 125 л.с. Количество автомобилей у дилеров ограничено. Не оферта. Действует с 08.09.2021 по 30.09.2021. Подробности – на <a href="/">renault.ru</a>.<br> </p>
+									<p></p> 
 					      </div>
 					    </div>
 					  </div>
 					</div>
 				</div>
-			</section>
+			</section> -->
 		</main>
 		
 		<footer id="footer" class="footer">
@@ -668,7 +923,7 @@
 						<div class="fb-md-3 fb-xs-6 mv-3">
 							<div class="fw-7 mb-3">О компании</div>
 							<ul>
-								<li><a href="">Renault в России</a></li>
+								<li><a href="">Renault в Узбекистане</a></li>
 								<li><a href="">Новости</a></li>
 								<li><a href="">Контакты</a></li>
 								<li><a href="">Часто задаваемые вопросы</a></li>
@@ -696,136 +951,14 @@
 			</div>
 		</footer>
 	</div>
+
 	<!-- SCRIPTS -->
 	
 
-<!-- CSS -->
-
-<link rel="stylesheet" href="/css/fonts.css">
-<link rel="stylesheet" href="/fonts/NouvelR/stylesheet.css">
-<link rel="stylesheet" href="/css/plugins.css">
-<link rel="stylesheet" type="text/css" href="/js/plugins/jquery-ui/jquery-ui.min.css">
-<link rel="stylesheet" href="/js/plugins/choices-js/public/assets/styles/choices.css"/> <!-- Choices CSS -->
-<link rel="stylesheet" href="/css/main.css">
-
-<link rel="stylesheet" href="/css/additional.css">
-
-
-
-
-<!-- Vue link -->
-<script src="/js/vue/vue.js"></script>
-<!-- multiselect -->
-<script src="/js/vue/vue-multiselect/vue-multiselect.min.js"></script>
-<link rel="stylesheet" href="/js/vue/vue-multiselect/vue-multiselect.css">
-<!-- splitpanes -->
-<script src="/js/vue/splitpanes/splitpanes.umd.min.js"></script>
-<link rel="stylesheet" href="/js/vue/splitpanes/splitpanes.css">
-<!-- <script src="https://unpkg.com/splitpanes"></script> -->
-<!-- <link href="https://unpkg.com/splitpanes/dist/splitpanes.css" rel="stylesheet"> -->
-
-<!-- SCRIPTS -->
-<script src="/js/scripts.min.js"></script>
-<script src="/js/plugins/jquery-ui/jquery-ui.min.js"></script> <!-- JQUERY UI -->
-<script src="/js/plugins/choices-js/public/assets/scripts/choices.min.js"></script><!-- Choices JS -->
-
-
 <script src="/js/main.js"></script>
 
-<script type="text/javascript">
-  // Подключение vue компонентов
-  Vue.component('multiselect', window.VueMultiselect.default)
 
-  Vue.filter('spaceBetweenNum', (price)=>{ 
-    if(!price)
-      return 0;
-    price += "";
-    var pattern = /(-?\d+)(\d{3})/;
-    while (pattern.test(price))
-      price = price.replace(pattern, "$1 $2");
-    
-    return price;      
-  })
-</script>
+
+
 </body>
-<script>
-var _splitpanes = splitpanes,
-    Splitpanes = _splitpanes.Splitpanes,
-    Pane = _splitpanes.Pane;
-new Vue({
-  el: '#main',
-  components: {
-    Splitpanes: Splitpanes,
-    Pane: Pane
-  },
-  data: function data() {
-    return {
-      animated: false,
-      activeTab: 1,
-      paneSize: 80,
-      activeDot: null
-    };
-  },
-  methods: {
-    activate: function activate(num) {
-      var _this = this;
-
-      this.activeTab = num;
-      setTimeout(function () {
-        if (num === 1) {
-          _this.paneSize = 80;
-        } else if (num === 2) {
-          _this.paneSize = 20;
-        }
-      });
-      this.animated = true;
-      setTimeout(function () {
-        _this.animated = false;
-      }, 1500);
-    },
-    resize: function resize(e) {
-      this.paneSize = e[0].size;
-
-      if (e[0].size < 50) {
-        this.activeTab = 2;
-      } else {
-        this.activeTab = 1;
-      }
-    },
-    activateDot: function activateDot(num) {
-      var _this2 = this;
-
-      this.activeDot = num;
-      setTimeout(function () {
-        window.onclick = function (e) {
-          console.log(e.target.classList.contains('dot'));
-
-          if (e.target.classList.contains('dot')) {
-            return;
-          }
-
-          _this2.activeDot = null;
-          window.onclick = null;
-        };
-      });
-    },
-    toggleActiveTab: function toggleActiveTab() {
-      var _this3 = this;
-
-      this.animated = true;
-      setTimeout(function () {
-        _this3.animated = false;
-      }, 1500);
-
-      if (this.activeTab === 1) {
-        this.activeTab = 2;
-        this.paneSize = 20;
-      } else {
-        this.activeTab = 1;
-        this.paneSize = 80;
-      }
-    }
-  }
-});
-</script>
 </html>

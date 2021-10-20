@@ -26,7 +26,52 @@
 	<meta name="msapplication-TileColor" content="#ffffff">
 	<meta name="msapplication-TileImage" content="/img/favicon/ms-icon-144x144.png">
 	<meta name="theme-color" content="#ffffff">
-	<title>Title</title>
+	
+<!-- CSS -->
+
+<link rel="stylesheet" href="/css/fonts.css">
+<link rel="stylesheet" href="/fonts/NouvelR/stylesheet.css">
+<link rel="stylesheet" href="/css/plugins.css">
+<link rel="stylesheet" type="text/css" href="/js/plugins/jquery-ui/jquery-ui.min.css">
+<link rel="stylesheet" href="/js/plugins/choices-js/public/assets/styles/choices.css"/> <!-- Choices CSS -->
+<link rel="stylesheet" href="/css/main.css">
+
+<link rel="stylesheet" href="/css/additional.css">
+
+
+
+
+<!-- Vue link -->
+<script src="/js/vue/vue.js"></script>
+<!-- multiselect -->
+<script src="/js/vue/vue-multiselect/vue-multiselect.min.js"></script>
+<link rel="stylesheet" href="/js/vue/vue-multiselect/vue-multiselect.css">
+<!-- splitpanes -->
+<script src="/js/vue/splitpanes/splitpanes.umd.min.js"></script>
+<link rel="stylesheet" href="/js/vue/splitpanes/splitpanes.css">
+
+
+<!-- SCRIPTS -->
+<script src="/js/scripts.min.js"></script>
+<script src="/js/plugins/jquery-ui/jquery-ui.min.js"></script> <!-- JQUERY UI -->
+<script src="/js/plugins/choices-js/public/assets/scripts/choices.min.js"></script><!-- Choices JS -->
+
+<script type="text/javascript">
+  // Подключение vue компонентов
+  Vue.component('multiselect', window.VueMultiselect.default)
+
+  Vue.filter('spaceBetweenNum', (price)=>{ 
+    if(!price)
+      return 0;
+    price += "";
+    var pattern = /(-?\d+)(\d{3})/;
+    while (pattern.test(price))
+      price = price.replace(pattern, "$1 $2");
+    
+    return price;      
+  })
+</script>
+	<title>Renault Uzbekistan</title>
 </head>
 
 <body>
@@ -59,8 +104,8 @@
                 <ul class="menu-main list-inline">
                   <li><a href="javascript:;" subdown-click="subdown-menu-1">Модельный ряд</a></li>
                   <li><a href="javascript:;" subdown-click="subdown-menu-3">Покупателям</a></li>
-                  <li><a href="javascript:;" subdown-click="subdown-menu-4">Владельцам</a></li>
-                  <li><a href="">О компании</a></li>
+                  <!-- <li><a href="javascript:;" subdown-click="subdown-menu-4">Владельцам</a></li> -->
+                  <!-- <li><a href="">О компании</a></li> -->
                 </ul>
               </div>
               <div class="header-icons">
@@ -93,10 +138,19 @@
     <!-- MIN MENU -->
     <div id="min-menu" data-aos="fade">
       <ul>
-        <li><a href="">Модельный ряд</a></li>
-        <li><a href="">Покупателям</a></li>
-        <li><a href="">Владельцам</a></li>
-        <li><a href="">О компании</a></li>
+        <li>
+          <a href="">Модельный ряд</a>
+          <ul>
+            <li><a href="/personal-cars/arkana.html">ARKANA</a></li>
+            <li><a href="/personal-cars/kaptur.html">KAPTUR</a></li>
+            <li><a href="/personal-cars/newduster.html">НОВЫЙ RENAULT DUSTER</a></li>
+          </ul>
+        </li>
+        <!-- <div class="item-title">Покупателям</div> -->
+        <li><a title="Кредитные программы" href="/finance.html">Кредитные программы</a></li>
+        <li><a title="Кредитные программы" href="/leasing.html">Лизинговые программы</a></li>
+        <li><a title="Классический кредит" href="/classic-credit.html">Классический кредит</a></li>
+        <li><a title="Классический кредит" href="/trade-in.html">Trade-in</a></li>
       </ul>
     </div>
     <!-- MIN MENU HEADER -->
@@ -132,11 +186,13 @@
                   <div class="menu-models-title">НОВИНКИ</div>
                   <div class="menu-models-items box-xs-10">
                     <figure>
-                      <div class="img-content">
-                        <img src="/img/other/menu-models-1.png">
-                        <span class="soon-text top-right">Скоро</span>
-                      </div>
-                      <div class="mt-1">НОВЫЙ RENAULT DUSTER</div>
+                      <a href="/personal-cars/newduster.html">
+                        <div class="img-content">
+                          <img src="/img/other/menu-models-1.png">
+                          <span class="soon-text top-right">Скоро</span>
+                        </div>
+                        <div class="mt-1">НОВЫЙ RENAULT DUSTER</div>
+                        </a>
                     </figure>
                   </div>
                 </div>
@@ -144,16 +200,20 @@
                   <div class="menu-models-title">Кроссоверы и внедорожники</div>
                   <div class="menu-models-items box-xs-10">
                     <figure>
-                      <div class="img-content">
-                        <img src="/img/other/menu-models-3.png">
-                      </div>
-                      <div class="mt-1">RENAULT ARKANA</div>
+                      <a href="/personal-cars/arkana.html">
+                        <div class="img-content">
+                          <img src="/img/other/menu-models-3.png">
+                        </div>
+                        <div class="mt-1">RENAULT ARKANA</div>
+                      </a>
                     </figure>
                     <figure>
-                      <div class="img-content">
-                        <img src="/img/other/menu-models-4.png">
-                      </div>
-                      <div class="mt-1">RENAULT KAPTUR</div>
+                      <a href="/personal-cars/kaptur.html">
+                        <div class="img-content">
+                          <img src="/img/other/menu-models-4.png">
+                        </div>
+                        <div class="mt-1">RENAULT KAPTUR</div>
+                      </a>
                     </figure>
                   </div>
                 </div>
@@ -204,7 +264,7 @@
                     <div class="item-title">Renault Finance</div>
                     <ul class="item-list">
                       <li><a title="Кредитные программы" href="/finance.html">Кредитные программы</a></li>
-                      <li><a title="Классический кредит" href="/finance/classic-credit.html">Классический кредит</a></li>
+                      <li><a title="Классический кредит" href="/classic-credit.html">Классический кредит</a></li>
                       <li><a title="Программа 'Поехали'" href="/finance/credit-go.html">Программа 'Поехали'</a></li>
                       <li><a title="Получить одобрение кредита онлайн" href="/finance/credit-approval.html">Получить одобрение кредита онлайн</a></li>
                     </ul>
@@ -340,41 +400,41 @@
 				<div class="container pv-5">
 					<div class="boxes-3 figure-mv-6 desktop:ph-9 img-ratio-1">
 						<figure>
-							<a href="">
+							<a href="/personal-cars/arkana.html">
 								<picture>
 									<img src="/img/other/index/index-models-1.png">
 								</picture>
 							</a>
 							<div class="desc-content">
-								<div class="text-x3-bu"><a href="">Renault arkana</a></div>
+								<div class="text-x3-bu"><a href="/personal-cars/arkana.html">Renault arkana</a></div>
 								<div>Цена от <span class="price-content fs-5-em">230 879 300 сум</span></div>
 							</div>
 							<div class="link-content link-def mt-1 flex">
-								<a href="" class="mr-4">узнать больше</a>
+								<a href="/personal-cars/arkana.html" class="mr-4">узнать больше</a>
 							</div>
 						</figure>
 						<figure>
-							<a href="">
+							<a href="/personal-cars/kaptur.html">
 								<picture>
 									<img src="/img/other/index/index-models-2.png">
 								</picture>
 							</a>
 							<div class="desc-content">
-								<div class="text-x3-bu"><a href="">RENAULT KAPTUR</a></div>
+								<div class="text-x3-bu"><a href="/personal-cars/kaptur.html">RENAULT KAPTUR</a></div>
 								<div>Цена от <span class="price-content fs-5-em">221 115 600 сум</span></div>
 							</div>
 							<div class="link-content link-def mt-1 flex">
-								<a href="" class="mr-4">узнать больше</a>
+								<a href="/personal-cars/kaptur.html" class="mr-4">узнать больше</a>
 							</div>
 						</figure>
 						<figure>
-							<a href="">
+							<a href="/personal-cars/newduster.html">
 								<picture>
 									<img src="/img/other/index/index-models-3.png">
 								</picture>
 							</a>
 							<div class="desc-content">
-								<div class="text-x3-bu"><a href="">НОВЫЙ RENAULT DUSTER</a></div>
+								<div class="text-x3-bu"><a href="/personal-cars/newduster.html">НОВЫЙ RENAULT DUSTER</a></div>
 								<div>Цена от <span class="price-content fs-5-em">225 108 500 сум</span></div>
 							</div>
 							<div class="link-content link-def mt-1 flex">
@@ -447,7 +507,7 @@
 					</div>
 				</div>
 			</section>
-						<section>
+						<!-- <section>
 				<div class="container pv-8">
 					<div class="accordion-def desktop:ph-4" id="yur-accordion">
 					  <div class="panel">
@@ -456,20 +516,13 @@
 					    </a>
 					    <div id="yur-accordion-1" class="panel-collapse collapse">
 					      <div class="accordion-def-body">
-									<p><sup>1&nbsp;</sup>Акция «Домашний Тест-драйв» (далее - «Акция») действует исключительно на территории Российской Федерации, на специально созданной интернет платформе на сайте Renault.ru (далее - «Сайт»). Список официальных дилеров Renault, принимающих участие в Акции ограничен. Организаторы Акции оставляют за собой право в одностороннем порядке изменить список дилеров, участвующих в Акции. К записи на тест-драйв допускается клиент - физическое лицо, который в период проведения Акции заказал тест-драйв на Сайте, выбрав категорию «Домашний Тест-драйв», имеющее действующее водительское удостоверение. Предложение не является офертой и может быть изменено. Акция дает клиенту возможность выбрать дату, временной слот и маршрут тест-драйва (маршрут доступный для тест-драйва устанавливается дилерским центром Renault). Количество доступных слотов для записи и автомобилей для тест-драйва строго ограничено, в связи с чем действие Акции может быть приостановлено в любое время. Дополнительная информация предоставляется по телефону 8 800 200-80-80 (звонок по РФ бесплатный).</p> 
-									<p><sup>2&nbsp;</sup>&nbsp;Цена указана в рублях, с учетом НДС на комплексную диагностику, которая включает в себя восемь проверок: уровней эксплуатационных жидкостей, наружного освещения и регулировки света фар, осмотр ветрового стекла и щеток стеклоочистителя, повреждения кузова и лакокрасочного покрытия, системы кондиционирования и состояния салонного фильтра, тормозной системы с использованием диагностического стенда (проверка износа колодок и дисков), состояния протектора шин, подвески на подъемнике с осмотром элементов днища. Во избежание сомнений Дилер вправе самостоятельно установить стоимость диагностики ниже максимальной цены, рекомендованной ЗАО «РЕНО РОССИЯ» к непревышению, а также Дилер самостоятельно и по своему усмотрению определяет свою политику скидок. Предложение ограничено. Не является публичной офертой.</p> 
-									<p><sup>3&nbsp;</sup>&nbsp;Предложение распространяется на ряд Комплекс-Сервисов по замене тормозной системы, амортизаторов, сцепления, ремня ГРМ, системы кондиционирования, кузова. Каждый Комплекс-Сервис включает в себя оригинальные запасные части, работы по их замене, а также 10 обязательных контрольных проверок автомобиля. Указанная выгода представляет собой скидку от указанной конкретным Дилером фактической розничной цены за замену запасных частей, установленной таким Дилером. Во избежание сомнений Дилер вправе самостоятельно установить стоимость запасных частей, сервисного обслуживания и ремонта ниже максимальных цен, рекомендованных ЗАО «РЕНО РОССИЯ» к непревышению, а также Дилер самостоятельно и по своему усмотрению определяет свою политику скидок. Предложение ограничено. Не является публичной офертой.</p> 
-									<p>Начальные цены модельного ряда:</p> 
-									<p><b>Renault LOGAN</b><br> Указана максимальная рекомендованная розничная цена на автомобиль Renault LOGAN в комплектации ACCESS (Аксесс) 1,6 л, 82 л. с., МКП5 2021 года производства. Количество автомобилей у дилеров ограничено. Не оферта. Действует с 08.09.2021 по 30.09.2021. Подробности – на <a href="/">renault.ru</a>.<br> <b>Renault LOGAN STEPWAY</b><br> Указана максимальная рекомендованная розничная цена на автомобиль Renault LOGAN STEPWAY в комплектации Life (Лайф) 1,6 л, 82 л. с., МКП5 2021 года производства. Количество автомобилей у дилеров ограничено. Не оферта. Действует с 08.09.2021 по 30.09.2021. Подробности – на <a href="/">renault.ru</a>.<br> <b>Renault SANDERO</b><br> Указана максимальная рекомендованная розничная цена на автомобиль Renault SANDERO в комплектации ACCESS (Аксесс) 1,6 л, 82 л. с., МКП5 2021 года производства. Количество автомобилей у дилеров ограничено. Не оферта. Действует с 08.09.2021 по 30.09.2021. Подробности – на <a href="/">renault.ru</a>.</p> 
-									<p><b>Renault SANDERO STEPWAY</b></p> 
-									<p>Указана максимальная рекомендованная розничная цена на автомобиль Renault SANDERO STEPWAY в комплектации Life (Лайф) 1,6 л, 82 л. с., МКП5 2021 года производства. Количество автомобилей у дилеров ограничено. Не оферта. Предложение действует с 08.09.2021 по 30.09.2021. Подробности — на <a href="/">renault.ru</a>.</p> 
-									<p><b>Renault Новый DUSTER</b><br> Указана максимальная рекомендованная розничная цена на автомобиль Renault Duster 2021 года производства в комплектации Access (Аксесс) 1,6 л., 114 л.с., 4x2 МКП5. Количество автомобилей у дилеров ограничено. Не оферта. Действует с 08.09.2021 по 30.09.2021. Подробности – на <a href="/">renault.ru</a>.<br> <b>Renault KAPTUR</b><br> Указанна максимальная рекомендованная розничная цена на автомобиль Renault KAPTUR в комплектации Life (Лайф) 1,6 л., 114 л.с., МКП5 2021 года производства. Количество автомобилей у дилеров ограничено. Не оферта. Действует с 08.09.2021 по 30.09.2021. Подробности – на <a href="/">renault.ru</a>.<br> <b>Renault ARKANA</b><br> Указана максимальная рекомендованная розничная цена на автомобиль Renault ARKANA 2021 года производства в комплектации Life (Лайф) 1,6 л., 114 л.с., 4x2 МКП5. Количество автомобилей у дилеров ограничено. Не оферта. Действует с 08.09.2021 по 30.09.2021. Подробности – на <a href="/">renault.ru</a>.<br> <b>Renault MASTER</b><br> Указана максимальная рекомендованная розничная цена на автомобиль Renault Master в комплектации Fourgon L1 H1 (Фургон L1 H1) 2,3 л. МКП6, 125 л.с. Количество автомобилей у дилеров ограничено. Не оферта. Действует с 08.09.2021 по 30.09.2021. Подробности – на <a href="/">renault.ru</a>.<br> </p>
+									<p></p> 
 					      </div>
 					    </div>
 					  </div>
 					</div>
 				</div>
-			</section>
+			</section> -->
 		</main>
 		
 		<footer id="footer" class="footer">
@@ -557,7 +610,7 @@
 						<div class="fb-md-3 fb-xs-6 mv-3">
 							<div class="fw-7 mb-3">О компании</div>
 							<ul>
-								<li><a href="">Renault в России</a></li>
+								<li><a href="">Renault в Узбекистане</a></li>
 								<li><a href="">Новости</a></li>
 								<li><a href="">Контакты</a></li>
 								<li><a href="">Часто задаваемые вопросы</a></li>
@@ -588,54 +641,9 @@
 	<!-- SCRIPTS -->
 	
 
-<!-- CSS -->
-
-<link rel="stylesheet" href="/css/fonts.css">
-<link rel="stylesheet" href="/fonts/NouvelR/stylesheet.css">
-<link rel="stylesheet" href="/css/plugins.css">
-<link rel="stylesheet" type="text/css" href="/js/plugins/jquery-ui/jquery-ui.min.css">
-<link rel="stylesheet" href="/js/plugins/choices-js/public/assets/styles/choices.css"/> <!-- Choices CSS -->
-<link rel="stylesheet" href="/css/main.css">
-
-<link rel="stylesheet" href="/css/additional.css">
-
-
-
-
-<!-- Vue link -->
-<script src="/js/vue/vue.js"></script>
-<!-- multiselect -->
-<script src="/js/vue/vue-multiselect/vue-multiselect.min.js"></script>
-<link rel="stylesheet" href="/js/vue/vue-multiselect/vue-multiselect.css">
-<!-- splitpanes -->
-<script src="/js/vue/splitpanes/splitpanes.umd.min.js"></script>
-<link rel="stylesheet" href="/js/vue/splitpanes/splitpanes.css">
-<!-- <script src="https://unpkg.com/splitpanes"></script> -->
-<!-- <link href="https://unpkg.com/splitpanes/dist/splitpanes.css" rel="stylesheet"> -->
-
-<!-- SCRIPTS -->
-<script src="/js/scripts.min.js"></script>
-<script src="/js/plugins/jquery-ui/jquery-ui.min.js"></script> <!-- JQUERY UI -->
-<script src="/js/plugins/choices-js/public/assets/scripts/choices.min.js"></script><!-- Choices JS -->
-
-
 <script src="/js/main.js"></script>
 
-<script type="text/javascript">
-  // Подключение vue компонентов
-  Vue.component('multiselect', window.VueMultiselect.default)
 
-  Vue.filter('spaceBetweenNum', (price)=>{ 
-    if(!price)
-      return 0;
-    price += "";
-    var pattern = /(-?\d+)(\d{3})/;
-    while (pattern.test(price))
-      price = price.replace(pattern, "$1 $2");
-    
-    return price;      
-  })
-</script>
 </body>
 
 </html>

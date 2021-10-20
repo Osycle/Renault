@@ -6,26 +6,71 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta name="description" content="">
-		<link rel="shortcut icon" href="img/favicon/favicon.ico" type="image/x-icon">
-	<link rel="apple-touch-icon" href="img/favicon/favicon.png">
+		<link rel="shortcut icon" href="/img/favicon/favicon.ico" type="image/x-icon">
+	<link rel="apple-touch-icon" href="/img/favicon/favicon.png">
 
-	<link rel="apple-touch-icon" sizes="57x57" href="img/favicon/apple-icon-57x57.png">
-	<link rel="apple-touch-icon" sizes="60x60" href="img/favicon/apple-icon-60x60.png">
-	<link rel="apple-touch-icon" sizes="72x72" href="img/favicon/apple-icon-72x72.png">
-	<link rel="apple-touch-icon" sizes="76x76" href="img/favicon/apple-icon-76x76.png">
-	<link rel="apple-touch-icon" sizes="114x114" href="img/favicon/apple-icon-114x114.png">
-	<link rel="apple-touch-icon" sizes="120x120" href="img/favicon/apple-icon-120x120.png">
-	<link rel="apple-touch-icon" sizes="144x144" href="img/favicon/apple-icon-144x144.png">
-	<link rel="apple-touch-icon" sizes="152x152" href="img/favicon/apple-icon-152x152.png">
-	<link rel="apple-touch-icon" sizes="180x180" href="img/favicon/apple-icon-180x180.png">
-	<link rel="icon" type="image/png" sizes="192x192"  href="img/favicon/android-icon-192x192.png">
-	<link rel="icon" type="image/png" sizes="32x32" href="img/favicon/favicon-32x32.png">
-	<link rel="icon" type="image/png" sizes="96x96" href="img/favicon/favicon-96x96.png">
-	<link rel="icon" type="image/png" sizes="16x16" href="img/favicon/favicon-16x16.png">
-	<link rel="manifest" href="img/favicon/manifest.json">
+	<link rel="apple-touch-icon" sizes="57x57" href="/img/favicon/apple-icon-57x57.png">
+	<link rel="apple-touch-icon" sizes="60x60" href="/img/favicon/apple-icon-60x60.png">
+	<link rel="apple-touch-icon" sizes="72x72" href="/img/favicon/apple-icon-72x72.png">
+	<link rel="apple-touch-icon" sizes="76x76" href="/img/favicon/apple-icon-76x76.png">
+	<link rel="apple-touch-icon" sizes="114x114" href="/img/favicon/apple-icon-114x114.png">
+	<link rel="apple-touch-icon" sizes="120x120" href="/img/favicon/apple-icon-120x120.png">
+	<link rel="apple-touch-icon" sizes="144x144" href="/img/favicon/apple-icon-144x144.png">
+	<link rel="apple-touch-icon" sizes="152x152" href="/img/favicon/apple-icon-152x152.png">
+	<link rel="apple-touch-icon" sizes="180x180" href="/img/favicon/apple-icon-180x180.png">
+	<link rel="icon" type="image/png" sizes="192x192"  href="/img/favicon/android-icon-192x192.png">
+	<link rel="icon" type="image/png" sizes="32x32" href="/img/favicon/favicon-32x32.png">
+	<link rel="icon" type="image/png" sizes="96x96" href="/img/favicon/favicon-96x96.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="/img/favicon/favicon-16x16.png">
+	<link rel="manifest" href="/img/favicon/manifest.json">
 	<meta name="msapplication-TileColor" content="#ffffff">
-	<meta name="msapplication-TileImage" content="img/favicon/ms-icon-144x144.png">
+	<meta name="msapplication-TileImage" content="/img/favicon/ms-icon-144x144.png">
 	<meta name="theme-color" content="#ffffff">
+	
+<!-- CSS -->
+
+<link rel="stylesheet" href="/css/fonts.css">
+<link rel="stylesheet" href="/fonts/NouvelR/stylesheet.css">
+<link rel="stylesheet" href="/css/plugins.css">
+<link rel="stylesheet" type="text/css" href="/js/plugins/jquery-ui/jquery-ui.min.css">
+<link rel="stylesheet" href="/js/plugins/choices-js/public/assets/styles/choices.css"/> <!-- Choices CSS -->
+<link rel="stylesheet" href="/css/main.css">
+
+<link rel="stylesheet" href="/css/additional.css">
+
+
+
+
+<!-- Vue link -->
+<script src="/js/vue/vue.js"></script>
+<!-- multiselect -->
+<script src="/js/vue/vue-multiselect/vue-multiselect.min.js"></script>
+<link rel="stylesheet" href="/js/vue/vue-multiselect/vue-multiselect.css">
+<!-- splitpanes -->
+<script src="/js/vue/splitpanes/splitpanes.umd.min.js"></script>
+<link rel="stylesheet" href="/js/vue/splitpanes/splitpanes.css">
+
+
+<!-- SCRIPTS -->
+<script src="/js/scripts.min.js"></script>
+<script src="/js/plugins/jquery-ui/jquery-ui.min.js"></script> <!-- JQUERY UI -->
+<script src="/js/plugins/choices-js/public/assets/scripts/choices.min.js"></script><!-- Choices JS -->
+
+<script type="text/javascript">
+  // Подключение vue компонентов
+  Vue.component('multiselect', window.VueMultiselect.default)
+
+  Vue.filter('spaceBetweenNum', (price)=>{ 
+    if(!price)
+      return 0;
+    price += "";
+    var pattern = /(-?\d+)(\d{3})/;
+    while (pattern.test(price))
+      price = price.replace(pattern, "$1 $2");
+    
+    return price;      
+  })
+</script>
 	<title>Renault Uzbekistan</title>
 </head>
 
@@ -59,8 +104,8 @@
                 <ul class="menu-main list-inline">
                   <li><a href="javascript:;" subdown-click="subdown-menu-1">Модельный ряд</a></li>
                   <li><a href="javascript:;" subdown-click="subdown-menu-3">Покупателям</a></li>
-                  <li><a href="javascript:;" subdown-click="subdown-menu-4">Владельцам</a></li>
-                  <li><a href="">О компании</a></li>
+                  <!-- <li><a href="javascript:;" subdown-click="subdown-menu-4">Владельцам</a></li> -->
+                  <!-- <li><a href="">О компании</a></li> -->
                 </ul>
               </div>
               <div class="header-icons">
@@ -93,10 +138,19 @@
     <!-- MIN MENU -->
     <div id="min-menu" data-aos="fade">
       <ul>
-        <li><a href="">Модельный ряд</a></li>
-        <li><a href="">Покупателям</a></li>
-        <li><a href="">Владельцам</a></li>
-        <li><a href="">О компании</a></li>
+        <li>
+          <a href="">Модельный ряд</a>
+          <ul>
+            <li><a href="/personal-cars/arkana.html">ARKANA</a></li>
+            <li><a href="/personal-cars/kaptur.html">KAPTUR</a></li>
+            <li><a href="/personal-cars/newduster.html">НОВЫЙ RENAULT DUSTER</a></li>
+          </ul>
+        </li>
+        <!-- <div class="item-title">Покупателям</div> -->
+        <li><a title="Кредитные программы" href="/finance.html">Кредитные программы</a></li>
+        <li><a title="Кредитные программы" href="/leasing.html">Лизинговые программы</a></li>
+        <li><a title="Классический кредит" href="/classic-credit.html">Классический кредит</a></li>
+        <li><a title="Классический кредит" href="/trade-in.html">Trade-in</a></li>
       </ul>
     </div>
     <!-- MIN MENU HEADER -->
@@ -132,11 +186,13 @@
                   <div class="menu-models-title">НОВИНКИ</div>
                   <div class="menu-models-items box-xs-10">
                     <figure>
-                      <div class="img-content">
-                        <img src="/img/other/menu-models-1.png">
-                        <span class="soon-text top-right">Скоро</span>
-                      </div>
-                      <div class="mt-1">НОВЫЙ RENAULT DUSTER</div>
+                      <a href="/personal-cars/newduster.html">
+                        <div class="img-content">
+                          <img src="/img/other/menu-models-1.png">
+                          <span class="soon-text top-right">Скоро</span>
+                        </div>
+                        <div class="mt-1">НОВЫЙ RENAULT DUSTER</div>
+                        </a>
                     </figure>
                   </div>
                 </div>
@@ -144,16 +200,20 @@
                   <div class="menu-models-title">Кроссоверы и внедорожники</div>
                   <div class="menu-models-items box-xs-10">
                     <figure>
-                      <div class="img-content">
-                        <img src="/img/other/menu-models-3.png">
-                      </div>
-                      <div class="mt-1">RENAULT ARKANA</div>
+                      <a href="/personal-cars/arkana.html">
+                        <div class="img-content">
+                          <img src="/img/other/menu-models-3.png">
+                        </div>
+                        <div class="mt-1">RENAULT ARKANA</div>
+                      </a>
                     </figure>
                     <figure>
-                      <div class="img-content">
-                        <img src="/img/other/menu-models-4.png">
-                      </div>
-                      <div class="mt-1">RENAULT KAPTUR</div>
+                      <a href="/personal-cars/kaptur.html">
+                        <div class="img-content">
+                          <img src="/img/other/menu-models-4.png">
+                        </div>
+                        <div class="mt-1">RENAULT KAPTUR</div>
+                      </a>
                     </figure>
                   </div>
                 </div>
@@ -204,7 +264,7 @@
                     <div class="item-title">Renault Finance</div>
                     <ul class="item-list">
                       <li><a title="Кредитные программы" href="/finance.html">Кредитные программы</a></li>
-                      <li><a title="Классический кредит" href="/finance/classic-credit.html">Классический кредит</a></li>
+                      <li><a title="Классический кредит" href="/classic-credit.html">Классический кредит</a></li>
                       <li><a title="Программа 'Поехали'" href="/finance/credit-go.html">Программа 'Поехали'</a></li>
                       <li><a title="Получить одобрение кредита онлайн" href="/finance/credit-approval.html">Получить одобрение кредита онлайн</a></li>
                     </ul>
@@ -322,144 +382,293 @@
     </div>
 		<main class="main" data-aos="fade" id="main">
 			<div class="nav-sub">
-				<div class="wrapper link-li-1">
-					<ul>
-						<li class="active"><a href="/personal-cars/newduster.html">Новый DUSTER</a></li>
-						<li><a href="/personal-cars/newduster/equipment.html">Оборудование</a></li>
-						<li><a href="/personal-cars/newduster/technologies-4x4.html">Технологии 4x4</a></li>
-						<li><a href="/personal-cars/newduster/off-road.html">Пакет OFF-ROAD</a></li>
-						<li><a href="">Аксессуары</a></li>
+				<div class="wrapper link-li-1 jc-between flex ai-center ph-3">
+					<ul class="jc-start fs-2-em">
+						<li class="active"><a href="/personal-cars/newduster.html">Kaptur</a></li>
 					</ul>
+					<div class="btn-content box-md-4 jc-end flex ai-center hidden-xs hidden-sm">
+						<span class="btn-def mr-2 hovered">
+							<a href="">конфигуратор</a>
+						</span>
+						<span class="btn-opacity">
+							<a href="">купить онлайн</a>
+						</span>
+					</div>
 				</div>
 			</div>
-			<div class="bnr-page">
+			<div class="bnr-page full-style">
 				<div class="wrapper">
 					<div class="entry-header">
 						<div class="img-content">
-							<picture class="pic-absolute is-covered opacity-3">
-								<img src="/img/other/finance/finance-bnr.webp">
+							<picture>
+								<img src="https://cdn.group.renault.com/ren/ru/main/new/Kaptur.jpg.ximg.mediumx2.webp/2a55bf7fef.webp">
 							</picture>
-						</div>
-						<div class="desc-content">
-							<h1>Renault Finance - покупка Renault в кредит</h1>
-							<div class="text-summary">Покупка автомобиля — значимое событие в жизни каждого человека! Собственная программа Renault Finance уже помогла многим ускорить этот счастливый момент.</div>
 						</div>
 					</div>					
 				</div>
 			</div>
+			<section class="sibls">
+				<div class="container pv-8">
+					<div class="sibls-items boxes-3">
+						<div class="cell">
+							<div class="text-x13-bu lh-2 mb-2">RENAULT KAPTUR</div>
+						</div>
+						<div class="cell">
+							<div class="text-x8-b mb-2">7 400 руб. / месяц</div>
+							<span class="btn-opacity">
+								<a href="">кредит</a>
+							</span>
+						</div>
+						<div class="cell">
+							<div class="text-x8-b mb-2">Цена от 221 115 600 сум</div>
+							<span class="btn-def btn-icon">
+								<a href="">
+									<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 185.343 185.343"><path d="M51.707 185.343a10.692 10.692 0 01-7.593-3.149 10.724 10.724 0 010-15.175l74.352-74.347L44.114 18.32c-4.194-4.194-4.194-10.987 0-15.175 4.194-4.194 10.987-4.194 15.18 0l81.934 81.934c4.194 4.194 4.194 10.987 0 15.175l-81.934 81.939a10.678 10.678 0 01-7.587 3.15z"></path></svg>
+									пройти тест-драйв
+								</a>
+							</span>
+						</div>
+					</div>
+				</div>
+			</section>
 			<section>
 				<div class="container pv-8">
-					<div class="entry-header text-center box-lg-7 mh-auto">
-						<p class="color-gray-5">Кредит — проще, чем вы думаете!</p>
-						<h2>Выберите удобный для вас способ одобрения кредита: </h2>
-						<p>В официальном дилерском центре</p>
-					</div>
-					<div class="credit-steps mv-10">
-						<div class="credit-steps-items">
-							<figure>
-								<div class="img-content">
-									<picture>
-										<img src="/img/other/finance/credit-steps-1.svg">
-									</picture>
+					<div class="boxes-4 jc-center figure-mv-3 mv-5 img-ratio-1">
+						<figure>
+							<picture>
+								<img src="https://cdn.group.renault.com/ren/ru/kaptur/new/kaptur-main-01.jpg.ximg.large.webp/7c2576f981.webp" width="100%">
+							</picture>
+							<div class="desc-content">
+								<div class="text-x4-b mv-3">Выделяться в потоке</div>
+								<hr class="style-1 ml-0">
+								<p>Кроссовер Renault KAPTUR всегда в центре внимания. 24 варианта окраски кузова — это ваша свобода самовыражения. Элегантный образ автомобиля отлично сочетается с динамичными линиями кузова. Фирменные дневные ходовые огни и головная оптика выделяют автомобиль в потоке в ночное время..</p>
+								<div class="text-center">
+									<span class="btn-def mt-4">
+										<a href="">подробнее</a>
+									</span>
 								</div>
-								<div class="desc-content">
-									Получите расчет по кредиту у специалиста Renault Finance
+							</div>
+						</figure>
+						<figure>
+							<picture>
+								<img src="https://cdn.group.renault.com/ren/ru/new-kaptur/kaptur-main-02.jpg.ximg.large.webp/73129b2d2d.webp" width="100%">
+							</picture>
+							<div class="desc-content">
+								<div class="text-x4-b mv-3">Получать удовольствие за рулем</div>
+								<hr class="style-1 ml-0">
+								<p>Новый двигатель ТСе 150 с турбонаддувом подарит вам отличную динамику, а электроусилитель рулевого управления и интеллектуальная система полного привода готовы полностью раскрыть весь потенциал автомобиля как в городе, так и за его пределами. Благодаря различным системам помощи водителю вы сможете чувствовать себя уверенно в любых дорожных ситуациях.!.</p>
+								<div class="text-center">
+									<span class="btn-def mt-4">
+										<a href="">подробнее</a>
+									</span>
 								</div>
-							</figure>
-							<figure>
-								<div class="img-content">
-									<picture>
-										<img src="/img/other/finance/credit-steps-2.svg">
-									</picture>
+							</div>
+						</figure>
+						<figure>
+							<picture>
+								<img src="https://cdn.group.renault.com/ren/ru/new-kaptur/kaptur-main-03.jpg.ximg.large.webp/83c18a9123.webp" width="100%">
+							</picture>
+							<div class="desc-content">
+								<div class="text-x4-b mv-3">Насладитесь комфортом</div>
+								<hr class="style-1 ml-0">
+								<p>Мягкие и качественные материалы отделки интерьера создают ощущение уюта, а новое расположение клавиш управления интуитивно понятно. Зимние опции, удобные отсеки для хранения, центральный подлокотник и два подстаканника для напитков сделают путешествия на любые расстояния удобнее...</p>
+								<div class="text-center">
+									<span class="btn-def mt-4">
+										<a href="">подробнее</a>
+									</span>
 								</div>
-								<div class="desc-content">
-									Оформите заявку, предъявив только паспорт и водительское удостоверение
+							</div>
+						</figure>
+						<figure>
+							<picture>
+								<img src="https://cdn.group.renault.com/ren/ru/kaptur/new/kaptur-main-04.jpg.ximg.large.webp/1871a31a84.webp" width="100%">
+							</picture>
+							<div class="desc-content">
+								<div class="text-x4-b mv-3">Создан для России</div>
+								<hr class="style-1 ml-0">
+								<p>Renault KAPTUR — это полноприводный кроссовер, идеально подходящий для эксплуатации в российских условиях. Идеально подходит для России благодаря большому дорожному просвету, отличной геометрии кузова, энергоемкой подвеске и интеллектуальной системе полного привода...</p>
+								<div class="text-center">
+									<span class="btn-def mt-4">
+										<a href="">подробнее</a>
+									</span>
 								</div>
-							</figure>
-							<figure>
-								<div class="img-content">
-									<picture>
-										<img src="/img/other/finance/credit-steps-3.svg">
-									</picture>
-								</div>
-								<div class="desc-content">
-									Подпишите кредитный договор и получите ваш новый Renault
-								</div>
-							</figure>
-						</div>
-					</div>
-					<div class="btn-content text-center">
-						<span class="btn-def hovered">
-							<a href="">получите одобрение кредита онлайн</a>
-						</span>
+							</div>
+						</figure>
 					</div>
 				</div>
 			</section>
+			<div>
+				<iframe src="https://production.renault.ru/kaptur-new-page/frame_new_options.html" frameborder="0"
+					width="100%"
+					style="min-height: 0px; height: 1199px;"></iframe>
+			</div>
 			<section>
-				<div class="container pv-5">
-					<div class="wrapper">
-						<div class="entry-header text-center box-lg-7 mh-auto">
-							<h2>Кредитные программы</h2>
-							<br>
-						</div>
-						<div class="flex mv-3 mobile:fd-column desktop:fd-row-reverse">
-							<div class="fb-md-6 mv-3">
-								<div class="img-content">
-									<picture>
-										<img src="/img/other/finance/credit-programs-1.webp">
-									</picture>
-								</div>
-							</div>
-							<div class="fb-md-6 mv-3 desktop:mr-6">
-								<div class="desc-content desc-style-1">
-									<h5>RENAULT FINANCE</h5>
-									<h4>КЛАССИЧЕСКИЙ КРЕДИТ</h4>
-									<p>Просто свяжитесь с нами. Наши менеджеры ответят на любые ваши вопросы и помогут подобрать предложение, наиболее выгодное для вашего бизнеса.</p>
-									<ul>
-										<li>Субсидированная процентная ставка.</li>
-										<li>Первоначальный взнос от 10%.</li>
-									</ul>
-									<div class="text-center mt-7">
-										<div class="mv-4">
-											<span class="btn-def">
-												<a href="">подробнее о программе</a>
-											</span>
+				<div class="container pv-8">
+					<div class="entry-header box-lg-7 mt-3 text-center mh-auto">
+						<h2>КОМПЛЕКТАЦИИ RENAULT KAPTUR</h2>
+					</div>
+				</div>
+				<div class="model-complectations-items">
+					<div class="container pv-8">
+						<div class="swiper-def">
+							<!-- Additional required wrapper -->
+							<div class="swiper-wrapper model-complectations-items">
+								<!-- Slides -->
+								<div class="swiper-slide">
+									<figure>
+										<div class="img-content">
+											<img src="https://www.renault.ru/agg/vn/unique/ONE_CF_DACIA_NEQ_DENSITY1_LARGE/r_brandSite_carPicker_1.png?uri=https%3A%2F%2Fru.co.rplug.renault.com%2Fproduct%2Fmodel%2FHAH%2Fkaptur%2Fc%2FA-ENS_0MDL2P1SERIELIM1_-OV369" alt="">
+											<picture>
+											</picture>
 										</div>
-									</div>
-								</div>
-							</div>
-						</div>
-						<div class="flex mv-3 mobile:fd-column">
-							<div class="fb-md-6 mv-3">
-								<div class="img-content">
-									<picture>
-										<img src="/img/other/finance/credit-programs-2.webp">
-									</picture>
-								</div>
-							</div>
-							<div class="fb-md-6 mv-3 desktop:ml-6">
-								<div class="desc-content desc-style-1">
-									<h5>RENAULT FINANCE</h5>
-									<h4>ПРОГРАММА "ПОЕХАЛИ"</h4>
-									<p>Воспользуйтесь уникальными преимуществами программы, чтобы приобрести новый Renault уже сегодня.</p>
-									<ul>
-										<li>Ежемесячный платеж до двух раз ниже стандартных кредитных платежей.</li>
-										<li>Возможность обновлять автомобиль каждые 3 года.</li>
-									</ul>
-									<div class="text-center mt-7">
-										<div class="mv-4">
-											<span class="btn-def">
-												<a href="">подробнее о программе</a>
-											</span>
+										<div class="desc-content ph-5">
+											<div class="text-content">
+												<div class="title-content text-center mv-3">
+													<div class="text-x8-b">Life</div>
+													<div class="text-x3">Life</div>
+													<div class="text-x3">Цена от 221 115 600 сум</div>
+												</div>
+												<div class="mv-6">
+													<div class="mb-1">Двигатели:</div>
+													<div class="text-x4-b">1,6 л, 114 л. с., 4х2, МКП5</div>
+													<div class="text-x4-b">1,6 л, 114 л. с., 4х2, CVT X-Tronic</div>
+												</div>
+											</div>
+											<div class="btn-content mv-3 mobile:ph-5 desktop:ph-7">
+												<div class="btn-def hovered mv-2">
+													<a href="">выбрать</a>
+												</div>
+												<div class="btn-opacity mv-2">
+													<a href="">рассчитать кредит</a>
+												</div>
+											</div>
 										</div>
-									</div>
+									</figure>
 								</div>
+								<div class="swiper-slide">
+									<figure>
+										<div class="img-content">
+											<picture>
+												<img src="https://www.renault.ru/agg/vn/unique/ONE_CF_DACIA_NEQ_DENSITY1_LARGE/r_brandSite_carPicker_1.png?uri=https%3A%2F%2Fru.co.rplug.renault.com%2Fproduct%2Fmodel%2FHAH%2Fkaptur%2Fc%2FA-ENS_0MDL2P1SERIELIM2_-BIXTL" alt="">
+											</picture>
+										</div>
+										<div class="desc-content ph-5">
+											<div class="text-content">
+												<div class="title-content text-center mv-3">
+													<div class="text-x8-b">Drive</div>
+													<div class="text-x3">Drive</div>
+													<div class="text-x3">Цена от 244 018 200 сум</div>
+												</div>
+												<div class="mv-6">
+													<div class="mb-1">Двигатели:</div>
+													<div class="text-x4-b">1,6 л, 114 л. с., 4х2, CVT X-Tronic</div>
+													<div class="text-x4-b">TCe 150, 150 л. с., 4х2, CVT X-Tronic</div>
+												</div>
+											</div>
+											<div class="btn-content mv-3 mobile:ph-5 desktop:ph-7">
+												<div class="btn-def hovered mv-2">
+													<a href="">выбрать</a>
+												</div>
+												<div class="btn-opacity mv-2">
+													<a href="">рассчитать кредит</a>
+												</div>
+											</div>
+										</div>
+									</figure>
+								</div>
+								<div class="swiper-slide">
+									<figure>
+										<div class="img-content">
+											<picture>
+												<img src="https://www.renault.ru/agg/vn/unique/ONE_CF_DACIA_NEQ_DENSITY1_LARGE/r_brandSite_carPicker_1.png?uri=https%3A%2F%2Fru.co.rplug.renault.com%2Fproduct%2Fmodel%2FHAH%2Frenault-kaptur%2Fc%2FA-ENS_0MDL2P1SERIELIM3_-BIYQZ" alt="">
+											</picture>
+										</div>
+										<div class="desc-content ph-5">
+											<div class="text-content">
+												<div class="title-content text-center mv-3">
+													<div class="text-x8-b">Style</div>
+													<div class="text-x3">Style</div>
+													<div class="text-x3">Цена от 267 071 400 сум</div>
+												</div>
+												<div class="mv-6">
+													<div class="mb-1">Двигатели:</div>
+													<div class="text-x4-b">1,6 л, 114 л. с., 4х2, CVT X-Tronic</div>
+													<div class="text-x4-b">TCe 150, 150 л. с., 4х4, CVT X-Tronic</div>
+												</div>
+											</div>
+											<div class="btn-content mv-3 mobile:ph-5 desktop:ph-7">
+												<div class="btn-def hovered mv-2">
+													<a href="">выбрать</a>
+												</div>
+												<div class="btn-opacity mv-2">
+													<a href="">рассчитать кредит</a>
+												</div>
+											</div>
+										</div>
+									</figure>
+								</div>
+
 							</div>
+							<!-- If we need pagination -->
+							<div class="swiper-pagination"></div>
+						
+							<!-- If we need navigation buttons -->
+							<!-- <div class="swiper-btns">
+								<div class="swiper-button swiper-button-prev"></div>
+								<div class="swiper-button swiper-button-next"></div>
+							</div> -->
+						
 						</div>
 					</div>
 				</div>
 			</section>
-						<section>
+			<section class="offers-icolinks">
+				<div class="container pv-10">
+					<div class="offers-icolinks-items fs-1">
+						<figure>
+							<a href="/files/kaptur-20211013.pdf" download>
+								<div class="wrapper">
+									<picture>
+										<img src="/img/other/newduster/icolinks-brochure.svg">
+									</picture>
+									<div class="desc-content">брошюра</div>
+								</div>
+							</a>
+						</figure>
+						<figure>
+							<a href="/files/kaptur-20211013.pdf" download>
+								<div class="wrapper">
+									<picture>
+										<img src="/img/other/newduster/icolinks-brochure.svg">
+									</picture>
+									<div class="desc-content">прайс-лист Новый Renault DUSTER</div>
+								</div>
+							</a>
+						</figure>
+						<!-- <figure>
+							<a href="">
+								<div class="wrapper">
+									<picture>
+										<img src="/img/other/newduster/icolinks-pdf.svg">
+									</picture>
+									<div class="desc-content">руководство по эксплуатации</div>
+								</div>
+							</a>
+						</figure>
+						<figure>
+							<a href="">
+								<div class="wrapper">
+									<picture>
+										<img src="/img/other/newduster/icolinks-steering.svg">
+									</picture>
+									<div class="desc-content">каталог аксессуаров</div>
+								</div>
+							</a>
+						</figure> -->
+					</div>
+				</div>
+			</section>
+						<!-- <section>
 				<div class="container pv-8">
 					<div class="accordion-def desktop:ph-4" id="yur-accordion">
 					  <div class="panel">
@@ -468,20 +677,13 @@
 					    </a>
 					    <div id="yur-accordion-1" class="panel-collapse collapse">
 					      <div class="accordion-def-body">
-									<p><sup>1&nbsp;</sup>Акция «Домашний Тест-драйв» (далее - «Акция») действует исключительно на территории Российской Федерации, на специально созданной интернет платформе на сайте Renault.ru (далее - «Сайт»). Список официальных дилеров Renault, принимающих участие в Акции ограничен. Организаторы Акции оставляют за собой право в одностороннем порядке изменить список дилеров, участвующих в Акции. К записи на тест-драйв допускается клиент - физическое лицо, который в период проведения Акции заказал тест-драйв на Сайте, выбрав категорию «Домашний Тест-драйв», имеющее действующее водительское удостоверение. Предложение не является офертой и может быть изменено. Акция дает клиенту возможность выбрать дату, временной слот и маршрут тест-драйва (маршрут доступный для тест-драйва устанавливается дилерским центром Renault). Количество доступных слотов для записи и автомобилей для тест-драйва строго ограничено, в связи с чем действие Акции может быть приостановлено в любое время. Дополнительная информация предоставляется по телефону 8 800 200-80-80 (звонок по РФ бесплатный).</p> 
-									<p><sup>2&nbsp;</sup>&nbsp;Цена указана в рублях, с учетом НДС на комплексную диагностику, которая включает в себя восемь проверок: уровней эксплуатационных жидкостей, наружного освещения и регулировки света фар, осмотр ветрового стекла и щеток стеклоочистителя, повреждения кузова и лакокрасочного покрытия, системы кондиционирования и состояния салонного фильтра, тормозной системы с использованием диагностического стенда (проверка износа колодок и дисков), состояния протектора шин, подвески на подъемнике с осмотром элементов днища. Во избежание сомнений Дилер вправе самостоятельно установить стоимость диагностики ниже максимальной цены, рекомендованной ЗАО «РЕНО РОССИЯ» к непревышению, а также Дилер самостоятельно и по своему усмотрению определяет свою политику скидок. Предложение ограничено. Не является публичной офертой.</p> 
-									<p><sup>3&nbsp;</sup>&nbsp;Предложение распространяется на ряд Комплекс-Сервисов по замене тормозной системы, амортизаторов, сцепления, ремня ГРМ, системы кондиционирования, кузова. Каждый Комплекс-Сервис включает в себя оригинальные запасные части, работы по их замене, а также 10 обязательных контрольных проверок автомобиля. Указанная выгода представляет собой скидку от указанной конкретным Дилером фактической розничной цены за замену запасных частей, установленной таким Дилером. Во избежание сомнений Дилер вправе самостоятельно установить стоимость запасных частей, сервисного обслуживания и ремонта ниже максимальных цен, рекомендованных ЗАО «РЕНО РОССИЯ» к непревышению, а также Дилер самостоятельно и по своему усмотрению определяет свою политику скидок. Предложение ограничено. Не является публичной офертой.</p> 
-									<p>Начальные цены модельного ряда:</p> 
-									<p><b>Renault LOGAN</b><br> Указана максимальная рекомендованная розничная цена на автомобиль Renault LOGAN в комплектации ACCESS (Аксесс) 1,6 л, 82 л. с., МКП5 2021 года производства. Количество автомобилей у дилеров ограничено. Не оферта. Действует с 08.09.2021 по 30.09.2021. Подробности – на <a href="/">renault.ru</a>.<br> <b>Renault LOGAN STEPWAY</b><br> Указана максимальная рекомендованная розничная цена на автомобиль Renault LOGAN STEPWAY в комплектации Life (Лайф) 1,6 л, 82 л. с., МКП5 2021 года производства. Количество автомобилей у дилеров ограничено. Не оферта. Действует с 08.09.2021 по 30.09.2021. Подробности – на <a href="/">renault.ru</a>.<br> <b>Renault SANDERO</b><br> Указана максимальная рекомендованная розничная цена на автомобиль Renault SANDERO в комплектации ACCESS (Аксесс) 1,6 л, 82 л. с., МКП5 2021 года производства. Количество автомобилей у дилеров ограничено. Не оферта. Действует с 08.09.2021 по 30.09.2021. Подробности – на <a href="/">renault.ru</a>.</p> 
-									<p><b>Renault SANDERO STEPWAY</b></p> 
-									<p>Указана максимальная рекомендованная розничная цена на автомобиль Renault SANDERO STEPWAY в комплектации Life (Лайф) 1,6 л, 82 л. с., МКП5 2021 года производства. Количество автомобилей у дилеров ограничено. Не оферта. Предложение действует с 08.09.2021 по 30.09.2021. Подробности — на <a href="/">renault.ru</a>.</p> 
-									<p><b>Renault Новый DUSTER</b><br> Указана максимальная рекомендованная розничная цена на автомобиль Renault Duster 2021 года производства в комплектации Access (Аксесс) 1,6 л., 114 л.с., 4x2 МКП5. Количество автомобилей у дилеров ограничено. Не оферта. Действует с 08.09.2021 по 30.09.2021. Подробности – на <a href="/">renault.ru</a>.<br> <b>Renault KAPTUR</b><br> Указанна максимальная рекомендованная розничная цена на автомобиль Renault KAPTUR в комплектации Life (Лайф) 1,6 л., 114 л.с., МКП5 2021 года производства. Количество автомобилей у дилеров ограничено. Не оферта. Действует с 08.09.2021 по 30.09.2021. Подробности – на <a href="/">renault.ru</a>.<br> <b>Renault ARKANA</b><br> Указана максимальная рекомендованная розничная цена на автомобиль Renault ARKANA 2021 года производства в комплектации Life (Лайф) 1,6 л., 114 л.с., 4x2 МКП5. Количество автомобилей у дилеров ограничено. Не оферта. Действует с 08.09.2021 по 30.09.2021. Подробности – на <a href="/">renault.ru</a>.<br> <b>Renault MASTER</b><br> Указана максимальная рекомендованная розничная цена на автомобиль Renault Master в комплектации Fourgon L1 H1 (Фургон L1 H1) 2,3 л. МКП6, 125 л.с. Количество автомобилей у дилеров ограничено. Не оферта. Действует с 08.09.2021 по 30.09.2021. Подробности – на <a href="/">renault.ru</a>.<br> </p>
+									<p></p> 
 					      </div>
 					    </div>
 					  </div>
 					</div>
 				</div>
-			</section>
+			</section> -->
 		</main>
 		
 		<footer id="footer" class="footer">
@@ -569,7 +771,7 @@
 						<div class="fb-md-3 fb-xs-6 mv-3">
 							<div class="fw-7 mb-3">О компании</div>
 							<ul>
-								<li><a href="">Renault в России</a></li>
+								<li><a href="">Renault в Узбекистане</a></li>
 								<li><a href="">Новости</a></li>
 								<li><a href="">Контакты</a></li>
 								<li><a href="">Часто задаваемые вопросы</a></li>
@@ -597,50 +799,14 @@
 			</div>
 		</footer>
 	</div>
+
 	<!-- SCRIPTS -->
 	
 
-<!-- CSS -->
-
-<link rel="stylesheet" href="css/fonts.css">
-<link rel="stylesheet" href="fonts/NouvelR/stylesheet.css">
-<link rel="stylesheet" href="css/plugins.css">
-<link rel="stylesheet" type="text/css" href="/js/plugins/jquery-ui/jquery-ui.min.css">
-<link rel="stylesheet" href="/js/plugins/choices-js/public/assets/styles/choices.css"/> <!-- Choices CSS -->
-<link rel="stylesheet" href="/js/plugins/vue-multiselect/vue-multiselect.css"> <!-- multiselect -->
-<link rel="stylesheet" href="css/main.css">
-
-<link rel="stylesheet" href="css/additional.css">
-
-
-
-
-
-
-
-
-<!-- SCRIPTS -->
-<script src="/js/scripts.min.js"></script>
-<script src="/js/plugins/jquery-ui/jquery-ui.min.js"></script> <!-- JQUERY UI -->
-<script src="/js/plugins/choices-js/public/assets/scripts/choices.min.js"></script><!-- Choices JS -->
-<script src="/js/plugins/vue.js"></script>
-<script src="/js/plugins/vue-multiselect/vue-multiselect.min.js"></script> 
 <script src="/js/main.js"></script>
 
-<script type="text/javascript">
-  // Подключение vue компонентов
-  Vue.component('multiselect', window.VueMultiselect.default)
-  Vue.filter('spaceBetweenNum', (price)=>{ 
-    if(!price)
-      return 0;
-    price += "";
-    var pattern = /(-?\d+)(\d{3})/;
-    while (pattern.test(price))
-      price = price.replace(pattern, "$1 $2");
-    
-    return price;      
-  })
-</script>
-</body>
 
+
+
+</body>
 </html>
