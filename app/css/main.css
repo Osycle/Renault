@@ -10111,6 +10111,16 @@ small {
   .model-complectations-items .img-content {
     background-color: #f2f1f2; }
 
+.kaptur-options {
+  overflow: hidden; }
+  .kaptur-options iframe {
+    min-height: 0px;
+    height: 920px;
+    margin-top: -200px; }
+    @media (max-width: 991px) {
+      .kaptur-options iframe {
+        height: 700px; } }
+
 /* 
 		_footer.scss
 */

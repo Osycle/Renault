@@ -1407,3 +1407,15 @@ $yellow: #efdf00;
     background-color: $color-gray-1;
   }
 }
+
+.kaptur-options{
+  overflow: hidden;
+  iframe{
+    min-height: 0px; 
+    height: 920px; 
+    margin-top: -200px;
+    @media (max-width: 991px){
+      height: 700px; 
+    }
+  }
+}
