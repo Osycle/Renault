@@ -1,0 +1,171 @@
+
+.newOptions {
+  margin-bottom: 3em; }
+  .newOptions .container {
+    padding: 0 3.8em; }
+  .newOptions .list {
+    position: relative;
+    width: 80em;
+    max-width: 100%;
+    margin: 0 auto;
+    height: 39em;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    background: #000; }
+    .newOptions .list .option {
+      width: 25%;
+      cursor: pointer;
+      color: #fff; }
+      .newOptions .list .option:hover .content:before {
+        background: #b49201;
+        opacity: 1; }
+      .newOptions .list .option:hover .content .text {
+        opacity: 1;
+        -webkit-transform: translateY(0);
+        transform: translateY(0);
+        -webkit-transition: .5s .5s;
+        transition: .5s .5s; }
+      .newOptions .list .option:hover .content .shadow {
+        opacity: 1;
+        -webkit-transition: .2s .5s;
+        transition: .2s .5s; }
+      .newOptions .list .option .content {
+        position: relative;
+        z-index: 2;
+        height: 100%;
+        padding: 1.4em 1.8em;
+        background: url(/img/other/kaptur/vertical_dotts.png) repeat-y right top/1px auto, -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.8)), color-stop(50%, rgba(0, 0, 0, 0)));
+        background: url(/img/other/kaptur/vertical_dotts.png) repeat-y right top/1px auto, linear-gradient(to bottom, rgba(0, 0, 0, 0.8) 0%, rgba(0, 0, 0, 0) 50%); }
+        .newOptions .list .option .content .shadow {
+          content: '';
+          display: block;
+          position: absolute;
+          z-index: 1;
+          top: 0;
+          left: 0;
+          right: 0;
+          bottom: 0;
+          background: -webkit-gradient(linear, left top, left bottom, from(black), to(rgba(0, 0, 0, 0.4)));
+          background: linear-gradient(to bottom, black 0%, rgba(0, 0, 0, 0.4) 100%);
+          opacity: 0;
+          pointer-events: none;
+          -webkit-transition: .1s linear;
+          transition: .1s linear; }
+        .newOptions .list .option .content:before {
+          content: '';
+          display: block;
+          position: absolute;
+          left: 0.5em;
+          right: 0.5em;
+          bottom: 0.5em;
+          height: 0.25em;
+          background: #919191;
+          opacity: 0.4;
+          z-index: 1;
+          -webkit-transition: .3s linear;
+          transition: .3s linear; }
+      .newOptions .list .option .name, .newOptions .list .option .text {
+        position: relative;
+        z-index: 3; }
+      .newOptions .list .option .name {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        align-items: center;
+        margin-bottom: 0.7em;
+        font-size: 1.125em;
+        line-height: 1.25;
+        font-weight: 700; }
+        .newOptions .list .option .name img {
+          width: 4em;
+          margin-right: 1em; }
+        .newOptions .list .option .name span {
+          margin-bottom: 0.2em; }
+      .newOptions .list .option .text {
+        font-size: 0.875em;
+        line-height: 1.45;
+        -webkit-transform: translateY(-1em);
+        transform: translateY(-1em);
+        opacity: 0;
+        pointer-events: none;
+        -webkit-transition: .3s;
+        transition: .3s; }
+      .newOptions .list .option .image {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: no-repeat center center / cover;
+        opacity: 0;
+        -webkit-transition: opacity .5s;
+        transition: opacity .5s; }
+      .newOptions .list .option.active .image {
+        opacity: 1;
+        z-index: 1; }
+  @media screen and (max-width: 900px) {
+    .newOptions .container {
+      padding: 0 0 350px; }
+    .newOptions .list .option .content {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-align: end;
+      -ms-flex-align: end;
+      align-items: flex-end;
+      padding: 1.4em 0 1em 1.2em;
+      background: -webkit-gradient(linear, left bottom, left top, from(rgba(0, 0, 0, 0.8)), color-stop(50%, rgba(0, 0, 0, 0)));
+      background: linear-gradient(to top, rgba(0, 0, 0, 0.8) 0%, rgba(0, 0, 0, 0) 50%); }
+      .newOptions .list .option .content .name {
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+        flex-direction: column;
+        -webkit-box-align: start;
+        -ms-flex-align: start;
+        align-items: flex-start;
+        width: 100%;
+        height: 8.4em;
+        font-size: 1em; }
+        .newOptions .list .option .content .name img {
+          margin-bottom: 1em; }
+      .newOptions .list .option .content:before {
+        display: none; }
+      .newOptions .list .option .content .shadow {
+        background: -webkit-gradient(linear, left bottom, left top, from(black), to(rgba(0, 0, 0, 0)));
+        background: linear-gradient(to top, black 0%, rgba(0, 0, 0, 0) 100%); }
+    .newOptions .list .option .text {
+      position: absolute;
+      top: 100%;
+      left: 0;
+      right: 0;
+      color: #000;
+      padding: 3em 1.2em;
+      -webkit-transform: translateY(0);
+      transform: translateY(0);
+      font-size: 14px; }
+    .newOptions .list .option.active .text, .newOptions .list .option.active .shadow {
+      opacity: 1; }
+    .newOptions .list:after {
+      content: '';
+      display: block;
+      position: absolute;
+      top: calc(100% + 1.25em);
+      left: 0;
+      right: 0;
+      height: 1.25em;
+      background: url(/img/other/kaptur/bracket.png) no-repeat center/95vmin auto; } }
+
+
+@media screen and (max-width: 900px) {
+  .forDesktop {
+    display: none !important; } }
+
+.forMobile {
+  display: none !important; }
+  @media screen and (max-width: 900px) {
+    .forMobile {
+      display: block !important; } }

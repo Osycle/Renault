@@ -10113,10 +10113,12 @@ small {
 
 .kaptur-options {
   overflow: hidden; }
+  @media (max-width: 991px) {
+    .kaptur-options {
+      font-size: 9.6px; } }
   .kaptur-options iframe {
     min-height: 0px;
-    height: 920px;
-    margin-top: -200px; }
+    height: 920px; }
     @media (max-width: 991px) {
       .kaptur-options iframe {
         height: 700px; } }

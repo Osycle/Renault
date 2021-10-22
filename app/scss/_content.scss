@@ -1410,10 +1410,13 @@ $yellow: #efdf00;
 
 .kaptur-options{
   overflow: hidden;
+  @media (max-width: 991px){
+    font-size: 9.6px;
+  }
   iframe{
     min-height: 0px; 
     height: 920px; 
-    margin-top: -200px;
+    //margin-top: -200px;
     @media (max-width: 991px){
       height: 700px; 
     }
