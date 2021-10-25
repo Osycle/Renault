@@ -115,6 +115,7 @@
 
 		//MIN-MENU
 		$("#min-menu").mmenu({
+			//"counters": true, Считает кол-во элементов
 			//extensions: [
 				//"wrapper-bg",
 				//"theme-black",
@@ -128,11 +129,14 @@
 				//"position-right",
 			//],
 			extensions 	: [ 
-				"position-bottom", 
+				"position-right", 
 				"fullscreen", 
-				"theme-black",
-				"border-full" 
+				"multiline",
+				"listview-50",
+				"theme-white",
+				//"border-full" 
 			],
+			
 			navbar: {
 				title: "Меню"
 			},
@@ -140,8 +144,8 @@
 					height: 2,
 					content: [
 						'<div class="close-btn">' +
-						'<a  href="#page" >'+
-						'<svg viewBox="0 0 30 30"><path d="M29.999 2.512L27.5.012 14.999 12.504 2.498.012l-2.497 2.5L12.5 15.001.001 27.488l2.497 2.5 12.501-12.49L27.5 29.988l2.497-2.5-12.499-12.487z"></path></svg>'+
+						'<a href="#page">'+
+							'<svg viewBox="0 0 30 30"><path d="M29.999 2.512L27.5.012 14.999 12.504 2.498.012l-2.497 2.5L12.5 15.001.001 27.488l2.497 2.5 12.501-12.49L27.5 29.988l2.497-2.5-12.499-12.487z"></path></svg>'+
 						'</a>' +
 						'</div>'
 					]
