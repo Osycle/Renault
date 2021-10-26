@@ -21,7 +21,7 @@ gulp.task('fileinclude', function() {
       prefix: '@@',
       basepath: './'
     }))
-    .pipe(gulp.dest('./app/'))
+    .pipe(gulp.dest('./app/html'))
     .pipe( browserSync.reload({stream:true}) )
     
 });
@@ -76,7 +76,7 @@ gulp.task('cssnano', ()=>{
 // RELOADER BROWSER
 gulp.task('browser-sync', (done)=>{
 		browserSync({
-			server: {baseDir: app+''},
+			server: {baseDir: 'app/html'},
 			//proxy: "http://taf/",
 			notify: false
 		});
