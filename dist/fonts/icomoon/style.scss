@@ -1,0 +1,393 @@
+@import "variables";
+
+@font-face {
+  font-family: '#{$icomoon-font-family}';
+  src:
+    url('#{$icomoon-font-path}/#{$icomoon-font-family}.ttf?p68c6h') format('truetype'),
+    url('#{$icomoon-font-path}/#{$icomoon-font-family}.woff?p68c6h') format('woff'),
+    url('#{$icomoon-font-path}/#{$icomoon-font-family}.svg?p68c6h##{$icomoon-font-family}') format('svg');
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}
+
+[class^="icm-"], [class*=" icm-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: '#{$icomoon-font-family}' !important;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icm-Event-mark .path1 {
+  &:before {
+    content: $icm-Event-mark-path1;  
+    color: rgb(149, 193, 43);
+  }
+}
+.icm-Event-mark .path2 {
+  &:before {
+    content: $icm-Event-mark-path2;  
+    margin-left: -1em;  
+    color: rgb(33, 167, 63);
+  }
+}
+.icm-Event-mark .path3 {
+  &:before {
+    content: $icm-Event-mark-path3;  
+    margin-left: -1em;  
+    color: rgb(33, 167, 63);
+  }
+}
+.icm-Event-mark .path4 {
+  &:before {
+    content: $icm-Event-mark-path4;  
+    margin-left: -1em;  
+    color: rgb(33, 167, 63);
+  }
+}
+.icm-Event-mark .path5 {
+  &:before {
+    content: $icm-Event-mark-path5;  
+    margin-left: -1em;  
+    color: rgb(36, 90, 42);
+  }
+}
+.icm-Event-mark .path6 {
+  &:before {
+    content: $icm-Event-mark-path6;  
+    margin-left: -1em;  
+    color: rgb(36, 90, 42);
+  }
+}
+.icm-Event-mark .path7 {
+  &:before {
+    content: $icm-Event-mark-path7;  
+    margin-left: -1em;  
+    color: rgb(33, 167, 63);
+  }
+}
+.icm-Event-mark .path8 {
+  &:before {
+    content: $icm-Event-mark-path8;  
+    margin-left: -1em;  
+    color: rgb(33, 167, 63);
+  }
+}
+.icm-Event-mark .path9 {
+  &:before {
+    content: $icm-Event-mark-path9;  
+    margin-left: -1em;  
+    color: rgb(149, 193, 43);
+  }
+}
+.icm-Event-mark .path10 {
+  &:before {
+    content: $icm-Event-mark-path10;  
+    margin-left: -1em;  
+    color: rgb(149, 193, 43);
+  }
+}
+.icm-Event-mark .path11 {
+  &:before {
+    content: $icm-Event-mark-path11;  
+    margin-left: -1em;  
+    color: rgb(36, 90, 42);
+  }
+}
+.icm-Event-mark .path12 {
+  &:before {
+    content: $icm-Event-mark-path12;  
+    margin-left: -1em;  
+    color: rgb(36, 90, 42);
+  }
+}
+.icm-Event-mark .path13 {
+  &:before {
+    content: $icm-Event-mark-path13;  
+    margin-left: -1em;  
+    color: rgb(36, 90, 42);
+  }
+}
+.icm-Event-mark .path14 {
+  &:before {
+    content: $icm-Event-mark-path14;  
+    margin-left: -1em;  
+    color: rgb(149, 193, 43);
+  }
+}
+.icm-facebook {
+  &:before {
+    content: $icm-facebook; 
+  }
+}
+.icm-gems {
+  &:before {
+    content: $icm-gems; 
+  }
+}
+.icm-goal {
+  &:before {
+    content: $icm-goal; 
+  }
+}
+.icm-handshake {
+  &:before {
+    content: $icm-handshake; 
+  }
+}
+.icm-idea {
+  &:before {
+    content: $icm-idea; 
+  }
+}
+.icm-instagram {
+  &:before {
+    content: $icm-instagram; 
+  }
+}
+.icm-interview {
+  &:before {
+    content: $icm-interview; 
+  }
+}
+.icm-linkedin {
+  &:before {
+    content: $icm-linkedin; 
+  }
+}
+.icm-mail {
+  &:before {
+    content: $icm-mail; 
+  }
+}
+.icm-Marketing-srtategy .path1 {
+  &:before {
+    content: $icm-Marketing-srtategy-path1;  
+    color: rgb(103, 180, 55);
+  }
+}
+.icm-Marketing-srtategy .path2 {
+  &:before {
+    content: $icm-Marketing-srtategy-path2;  
+    margin-left: -1em;  
+    color: rgb(35, 132, 53);
+  }
+}
+.icm-Marketing-srtategy .path3 {
+  &:before {
+    content: $icm-Marketing-srtategy-path3;  
+    margin-left: -1em;  
+    color: rgb(35, 132, 53);
+  }
+}
+.icm-Marketing-srtategy .path4 {
+  &:before {
+    content: $icm-Marketing-srtategy-path4;  
+    margin-left: -1em;  
+    color: rgb(35, 132, 53);
+  }
+}
+.icm-Marketing-srtategy .path5 {
+  &:before {
+    content: $icm-Marketing-srtategy-path5;  
+    margin-left: -1em;  
+    color: rgb(35, 132, 53);
+  }
+}
+.icm-Marketing-srtategy .path6 {
+  &:before {
+    content: $icm-Marketing-srtategy-path6;  
+    margin-left: -1em;  
+    color: rgb(35, 132, 53);
+  }
+}
+.icm-Marketing-srtategy .path7 {
+  &:before {
+    content: $icm-Marketing-srtategy-path7;  
+    margin-left: -1em;  
+    color: rgb(35, 132, 53);
+  }
+}
+.icm-Marketing-srtategy .path8 {
+  &:before {
+    content: $icm-Marketing-srtategy-path8;  
+    margin-left: -1em;  
+    color: rgb(35, 132, 53);
+  }
+}
+.icm-Marketing-srtategy .path9 {
+  &:before {
+    content: $icm-Marketing-srtategy-path9;  
+    margin-left: -1em;  
+    color: rgb(149, 193, 43);
+  }
+}
+.icm-Marketing-srtategy .path10 {
+  &:before {
+    content: $icm-Marketing-srtategy-path10;  
+    margin-left: -1em;  
+    color: rgb(33, 167, 63);
+  }
+}
+.icm-Marketing-srtategy .path11 {
+  &:before {
+    content: $icm-Marketing-srtategy-path11;  
+    margin-left: -1em;  
+    color: rgb(32, 89, 43);
+  }
+}
+.icm-Marketing-srtategy .path12 {
+  &:before {
+    content: $icm-Marketing-srtategy-path12;  
+    margin-left: -1em;  
+    color: rgb(35, 132, 53);
+  }
+}
+.icm-Marketing-srtategy .path13 {
+  &:before {
+    content: $icm-Marketing-srtategy-path13;  
+    margin-left: -1em;  
+    color: rgb(32, 89, 43);
+  }
+}
+.icm-next {
+  &:before {
+    content: $icm-next; 
+  }
+}
+.icm-phone {
+  &:before {
+    content: $icm-phone; 
+  }
+}
+.icm-pin {
+  &:before {
+    content: $icm-pin; 
+  }
+}
+.icm-placeholder-filled-point {
+  &:before {
+    content: $icm-placeholder-filled-point; 
+  }
+}
+.icm-play {
+  &:before {
+    content: $icm-play; 
+  }
+}
+.icm-strategy {
+  &:before {
+    content: $icm-strategy; 
+  }
+}
+.icm-team {
+  &:before {
+    content: $icm-team; 
+  }
+}
+.icm-telegram {
+  &:before {
+    content: $icm-telegram; 
+  }
+}
+.icm-youtube {
+  &:before {
+    content: $icm-youtube; 
+  }
+}
+.icm-analysis {
+  &:before {
+    content: $icm-analysis; 
+  }
+}
+.icm-arrows {
+  &:before {
+    content: $icm-arrows; 
+  }
+}
+.icm-asset-management {
+  &:before {
+    content: $icm-asset-management; 
+  }
+}
+.icm-close {
+  &:before {
+    content: $icm-close; 
+  }
+}
+.icm-Commutications .path1 {
+  &:before {
+    content: $icm-Commutications-path1;  
+    color: rgb(35, 132, 53);
+  }
+}
+.icm-Commutications .path2 {
+  &:before {
+    content: $icm-Commutications-path2;  
+    margin-left: -1.01171875em;  
+    color: rgb(36, 90, 42);
+  }
+}
+.icm-Commutications .path3 {
+  &:before {
+    content: $icm-Commutications-path3;  
+    margin-left: -1.01171875em;  
+    color: rgb(36, 90, 42);
+  }
+}
+.icm-Commutications .path4 {
+  &:before {
+    content: $icm-Commutications-path4;  
+    margin-left: -1.01171875em;  
+    color: rgb(149, 193, 43);
+  }
+}
+.icm-Commutications .path5 {
+  &:before {
+    content: $icm-Commutications-path5;  
+    margin-left: -1.01171875em;  
+    color: rgb(33, 167, 63);
+  }
+}
+.icm-Commutications .path6 {
+  &:before {
+    content: $icm-Commutications-path6;  
+    margin-left: -1.01171875em;  
+    color: rgb(36, 90, 42);
+  }
+}
+.icm-Commutications .path7 {
+  &:before {
+    content: $icm-Commutications-path7;  
+    margin-left: -1.01171875em;  
+    color: rgb(149, 193, 43);
+  }
+}
+.icm-Commutications .path8 {
+  &:before {
+    content: $icm-Commutications-path8;  
+    margin-left: -1.01171875em;  
+    color: rgb(149, 193, 43);
+  }
+}
+.icm-Commutications .path9 {
+  &:before {
+    content: $icm-Commutications-path9;  
+    margin-left: -1.01171875em;  
+    color: rgb(36, 90, 42);
+  }
+}
+.icm-confirm {
+  &:before {
+    content: $icm-confirm; 
+  }
+}
+

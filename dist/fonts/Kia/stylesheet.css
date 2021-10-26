@@ -1,0 +1,24 @@
+@font-face {
+    font-family: 'KIA';
+    src: url('KIAB.woff2') format('woff2'),
+        url('KIAB.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'KIA';
+    src: url('KIAL.woff2') format('woff2'),
+        url('KIAL.woff') format('woff');
+    font-weight: 300;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'KIA';
+    src: url('KIAM.woff2') format('woff2'),
+        url('KIAM.woff') format('woff');
+    font-weight: 500;
+    font-style: normal;
+}
+

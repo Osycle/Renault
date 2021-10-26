@@ -14,32 +14,30 @@
 
 
 <!-- Vue link -->
-<script src="/js/vue/vue.js"></script>
+<script defer src="/js/vue/vue.js"></script>
 <!-- multiselect -->
-<script src="/js/vue/vue-multiselect/vue-multiselect.min.js"></script>
+<script defer src="/js/vue/vue-multiselect/vue-multiselect.min.js"></script>
 <link rel="stylesheet" href="/js/vue/vue-multiselect/vue-multiselect.css">
 <!-- splitpanes -->
-<script src="/js/vue/splitpanes/splitpanes.umd.min.js"></script>
+<script defer src="/js/vue/splitpanes/splitpanes.umd.min.js"></script>
 <link rel="stylesheet" href="/js/vue/splitpanes/splitpanes.css">
 
 
 <!-- SCRIPTS -->
-<script src="/js/scripts.min.js"></script>
-<script src="/js/plugins/jquery-ui/jquery-ui.min.js"></script> <!-- JQUERY UI -->
-<script src="/js/plugins/choices-js/public/assets/scripts/choices.min.js"></script><!-- Choices JS -->
+<script defer src="/js/plugins/jquery.min.js"></script>
+<script defer src="/js/plugins/bootstrap.min.js"></script>
+<script defer src="/js/plugins/aos.js"></script>
+<script defer src="/js/plugins/owl.carousel.min.js"></script>
+<script defer src="/js/plugins/jquery.fancybox.js"></script>
+<script defer src="/js/plugins/jquery.mmenu.all.js"></script>
+<script defer src="/js/plugins/smooth-scroll.js"></script>
+<script defer src="/js/plugins/ion.rangeSlider.min.js"></script>
+<script defer src="/js/plugins/ResizeSensor.min.js"></script>
+<script defer src="/js/plugins/theia-sticky-sidebar.min.js"></script>
+<script defer src="/js/plugins/swiper-bundle.min.js"></script>
+<script defer src="/js/plugins/jquery.responsiveTabs.js"></script>
+<script defer src="/js/plugins/flickity.js"></script>
 
-<script type="text/javascript">
-  // Подключение vue компонентов
-  Vue.component('multiselect', window.VueMultiselect.default)
+<script defer src="/js/plugins/jquery-ui/jquery-ui.min.js"></script> <!-- JQUERY UI -->
+<script defer src="/js/plugins/choices-js/public/assets/scripts/choices.min.js"></script><!-- Choices JS -->
 
-  Vue.filter('spaceBetweenNum', (price)=>{ 
-    if(!price)
-      return 0;
-    price += "";
-    var pattern = /(-?\d+)(\d{3})/;
-    while (pattern.test(price))
-      price = price.replace(pattern, "$1 $2");
-    
-    return price;      
-  })
-</script>
