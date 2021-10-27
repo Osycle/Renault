@@ -7102,7 +7102,7 @@ tbody.collapse.in {
 table {
   border-collapse: collapse;
   width: 100%;
-  font-family: "Nouvel R";
+  font-family: "NouvelR";
   color: #3e3f40; }
   table a:hover {
     text-decoration: underline; }
@@ -7175,13 +7175,13 @@ table {
     filter: brightness(115%); }
 
 .ff-1 {
-  font-family: "Nouvel R"; }
+  font-family: "NouvelR"; }
 
 .ff-2 {
-  font-family: "Nouvel R"; }
+  font-family: "NouvelR"; }
 
 .ff-3 {
-  font-family: "Nouvel R"; }
+  font-family: "NouvelR"; }
 
 .btn-res, .btn-style button, .btn-def button, .btn-opacity button {
   background-color: transparent;
@@ -7367,7 +7367,7 @@ div.btn-style, div.btn-def, div.btn-opacity {
   display: inline-block;
   text-align: center;
   overflow: hidden;
-  font-family: "Nouvel R";
+  font-family: "NouvelR";
   border-radius: 0;
   font-weight: 700; }
   .btn-style.text-wrap, .text-wrap.btn-def, .text-wrap.btn-opacity {
@@ -7558,7 +7558,7 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-text-size-adjust: none;
   text-size-adjust: none;
-  font-family: "Nouvel R", sans-serif;
+  font-family: "NouvelR", sans-serif;
   overflow-x: hidden;
   color: #000;
   line-height: 1.45;
@@ -7818,7 +7818,7 @@ html {
 .input-title {
   display: inline-block;
   margin-bottom: 5px;
-  font-family: "Nouvel R";
+  font-family: "NouvelR";
   font-weight: 400; }
 
 .placeholder-focus {
@@ -10150,6 +10150,9 @@ small {
       .kaptur-newoptions-iframe iframe {
         height: 700px; } }
 
+.iframe-el {
+  width: 100%; }
+
 /* 
 		_footer.scss
 */
@@ -10277,7 +10280,7 @@ html .fancybox-show-thumbs .fancybox-thumbs {
   display: inline-block; }
 
 .fancybox-caption {
-  font-family: "Nouvel R"; }
+  font-family: "NouvelR"; }
 
 /* clear fix */
 .grid-img:after {

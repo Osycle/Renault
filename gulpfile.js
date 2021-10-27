@@ -36,18 +36,31 @@ gulp.task('img', function () {
 	return gulp.src('app/img/**/*').pipe( gulp.dest( 'dist/img/' ) )
 })
 gulp.task('fonts', function () {
+	del.sync( './dist/fonts/**/*' );
+	deleteEmpty.sync('dist/**/*');
 	return gulp.src('app/fonts/**/*').pipe( gulp.dest( 'dist/fonts/' ) )
 })
 gulp.task('files', function () {
+	del.sync( './dist/files/**/*' );
+	deleteEmpty.sync('dist/**/*');
 	return gulp.src('app/files/**/*').pipe( gulp.dest( 'dist/files/' ) )
 })
 gulp.task('js', function () {
+	del.sync( './dist/js/**/*' )
+	deleteEmpty.sync('dist/**/*');
 	return gulp.src('app/js/**/*').pipe( gulp.dest( 'dist/js/' ) )
 })
 
 gulp.task('fileinclude', function() {
-	del.sync( ['./dist/**/*', '!./dist/js/', '!./dist/img/', '!./dist/files/', '!./dist/fonts/'] ); // Удаление html файлов
-	deleteEmpty.sync('dist/**/*'); // Удаление пустых папок
+	del.sync([
+		'./dist/**', 
+		'!./dist/js/**', 
+		'!./dist/img/**', 
+		'!./dist/files/**', 
+		'!./dist/fonts/**', 
+		'!./dist/css/**'
+	]);
+	deleteEmpty.sync('dist/**/*');
 	gulp.src(['./app/src/**/*', '!./app/src/**/*.html']).pipe( gulp.dest( 'dist/' ) )
 	//gulp.src('app/src/**/*.css').pipe( gulp.dest( 'dist/' ) )
   return gulp.src(['./app/src/**/*.html', '!./app/src/**/_*.html'])	

@@ -1,5 +1,5 @@
 @font-face {
-    font-family: 'Nouvel R';
+    font-family: 'NouvelR';
     src: url('NouvelR-Semibold.woff2') format('woff2'),
         url('NouvelR-Semibold.woff') format('woff');
     font-weight: 600;
@@ -8,7 +8,7 @@
 }
 
 @font-face {
-    font-family: 'Nouvel R';
+    font-family: 'NouvelR';
     src: url('NouvelR-Light.woff2') format('woff2'),
         url('NouvelR-Light.woff') format('woff');
     font-weight: 300;
@@ -17,7 +17,7 @@
 }
 
 @font-face {
-    font-family: 'Nouvel R';
+    font-family: 'NouvelR';
     src: url('NouvelR-Extrabold.woff2') format('woff2'),
         url('NouvelR-Extrabold.woff') format('woff');
     font-weight: bold;
@@ -26,7 +26,7 @@
 }
 
 @font-face {
-    font-family: 'Nouvel R';
+    font-family: 'NouvelR';
     src: url('NouvelR.woff2') format('woff2'),
         url('NouvelR.woff') format('woff');
     font-weight: normal;
@@ -35,11 +35,10 @@
 }
 
 @font-face {
-    font-family: 'Nouvel R';
+    font-family: 'NouvelR';
     src: url('NouvelR-Bold.woff2') format('woff2'),
         url('NouvelR-Bold.woff') format('woff');
     font-weight: bold;
     font-style: normal;
     font-display: swap;
 }
-
