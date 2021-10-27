@@ -42,12 +42,12 @@
 
 
 <!-- Vue link -->
-<script defer src="/js/vue/vue.js"></script>
+<script src="/js/vue/vue.js"></script>
 <!-- multiselect -->
-<script defer src="/js/vue/vue-multiselect/vue-multiselect.min.js"></script>
+<script src="/js/vue/vue-multiselect/vue-multiselect.min.js"></script>
 <link rel="stylesheet" href="/js/vue/vue-multiselect/vue-multiselect.css">
 <!-- splitpanes -->
-<script defer src="/js/vue/splitpanes/splitpanes.umd.min.js"></script>
+<script src="/js/vue/splitpanes/splitpanes.umd.min.js"></script>
 <link rel="stylesheet" href="/js/vue/splitpanes/splitpanes.css">
 
 
@@ -70,6 +70,24 @@
 <script defer src="/js/plugins/choices-js/public/assets/scripts/choices.min.js"></script><!-- Choices JS -->
 
 
+<script defer type="text/javascript">
+
+
+    // Подключение vue компонентов
+    Vue.component('multiselect', window.VueMultiselect.default)
+
+    Vue.filter('spaceBetweenNum', (price)=>{ 
+      if(!price)
+        return 0;
+      price += "";
+      var pattern = /(-?\d+)(\d{3})/;
+      while (pattern.test(price))
+        price = price.replace(pattern, "$1 $2");
+      
+      return price;      
+    })
+
+</script>
 	<title>Renault Uzbekistan</title>
 </head>
 
@@ -400,16 +418,10 @@
 			<div class="nav-sub">
 				<div class="wrapper link-li-1 jc-between flex ai-center ph-3">
 					<ul class="jc-start fs-2-em">
-						<li class="active"><a href="/personal-cars/newduster.html">ARKANA</a></li>
+						<li class="active"><a href="/personal-cars/arkana.html">ARKANA</a></li>
+						<li class="active"><a href="/personal-cars/arkana/desing.html">ДИЗАЙН</a></li>
+						<li class="active"><a href="/personal-cars/arkana/equipment.html">ОБОРУДОВАНИЕ</a></li>
 					</ul>
-					<!-- <div class="btn-content box-md-4 jc-end flex ai-center hidden-xs hidden-sm">
-						<span class="btn-def mr-2 hovered">
-							<a href="">конфигуратор</a>
-						</span>
-						<span class="btn-opacity">
-							<a href="">купить онлайн</a>
-						</span>
-					</div> -->
 				</div>
 			</div>
 			<div class="bnr-page full-style">
@@ -841,21 +853,6 @@
 
 <script defer src="/js/main.js"></script>
 
-<script defer type="text/javascript">
-  // Подключение vue компонентов
-  Vue.component('multiselect', window.VueMultiselect.default)
-
-  Vue.filter('spaceBetweenNum', (price)=>{ 
-    if(!price)
-      return 0;
-    price += "";
-    var pattern = /(-?\d+)(\d{3})/;
-    while (pattern.test(price))
-      price = price.replace(pattern, "$1 $2");
-    
-    return price;      
-  })
-</script>
 
 
 </body>

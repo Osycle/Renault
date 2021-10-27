@@ -10138,16 +10138,16 @@ small {
   .model-complectations-items .img-content {
     background-color: #f2f1f2; }
 
-.kaptur-options {
+.kaptur-newoptions-iframe {
   overflow: hidden; }
   @media (max-width: 991px) {
-    .kaptur-options {
+    .kaptur-newoptions-iframe {
       font-size: 9.6px; } }
-  .kaptur-options iframe {
+  .kaptur-newoptions-iframe iframe {
     min-height: 0px;
-    height: 920px; }
+    height: 650px; }
     @media (max-width: 991px) {
-      .kaptur-options iframe {
+      .kaptur-newoptions-iframe iframe {
         height: 700px; } }
 
 /* 

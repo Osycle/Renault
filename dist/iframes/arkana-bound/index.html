@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<head>
+  <title>arkana</title>
+  <meta charset="utf8">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0">
+  <link rel="stylesheet" href="https://unpkg.com/vue-select@latest/dist/vue-select.css">
+  <link rel="stylesheet" href="css/main.css">
+  <!-- Google Tag Manager-->
+  <script src="https://developers.google.com/maps/documentation/javascript/examples/markerclusterer/markerclusterer.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-core/5.6.15/browser-polyfill.min.js" defer></script>
+  <script src="https://cdn.jsdelivr.net/npm/promise-polyfill@8/dist/polyfill.min.js" defer></script>
+  <script src="https://cdn.jsdelivr.net/npm/fetch-polyfill@0.8.2/fetch.min.js" defer></script>
+  <script src="https://cdn.jsdelivr.net/npm/vue" defer></script>
+  <script src="https://list-arkana.ru/js/iframe.js" defer></script>
+  <script src="js/polyfills.js" defer></script>
+  <script src="https://unpkg.com/vue-select@latest" defer></script>
+  <script src="js/main.js" defer></script>
+</head>
+<body>
+  <div class="wrapper">
+    <div class="roadCar">
+      <transition name="fade">
+        <div class="loader" v-if="!loaded">
+          <div class="strip">
+            <div class="stripElem"></div>
+          </div>
+          <div class="text">Загрузка</div>
+        </div>
+      </transition>
+      <div class="carVideo" ref="carVideo">
+        <div class="textContent" v-if="isMobile">
+          <transition-group name="show">
+            <div v-if="openedOn&lt;50" key="left">
+              <h3>Покоряет города</h3>
+              <p>Renault ARKANA готов к стремительному ритму города. Cистемы помощи водителю способствуют безопасному передвижению, а новая мультимедийная система EASY LINK поможет подобрать оптимальный маршрут и разнообразить время в трафике мегаполиса.</p>
+            </div>
+            <div v-else key="right">
+              <h3>Стирает границы</h3>
+              <p>Высокий дорожный просвет, система интеллектуального полного привода, отличная геометрическая проходимость и защита кузова 360 позволяют уверенно передвигаться по любому покрытию.</p>
+            </div>
+          </transition-group>
+        </div>
+        <div class="left" :style="{'max-width': openedOn+'%', backgroundSize:sectionWidth+'px auto'}" data-image="img/roadCar/selo_sky.jpg">
+          <div class="content" :style="{width: sectionWidth+'px'}">
+            <template v-if="!isMobile">
+              <div class="bg" :style="{transform: 'translateX('+openedOn/100*21.5+'%) '}" data-image="img/roadCar/selo-bg.png"></div>
+              <div class="car" :style="{transform: 'translateX('+openedOn/100*21.5+'%) '}" data-image="img/roadCar/selo/selo.png"></div>
+            </template>
+            <template v-else>
+              <div class="bg" :style="{transform: 'translateX('+(currentOpenedOn/100*31.5+17)+'vw) '}" data-image="img/roadCar/selo-bg.png"></div>
+              <div class="car" :style="{transform: 'translateX('+(currentOpenedOn/100*31.5+17)+'vw) '}" data-image="img/roadCar/selo/selo.png"></div>
+            </template>
+            <div class="textContent" v-if="!isMobile">
+              <h3>Стирает границы</h3>
+              <p>Высокий дорожный просвет, система интеллектуального полного привода, отличная геометрическая проходимость и защита кузова 360 позволяют уверенно передвигаться по любому покрытию.</p>
+            </div>
+          </div>
+        </div>
+        <div class="centerCursor" v-if="isMobile" :style="{left:openedOn+'%'}" :class="{hide:openedOn&lt;3||openedOn&gt;97}">
+          <div class="cursor" :style="{top:offsetY+'%'}"></div>
+        </div>
+        <div class="right" data-image="img/roadCar/city_sky.jpg">
+          <div class="content">
+            <template v-if="!isMobile">
+              <div class="bg" :style="{transform: 'translateX('+(-21.5+openedOn/100*21.5)+'%) '}" data-image="img/roadCar/city-bg.png"></div>
+              <div class="car" :style="{transform: 'translateX('+(-21.5+openedOn/100*21.5)+'%) '}" data-image="img/roadCar/city/city.png"></div>
+            </template>
+            <template v-else>
+              <div class="bg" :style="{transform
+              : 'translateX('+(-31.5+currentOpenedOn/100*31.5-17)+'vw) '}" data-image="img/roadCar/city-bg.png"></div>
+              <div class="car" :style="{transform: 'translateX('+(-31.5+currentOpenedOn/100*31.5-17)+'vw) '}" data-image="img/roadCar/city/city.png"></div>
+            </template>
+            <div class="textContent" v-if="!isMobile">
+              <h3>Покоряет города</h3>
+              <p>Renault ARKANA готов к стремительному ритму города. Cистемы помощи водителю способствуют безопасному передвижению, а новая мультимедийная система EASY LINK поможет подобрать оптимальный маршрут и разнообразить время в трафике мегаполиса.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>

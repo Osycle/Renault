@@ -42,12 +42,12 @@
 
 
 <!-- Vue link -->
-<script defer src="/js/vue/vue.js"></script>
+<script src="/js/vue/vue.js"></script>
 <!-- multiselect -->
-<script defer src="/js/vue/vue-multiselect/vue-multiselect.min.js"></script>
+<script src="/js/vue/vue-multiselect/vue-multiselect.min.js"></script>
 <link rel="stylesheet" href="/js/vue/vue-multiselect/vue-multiselect.css">
 <!-- splitpanes -->
-<script defer src="/js/vue/splitpanes/splitpanes.umd.min.js"></script>
+<script src="/js/vue/splitpanes/splitpanes.umd.min.js"></script>
 <link rel="stylesheet" href="/js/vue/splitpanes/splitpanes.css">
 
 
@@ -70,6 +70,24 @@
 <script defer src="/js/plugins/choices-js/public/assets/scripts/choices.min.js"></script><!-- Choices JS -->
 
 
+<script defer type="text/javascript">
+
+
+    // Подключение vue компонентов
+    Vue.component('multiselect', window.VueMultiselect.default)
+
+    Vue.filter('spaceBetweenNum', (price)=>{ 
+      if(!price)
+        return 0;
+      price += "";
+      var pattern = /(-?\d+)(\d{3})/;
+      while (pattern.test(price))
+        price = price.replace(pattern, "$1 $2");
+      
+      return price;      
+    })
+
+</script>
 	<title>Renault Uzbekistan</title>
 </head>
 
@@ -667,21 +685,6 @@
 
 <script defer src="/js/main.js"></script>
 
-<script defer type="text/javascript">
-  // Подключение vue компонентов
-  Vue.component('multiselect', window.VueMultiselect.default)
-
-  Vue.filter('spaceBetweenNum', (price)=>{ 
-    if(!price)
-      return 0;
-    price += "";
-    var pattern = /(-?\d+)(\d{3})/;
-    while (pattern.test(price))
-      price = price.replace(pattern, "$1 $2");
-    
-    return price;      
-  })
-</script>
 </body>
 
 </html>

@@ -1,0 +1,526 @@
+#curtain {
+  font-size: 16px;
+}
+@media (max-width: 991px) {
+  #curtain {
+    font-size: 2vw;
+ }
+}
+#curtain img {
+  max-width: none;
+}
+#curtain .curtain {
+  max-width: 1280px;
+  margin: 0 auto;
+  @media (min-width: 991px){
+    height: 843px;
+  }
+}
+#curtain .curtain h2 {
+  min-width: 20em;
+  font-size: inherit;
+  font-weight: 700;
+  letter-spacing: 0.07em;
+  transition: 0.5s;
+  display: flex;
+  flex-wrap: wrap;
+}
+#curtain .curtain h2 span {
+  position: relative;
+  display: block;
+  width: -moz-fit-content;
+  width: fit-content;
+  font-size: 28px;
+}
+@media (max-width: 991px) {
+  #curtain .curtain h2 span {
+    font-size: 17px;
+ }
+}
+#curtain .curtain h2 span:after {
+  content: "";
+  position: absolute;
+  top: 102%;
+  left: -0.2em;
+  height: 2px;
+  right: -0.2em;
+  background: url("/img/other/newduster/dashed.svg") repeat-x left center/auto 100%;
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+#curtain .curtain p {
+  line-height: 130%;
+}
+#curtain .curtain .hr {
+  border-top: 1px dotted #828282;
+}
+#curtain .curtain .head {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 12em;
+  overflow: hidden;
+  padding: 3.5em 3em 5em;
+}
+#curtain .curtain .head h2, #curtain .curtain .head p {
+  text-transform: none;
+  margin-top: 0;
+  margin-bottom: 0;
+  line-height: 1;
+}
+#curtain .curtain .tab {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 64.2%;
+  transition: 0.5s;
+}
+#curtain .curtain .tab p {
+  width: 26em;
+  margin-top: 0.2em;
+  font-size: inherit;
+  line-height: 1.2;
+  overflow: hidden;
+  text-align: right;
+  transition: 0.5s;
+}
+#curtain .curtain .tab p span {
+  display: block;
+  width: 26em;
+  font-size: 16px;
+}
+#curtain .curtain .tab.left h2 {
+  width: 16em;
+}
+#curtain .curtain .tab.right {
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+  margin-left: 3em;
+  width: 66%;
+}
+#curtain .curtain .tab.right h2 {
+  min-width: 20em;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  margin-right: 1em;
+}
+#curtain .curtain .tab.right p {
+  width: 43em;
+  text-align: left;
+}
+#curtain .curtain .tab.right p span {
+  width: 28em;
+}
+#curtain .curtain .tab.inactive {
+  cursor: pointer;
+  width: 22%;
+}
+#curtain .curtain .tab.inactive:hover {
+  transform: scale(1.1);
+}
+#curtain .curtain .tab.inactive h2 {
+  padding-bottom: 0.5em;
+  color: #828282;
+  transform: scale(0.6);
+}
+#curtain .curtain .tab.inactive h2 span:after {
+  opacity: 1;
+}
+#curtain .curtain .tab.inactive p {
+  width: 0;
+}
+#curtain .curtain .tab.inactive.left {
+  width: 18.6%;
+}
+#curtain .curtain .tab.inactive.right {
+  margin-left: 0;
+}
+#curtain .curtain .line {
+  position: relative;
+  width: 5%;
+  cursor: pointer;
+}
+#curtain .curtain .line img {
+  display: block;
+}
+#curtain .curtain .line:before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+  height: 1.5em;
+  width: 6em;
+}
+#curtain .curtain .line:after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translate(-50%, -50%);
+  width: 2em;
+  height: 2em;
+  background: url("/img/other/newduster/head-dot.svg") no-repeat center center/contain;
+  transition: left 0.5s, transform 0.5s;
+}
+#curtain .curtain .line.right:after {
+  left: 105%;
+  transform: translate(50%, -50%);
+}
+#curtain .curtain .car {
+  overflow: hidden;
+}
+#curtain .curtain .car .img-block {
+  position: relative;
+  width: 80em;
+  height: 100%;
+}
+#curtain .curtain .car .right {
+  position: relative;
+  height: 40.3125em;
+}
+#curtain .curtain .car .right .img-block {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+}
+#curtain .curtain .car .right .dot {
+  top: 15em;
+  right: 67em;
+}
+#curtain .curtain .car .right .dot:nth-of-type(2) {
+  top: 27.2em;
+  right: 49.6em;
+}
+#curtain .curtain .car .right .dot:nth-of-type(3) {
+  top: 15em;
+  right: 34em;
+}
+#curtain .curtain .car .right .dot:nth-of-type(4) {
+  top: 3.4em;
+  right: 54em;
+}
+#curtain .curtain .car .right .dot:nth-of-type(5) {
+  top: 15.7em;
+  right: 14.5em;
+}
+#curtain .curtain .car .dot {
+  position: absolute;
+  top: 14em;
+  right: 26em;
+  width: 5em;
+  height: 5em;
+  background: url("/img/other/newduster/dot.svg") no-repeat center center/100% auto;
+  cursor: pointer;
+}
+#curtain .curtain .car .dot:after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: url("/img/other/newduster/active-dot.svg") no-repeat center center/100% auto;
+  opacity: 0;
+  transition: opacity 0.3s;
+  will-change: opacity;
+}
+#curtain .curtain .car .dot:nth-of-type(2) {
+  top: 27.7em;
+  right: 65.5em;
+}
+#curtain .curtain .car .dot:nth-of-type(3) {
+  top: 22.7em;
+  right: 56.5em;
+}
+#curtain .curtain .car .dot:nth-of-type(4) {
+  top: 16.4em;
+  right: 47.5em;
+}
+#curtain .curtain .car .dot:nth-of-type(5) {
+  top: 24em;
+  right: 28.5em;
+}
+#curtain .curtain .car .dot > img {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+#curtain .curtain .car .dot .popup {
+  position: absolute;
+  top: calc(50% - 10px);
+  left: calc(50% + 10px);
+  z-index: 10;
+  opacity: 0;
+  font-family: "NouvelR", Arial;
+  font-weight: 700;
+  background: white;
+  border-radius: 0.3em;
+  pointer-events: none;
+  transition: opacity 0.5s;
+}
+#curtain .curtain .car .dot .popup:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 98%;
+  z-index: -1;
+  border: 10px solid white;
+  border-left-color: transparent;
+  border-top-color: transparent;
+  border-bottom-color: transparent;
+}
+#curtain .curtain .car .dot .popup img {
+  width: 100%;
+}
+#curtain .curtain .car .dot .popup p {
+  padding: 1em;
+}
+#curtain .curtain .car .dot.active {
+  z-index: 10;
+  background-image: url("/img/other/newduster/dotTr.svg");
+}
+#curtain .curtain .car .dot.active:after {
+  opacity: 1;
+}
+#curtain .curtain .car .dot.active .popup {
+  opacity: 1;
+  pointer-events: all;
+}
+#curtain .curtain .car .splitpanes__pane:nth-of-type(1) > div {
+  height: 40.3125em;
+}
+#curtain .curtain .car .default-theme.splitpanes--vertical > .splitpanes__splitter {
+  width: 1px;
+  border: none;
+  background: url("/img/other/newduster/vertical_line.svg") no-repeat center center/cover;
+}
+#curtain .curtain .car .default-theme.splitpanes--vertical > .splitpanes__splitter:after {
+  display: none;
+}
+#curtain .curtain .car .default-theme.splitpanes--vertical > .splitpanes__splitter:before {
+  left: calc(50% + 1px);
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 2em;
+  height: 1.3em;
+  z-index: 10;
+  background: url("/img/other/newduster/drag.svg") no-repeat center center/contain;
+}
+#curtain .curtain .car .default-theme .splitpanes--vertical > .splitpanes__splitter {
+  width: 1px;
+  border: none;
+  background: url("/img/other/newduster/vertical_line.svg") no-repeat center center/cover;
+}
+#curtain .curtain .car .default-theme .splitpanes--vertical > .splitpanes__splitter:after {
+  display: none;
+}
+#curtain .curtain .car .default-theme .splitpanes--vertical > .splitpanes__splitter:before {
+  left: calc(50% + 1px);
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 2em;
+  height: 1.3em;
+  z-index: 10;
+  background: url("/img/other/newduster/drag.svg") no-repeat center center/contain;
+}
+#curtain .curtain .car .splitpanes--vertical.animated .splitpanes__pane {
+  transition: 1s;
+}
+#curtain .forMobile {
+  display: none !important;
+}
+@media screen and (max-width: 767px) {
+  #curtain .curtain .tab.right h2 {
+    min-width: 20em;
+ }
+}
+@media screen and (max-width: 900px) {
+  #curtain html {
+    font-size: 2.2vw;
+ }
+  #curtain .forMobile {
+    display: block !important;
+ }
+  #curtain .forDesktop {
+    display: none !important;
+ }
+  #curtain .curtain .head {
+    position: relative;
+    height: 5em;
+    box-sizing: content-box;
+    padding: 3em 2.5em 18em;
+ }
+  #curtain .curtain .head .line {
+    width: 10%;
+ }
+  #curtain .curtain .head .line:after {
+    display: none;
+ }
+  #curtain .curtain .head .line img {
+    width: 100%;
+ }
+  #curtain .curtain .head p {
+    position: absolute;
+    top: 8.5em;
+    left: 0;
+    right: 0;
+    width: auto;
+    padding: 0 2em;
+    margin-top: 2em;
+    text-align: left;
+ }
+  #curtain .curtain .head .left h2 {
+    min-width: 16em;
+ }
+  #curtain .curtain .tab {
+    width: 40%;
+ }
+  #curtain .curtain .tab p {
+    width: auto;
+    opacity: 1;
+    transition: opacity 0.2s;
+ }
+  #curtain .curtain .tab p span {
+    width: 100%;
+ }
+  #curtain .curtain .tab.inactive {
+    width: 20%;
+ }
+  #curtain .curtain .tab.inactive h2 {
+    transform: scale(0.7);
+ }
+  #curtain .curtain .tab.inactive p {
+    width: auto;
+    opacity: 0;
+ }
+  #curtain .curtain .tab.inactive:hover {
+    transform: none;
+ }
+  #curtain .curtain .tab.inactive.left {
+    width: 30%;
+ }
+  #curtain .curtain .tab.right {
+    justify-content: flex-end;
+    width: 43%;
+    margin-left: 0;
+ }
+  #curtain .curtain .tab.right h2 {
+    margin-right: 0;
+ }
+  #curtain .curtain .tab.right p {
+    width: 100%;
+ }
+  #curtain .curtain .tab.right p span {
+    width: 100%;
+ }
+  #curtain .curtain .car {
+    height: 23.125em;
+ }
+  #curtain .curtain .car .splitpanes__pane > div {
+    height: 100%;
+ }
+  #curtain .curtain .car .right {
+    height: 25em;
+ }
+  #curtain .curtain .car .right .img-block {
+    width: 100vw;
+ }
+  #curtain .curtain .car .right .dot {
+    top: 7em;
+    right: 37em;
+ }
+  #curtain .curtain .car .right .dot:nth-of-type(2) {
+    top: 14.5em;
+    right: 26.5em;
+ }
+  #curtain .curtain .car .right .dot:nth-of-type(3) {
+    top: 7.3em;
+    right: 17.5em;
+ }
+  #curtain .curtain .car .right .dot:nth-of-type(4) {
+    top: 0.4em;
+    right: 29em;
+ }
+  #curtain .curtain .car .right .dot:nth-of-type(5) {
+    top: 8.4em;
+    right: 12em;
+ }
+  #curtain .curtain .car .img-block {
+    width: 100vw;
+    height: 100%;
+ }
+  #curtain .curtain .car img {
+    width: 100%;
+    height: auto;
+    -o-object-fit: contain;
+    object-fit: contain;
+ }
+  #curtain .curtain .car .dot {
+    top: 7em;
+    right: 13em;
+    width: 5em;
+    height: 5em;
+    font-size: 1.1em;
+    background-size: 150% auto;
+ }
+  #curtain .curtain .car .dot:nth-of-type(2) {
+    top: 14.5em;
+    right: 36.5em;
+ }
+  #curtain .curtain .car .dot:nth-of-type(3) {
+    top: 12.1em;
+    right: 31.5em;
+ }
+  #curtain .curtain .car .dot:nth-of-type(4) {
+    top: 8.4em;
+    right: 26em;
+ }
+  #curtain .curtain .car .dot:nth-of-type(5) {
+    top: 12.4em;
+    right: 15em;
+ }
+  #curtain .curtain .car .dot:after {
+    background-size: 150% auto;
+ }
+  #curtain .curtain .car .dot img {
+    display: none;
+ }
+  #curtain .curtain .car .dot.active {
+    background-size: 180% auto;
+ }
+  #curtain .curtain .splitpanes__pane:nth-of-type(1) > div {
+    height: 40.3125em;
+ }
+}
+@media screen and (max-width: 1024px) and (min-width: 900px) {
+  #curtain .curtain .car {
+    padding: 0 2.7em;
+ }
+  #curtain .curtain .car img {
+    width: 100%;
+ }
+  #curtain .curtain .line.right:after {
+    left: 125%;
+ }
+}
+@media screen and (max-width: 1023px) and (min-width: 500px) {
+  #curtain .curtain .tab.right h2 {
+    min-width: 18em;
+ }
+  #curtain .curtain .head {
+    padding-bottom: 8em;
+ }
+  #curtain .curtain .head p {
+    top: 8em;
+ }
+  #curtain .curtain .tab p {
+    font-size: 14px;
+    line-height: 1.5;
+ }
+  #curtain .curtain h2 {
+    font-size: 25px;
+ }
+}

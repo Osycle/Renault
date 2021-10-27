@@ -31,6 +31,8 @@ var app = "app";
 
 
 gulp.task('img', function () {
+	del.sync( './dist/img/**/*' );
+	deleteEmpty.sync('dist/**/*');
 	return gulp.src('app/img/**/*').pipe( gulp.dest( 'dist/img/' ) )
 })
 gulp.task('fonts', function () {
@@ -44,9 +46,10 @@ gulp.task('js', function () {
 })
 
 gulp.task('fileinclude', function() {
-	del.sync( 'dist/**/*.html' ); // Удаление html файлов
-	deleteEmpty.sync('dist/'); // Удаление пустых папок
-	gulp.src('app/src/**/*.js').pipe( gulp.dest( 'dist/' ) )
+	del.sync( ['./dist/**/*', '!./dist/js/', '!./dist/img/', '!./dist/files/', '!./dist/fonts/'] ); // Удаление html файлов
+	deleteEmpty.sync('dist/**/*'); // Удаление пустых папок
+	gulp.src(['./app/src/**/*', '!./app/src/**/*.html']).pipe( gulp.dest( 'dist/' ) )
+	//gulp.src('app/src/**/*.css').pipe( gulp.dest( 'dist/' ) )
   return gulp.src(['./app/src/**/*.html', '!./app/src/**/_*.html'])	
     .pipe(fileinclude({
       prefix: '@@',
@@ -123,7 +126,7 @@ gulp.task('browser-sync', (done)=>{
 gulp.task('watch', (done)=>{
 		//gulp.task('default', gulp.series('watch', 'sass', 'browser-sync'));
 		gulp.watch('app/scss/**/*.+(scss|sass)', gulp.parallel('sass'));
-		gulp.watch('app/src/**/*.+(html|js)', gulp.parallel('fileinclude'));
+		gulp.watch('app/src/**/*.+(html|js|css)', gulp.parallel('fileinclude'));
 		gulp.watch('app/js/**/*', gulp.parallel('js'));
 		gulp.watch('app/img/**/*', gulp.parallel('img'));
 		gulp.watch('app/fonts/**/*', gulp.parallel('fonts'));
