@@ -154,5 +154,5 @@ gulp.task('watch', (done)=>{
 
 //gulp.task('default', gulp.series('watch', 'sass'));
 //gulp.task('watch', gulp.series('watch','browser-sync', 'scripts', 'fileinclude'));
-gulp.task('watch', gulp.series('watch','browser-sync', 'js', 'img', 'files', 'fonts', 'fileinclude', 'sass'));
+gulp.task('watch', gulp.series('watch', 'js', 'img', 'files', 'fonts', 'fileinclude', 'sass', 'browser-sync'));
 

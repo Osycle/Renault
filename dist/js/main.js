@@ -89,7 +89,7 @@
     });
 
 		//responsiveTabs
-    $('#responsiveTabsDemo').responsiveTabs({
+    $('.responsive-tab').responsiveTabs({
     	startCollapsed: 'accordion'
 		});
 
@@ -207,8 +207,15 @@
   multiDefault();
 
 
-
-
+	$(".iframe-h").map(function(i, el){
+		$(el).on("load", function(){
+			var h = this.contentDocument.body.offsetHeight;
+			$(this).css("min-height", h)
+			console.log(this.contentDocument.body.offsetHeight);
+		})
+		console.log(el.contentDocument);
+	})
+	//s.contentDocument.body.clientHeight
 
 	});
 })(jQuery);

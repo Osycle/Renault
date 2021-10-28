@@ -143,8 +143,19 @@ $gradient-gray-2: linear-gradient(to bottom, #e8e8e8, white);
 	.text-x#{$i}-u{text-transform: uppercase;}
 	.text-x#{$i}-bu{font-weight: 700; text-transform: uppercase;}
 }
-
-
+@media (max-width: 991px){
+	@for $i from 1 through 20{
+		.mobile\:text-x#{$i}, 
+		.mobile\:text-x#{$i}-u, 
+		.mobile\:text-x#{$i}-b, 
+		.mobile\:text-x#{$i}-bu{
+			font-size: (8+(2*$i))#{"px"};
+		}
+		.mobile\:text-x#{$i}-b{font-weight: 700;}
+		.mobile\:text-x#{$i}-u{text-transform: uppercase;}
+		.mobile\:text-x#{$i}-bu{font-weight: 700; text-transform: uppercase;}
+	}
+}
 
 
 .border-1{border: 1px solid $color-gray-1;}
