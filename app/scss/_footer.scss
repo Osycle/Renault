@@ -20,6 +20,8 @@
 }
 .footer-menu{
 	padding: 5px 0;
+	
+	justify-content: space-between;
 	ul:not([class]) a{
 		@extend .hover-underline;
 		&:before{

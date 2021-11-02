@@ -9622,9 +9622,9 @@ small {
       height: 100%; }
       @media (max-width: 991px) {
         .nav-sub .wrapper ul {
-          -webkit-box-pack: justify;
-          -ms-flex-pack: justify;
-          justify-content: space-between;
+          -webkit-box-pack: normal;
+          -ms-flex-pack: normal;
+          justify-content: normal;
           font-size: 12px; } }
     .nav-sub .wrapper li {
       -ms-flex-negative: 0;
@@ -10413,7 +10413,10 @@ small {
   font-size: 12px; }
 
 .footer-menu {
-  padding: 5px 0; }
+  padding: 5px 0;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between; }
   .footer-menu ul:not([class]) a:before {
     bottom: -2px; }
 
