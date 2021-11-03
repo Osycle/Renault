@@ -26,7 +26,19 @@
 	<meta name="msapplication-TileColor" content="#ffffff">
 	<meta name="msapplication-TileImage" content="/img/favicon/ms-icon-144x144.png">
 	<meta name="theme-color" content="#ffffff">
-	
+	<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-211871187-1">
+</script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-211871187-1');
+</script>
+
+
+
 <!-- CSS -->
 
 <link rel="stylesheet" href="/css/fonts.css">
@@ -46,9 +58,7 @@
 <!-- multiselect -->
 <script src="/js/vue/vue-multiselect/vue-multiselect.min.js"></script>
 <link rel="stylesheet" href="/js/vue/vue-multiselect/vue-multiselect.css">
-<!-- splitpanes -->
-<script src="/js/vue/splitpanes/splitpanes.umd.min.js"></script>
-<link rel="stylesheet" href="/js/vue/splitpanes/splitpanes.css">
+
 
 
 <!-- SCRIPTS -->
@@ -445,101 +455,9 @@
 						<div>Новый Renault DUSTER — это полностью новый кузов, полностью новый интерьер и самые современные опции. Новый DUSTER — это легендарная надежность и уверенность за рулем в сочетании с новым уровнем комфорта. А еще, Новый DUSTER — это две индивидуальности.</div>
 					</div>
 				</div>
-				<div id="curtain">
-					<div class="curtain">
-						<div class="hr"></div>
-						<div class="head">
-								<div class="tab left" @click="activate(1)" :class="{inactive: activeTab===2}">
-										<p><span>Внедорожная версия подчеркивает брутальную сущность полноприводного автомобиля, не&nbsp;знающего преград. Это практичность, воплощенная в&nbsp;каждой детали.</span></p>
-										<h2><span>Внедорожный</span><span>характер</span></h2>
-								</div>
-								<div class="line":class="{right: activeTab===2}" @click="toggleActiveTab" >
-										<img src="/img/other/newduster/line.svg" alt="" class="forDesktop">
-										<img src="/img/other/newduster/line-mobile.svg" alt="" class="forMobile">
-								</div>
-								<div class="tab right" @click="activate(2)" :class="{inactive: activeTab===1}">
-										<h2><span>Новый стильный</span><span>характер</span></h2>
-										<p><span>Новая максимальная комплектация выводит комфорт на&nbsp;новый уровень. Стиль и&nbsp;современные технологии, совмещенные с&nbsp;универсальностью и&nbsp;выдающейся проходимостью.</span></p>
-								</div>
-						</div>
-						<div class="car">
-							<splitpanes class="default-theme" @resize="resize($event)" :class="{animated: animated}">
-								<pane :key="1" :size="paneSize">
-									<div>
-										<div class="img-block">
-											<img src="/img/other/newduster/split-img-1.png" alt="">
-											<div class="dots">
-												<div class="dot" @click="activateDot(1)" :class="{active: activeDot===1}">
-													<div class="popup">
-														<p>Черная решетка радиатора</p>
-													</div>
-												</div>
-												<div class="dot" @click="activateDot(2)" :class="{active: activeDot===2}">
-													<div class="popup">
-														<p>Черные легкосплавные диски 16”</p>
-													</div>
-												</div>
-												<div class="dot" @click="activateDot(3)" :class="{active: activeDot===3}">
-													<div class="popup">
-														<p>Боковые молдинги с&nbsp;надписью DUSTER</p>
-													</div>
-												</div>
-												<div class="dot" @click="activateDot(4)" :class="{active: activeDot===4}">
-													<div class="popup">
-														<p>Пластиковые расширители арок</p>
-													</div>
-												</div>
-												<div class="dot" @click="activateDot(5)" :class="{active: activeDot===5}">
-													<div class="popup">
-														<p> Передний бампер с&nbsp;пластиковой накладкой</p>
-													</div>
-												</div>
-											</div>
-										</div>
-									</div>
-								</pane>
-								<pane :key="2" :size="100 - paneSize">
-									<div class="right">
-										<div class="img-block">
-											<img src="/img/other/newduster/split-img-2.png" alt="">
-											<div class="dots">
-												<div class="dot" @click="activateDot(21)" :class="{active: activeDot===21}">
-													<div class="popup">
-														<img src="/img/other/newduster/dotL1.jpg" alt="">
-														<p>Задние фонари со&nbsp;светодиодными элементами</p>
-													</div>
-												</div>
-						
-												<div class="dot" @click="activateDot(22)" :class="{active: activeDot===22}">
-													<div class="popup">
-														<p>Двухцветные легкосплавные диски 17”</p>
-													</div>
-												</div>
-												<div class="dot" @click="activateDot(23)" :class="{active: activeDot===23}">
-													<div class="popup">
-														<p>Светодиодные ходовые огни</p>
-													</div>
-												</div>
-												<div class="dot" @click="activateDot(24)" :class="{active: activeDot===24}">
-													<div class="popup">
-														<p>Серебристые рейлинги с&nbsp;надписью DUSTER</p>
-													</div>
-												</div>
-												<div class="dot" @click="activateDot(25)" :class="{active: activeDot===25}">
-													<div class="popup">
-														<p>Решетка радиатора с&nbsp;хромированными вставками</p>
-													</div>
-												</div>
-											</div>
-										</div>
-									</div>
-								</pane>
-							</splitpanes>
-						</div>
-					</div>
+				<div class="iframe-area">
+					<iframe src="/iframes/duster/curtain.html" class="iframe-el" frameborder="0"></iframe>
 				</div>
-				<link rel="stylesheet" href="/personal-cars/css/curtain.css">
-				<script defer src="/personal-cars/js/curtain.js"></script>
 			</section>
 			<section>
 				<div class="container pv-8">
@@ -612,26 +530,8 @@
 				</div>
 			</section>
 			<section>
-				<div id="duster2" class="duster2">
-					<div class="duster2-passability">
-						<div class="duster2-crop">
-							<div class="duster2-crop__image-wrapper left">
-								<div class="duster2-crop__image hidden-xs hidden-sm" style="background-image: url(/img/other/newduster/passability_car.jpg);"></div>
-								<div class="duster2-crop__image hidden-md hidden-lg" style="background-image: url(/img/other/newduster/passability_car-mobile.jpg);"></div>
-								<div class="duster2-crop__image dark hidden-xs hidden-sm" style="background-image: url(/img/other/newduster/passability_car_dark.jpg);"></div>
-								<div class="duster2-crop__image dark hidden-md hidden-lg" style="background-image: url(/img/other/newduster/passability_car_dark-mobile.jpg);"></div>
-								<div class="duster2-crop__line hidden-xs hidden-sm" style="background: url(/img/other/newduster/passability_lines.png) no-repeat left bottom/contain;"></div>
-								<div class="duster2-crop__line hidden-md hidden-lg" style="background: url(/img/other/newduster/passability_lines-mobile.png) no-repeat left bottom/contain;"></div>
-							</div>
-							<div class="duster2-description right">
-								<h4 class="magic-letters">Легендарная</h4>
-								<h3 class="magic-letters">проходимость</h3>
-								<hr class="magic-letters">
-								<p class="magic-letters">Новый Renault DUSTER сохранил непревзойденную геометрическую проходимость. Дорожный просвет 210&nbsp;мм в&nbsp;комбинации с&nbsp;углами въезда (31&nbsp;градус) и&nbsp;съезда (33&nbsp;градуса) подтверждают статус внедорожника, который не&nbsp;знает преград. Но&nbsp;помимо базовых внедорожных характеристик, появилось и&nbsp;новое оборудование для уникального внедорожного опыта.</p>
-								<a href="" class="duster2 btn">подробнее</a>
-							</div>
-						</div>
-					</div>
+				<div class="iframe-area">
+					<iframe src="/iframes/duster/passability.html" class="iframe-el" frameborder="0"></iframe>
 				</div>
 
 				<div class="container pv-10">
@@ -641,26 +541,10 @@
 					</div>
 				</div>
 
-				<div id="duster2" class="duster2">
-					<div class="duster2-design">
-						<div class="duster2-crop">
-							<div class="duster2-crop__image-wrapper right">
-								<div class="duster2-crop__image hidden-xs hidden-sm" style="background-image: url(/img/other/newduster/design_car_dark.jpg);"></div>
-								<div class="duster2-crop__image hidden-md hidden-lg" style="background-image: url(/img/other/newduster/design_car_dark-mobile.jpg);"></div>
-								<div class="duster2-crop__image dark hidden-xs hidden-sm" style="background-image: url(/img/other/newduster/design_car_dark.jpg);"></div>
-								<div class="duster2-crop__image dark hidden-md hidden-lg" style="background-image: url(/img/other/newduster/design_car_dark-mobile.jpg);"></div>
-							</div>
-							<div class="duster2-description left">
-								<h4 class="magic-letters">Современный</h4>
-								<h3 class="magic-letters">дизайн</h3>
-								<hr class="magic-letters">
-								<p class="magic-letters">Современный дизайн Нового DUSTER подчеркивают новая оптика, новые пропорции и&nbsp;новые цвета кузова. Яркий оранжевый Atacama настраивает на&nbsp;приключения, а&nbsp;стильный серо-коричневый Tenakuru подчеркивает каждую линию нового кузова. Новые передние светодиодные дневные ходовые огни, как и&nbsp;задние огни со&nbsp;светодиодами в&nbsp;форме квадрата точно станут визитной карточкой Нового DUSTER.</p>
-							</div>
-						</div>
-					</div>
+				<div class="iframe-area">
+					<iframe src="/iframes/duster/design.html" class="iframe-el" frameborder="0"></iframe>
 				</div>
-				<link rel="stylesheet" href="/personal-cars/css/duster2.css">
-				<script defer src="/personal-cars/js/duster2.js"></script>
+
 			</section>
 			<section>
 				<div class="container pv-8">

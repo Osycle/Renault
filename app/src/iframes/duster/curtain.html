@@ -1,0 +1,131 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport"
+		  content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>Document</title>
+	<script src="/js/vue/vue.js"></script>
+
+	<script src="js/curtain.js" defer></script>
+  
+  <link rel="stylesheet" href="/fonts/NouvelR/stylesheet.css">
+	<link rel="stylesheet" href="css/curtain.css">
+
+  <script src="/js/vue/splitpanes/splitpanes.umd.min.js"></script>
+	<link rel="stylesheet" href="/js/vue/splitpanes/splitpanes.css">
+
+
+</head>
+<body>
+<div id="app">
+	<div class="curtain">
+		<div class="hr"></div>
+		<div class="head">
+			<div class="tab left" @click="activate(1)" :class="{inactive: activeTab===2}">
+				<p>
+					<span>
+						Внедорожная версия подчеркивает брутальную сущность полноприводного автомобиля, не&nbsp;знающего преград. Это практичность, воплощенная в&nbsp;каждой детали.
+					</span>
+				</p>
+				<h2><span>Внедорожный</span>
+					<span>характер</span></h2>
+			</div>
+			<div class="line":class="{right: activeTab===2}" @click="toggleActiveTab" >
+				<img src="./img/curtain/line.svg" alt="" class="forDesktop">
+				<img src="./img/curtain/line-mobile.svg" alt="" class="forMobile">
+			</div>
+			<div class="tab right" @click="activate(2)" :class="{inactive: activeTab===1}">
+				<h2><span>Новый стильный</span>
+					<span>характер</span></h2>
+				<p>
+					<span>
+					   Новая максимальная комплектация выводит комфорт на&nbsp;новый уровень. Стиль и&nbsp;современные технологии, совмещенные с&nbsp;универсальностью и&nbsp;выдающейся проходимостью.
+					</span>
+				</p>
+			</div>
+		</div>
+		<div class="car">
+			<splitpanes class="default-theme" @resize="resize($event)" :class="{animated: animated}">
+
+				<pane :key="1" :size="paneSize">
+					<div>
+						<div class="img-block">
+							<img src="./img/curtain/car1.png" alt="">
+							<div class="dots">
+								<div class="dot" @click="activateDot(1)" :class="{active: activeDot===1}">
+									<div class="popup">
+										<p>Черная решетка радиатора</p>
+									</div>
+								</div>
+								<div class="dot" @click="activateDot(2)" :class="{active: activeDot===2}">
+									<div class="popup">
+										<p>Черные легкосплавные диски 16”</p>
+									</div>
+								</div>
+								<div class="dot" @click="activateDot(3)" :class="{active: activeDot===3}">
+									<div class="popup">
+										<p>Боковые молдинги с&nbsp;надписью DUSTER</p>
+									</div>
+								</div>
+								<div class="dot" @click="activateDot(4)" :class="{active: activeDot===4}">
+									<div class="popup">
+										<p>Пластиковые расширители арок</p>
+									</div>
+								</div>
+								<div class="dot" @click="activateDot(5)" :class="{active: activeDot===5}">
+									<div class="popup">
+										<p> Передний бампер с&nbsp;пластиковой накладкой</p>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</pane>
+				<pane :key="2" :size="100 - paneSize">
+					<div class="right">
+						<div class="img-block">
+							<img src="./img/curtain/car2.png" alt="">
+							<div class="dots">
+								<div class="dot" @click="activateDot(21)" :class="{active: activeDot===21}">
+									<div class="popup">
+										<img src="./img/curtain/dotL1.jpg" alt="">
+										<p>Задние фонари со&nbsp;светодиодными элементами</p>
+									</div>
+								</div>
+
+								<div class="dot" @click="activateDot(22)" :class="{active: activeDot===22}">
+									<div class="popup">
+										<p>Двухцветные легкосплавные диски 17”</p>
+									</div>
+								</div>
+								<div class="dot" @click="activateDot(23)" :class="{active: activeDot===23}">
+									<div class="popup">
+										<p>Светодиодные ходовые огни</p>
+									</div>
+								</div>
+								<div class="dot" @click="activateDot(24)" :class="{active: activeDot===24}">
+									<div class="popup">
+										<p>Серебристые рейлинги с&nbsp;надписью DUSTER</p>
+									</div>
+								</div>
+								<div class="dot" @click="activateDot(25)" :class="{active: activeDot===25}">
+									<div class="popup">
+										<p>Решетка радиатора с&nbsp;хромированными вставками</p>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</pane>
+
+			</splitpanes>
+		</div>
+	</div>
+</div>
+
+
+
+</body>
+</html>

@@ -10385,12 +10385,6 @@ small {
   @media (max-width: 991px) {
     .kaptur-newoptions-iframe {
       font-size: 9.6px; } }
-  .kaptur-newoptions-iframe iframe {
-    min-height: 0px;
-    height: 650px; }
-    @media (max-width: 991px) {
-      .kaptur-newoptions-iframe iframe {
-        height: 700px; } }
 
 .iframe-el {
   min-height: 0;
