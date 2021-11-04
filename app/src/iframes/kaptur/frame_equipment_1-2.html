@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport"
+		  content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<link rel="stylesheet" href="css/main.css">
+	<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js" defer></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.4.1/js/swiper.js" defer></script>
+	<script src="js/polyfill.js" defer></script>
+	<script src="js/main.js" defer></script>
+	<title>Frame 1</title>
+</head>
+<body>
+<div id="app">
+	<section class="comfort" :class="{show: canShow('.comfort', 0.35)}">
+		<div class="app_title">Наслаждайтесь комфортом</div>
+		<hr>
+		<div class="container">
+			<div class="right">
+				<div class="sliders">
+					<div class="gallery-top">
+						<div class="swiper-container">
+							<div class="swiper-wrapper">
+								<div class="swiper-slide"
+									 @click="showPopupImage('https://production.renault.ru/testkaptur/'+slide.galleryimage)"
+									 v-for="slide in gallery">
+									<div class="img" :style="{backgroundImage: 'url(img/comfort/'+slide.img+')'}"></div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="gallery-thumbs">
+						<div class="swiper-container">
+							<div class="swiper-wrapper">
+								<div class="swiper-slide" @mouseover="galleryTop.slideTo(0)">
+									<div class="img" style="background-image: url(img/comfort/interior.jpg)"></div>
+									<span>Обновленный интерьер</span>
+								</div>
+								<div class="swiper-slide" @mouseover="galleryTop.slideTo(1)">
+									<div class="img" style="background-image: url(img/comfort/komfort.jpg)"></div>
+									<span>Комфорт за рулем</span>
+								</div>
+								<div class="swiper-slide" @mouseover="galleryTop.slideTo(2)">
+									<div class="img" style="background-image: url(img/comfort/space.jpg)"></div>
+									<span>Пространство для пассажира и&nbsp;багажа</span>
+								</div>
+								<div class="swiper-slide" @mouseover="galleryTop.slideTo(3)">
+									<div class="img" style="background-image: url(img/comfort/tech.jpg)"></div>
+									<span>Инновации комфорта</span>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="left">
+				<transition name="info" mode="out-in">
+					<div class="info" v-if="activeGallerySlide===0">
+						<h3 class="forDesktop">Обновленный интерьер</h3>
+						<p>Мягкие и качественные материалы отделки интерьера создают ощущение уюта, а новое расположение клавиш управления интуитивно понятно и делает использование функций автомобиля в пути еще удобнее.</p>
+					</div>
+					<div class="info" v-if="activeGallerySlide===1">
+						<h3 class="forDesktop">Комфорт за рулем</h3>
+						<p>Почувствуйте новый уровень комфорта в салоне Renault KAPTUR! Современная центральная консоль делает салон эстетически сбалансированным и функциональным. С центральным подлокотником и двумя подстаканниками для напитков вы сможете еще удобнее разместиться в автомобиле. А для пассажиров второго ряда сидений предусмотрены отдельные USB-разъемы для зарядки личных устройств.</p>
+					</div>
+					<div class="info" v-if="activeGallerySlide===2">
+						<h3 class="forDesktop">Пространство для пассажира и багажа</h3>
+						<p>Выбирая Renault KAPTUR, вы выбираете комфорт. В удобном и практичном кроссовере могут разместиться до пяти человек. Объем багажного отделения составляет 387 л с возможностью увеличения до 1 200 л благодаря складывающимся сиденьям заднего ряда (в пропорции 1/3 и 2/3). Широкий проем (1002 мм), дополнительное освещение и возможность складывания задних сидений обеспечивают удобство загрузки в багажник. Дополнительные ниши для хранения, распределенные по всему салону, позволяют всегда иметь необходимые вещи под рукой.</p>
+					</div>
+					<div class="info" v-if="activeGallerySlide===3">
+						<h3 class="forDesktop">Инновации комфорта</h3>
+						<p>Управлять новым Renault KAPTUR стало еще удобнее. Зеркало заднего вида справится с яркими огнями автомобилей позади благодаря электрохромному покрытию. Круиз-контроль с ограничителем скорости сделает дальнюю дорогу комфортнее. <br><br> Внешнее освещение и стеклоочистители можно настроить на автоматическое включение и выключение. Благодаря электроусилителю и системе кругового обзора вы сможете легко маневрировать на парковке. И не беспокойтесь о сохранности боковых зеркал &mdash; они сложатся автоматически, как только вы припаркуете автомобиль и отойдете от него.</p>
+					</div>
+				</transition>
+			</div>
+		</div>
+	</section>
+</div>
+<script>
+
+	function pm(message) {
+		window.parent.postMessage(JSON.stringify(message), '*');
+	}
+	function scrollPageTo(selector, offs){
+		let to = document.querySelector(selector);
+		if (to){
+			let offset = to.getBoundingClientRect().top + window.pageYOffset + offs;
+			var message = {
+				type: 'scroll_to',
+				data: offset,
+				frameSrc: '/iframes/kaptur/frame_equipment_1-2.html'
+			};
+			pm(message);
+		}
+	}
+	function linkTo(link, blank=0){
+		var message = {
+			type: 'link_to',
+			data: {
+				link: link,
+				blank: blank
+			},
+			frameSrc: '/iframes/kaptur/frame_equipment_1-2.html'
+		};
+		pm(message);
+	}
+
+	function getMetrix(){
+		var message = {
+			type: 'get_metrix',
+			frameSrc: '/iframes/kaptur/frame_equipment_1-2.html'
+		};
+		pm(message);
+	}
+	function showPopupImage(src){
+		var message = {
+			type: 'show_popup_image',
+			imageSrc: src,
+			frameSrc: '/iframes/kaptur/frame_equipment_1-2.html'
+		};
+		pm(message);
+	}
+	function setHeight(){
+		var message = {
+			type: 'resize',
+			data: document.body.offsetHeight,
+			frameSrc: '/iframes/kaptur/frame_equipment_1-2.html'
+		};
+		pm(message);
+	}
+	window.addEventListener('resize', function () {
+		setHeight()
+	});
+	window.addEventListener('load', function () {
+		setHeight()
+		setInterval(function () {
+			setHeight()
+		}, 5000)
+	});
+
+
+</script>
+</body>
+</html>

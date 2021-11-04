@@ -1,6 +1,6 @@
 "use strict";
 
-new Vue({
+window.aplex = new Vue({
   el: '#app',
   data: {
     metrix: {},
@@ -129,7 +129,6 @@ new Vue({
     // БОЙ
     parallax: function parallax(elem, koef) {
       var offset = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : 0;
-
       if (document.documentElement.offsetWidth < 900) {
         offset = offset / 8;
         koef = koef / 3;
@@ -146,21 +145,20 @@ new Vue({
       }
     },
     canShow: function canShow(elem) {
-      
       var offset = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : 0;
       var target = document.querySelector(elem);
       if (target.classList.contains('show')) return true;
       var targetOffset = target.getBoundingClientRect().top;
       var sectorOffset = null; // насколько от верха экрана верх элемента в области
-      return true;
+      
       if (this.metrix.windowHeight + this.metrix.scrollTop > targetOffset + this.metrix.frameOffset) {
         sectorOffset = 1 - (targetOffset + this.metrix.frameOffset - this.metrix.scrollTop) / this.metrix.windowHeight;
-        console.log("Я отработал");
+
         if (sectorOffset > offset) {
           return true;
         }
 
-        return true;
+        return false;
       }
     },
     // ТЕСТ
@@ -391,37 +389,39 @@ new Vue({
     init_get_metrix: function init_get_metrix() {
       var _this4 = this;
 
-      // getMetrix();
-      // window.addEventListener("message", function () {
-      //   if (event.data) {
-      //     var message = JSON.parse(event.data);
+      getMetrix();
+      console.log(_this4.metrix);
+      
+      window.addEventListener("message", function (event) {
+        if (event.data) {
+          var message = JSON.parse(event.data);
 
-      //     if (message.type === 'metrix') {
-      //       _this4.metrix = message.data;
-      //     }
-      //   }
-      // });
-      /*this.metrix = {
-          frameOffset: 207,
-          scrollTop: window.pageYOffset,
-          windowHeight: 937,
-      }
-      window.addEventListener('scroll', ()=>{
-          this.metrix = {
-              frameOffset: 207,
-              scrollTop: window.pageYOffset,
-              windowHeight: 937,
+          if (message.type === 'metrix') {
+            _this4.metrix = message.data;
           }
-      })*/
+        }
+      });
+      // this.metrix = {
+      //     frameOffset: 207,
+      //     scrollTop: window.pageYOffset,
+      //     windowHeight: 937,
+      // }
+      // window.addEventListener('scroll', ()=>{
+      //     this.metrix = {
+      //         frameOffset: 207,
+      //         scrollTop: window.pageYOffset,
+      //         windowHeight: 937,
+      //     }
+      // })
     }
   },
   mounted: function mounted() {
     var _this5 = this;
-    console.log(this)
+
     window.addEventListener('load', function () {
       _this5.initComfortSliders();
 
-      //_this5.init_get_metrix();
+      _this5.init_get_metrix();
     });
     this.initMotorEvents();
   }
