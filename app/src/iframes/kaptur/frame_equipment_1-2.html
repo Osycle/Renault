@@ -23,10 +23,17 @@
 					<div class="gallery-top">
 						<div class="swiper-container">
 							<div class="swiper-wrapper">
-								<div class="swiper-slide"
-									 @click="showPopupImage('https://production.renault.ru/testkaptur/'+slide.galleryimage)"
-									 v-for="slide in gallery">
-									<div class="img" :style="{backgroundImage: 'url(img/comfort/'+slide.img+')'}"></div>
+								<div class="swiper-slide">
+									<div class="img" style="background-image: url(img/comfort/interior.jpg)"></div>
+								</div>
+								<div class="swiper-slide">
+									<div class="img" style="background-image: url(img/comfort/komfort.jpg)"></div>
+								</div>
+								<div class="swiper-slide">
+									<div class="img" style="background-image: url(img/comfort/space.jpg)"></div>
+								</div>
+								<div class="swiper-slide">
+									<div class="img" style="background-image: url(img/comfort/tech.jpg)"></div>
 								</div>
 							</div>
 						</div>

@@ -62,42 +62,25 @@
 
 
 <!-- SCRIPTS -->
-<script defer src="/js/plugins/jquery.min.js"></script>
-<script defer src="/js/plugins/bootstrap.min.js"></script>
-<script defer src="/js/plugins/aos.js"></script>
-<script defer src="/js/plugins/owl.carousel.min.js"></script>
-<script defer src="/js/plugins/jquery.fancybox.js"></script>
-<script defer src="/js/plugins/jquery.mmenu.all.js"></script>
-<script defer src="/js/plugins/smooth-scroll.js"></script>
-<script defer src="/js/plugins/ion.rangeSlider.min.js"></script>
-<script defer src="/js/plugins/ResizeSensor.min.js"></script>
-<script defer src="/js/plugins/theia-sticky-sidebar.min.js"></script>
-<script defer src="/js/plugins/swiper-bundle.min.js"></script>
-<script defer src="/js/plugins/jquery.responsiveTabs.js"></script>
-<script defer src="/js/plugins/flickity.js"></script>
+<script src="/js/plugins/jquery.min.js"></script>
+<script src="/js/plugins/bootstrap.min.js"></script>
+<script src="/js/plugins/aos.js"></script>
+<script src="/js/plugins/owl.carousel.min.js"></script>
+<script src="/js/plugins/jquery.fancybox.js"></script>
+<script src="/js/plugins/jquery.mmenu.all.js"></script>
+<script src="/js/plugins/smooth-scroll.js"></script>
+<script src="/js/plugins/ion.rangeSlider.min.js"></script>
+<script src="/js/plugins/ResizeSensor.min.js"></script>
+<script src="/js/plugins/theia-sticky-sidebar.min.js"></script>
+<script src="/js/plugins/swiper-bundle.min.js"></script>
+<script src="/js/plugins/jquery.responsiveTabs.js"></script>
+<script src="/js/plugins/flickity.js"></script>
 
-<script defer src="/js/plugins/jquery-ui/jquery-ui.min.js"></script> <!-- JQUERY UI -->
-<script defer src="/js/plugins/choices-js/public/assets/scripts/choices.min.js"></script><!-- Choices JS -->
-
-
-<script defer type="text/javascript">
+<script src="/js/plugins/jquery-ui/jquery-ui.min.js"></script> <!-- JQUERY UI -->
+<script src="/js/plugins/choices-js/public/assets/scripts/choices.min.js"></script><!-- Choices JS -->
 
 
-    // Подключение vue компонентов
-    Vue.component('multiselect', window.VueMultiselect.default)
 
-    Vue.filter('spaceBetweenNum', (price)=>{ 
-      if(!price)
-        return 0;
-      price += "";
-      var pattern = /(-?\d+)(\d{3})/;
-      while (pattern.test(price))
-        price = price.replace(pattern, "$1 $2");
-      
-      return price;      
-    })
-
-</script>
 	<title>Renault Uzbekistan</title>
 </head>
 
@@ -425,7 +408,7 @@
 					<div class="entry-header">
 						<div class="img-content">
 							<picture>
-								<img src="https://cdn.group.renault.com/ren/ru/main/new/kaptur-2.jpg.ximg.mediumx2.webp/fd0dd6960d.webp">
+								<img src="https://cdn.group.renault.com/ren/ru/kaptur/new/page_3.jpg.ximg.mediumx2.webp/47735bf32d.webp">
 							</picture>
 						</div>
 					</div>					
@@ -436,18 +419,13 @@
 					<div class="wrapper">
 						<div class="entry-header text-center box-lg-7 mh-auto mb-5">
 							<h1 class="mb-3">
-								<span class="text-x20 mobile:text-x15 lh-1">ОБОРУДОВАНИЕ RENAULT KAPTUR</span>
+								<div class="text-x20 mobile:text-x15 lh-1 mb-2">ОБОРУДОВАНИЕ</div>
+								<div class="text-x10 mobile:text-x8 lh-1 fw-2">RENAULT KAPTUR</div>
 							</h1>
 						</div>
 					</div>
 				</div>
 			</section>
-			<div class="iframe-area pb-10">
-				<iframe class="iframe-h iframe-el" src="/iframes/kaptur-equipment/iframe-kaptur-equipment.html" frameborder="0"></iframe>
-			</div>
-			<div class="iframe-area pv-8">
-				<iframe class="iframe-h iframe-el" src="/iframes/kaptur-equipment/iframe-kaptur-engine.html" frameborder="0"></iframe>
-			</div>
 			<section>
 				<div class="container pv-8">
 					<div class="entry-header box-lg-7 text-center mh-auto mb-8">
@@ -566,9 +544,6 @@
 					</div>
 				</div>
 			</section>
-			<div class="iframe-area pv-8">
-				<iframe class="iframe-h iframe-el" src="/iframes/kaptur-equipment/iframe-kaptur-forrussia.html" frameborder="0"></iframe>
-			</div>
 						<!-- <section>
 				<div class="container pv-8">
 					<div class="accordion-def desktop:ph-4" id="yur-accordion">
@@ -703,7 +678,26 @@
 	
 
 <script defer src="/js/main.js"></script>
+<script src="/js/postM.js"></script>
+<script defer type="text/javascript">
 
+
+  // Подключение vue компонентов
+  Vue.component('multiselect', window.VueMultiselect.default)
+
+  Vue.filter('spaceBetweenNum', (price)=>{ 
+    if(!price)
+      return 0;
+    price += "";
+    var pattern = /(-?\d+)(\d{3})/;
+    while (pattern.test(price))
+      price = price.replace(pattern, "$1 $2");
+    
+    return price;      
+  })
+
+
+</script>
 
 
 </body>

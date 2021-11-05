@@ -211,9 +211,9 @@
 		$(el).on("load", function(){
 			var h = this.contentDocument.body.offsetHeight;
 			$(this).css("min-height", h)
-			console.log(this.contentDocument.body.offsetHeight);
+			//console.log(this.contentDocument.body.offsetHeight);
 		})
-		console.log(el.contentDocument);
+		//console.log(el.contentDocument);
 	})
 	$(window).resize(function(){
 		$(".iframe-el").map(function(i, el){
