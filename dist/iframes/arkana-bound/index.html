@@ -23,7 +23,7 @@
       <div class="carVideo" ref="carVideo">
         <div class="textContent" v-if="isMobile">
           <transition-group name="show">
-            <div v-if="openedOn&lt;50" key="left">
+            <div v-if="openedOn<50" key="left">
               <h3>Покоряет города</h3>
               <p>Renault ARKANA готов к стремительному ритму города. Cистемы помощи водителю способствуют безопасному передвижению, а новая мультимедийная система EASY LINK поможет подобрать оптимальный маршрут и разнообразить время в трафике мегаполиса.</p>
             </div>
@@ -49,7 +49,7 @@
             </div>
           </div>
         </div>
-        <div class="centerCursor" v-if="isMobile" :style="{left:openedOn+'%'}" :class="{hide:openedOn&lt;3||openedOn&gt;97}">
+        <div class="centerCursor" v-if="isMobile" :style="{left:openedOn+'%'}" :class="{hide:openedOn<3||openedOn&gt;97}">
           <div class="cursor" :style="{top:offsetY+'%'}"></div>
         </div>
         <div class="right" data-image="img/roadCar/city_sky.jpg">
