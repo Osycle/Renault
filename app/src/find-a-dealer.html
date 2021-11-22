@@ -32,85 +32,63 @@
 							</picture>
 						</div>
 						<div class="desc-content">
-							<h1>ПРОГРАММА TRADE-IN</h1>
-							<p>Обменяйте свой текущий автомобиль на новый RENAULT быстро, комфортно и с ВЫГОДОЙ до 5 000 000 сум!</p>
+							<h1>ОФИЦИАЛЬНЫЕ ДИЛЕРЫ RENAULT В РОССИИ</h1>
+							<p>В режиме работы дилерских центров возможны изменения. Уточняйте актуальный режим работы через форму "Задать вопрос" или по телефону. Ответы на запросы через сайт могут поступать с задержкой.</p>
 						</div>
 					</div>					
 				</div>
 			</div>
-			<section>
+			<section class="dealers">
 				<div class="container pv-8">
-					<div class="entry-header text-center box-lg-5 mh-auto">
-						<h2>Что от вас требуется:</h2>
-					</div>
-					<div class="credit-steps mv-10">
-						<div class="credit-steps-items">
-							<figure>
-								<div class="img-content">
-									<picture>
-										<img src="/img/other/tradein/tradein-steps-1.svg">
-									</picture>
-								</div>
-								<div class="desc-content">
-									Юридическая чистота вашего транспортного средства (возраст и пробег автомобиля не принципиальны)
-								</div>
-							</figure>
-							<figure>
-								<div class="img-content">
-									<picture>
-										<img src="/img/other/tradein/tradein-steps-2.svg">
-									</picture>
-								</div>
-								<div class="desc-content">
-									Отсутствие серьезных повреждений кузова, оказывающих влияние на его геометрию
-								</div>
-							</figure>
-							<figure>
-								<div class="img-content">
-									<picture>
-										<img src="/img/other/tradein/tradein-steps-3.svg">
-									</picture>
-								</div>
-								<div class="desc-content">
-									Ваше желание поменять свой автомобиль на новый RENAULT быстро, удобно и выгодно 
-								</div>
-							</figure>
-						</div>
-					</div>
-				</div>
-			</section>
-			<section>
-				<div class="container pv-5">
 					<div class="wrapper">
-						<div class="entry-header text-center box-lg-5 mh-auto mb-8">
-							<h2>обмен по программе TRADE-IN</h2>
-						</div>
-						<div class="flex mv-3 mobile:fd-column desktop:fd-row-reverse">
-							<div class="fb-md-6 mv-3 desktop:mh-3">
-								<div class="img-content">
-									<picture>
-										<img src="/img/other/tradein/tradein-img-1.jpg">
-									</picture>
+						<div id="dealers-map" class="dealers-map">
+							<div class="dealers-map-wrapper">
+								<div class="map-bar">
+									<div class="cap-content">
+										20 дилерских центров найдено
+									</div>
+									<div class="item-content">
+										<div class="item" v-for="(item, key) in dealerships" :key="key">
+											<div class="item-wrapper">
+												<div class="mr-3 fsh-0">
+													<span class="i-marker">{{key+1}}</span>
+												</div>
+												<div>
+													<div class="_name mb-1">{{item.name}}</div>
+													<div class="_address mb-1"><a :href="'http://maps.yandex.ru/?text='+item.coords[0]+', '+item.coords[1]" target="_blank">{{item.address}}</a></div>
+													<div class="_phone mb-1"><a :href="'tel:'+item.phone"><u>Телефон: +{{item.phone | spacePhone}}</u></a></div>
+													<div class="more-panel mt-3">
+														<span class="link-def">
+															<a role="button" data-toggle="collapse" :href="'#t-'+key" class="fw-7">
+																<span>Узнать больше</span>
+															</a>
+														</span>
+														<div :id="'t-'+key" class="collapse fs-2-em">
+															<div class="pv-2">
+																<div class="fw-7">Услуги:</div>
+																<ul>
+																	<li v-for="(service, key) in item.services" :key="key">{{service}}</li>
+																</ul>
+															</div>
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
 								</div>
-							</div>
-							<div class="fb-md-6 mv-3 desktop:mh-3">
-								<div class="desc-content desktop:pr-10 li-mv-2">
-									<p class="text-x4-bu mb-4">ПРОГРАММА TRADE-IN</p>
-									<h3>Порядок обмена старого автомобиля на новый по программе Trade-in:</h3>
-									<br>
-									<ul>
-										<li>Приехать в дилерский центр RENAULT на своем автомобиле</li>
-										<li>Выбрать модель RENAULT, которую вы хотите приобрести</li>
-										<li>Пройти диагностику и оценку вашего автомобиля</li>
-										<li>Заключить договор на приобретение нового автомобиля RENAULT с учетом стоимости вашего автомобиля и дополнительной выгоды</li>
-										<li>Уехать на новом автомобиле RENAULT!</li>
-									</ul>
+								<div class="map-content m-t-30 relative">
+									<div id="ymap_ctrl_display" style="display: none; width: 100%; height: 100%; position: absolute; background-color: rgba(0, 0, 0, 0.5); z-index: 100; pointer-events: none;">
+										<div style="position: relative; top: 50%; left: 0; right: 0; color: white; text-align: center; font-size: 1.8em; pointer-events: none;">Чтобы изменить масштаб, прокручивайте карту, удерживая клавишу Ctrl.</div>
+									</div>
+									<div id="map"></div>
 								</div>
 							</div>
 						</div>
 					</div>
 				</div>
 			</section>
+
 			@@include('./app/src/components/_yur-accordion.html')
 		</main>
 		@@include('./app/src/components/_footer.html')
@@ -118,5 +96,89 @@
 	<!-- SCRIPTS -->
 	@@include('./app/src/components/_scripts_footer.html')
 </body>
+
+<script>
+	var v = new Vue({
+  	el: '#dealers-map',
+  	data: {
+			dealerships: []
+		},
+		mounted(){
+			var v = this;
+			this.dealerships = [
+				{
+					"name": "ROHAT RENAULT",
+					"address": "г. Ташкент, Бектемирский район, ТКАД-1 (напротив ЖБИ-2)",
+					"phone": "998993533226",
+					"coords": ["41.251831", "69.344402"],
+					"services": [
+						"Кузовной ремонт",
+						"Продажа з/ч и аксессуаров",
+						"Автосервис",
+						"Продажа новых автомобилей",
+						"Продажа автомобилей с пробегом"
+					]
+				},
+				{
+					"name": "SERGELI RENAULT",
+					"address": "Узбекистан, г.Ташкент, Сергелийский район, ул.Янги Сергели 7",
+					"phone": "998993533221",
+					"coords": ["41.236726", "69.214532"],
+					"services": [
+						"Кузовной ремонт",
+						"Продажа з/ч и аксессуаров",
+						"Автосервис",
+						"Продажа новых автомобилей",
+						"Продажа автомобилей с пробегом"
+					]
+				}
+			]
+			var dealerships = this.dealerships;
+
+			ymaps.ready(function() {
+				window.myMap = new ymaps.Map('map', {
+						center: [41.234893, 69.207893],
+						zoom: 11
+					}, {
+						searchControlProvider: 'yandex#search'
+					})
+
+					// Создаём макет содержимого.
+				var MyIconContentLayout = ymaps.templateLayoutFactory.createClass(
+						`<div class="marker-area">
+							<div class="marker-area-content">
+								<span>
+									$[properties.iconContent]
+								</span>
+							</div>
+						</div>`
+					)
+
+				for (let i = 0; i < dealerships.length; i++) {
+					const item = dealerships[i];
+					var myPlacemark = new ymaps.Placemark(item.coords, {
+						//hintContent: 'Собственный значок метки',
+						//balloonContent: 'Это красивая метка',
+						iconContent: i+1
+					}, {
+						// Опции.
+						iconLayout: 'default#imageWithContent', // Необходимо указать данный тип макета
+						//iconImageHref: 'https://www.kia.ru/images/map/map_pin.svg',
+						iconImageHref: '', // Своё изображение иконки метки.
+						iconImageSize: [36, 36], // Размеры метки.
+            iconContentLayout: MyIconContentLayout, // Макет содержимого.
+						iconImageOffset: [-18, -18] // Смещение левого верхнего угла иконки относительно её "ножки" (точки привязки)
+					})
+
+
+					myMap.geoObjects.add(myPlacemark)
+				}
+					
+
+			});
+
+		}
+	})
+</script>
 
 </html>
