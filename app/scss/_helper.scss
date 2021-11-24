@@ -342,7 +342,9 @@
 	}
 }
 
-
+img.of-cover, video.of-cover{object-fit: cover;}
+img.of-scale, video.of-cover{object-fit: scale-down;}
+img.of-contain, video.of-cover{object-fit: contain;}
 
 
 

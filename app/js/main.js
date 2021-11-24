@@ -43,7 +43,7 @@
 		  },
 		});
 
-		var swiper_def = new Swiper('.swiper-def', {
+		new Swiper('.swiper-compl', {
 		  // Optional parameters
 		  direction: 'horizontal',
 		  loop: false,
@@ -53,6 +53,34 @@
 			breakpoints: {
 				991: {
 					slidesPerView: 3
+				}
+			},
+			
+		  // If we need pagination
+		  pagination: {
+		    el: '.swiper-pagination',
+		  },
+		  // Navigation arrows
+		  navigation: {
+		    nextEl: '.swiper-btn-next',
+		    prevEl: '.swiper-btn-prev',
+		  },
+		  // And if we need scrollbar
+		  scrollbar: {
+		    el: '.swiper-scrollbar',
+		  },
+		});
+
+		new Swiper('.swiper-alone', {
+		  // Optional parameters
+		  direction: 'horizontal',
+		  loop: false,
+			slidesPerView: 1,
+			spaceBetween: 0,
+			//autoHeight: true,
+			breakpoints: {
+				991: {
+					slidesPerView: 1
 				}
 			},
 			

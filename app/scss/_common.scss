@@ -477,7 +477,9 @@ table {
 	border-radius: 15px;
 	border: 1px solid $color-gray-3;
 }
-
+.full-h{
+	height: 100%;
+}
 
 .fuller{
 	height: 100%;
@@ -938,7 +940,7 @@ input:focus, button:focus{
 	outline: transparent;
 }
 b{font-weight: 700;}
-strong{font-weight: 600;}
+strong{font-weight: 700;}
 bolder{
 	font-weight: 900;
 }
@@ -990,6 +992,9 @@ h1{
 	font-size: 3.5rem;
 	margin-bottom: 24px;
 	font-weight: 700;
+	@media (max-width: 991px){
+		font-size: 2.8rem;
+	}
 }
 h2{
 	font-size: 2.8rem;
@@ -1098,7 +1103,7 @@ hr{
 		margin-top: 0;
 	}
 	p, li{
-		font-size: em(18);
+		font-size: 1em;
 	}
 	p{
 		line-height: 156%;

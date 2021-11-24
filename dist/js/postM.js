@@ -1,4 +1,6 @@
 function listener(event) {
+  if(typeof event.data != "string")
+    return;
   if (event.data) {
     var message = JSON.parse(event.data);
     var iframe = document.querySelector('iframe[src="' + message.frameSrc + '"]');
