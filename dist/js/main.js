@@ -249,9 +249,11 @@
 		})
 	})
 	//s.contentDocument.body.clientHeight
-
+	$(function () {
+		$("select").selectize({});
 	});
-})(jQuery);
+
+});})(jQuery);
 
 var isWebkit = /Webkit/i.test(navigator.userAgent),
 		isChrome = /Chrome/i.test(navigator.userAgent),

@@ -7489,7 +7489,7 @@ table {
 .claf, [data-flicker]:before, .checkbox-style-1:before {
   content: " "; }
 
-.clafclear, .radio-style-1:before, .radio-style-2:before, .subdown .bg-shadow, .subdown-menu-items .item:not(:last-child):after, .hover-underline:before, .footer-menu ul:not([class]) a:before, .link-li-1 li:before, .credit-steps-items .img-content:before, .credit-steps-items .img-content:after {
+.clafclear, .radio-style-1:before, .radio-style-2:before, .subdown .bg-shadow, .subdown-menu-items .item:not(:last-child):after, .hover-underline:before, .footer-menu ul:not([class]) a:before, .link-li-1 li:before, .credit-steps-items .img-content:before, .credit-steps-items .img-content:after, .online-app nav a:before {
   content: " ";
   height: 100%;
   width: 100%;
@@ -10581,6 +10581,48 @@ ymaps .map-cluster {
   -webkit-box-pack: center;
   -ms-flex-pack: center;
   justify-content: center; }
+
+.online-app nav {
+  -webkit-box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+  font-weight: 600;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex; }
+  .online-app nav a {
+    display: block;
+    width: 25%;
+    padding: 16px 16px 11px 19px;
+    -ms-flex-negative: 0;
+    flex-shrink: 0;
+    border-left: 1px solid #f1f2f3;
+    border-right: 1px solid #f1f2f3;
+    position: relative;
+    -webkit-filter: grayscale(1);
+    filter: grayscale(1);
+    opacity: 0.8; }
+    .online-app nav a:before {
+      bottom: 0;
+      left: 0;
+      height: 6px;
+      background-color: #ffce33;
+      opacity: 0; }
+    .online-app nav a.active {
+      opacity: 1;
+      -webkit-filter: grayscale(0);
+      filter: grayscale(0); }
+      .online-app nav a.active:before {
+        opacity: 1; }
+  .online-app nav .num-content {
+    color: #ffce33;
+    margin-bottom: 10px;
+    font-size: 15px;
+    font-weight: 700;
+    line-height: 1; }
+  .online-app nav .desc-content {
+    color: black;
+    font-size: 13px;
+    text-transform: uppercase; }
 
 /* 
 		_footer.scss

@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="description" content="">
+	@@include('./app/src/components/_favicons.html')
+	@@include('./app/src/components/_scripts_head.html')
+	<title>Renault Uzbekistan</title>
+</head>
+
+<body>
+
+	<div id="page">
+		@@include('./app/src/components/_header.html')
+		<main class="main" data-aos="fade" id="main">
+			<div class="nav-sub">
+				<div class="wrapper link-li-1">
+					<ul class="jc-center">
+						<li><a href="/service.html">СПЕЦИАЛЬНЫЕ ПРЕДЛОЖЕНИЯ</a></li>
+					</ul>
+				</div>
+			</div>
+			<div class="bnr-page">
+				<div class="wrapper">
+					<div class="entry-header">
+						<div class="img-content">
+							<picture class="pic-absolute is-covered opacity-3">
+								<img src="/img/other/online-app/online-app-bnr.webp">
+							</picture>
+						</div>
+						<div class="desc-content">
+							<h1>ОНЛАЙН-ЗАПИСЬ НА СЕРВИС</h1>
+							<div class="text-summary">ознакомьтесь с дилерами-участниками специальных предложений и запишитесь на сервис к официальному дилеру Renault в режиме онлайн, ведь это просто, удобно и выгодно!  </div>
+						</div>
+					</div>					
+				</div>
+			</div>
+			<section class="online-app">
+				<div class="container pv-8">
+					<div class="wrapper-nav">
+						<nav>
+							<a href="javascript:;" class="active">
+								<div class="num-content">1.</div>
+								<div class="desc-content"><span class="text">Ваш автомобиль</span></div>
+							</a>
+							<a href="javascript:;">
+								<div class="num-content">2.</div>
+								<div class="desc-content"><span class="text">РАСЧЕТ СТОИМОСТИ</span></div>
+							</a>
+							<a href="javascript:;">
+								<div class="num-content">3.</div>
+								<div class="desc-content"><span class="text">ВРЕМЯ И МЕСТО</span></div>
+							</a>
+							<a href="javascript:;">
+								<div class="num-content">4.</div>
+								<div class="desc-content"><span class="text">ЗАПИСЬ</span></div>
+							</a>
+						</nav>
+					</div>
+					<div class="wrapper-options">
+						<div class="step-1">
+							<h3>Параметры вашего автомобиля</h3> 
+							<br>
+							<div>
+								<select name="" id="" class="js-choice"></select>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+		</main>
+		@@include('./app/src/components/_footer.html')
+	</div>
+	<!-- SCRIPTS -->
+	@@include('./app/src/components/_scripts_footer.html')
+</body>
+
+</html>
