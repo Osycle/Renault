@@ -235,6 +235,32 @@
   multiDefault();
 
 
+	$("form").validate({
+		rules: {
+			name: {
+				required: true,
+				minlength: 2
+			}
+		},
+		messages: {
+			iagree:{
+				required: "Поставьте галочку",
+			},
+			phone: {
+				required: "Введите номер телефона",
+				minlength: "Не менее 12-ти цифр"
+			},
+			name: {
+				minlength: "Введите не менее 2-х символов в поле 'Имя'"
+			},
+			email: {
+				required: "Поле 'Email' обязательно к заполнению",
+				email: "Необходим формат адреса email"
+			},
+		}
+	})
+
+
 	$(".iframe-el").map(function(i, el){
 		$(el).on("load", function(){
 			var h = this.contentDocument.body.offsetHeight;
@@ -248,10 +274,14 @@
 			$(el).trigger("load");
 		})
 	})
-	//s.contentDocument.body.clientHeight
-	$(function () {
-		$("select").selectize({});
-	});
+
+	/* SELECT2 */
+	if ( $(".js-select").length )
+		$(".js-select").select2({
+			placeholder: true,
+			minimumResultsForSearch: Infinity,
+			allowClear: false
+		});
 
 });})(jQuery);
 
