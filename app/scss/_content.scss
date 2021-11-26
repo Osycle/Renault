@@ -362,22 +362,26 @@ small {
       display: none;
     }
     .img-content {
-      position: absolute;
-      max-width: none;
-      height: 100%;
+      display: flex;
+      align-items: flex-end;
       img {
-        width: auto;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: bottom;
       }
     }
     .text-content {
       height: 420px;
       top: 0;
       width: 100%;
+      padding-top: 40px;
       padding-left: 20px;
       padding-right: 20px;
       // left: 0;
       transform: none;
       position: relative;
+      align-items: flex-start;
     }
     h1 {
       margin-bottom: 0;

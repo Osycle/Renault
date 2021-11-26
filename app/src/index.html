@@ -24,12 +24,13 @@
 						<div class="swiper-slide">
 				    	<div class="slide-wrapper">
 					    	<div class="img-content">
-					    		<video class="is-covered" src="/img/other/index/bnr-arkana.mp4" type="video/mp4" muted="muted" autoplay="autoplay" loop="loop"></video>
+									<video class="is-covered" v-if="desktop" src="/img/other/index/bnr-arkana.mp4" type="video/mp4" muted="muted" autoplay="autoplay" loop="loop"></video>
+									<img v-if="!desktop" src="/img/other/index/bnr-arkana-mobile.webp" alt="">
 					    	</div>
 					    	<div class="text-content">
 					    		<div class="desc-content">
 						    		<h1>Renault ARKANA</h1>
-						    		<p></p>
+						    		<p>место силы</p>
 						    		<span class="btn-def mt-5">
 						    			<a href="/personal-cars/arkana.html">подробнее</a>
 						    		</span>
@@ -40,7 +41,8 @@
 				    <div class="swiper-slide">
 				    	<div class="slide-wrapper">
 					    	<div class="img-content">
-					    		<video class="is-covered" src="/img/other/index/bnr-5.mp4" type="video/mp4" muted="muted" autoplay="autoplay" loop="loop"></video>
+					    		<video class="is-covered" v-if="desktop" src="/img/other/index/bnr-5.mp4" type="video/mp4" muted="muted" autoplay="autoplay" loop="loop"></video>
+									<img v-if="!desktop" src="/img/other/index/bnr-kaptur-mobile.webp" alt="">
 					    	</div>
 					    	<div class="text-content">
 					    		<div class="desc-content">
@@ -56,12 +58,15 @@
 				    <div class="swiper-slide">
 				    	<div class="slide-wrapper">
 					    	<div class="img-content">
-					    		<video class="is-covered" src="/img/other/index/bnr-1.mp4" type="video/mp4" muted="muted" autoplay="autoplay" loop="loop"></video>
+					    		<video class="is-covered" v-if="desktop" src="/img/other/index/bnr-1.mp4" type="video/mp4" muted="muted" autoplay="autoplay" loop="loop"></video>
+									<img v-if="!desktop" src="/img/other/index/bnr-duster-mobile.webp" alt="">
 					    	</div>
 					    	<div class="text-content">
 					    		<div class="desc-content">
 						    		<h1>Новый Renault Duster</h1>
-										<p><span class="soon-text">Скоро</span></p>
+						    		<span class="btn-def mt-5">
+						    			<a href="/personal-cars/newduster.html">подробнее</a>
+						    		</span>
 					    		</div>
 					    	</div>
 				    	</div>

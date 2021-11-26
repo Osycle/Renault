@@ -283,6 +283,10 @@
 			allowClear: false
 		});
 
+		$("[hidden-sm]").map(function(i, el){
+			console.log(el.remove())
+		})
+
 });})(jQuery);
 
 var isWebkit = /Webkit/i.test(navigator.userAgent),
@@ -350,3 +354,23 @@ function spaceBetweenNum(str, char) {
 		str = str.replace(pattern, "$1"+char+"$2");
 	return str;
 }
+
+
+
+
+
+
+new Vue({
+	el: '.swiper',
+	data: {
+		desktop: false,
+	},
+	mounted(){
+		var v = this
+		v.desktop = window.innerWidth > 992
+		$(window).resize(function(){
+			v.desktop = window.innerWidth > 992
+		})
+	}
+})
+	

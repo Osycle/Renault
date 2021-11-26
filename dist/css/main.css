@@ -9372,20 +9372,32 @@ small {
     .bnr .swiper-btns {
       display: none; }
     .bnr .img-content {
-      position: absolute;
-      max-width: none;
-      height: 100%; }
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-align: end;
+      -ms-flex-align: end;
+      align-items: flex-end; }
       .bnr .img-content img {
-        width: auto; }
+        width: 100%;
+        height: 100%;
+        -o-object-fit: cover;
+        object-fit: cover;
+        -o-object-position: bottom;
+        object-position: bottom; }
     .bnr .text-content {
       height: 420px;
       top: 0;
       width: 100%;
+      padding-top: 40px;
       padding-left: 20px;
       padding-right: 20px;
       -webkit-transform: none;
       transform: none;
-      position: relative; }
+      position: relative;
+      -webkit-box-align: start;
+      -ms-flex-align: start;
+      align-items: flex-start; }
     .bnr h1, .bnr .h1 {
       margin-bottom: 0; }
     .bnr .desc-content {
