@@ -81,6 +81,8 @@ $gradient-gray-2: linear-gradient(to bottom, #e8e8e8, white);
 .bg-color-special-1{background-color: $color-special-1;}
 .bg-black-fill{background-color: #131313}
 
+html .bg-color-transparent{background-color: transparent;}
+
 .hr-color-1{
 	border-color: #c4c4c4;
 }

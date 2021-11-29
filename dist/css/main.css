@@ -6697,6 +6697,9 @@ tbody.collapse.in {
 .bg-black-fill {
   background-color: #131313; }
 
+html .bg-color-transparent {
+  background-color: transparent; }
+
 .hr-color-1 {
   border-color: #c4c4c4; }
 
@@ -10675,6 +10678,28 @@ ymaps .map-cluster {
   max-width: 610px;
   margin-left: auto;
   margin-right: auto; }
+
+.conf-steps-nav ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%; }
+
+.conf-steps-nav li {
+  list-style: none; }
+  .conf-steps-nav li a {
+    color: white;
+    background-color: #3e3f40;
+    height: 48px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center; }
 
 /* 
 		_footer.scss
