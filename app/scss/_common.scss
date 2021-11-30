@@ -390,7 +390,7 @@ table {
 
 
 [class*="hover-color"] a, 
-[class*="hover-underline"] a, 
+[class*="hover-underline-def"] a, 
 [role="button"]
 	{transition: all 0.3s ease-in-out;}
 
@@ -411,7 +411,7 @@ table {
 	a:hover{color: $color-4;}
 	[role="button"]:hover{color: $color-4;}
 }
-.hover-underline a:hover{text-decoration: underline;}
+.hover-underline-def a:hover{text-decoration: underline;}
 
 .hover-img{
 	img{
@@ -936,6 +936,12 @@ hr{
 	&.style-1{
 		height: 1px;
 		background-color: black;
+		border: none;
+		width: 50px;
+	}
+	&.style-2{
+		height: 4px;
+		background-color: $color-1;
 		border: none;
 		width: 50px;
 	}

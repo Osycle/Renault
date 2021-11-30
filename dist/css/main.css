@@ -7376,7 +7376,7 @@ table {
     background-color: #f6f6f6; }
 
 [class*="hover-color"] a,
-[class*="hover-underline"] a,
+[class*="hover-underline-def"] a,
 [role="button"] {
   -webkit-transition: all 0.3s ease-in-out;
   transition: all 0.3s ease-in-out; }
@@ -7405,7 +7405,7 @@ table {
 .hover-color-4 [role="button"]:hover {
   color: #95c12b; }
 
-.hover-underline a:hover, .footer-menu ul:not([class]) a a:hover {
+.hover-underline-def a:hover {
   text-decoration: underline; }
 
 .hover-img img {
@@ -7492,7 +7492,7 @@ table {
 .claf, [data-flicker]:before, .checkbox-style-1:before {
   content: " "; }
 
-.clafclear, .radio-style-1:before, .radio-style-2:before, .subdown .bg-shadow, .subdown-menu-items .item:not(:last-child):after, .hover-underline:before, .footer-menu ul:not([class]) a:before, .link-li-1 li:before, .credit-steps-items .img-content:before, .credit-steps-items .img-content:after, .online-app nav a:before, .select2-container--default [class*="_arrow"]:after {
+.clafclear, .radio-style-1:before, .radio-style-2:before, .subdown .bg-shadow, .subdown-menu-items .item:not(:last-child):after, .hover-underline a:before, .footer-menu ul:not([class]) a a:before, .hover-underline .this-btn:before, .footer-menu ul:not([class]) a .this-btn:before, .link-li-1 li:before, .credit-steps-items .img-content:before, .credit-steps-items .img-content:after, .online-app nav a:before, .select2-container--default [class*="_arrow"]:after {
   content: " ";
   height: 100%;
   width: 100%;
@@ -7859,6 +7859,11 @@ hr {
   hr.style-1 {
     height: 1px;
     background-color: black;
+    border: none;
+    width: 50px; }
+  hr.style-2 {
+    height: 4px;
+    background-color: #efdf00;
     border: none;
     width: 50px; }
 
@@ -9100,12 +9105,11 @@ small {
     bottom: 0;
     left: 0; }
 
-.hover-underline, .footer-menu ul:not([class]) a {
+.hover-underline a, .footer-menu ul:not([class]) a a, .hover-underline .this-btn, .footer-menu ul:not([class]) a .this-btn {
   position: relative;
   line-height: 100%; }
-  .hover-underline *, .footer-menu ul:not([class]) a * {
-    vertical-align: middle; }
-  .hover-underline:before, .footer-menu ul:not([class]) a:before {
+  .hover-underline a:before, .footer-menu ul:not([class]) a a:before, .hover-underline .this-btn:before, .footer-menu ul:not([class]) a .this-btn:before {
+    display: inline-block;
     height: 1px;
     background-color: #000;
     bottom: -5px;
@@ -9113,7 +9117,7 @@ small {
     width: 0;
     -webkit-transition: 0.35s ease;
     transition: 0.35s ease; }
-  .hover-underline:hover:before, .footer-menu ul:not([class]) a:hover:before {
+  .hover-underline a:hover:before, .footer-menu ul:not([class]) a a:hover:before, .hover-underline .this-btn:hover:before, .footer-menu ul:not([class]) a .this-btn:hover:before {
     width: 100%; }
 
 .img-contain img {
@@ -10683,11 +10687,15 @@ ymaps .map-cluster {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  width: 100%; }
+  width: 100%;
+  overflow: hidden; }
 
 .conf-steps-nav li {
-  list-style: none; }
-  .conf-steps-nav li a {
+  list-style: none;
+  width: 100%;
+  position: relative; }
+  .conf-steps-nav li .this-btn {
+    text-transform: uppercase;
     color: white;
     background-color: #3e3f40;
     height: 48px;
@@ -10699,7 +10707,43 @@ ymaps .map-cluster {
     align-items: center;
     -webkit-box-pack: center;
     -ms-flex-pack: center;
-    justify-content: center; }
+    justify-content: center;
+    font-size: 10px;
+    border: none;
+    width: 100%; }
+  .conf-steps-nav li:before, .conf-steps-nav li:after {
+    content: " ";
+    position: absolute;
+    top: 50%;
+    left: 100%;
+    display: block;
+    width: 0;
+    height: 0;
+    border-top: 50px solid transparent;
+    border-bottom: 50px solid transparent;
+    border-left: 20px solid transparent;
+    margin-top: -50px;
+    margin-left: -21px; }
+  .conf-steps-nav li:before {
+    z-index: 1;
+    margin-left: -20px;
+    border-left-color: #d9d9d6; }
+  .conf-steps-nav li:after {
+    border-left-color: #3e3f40;
+    z-index: 2; }
+  .conf-steps-nav li.active {
+    z-index: 2; }
+    .conf-steps-nav li.active .this-btn {
+      background-color: black; }
+    .conf-steps-nav li.active:after {
+      border-left-color: black; }
+    .conf-steps-nav li.active:before {
+      border-top-color: #3e3f40;
+      border-bottom-color: #3e3f40; }
+
+@media (min-width: 992px) {
+  .news-items figure:nth-child(5n+4), .news-items figure:nth-child(5n+5) {
+    width: 50%; } }
 
 /* 
 		_footer.scss
