@@ -7663,6 +7663,12 @@ div.btn-style, div.btn-def, div.btn-opacity {
   .btn-def:hover, .btn-def.hovered {
     background-color: #efdf00;
     color: #000000; }
+  .btn-def.reverse {
+    background-color: #efdf00;
+    color: black; }
+    .btn-def.reverse:hover {
+      background-color: black;
+      color: white; }
   .btn-def:active {
     border-color: transparent;
     -webkit-transform: translateY(2px);

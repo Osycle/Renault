@@ -659,7 +659,14 @@ div.btn-style{
 		background-color: $color-1;
 		color: $color-2;
 	}
-
+	&.reverse{
+		background-color: $color-1;
+		color: black;
+		&:hover{
+			background-color: black;
+			color: white;
+		}
+	}
 	&:active{
 		border-color: transparent;
 		transform: translateY(2px);
