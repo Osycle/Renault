@@ -62,8 +62,8 @@
 		  },
 		  // Navigation arrows
 		  navigation: {
-		    nextEl: '.swiper-btn-next',
-		    prevEl: '.swiper-btn-prev',
+		    nextEl: '.swiper-button-next',
+		    prevEl: '.swiper-button-prev',
 		  },
 		  // And if we need scrollbar
 		  scrollbar: {
@@ -287,6 +287,8 @@
 			console.log(el.remove())
 		})
 
+
+
 });})(jQuery);
 
 var isWebkit = /Webkit/i.test(navigator.userAgent),
@@ -360,17 +362,18 @@ function spaceBetweenNum(str, char) {
 
 
 
-new Vue({
-	el: '.swiper',
-	data: {
-		desktop: false,
-	},
-	mounted(){
-		var v = this
-		v.desktop = window.innerWidth > 992
-		$(window).resize(function(){
-			v.desktop = window.innerWidth > 992
-		})
-	}
-})
-	
+
+			
+// new Vue({
+// 	el: '.swiper',
+// 	data: {
+// 		desktop: false,
+// 	},
+// 	mounted(){
+// 		var v = this
+// 		v.desktop = window.innerWidth > 992
+// 		$(window).resize(function(){
+// 			v.desktop = window.innerWidth > 992
+// 		})
+// 	}
+// })
