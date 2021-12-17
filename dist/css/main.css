@@ -10751,6 +10751,21 @@ ymaps .map-cluster {
   .news-items figure:nth-child(5n+4), .news-items figure:nth-child(5n+5) {
     width: 50%; } }
 
+@media (min-width: 992px) {
+  .wa-advantages .cell {
+    border-left: 1px solid #cccccc; }
+    .wa-advantages .cell .flex {
+      margin-left: 20px; }
+    .wa-advantages .cell:nth-child(1) {
+      border-left: none; } }
+
+@media (max-width: 991px) {
+  .wa-advantages .cell .desc-content {
+    padding-bottom: 40px;
+    border-bottom: 1px solid #ccc; }
+  .wa-advantages .cell:nth-last-child(1) .desc-content {
+    border-bottom: none; } }
+
 /* 
 		_footer.scss
 */

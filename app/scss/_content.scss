@@ -1729,3 +1729,29 @@ ymaps .map-cluster{
      }
    }
  }
+ .wa-advantages{
+	@media (min-width: 992px){
+		.cell{
+			border-left: 1px solid #cccccc;
+			.flex{
+				margin-left: 20px;
+			}
+			&:nth-child(1){
+				border-left: none;
+			}
+		}
+	}
+	@media (max-width: 991px){
+		.cell{
+			.desc-content{
+				padding-bottom: 40px;
+				border-bottom: 1px solid #ccc;
+			}
+			&:nth-last-child(1){
+				.desc-content{
+					border-bottom: none;
+				}
+			}
+		}
+	}
+}
