@@ -797,6 +797,30 @@ small {
     }
   }
 }
+.index-news{
+  .index-news-items{
+    figure{
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      .desc-content{
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+      }
+    }
+  }
+}
+.form-success-block{
+	display: none;
+	&.active{
+		display: block;
+	}
+}
+.pe-none{
+	pointer-events: none;
+}
 .credits-partners-items{
 	margin-left: -15px;
 	margin-right: -15px;
