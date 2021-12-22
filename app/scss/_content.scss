@@ -917,17 +917,23 @@ small {
   @media (max-width: 991px) {
     flex-direction: column;
     figure {
+      margin-top: 20px;
+      margin-bottom: 20px;
       max-width: none;
       min-height: 80px;
       display: flex;
+      flex-direction: column;
+      justify-content: center;
       //align-items: center;
-      text-align: left;
+      text-align: center;
       .desc-content {
         display: flex;
         align-items: center;
+        flex-direction: column;
+        justify-content: center;
       }
       .img-content {
-        justify-content: flex-start;
+        justify-content: center;
         margin-bottom: 0;
         //margin-top: 10px;
         //margin-bottom: 10px;

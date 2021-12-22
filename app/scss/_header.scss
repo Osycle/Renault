@@ -343,8 +343,8 @@ $header-min-menu: 60px;
 		top: -15px;
 		right: -15px;
 		&:hover{
-			&:after{
-				color: white;
+			&:after, &:before{
+				background-color: white;
 			}
 		}
 		&:after, &:before{
