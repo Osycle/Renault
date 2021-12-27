@@ -16,27 +16,18 @@
 	<div id="page">
 		@@include('./app/src/components/_header.html')
 		<main class="main" data-aos="fade" id="main">
-			<div id="configurator">
+			<div id="configurator" class="configurator">
 				<div class="nav-sub">
 					<div class="conf-steps-nav">
 						<ul class="list">
-							<li class="active"><button type="button" class="this-btn">01. Комплектация</button></li>
-							<li><button type="button" class="this-btn">02. Двигатель</button></li>
-							<li><button type="button" class="this-btn">03. Дизайн</button></li>
-							<li><button type="button" class="this-btn">04. Опции</button></li>
-							<li><button type="button" class="this-btn">05. Аксессуары</button></li>
-							<li><button type="button" class="this-btn">06. Результат</button></li>
+							<li :class="{'active': current_step == step.step_number}" v-for="(step, key) in steps" :key="key">
+								<button type="button" class="this-btn" @click="current_step = step.step_number">0{{key+1}}. {{step.name}}</button>
+							</li>
 						</ul>
-					</div>
-					<div class="wrapper link-li-1">
-						<div>
-							<div>Цена конфигурации:</div>
-							<div>1 394 000 сум</div>
-						</div>
 					</div>
 				</div>
 				<section class="conf">
-					<div class="" v-if="current_step == 1">
+					<div class="step-1" v-if="current_step == 1">
 						<div class="container pv-8">
 							<div class="swiper-def swiper-compl">
 								<div class="swiper-wrapper model-complectations-items bg-color-transparent">
@@ -134,6 +125,158 @@
 							</div>
 						</div>
 					</div>
+					<div class="step-2" v-if="current_step == 2">
+						<div class="container pv-8">
+							<div class="swiper-def">
+								<div class="swiper-wrapper model-complectations-items bg-color-transparent">
+									<div class="swiper-slide">
+										<figure>
+											<div class="img-content">
+												<picture>
+													<img src="/img/other/arkana/arkana-4-2.webp" alt="">
+												</picture>
+											</div>
+											<div class="desc-content ph-5">
+												<div class="text-content">
+													<div class="title-content text-center mv-3">
+														<div class="text-x8-b">Life</div>
+														<div class="text-x3">Life</div>
+														<div class="text-x3">Цена от 239 046 500 сум</div>
+													</div>
+													<div class="mv-6">
+														<div class="mb-1">Двигатель:</div>
+														<div class="text-x4-b">1,6 л, 114 л. с., 4х2, МКП5</div>
+													</div>
+												</div>
+												<div class="btn-content mv-3 mobile:ph-5 desktop:ph-7">
+													<div class="btn-def hovered mv-2">
+														<a href="">выбрать</a>
+													</div>
+												</div>
+											</div>
+										</figure>
+									</div>
+									<div class="swiper-slide">
+										<figure>
+											<div class="img-content">
+												<picture>
+													<img src="/img/other/arkana/arkana-4-2.webp" alt="">
+												</picture>
+											</div>
+											<div class="desc-content ph-5">
+												<div class="text-content">
+													<div class="title-content text-center mv-3">
+														<div class="text-x8-b">Life</div>
+														<div class="text-x3">Life</div>
+														<div class="text-x3">Цена от 239 046 500 сум</div>
+													</div>
+													<div class="mv-6">
+														<div class="mb-1">Двигатель:</div>
+														<div class="text-x4-b">1,6 л, 114 л. с., 4х2, МКП5</div>
+													</div>
+												</div>
+												<div class="btn-content mv-3 mobile:ph-5 desktop:ph-7">
+													<div class="btn-def hovered mv-2">
+														<a href="">выбрать</a>
+													</div>
+												</div>
+											</div>
+										</figure>
+									</div>
+									<div class="swiper-slide">
+										<figure>
+											<div class="img-content">
+												<picture>
+													<img src="/img/other/arkana/arkana-4-2.webp" alt="">
+												</picture>
+											</div>
+											<div class="desc-content ph-5">
+												<div class="text-content">
+													<div class="title-content text-center mv-3">
+														<div class="text-x8-b">Life</div>
+														<div class="text-x3">Life</div>
+														<div class="text-x3">Цена от 239 046 500 сум</div>
+													</div>
+													<div class="mv-6">
+														<div class="mb-1">Двигатель:</div>
+														<div class="text-x4-b">1,6 л, 114 л. с., 4х2, МКП5</div>
+													</div>
+												</div>
+												<div class="btn-content mv-3 mobile:ph-5 desktop:ph-7">
+													<div class="btn-def hovered mv-2">
+														<a href="">выбрать</a>
+													</div>
+												</div>
+											</div>
+										</figure>
+									</div>
+									<div class="swiper-slide">
+										<figure>
+											<div class="img-content">
+												<picture>
+													<img src="/img/other/arkana/arkana-4-2.webp" alt="">
+												</picture>
+											</div>
+											<div class="desc-content ph-5">
+												<div class="text-content">
+													<div class="title-content text-center mv-3">
+														<div class="text-x8-b">Drive</div>
+														<div class="text-x3">Drive</div>
+														<div class="text-x3">Цена от 262 759 200 сум</div>
+													</div>
+													<div class="mv-6">
+														<div class="mb-1">Двигатель:</div>
+														<div class="text-x4-b">1,6 л, 114 л. с., 4х2, CVT X-Tronic</div>
+													</div>
+												</div>
+												<div class="btn-content mv-3 mobile:ph-5 desktop:ph-7">
+													<div class="btn-def hovered mv-2">
+														<a href="">выбрать</a>
+													</div>
+												</div>
+											</div>
+										</figure>
+									</div>
+									<div class="swiper-slide">
+										<figure>
+											<div class="img-content">
+												<picture>
+													<img src="/img/other/arkana/arkana-4-3.webp" alt="">
+												</picture>
+											</div>
+											<div class="desc-content ph-5">
+												<div class="text-content">
+													<div class="title-content text-center mv-3">
+														<div class="text-x8-b">Style</div>
+														<div class="text-x3">Style</div>
+														<div class="text-x3">Цена от 281 947 800 сум</div>
+													</div>
+													<div class="mv-6">
+														<div class="mb-1">Двигатель:</div>
+														<div class="text-x4-b">1,6 л, 114 л. с., 4х2, CVT X-Tronic</div>
+													</div>
+												</div>
+												<div class="btn-content mv-3 mobile:ph-5 desktop:ph-7">
+													<div class="btn-def hovered mv-2">
+														<a href="">выбрать</a>
+													</div>
+												</div>
+											</div>
+										</figure>
+									</div>
+
+								</div>
+								
+								<div class="swiper-pagination"></div>
+							
+								<div class="swiper-btns">
+									<div class="swiper-button swiper-button-prev"></div>
+									<div class="swiper-button swiper-button-next"></div>
+								</div>
+							
+							</div>
+						</div>
+					</div>
 				</section>
 			</div>
 			<!-- Vue scripts -->
@@ -142,7 +285,60 @@
 					el: "#configurator",
 					data: {
 						current_step: 1,
-						models: null
+						models: null,
+						steps: [
+							{ 
+								name: "Комплектация",
+								step_number: 1
+							},
+							{ 
+								name: "Двигатель",
+								step_number: 2
+							},
+							{ 
+								name: "Дизайн",
+								step_number: 3
+							},
+							{ 
+								name: "Опции",
+								step_number: 4
+							},
+							{ 
+								name: "Аксессуары",
+								step_number: 5
+							},
+							{ 
+								name: "Результат",
+								step_number: 6
+							},
+						],
+						
+					},
+					watch: {
+						current_step(){
+							setTimeout(() => {
+								new Swiper('.step-2 .swiper-def', {
+									direction: 'horizontal',
+									loop: false,
+									slidesPerView: 1,
+									spaceBetween: 25,
+									//autoHeight: true,
+									observer: true,
+									breakpoints: {
+										991: {
+											slidesPerView: 4
+										}
+									},
+									// pagination: {
+									// 	el: '.swiper-pagination',
+									// },
+									// scrollbar: {
+									// 	el: '.swiper-scrollbar',
+									// },
+								});
+							}, 1);
+							console.log(this, "watch");
+						}
 					},
 					async mounted(){
 						console.log( axios)

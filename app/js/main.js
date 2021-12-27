@@ -42,34 +42,34 @@
 		    el: '.swiper-scrollbar',
 		  },
 		});
-
-		new Swiper('.swiper-compl', {
-		  // Optional parameters
-		  direction: 'horizontal',
-		  loop: false,
-			slidesPerView: 1,
-			spaceBetween: 25,
-			//autoHeight: true,
-			breakpoints: {
-				991: {
-					slidesPerView: 3
-				}
-			},
-			
-		  // If we need pagination
-		  pagination: {
-		    el: '.swiper-pagination',
-		  },
-		  // Navigation arrows
-		  navigation: {
-		    nextEl: '.swiper-button-next',
-		    prevEl: '.swiper-button-prev',
-		  },
-		  // And if we need scrollbar
-		  scrollbar: {
-		    el: '.swiper-scrollbar',
-		  },
-		});
+		window.swiperComplInit = function(){
+			var swiperThat = new Swiper('.swiper-compl', {
+				direction: 'horizontal',
+				loop: false,
+				slidesPerView: 1,
+				spaceBetween: 25,
+				//autoHeight: true,
+				observer: true,
+				breakpoints: {
+					991: {
+						slidesPerView: 3
+					}
+				},
+				pagination: {
+					el: '.swiper-pagination',
+				},
+				navigation: {
+					nextEl: '.swiper-button-next',
+					prevEl: '.swiper-button-prev',
+				},
+				scrollbar: {
+					el: '.swiper-scrollbar',
+				},
+			});
+			console.log(swiperThat);
+			return swiperThat;
+		}
+		swiperComplInit();
 
 		new Swiper('.swiper-alone', {
 		  // Optional parameters
@@ -94,6 +94,24 @@
 		    prevEl: '.swiper-btn-prev',
 		  },
 		  // And if we need scrollbar
+		  scrollbar: {
+		    el: '.swiper-scrollbar',
+		  },
+		});
+
+
+		new Swiper('.swiper-def', {
+		  // Optional parameters
+		  direction: 'horizontal',
+		  loop: false,
+			slidesPerView: 1,
+		  pagination: {
+		    el: '.swiper-pagination',
+		  },
+		  navigation: {
+		    nextEl: '.swiper-button-next',
+		    prevEl: '.swiper-button-prev',
+		  },
 		  scrollbar: {
 		    el: '.swiper-scrollbar',
 		  },
