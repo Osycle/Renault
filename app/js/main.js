@@ -22,39 +22,13 @@
 		})
 
 
-		new Swiper('.swiper', {
-		  // Optional parameters
-		  direction: 'horizontal',
-		  loop: false,
-
-		  // If we need pagination
-		  pagination: {
-		    el: '.swiper-pagination',
-		  },
-
-		  // Navigation arrows
-		  navigation: {
-		    nextEl: '.swiper-btn-next',
-		    prevEl: '.swiper-btn-prev',
-		  },
-		  // And if we need scrollbar
-		  scrollbar: {
-		    el: '.swiper-scrollbar',
-		  },
-		});
-		window.swiperComplInit = function(){
-			var swiperThat = new Swiper('.swiper-compl', {
+		Swiper.extendDefaults(
+			{
 				direction: 'horizontal',
 				loop: false,
 				slidesPerView: 1,
-				spaceBetween: 25,
-				//autoHeight: true,
 				observer: true,
-				breakpoints: {
-					991: {
-						slidesPerView: 3
-					}
-				},
+				observeParents: true,
 				pagination: {
 					el: '.swiper-pagination',
 				},
@@ -65,11 +39,44 @@
 				scrollbar: {
 					el: '.swiper-scrollbar',
 				},
-			});
-			console.log(swiperThat);
-			return swiperThat;
+			}
+		)
+		new Swiper('.swiper', {
+		  navigation: {
+		    nextEl: '.swiper-btn-next',
+		    prevEl: '.swiper-btn-prev',
+		  },
+		});
+
+		window.swiperInit = function(){
+			$("[swiper-init]").map(function(i, el){
+				var options = $(el).attr("swiper-init")
+				.replace(/(['" \n\t])/gim, '')
+				.replace(/({[0-9]+|[a-zA-Z-_\.]+)/gim, t=>{
+						if(/{/.test(t))
+							return `{"${t.substring(1, t.length)}"`;
+						else
+							return `"${t}"`;
+					}
+				)
+				console.log(options)
+				options = JSON.parse(options);
+				window.s = new Swiper($(el), options);
+				
+			})
 		}
-		swiperComplInit();
+		swiperInit();
+
+		new Swiper('.swiper-compl', {
+			slidesPerView: 1,
+			spaceBetween: 25,
+			//autoHeight: true,
+			breakpoints: {
+				991: {
+					slidesPerView: 3
+				}
+			},
+		});
 
 		new Swiper('.swiper-alone', {
 		  // Optional parameters
@@ -83,39 +90,15 @@
 					slidesPerView: 1
 				}
 			},
-			
-		  // If we need pagination
-		  pagination: {
-		    el: '.swiper-pagination',
-		  },
 		  // Navigation arrows
 		  navigation: {
 		    nextEl: '.swiper-btn-next',
 		    prevEl: '.swiper-btn-prev',
 		  },
-		  // And if we need scrollbar
-		  scrollbar: {
-		    el: '.swiper-scrollbar',
-		  },
 		});
 
 
-		new Swiper('.swiper-def', {
-		  // Optional parameters
-		  direction: 'horizontal',
-		  loop: false,
-			slidesPerView: 1,
-		  pagination: {
-		    el: '.swiper-pagination',
-		  },
-		  navigation: {
-		    nextEl: '.swiper-button-next',
-		    prevEl: '.swiper-button-prev',
-		  },
-		  scrollbar: {
-		    el: '.swiper-scrollbar',
-		  },
-		});
+
 
 		$('[data-toggle="click"]').on("click", function(e){
 			var that = $(this);

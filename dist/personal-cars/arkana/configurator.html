@@ -456,7 +456,16 @@
 				<section class="conf">
 					<div class="step-1" v-if="current_step == 1">
 						<div class="container pv-8">
-							<div class="swiper-def swiper-compl">
+							<div class="swiper-def" 
+								swiper-init="{
+									slidesPerView: 2, 
+									spaceBetween: 25,
+									breakpoints: {
+										991: {
+											slidesPerView: 3
+										}
+									}
+								}">
 								<div class="swiper-wrapper model-complectations-items bg-color-transparent">
 									<div class="swiper-slide">
 										<figure>
@@ -539,6 +548,33 @@
 											</div>
 										</figure>
 									</div>
+									<div class="swiper-slide">
+										<figure>
+											<div class="img-content">
+												<picture>
+													<img src="/img/other/arkana/arkana-4-3.webp" alt="">
+												</picture>
+											</div>
+											<div class="desc-content ph-5">
+												<div class="text-content">
+													<div class="title-content text-center mv-3">
+														<div class="text-x8-b">Style</div>
+														<div class="text-x3">Style</div>
+														<div class="text-x3">Цена от 281 947 800 сум</div>
+													</div>
+													<div class="mv-6">
+														<div class="mb-1">Двигатель:</div>
+														<div class="text-x4-b">1,6 л, 114 л. с., 4х2, CVT X-Tronic</div>
+													</div>
+												</div>
+												<div class="btn-content mv-3 mobile:ph-5 desktop:ph-7">
+													<div class="btn-def hovered mv-2">
+														<a href="">выбрать</a>
+													</div>
+												</div>
+											</div>
+										</figure>
+									</div>
 
 								</div>
 								
@@ -554,14 +590,60 @@
 					</div>
 					<div class="step-2" v-if="current_step == 2">
 						<div class="container pv-8">
-							<div class="swiper-def">
+							<div class="swiper-def" 
+								swiper-init="{
+									slidesPerView: 2, 
+									spaceBetween: 25,
+									breakpoints: {
+										991: {
+											slidesPerView: 4
+										}
+									}
+								}">
 								<div class="swiper-wrapper model-complectations-items bg-color-transparent">
 									<div class="swiper-slide">
 										<figure>
 											<div class="img-content">
-												<picture>
-													<img src="/img/other/arkana/arkana-4-2.webp" alt="">
-												</picture>
+												<div class="flex">
+													<div>
+														<svg viewBox="0 0 30 30" width="24px" fill="#8c8c8b"><path d="M14.215 5.261H7.101v5.424h7.113V5.261h.001zM5.432 3.635h10.451v8.679H5.432V3.635zm10.451-1.873h-10.5c-1.275 0-1.767.542-1.767 1.825V28.24H17.65V3.586c0-1.282-.491-1.825-1.767-1.825v.001zm3.484 8.923c2.355 0 3.533 1.184 3.533 3.503v7.347c0 2.022 1.03 3.252 2.747 3.252s2.552-.983 2.552-2.956c0-3.207-3.533-5.918-3.533-11.194v-1.53c0-4.633-.883-6.507-3.533-7.345V.083c3.73.739 6.232 3.701 6.968 8.728h-1.717v1.331c0 5.326 3.533 8.333 3.533 11.689 0 2.958-1.521 4.633-4.269 4.633-2.65 0-4.464-1.971-4.464-4.929V14.09c0-1.282-.491-1.778-1.816-1.778V28.24h1.767v1.677H.083V28.24h1.816V3.586c0-2.368 1.128-3.503 3.484-3.503h10.5c2.355 0 3.484 1.135 3.484 3.503v7.099z"></path></svg>		
+													</div>
+													<div>
+														<svg viewBox="0 0 30 30" width="24px" fill="#8c8c8b"><path d="M16.624 4.119c-3.127 0-4.894 1.642-4.894 4.753 0 3.11 1.767 4.752 4.894 4.752 3.127 0 4.895-1.641 4.895-4.752 0-3.111-1.768-4.753-4.895-4.753zm-1.36 10.888l-1.586 6.222h-1.676l1.722-6.654c-2.266-.864-3.58-2.852-3.58-5.703 0-3.889 2.447-6.222 6.48-6.222 4.034 0 6.481 2.333 6.481 6.222 0 3.24-1.722 5.444-4.668 6.049l-1.314 6.308h-1.677l1.36-6.136h-.182c-.453 0-.634 0-1.36-.086zm-6.752 9.29h12.962v-1.47H8.512v1.47zm-3.218 3.067h19.397v-1.47H5.294v1.47z"></path></svg>
+													</div>
+												</div>
+											</div>
+											<div class="desc-content ph-5">
+												<div class="text-content">
+													<div class="title-content text-center mv-3">
+														<div class="text-x8-b">Life</div>
+														<div class="text-x3">Life</div>
+														<div class="text-x3">Цена от 239 046 500 сум</div>
+													</div>
+													<div class="mv-6">
+														<div class="mb-1">Двигатель:</div>
+														<div class="text-x4-b">1,6 л, 114 л. с., 4х2, МКП5</div>
+													</div>
+												</div>
+												<div class="btn-content mv-3 mobile:ph-5 desktop:ph-7">
+													<div class="btn-def hovered mv-2">
+														<a href="">выбрать</a>
+													</div>
+												</div>
+											</div>
+										</figure>
+									</div>
+									<div class="swiper-slide">
+										<figure>
+											<div class="img-content">
+												<div class="flex">
+													<div>
+														<svg viewBox="0 0 30 30" width="24px" fill="#8c8c8b"><path d="M14.215 5.261H7.101v5.424h7.113V5.261h.001zM5.432 3.635h10.451v8.679H5.432V3.635zm10.451-1.873h-10.5c-1.275 0-1.767.542-1.767 1.825V28.24H17.65V3.586c0-1.282-.491-1.825-1.767-1.825v.001zm3.484 8.923c2.355 0 3.533 1.184 3.533 3.503v7.347c0 2.022 1.03 3.252 2.747 3.252s2.552-.983 2.552-2.956c0-3.207-3.533-5.918-3.533-11.194v-1.53c0-4.633-.883-6.507-3.533-7.345V.083c3.73.739 6.232 3.701 6.968 8.728h-1.717v1.331c0 5.326 3.533 8.333 3.533 11.689 0 2.958-1.521 4.633-4.269 4.633-2.65 0-4.464-1.971-4.464-4.929V14.09c0-1.282-.491-1.778-1.816-1.778V28.24h1.767v1.677H.083V28.24h1.816V3.586c0-2.368 1.128-3.503 3.484-3.503h10.5c2.355 0 3.484 1.135 3.484 3.503v7.099z"></path></svg>		
+													</div>
+													<div>
+														<svg viewBox="0 0 30 30" width="24px" fill="#8c8c8b"><path d="M16.624 4.119c-3.127 0-4.894 1.642-4.894 4.753 0 3.11 1.767 4.752 4.894 4.752 3.127 0 4.895-1.641 4.895-4.752 0-3.111-1.768-4.753-4.895-4.753zm-1.36 10.888l-1.586 6.222h-1.676l1.722-6.654c-2.266-.864-3.58-2.852-3.58-5.703 0-3.889 2.447-6.222 6.48-6.222 4.034 0 6.481 2.333 6.481 6.222 0 3.24-1.722 5.444-4.668 6.049l-1.314 6.308h-1.677l1.36-6.136h-.182c-.453 0-.634 0-1.36-.086zm-6.752 9.29h12.962v-1.47H8.512v1.47zm-3.218 3.067h19.397v-1.47H5.294v1.47z"></path></svg>
+													</div>
+												</div>
 											</div>
 											<div class="desc-content ph-5">
 												<div class="text-content">
@@ -691,11 +773,8 @@
 											</div>
 										</figure>
 									</div>
-
 								</div>
-								
 								<div class="swiper-pagination"></div>
-							
 								<div class="swiper-btns">
 									<div class="swiper-button swiper-button-prev"></div>
 									<div class="swiper-button swiper-button-next"></div>
@@ -744,25 +823,7 @@
 					watch: {
 						current_step(){
 							setTimeout(() => {
-								new Swiper('.step-2 .swiper-def', {
-									direction: 'horizontal',
-									loop: false,
-									slidesPerView: 1,
-									spaceBetween: 25,
-									//autoHeight: true,
-									observer: true,
-									breakpoints: {
-										991: {
-											slidesPerView: 4
-										}
-									},
-									// pagination: {
-									// 	el: '.swiper-pagination',
-									// },
-									// scrollbar: {
-									// 	el: '.swiper-scrollbar',
-									// },
-								});
+								swiperInit();
 							}, 1);
 							console.log(this, "watch");
 						}
