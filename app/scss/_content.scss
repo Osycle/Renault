@@ -1725,6 +1725,8 @@ ymaps .map-cluster{
       border-left: 20px solid transparent;
       margin-top: -50px;
       margin-left: -21px;
+      //border-top-color: black;
+      //border-bottom-color: black;
      }
      &:before{
       z-index: 1;
@@ -1743,7 +1745,7 @@ ymaps .map-cluster{
       &:after{
         border-left-color: black;
       }
-      &:before{
+      & ~ *:before, &:before{
         border-top-color: $color-gray-5;
         border-bottom-color: $color-gray-5;
       }

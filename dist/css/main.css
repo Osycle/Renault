@@ -10798,7 +10798,7 @@ ymaps .map-cluster {
       background-color: black; }
     .conf-steps-nav li.active:after {
       border-left-color: black; }
-    .conf-steps-nav li.active:before {
+    .conf-steps-nav li.active ~ *:before, .conf-steps-nav li.active:before {
       border-top-color: #3e3f40;
       border-bottom-color: #3e3f40; }
 
