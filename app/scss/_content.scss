@@ -136,8 +136,7 @@ small {
 .swiper-def{
   overflow: hidden;
   position: relative;
-  padding-left: 20px;
-  padding-right: 20px;
+
   .swiper-btns {
     position: absolute;
     top: 50%;
@@ -161,6 +160,9 @@ small {
       display: flex;
       align-items: center;
       justify-content: center;
+      &.swiper-button-disabled{
+        display: none;
+      }
       &:after{
         transform: scale(.3);
       }
@@ -680,10 +682,6 @@ small {
   }
 }
 .nav-def {
-  .wrapper {
-    display: flex;
-    justify-content: center;
-  }
   .img-contain {
     display: block;
     width: 40px;
@@ -1786,4 +1784,126 @@ ymaps .map-cluster{
 			}
 		}
 	}
+}
+
+.model-drives-items{
+  figure{
+    border: 1px solid rgba($color-gray-1, 0.8);
+    padding: 15px;
+    color: $color-gray-6;
+    &.active{
+      border: 2px solid $color-1;
+    }
+  }
+  .desc-content{
+    font-size: 13px;
+  }
+  .icons-content{
+    display: grid;
+    grid-auto-columns: 1fr 1fr;
+    grid-auto-flow: column;
+    margin-left: -5px;
+    margin-right: -5px;
+  }
+}
+.model-drives-icon{
+  background-color: $color-gray-1;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  flex-direction: column;
+  padding: 5px;
+  height: 108px;
+  margin: 5px;
+}
+
+.summary-steps{
+  font-weight: 700;
+  font-size: 16px;
+  position: sticky;
+  bottom: 0;
+  left: 0;
+  z-index: 100;
+  .wrapper{
+    padding: 10px 20px 10px 60px;
+    min-height: 80px;
+    background-color: black;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .base-arrow-r{
+    width: 28px;
+    height: 28px;
+    background-color: $color-1;
+  }
+}
+.base-arrow-r{
+  position: relative;
+  display: inline-block;
+  &:after{
+    position: absolute;
+    top: 50%;
+    content: "";
+    transform: translate(-11px,-4px) rotate(45deg);
+    right: 0;
+    width: 9px;
+    height: 9px;
+    border-style: solid;
+    border-width: 2px 2px 0 0;
+    color: black;
+  }
+}
+
+.exterior{
+  .exterior-warpper{
+    max-width: 1280px;
+  }
+  .cloudimage-360-view-360-icon{
+    background-color: rgba(black, 0.8) !important;
+    background-size: 60% !important;
+    color: white;
+  }
+}
+.exterior-color-items{
+  display: flex;
+  border-bottom: 1px solid black;
+  padding-bottom: 15px;
+  figure{
+    position: relative;
+    margin-left: 5px;
+    margin-right: 5px;
+  }
+  .img-content{
+    border-radius: 50%;
+    width: 46px;
+    height: 46px;
+    overflow: hidden;
+  }
+  .checked-icon{
+    opacity: 0;
+    display: inline-block;
+    position: absolute;
+    right: 0;
+    top: 0;
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    background-color: $color-1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    svg{
+      width: 15px;
+      height: 15px;
+      color: white;
+      fill: white;
+    }
+  }
+  .active{
+    .checked-icon{
+      opacity: 1;
+    }
+  }
 }
