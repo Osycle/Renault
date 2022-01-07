@@ -10903,9 +10903,6 @@ ymaps .map-cluster {
     border-width: 2px 2px 0 0;
     color: black; }
 
-.exterior .exterior-warpper {
-  max-width: 1280px; }
-
 .exterior .cloudimage-360-view-360-icon {
   background-color: rgba(0, 0, 0, 0.8) !important;
   background-size: 60% !important;
@@ -14600,6 +14597,10 @@ html .fancybox-show-thumbs .fancybox-thumbs {
   -ms-flex-pack: justify;
   justify-content: space-between; }
 
+.jc-around {
+  -ms-flex-pack: distribute;
+  justify-content: space-around; }
+
 .jc-start {
   -webkit-box-pack: start;
   -ms-flex-pack: start;
@@ -14660,6 +14661,9 @@ html .fancybox-show-thumbs .fancybox-thumbs {
     -webkit-box-pack: justify;
     -ms-flex-pack: justify;
     justify-content: space-between; }
+  .desktop\:jc-around {
+    -ms-flex-pack: distribute;
+    justify-content: space-around; }
   .desktop\:jc-start {
     -webkit-box-pack: start;
     -ms-flex-pack: start;
@@ -14745,6 +14749,9 @@ html .fancybox-show-thumbs .fancybox-thumbs {
     -webkit-box-pack: justify;
     -ms-flex-pack: justify;
     justify-content: space-between; }
+  .mobile\:jc-around {
+    -ms-flex-pack: distribute;
+    justify-content: space-around; }
   .mobile\:jc-start {
     -webkit-box-pack: start;
     -ms-flex-pack: start;
