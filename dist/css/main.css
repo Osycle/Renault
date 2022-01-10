@@ -10916,8 +10916,7 @@ ymaps .map-cluster {
   padding-bottom: 15px; }
   .exterior-color-items figure {
     position: relative;
-    margin-left: 5px;
-    margin-right: 5px; }
+    margin: 10px; }
   .exterior-color-items .img-content {
     border-radius: 50%;
     width: 46px;
@@ -10930,8 +10929,8 @@ ymaps .map-cluster {
     right: 0;
     top: 0;
     border-radius: 50%;
-    width: 30px;
-    height: 30px;
+    width: 20px;
+    height: 20px;
     background-color: #efdf00;
     display: -webkit-box;
     display: -ms-flexbox;
@@ -10943,8 +10942,8 @@ ymaps .map-cluster {
     -ms-flex-pack: center;
     justify-content: center; }
     .exterior-color-items .checked-icon svg {
-      width: 15px;
-      height: 15px;
+      width: 10px;
+      height: 10px;
       color: white;
       fill: white; }
   .exterior-color-items .active .checked-icon {

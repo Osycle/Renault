@@ -1873,8 +1873,7 @@ ymaps .map-cluster{
   padding-bottom: 15px;
   figure{
     position: relative;
-    margin-left: 5px;
-    margin-right: 5px;
+    margin: 10px;
   }
   .img-content{
     border-radius: 50%;
@@ -1889,15 +1888,15 @@ ymaps .map-cluster{
     right: 0;
     top: 0;
     border-radius: 50%;
-    width: 30px;
-    height: 30px;
+    width: 20px;
+    height: 20px;
     background-color: $color-1;
     display: flex;
     align-items: center;
     justify-content: center;
     svg{
-      width: 15px;
-      height: 15px;
+      width: 10px;
+      height: 10px;
       color: white;
       fill: white;
     }
