@@ -625,6 +625,26 @@ div.btn-style{
 		vertical-align: middle;
 	}
 }
+.btn-play{
+	width: 60px;
+	height: 60px;
+	border-radius: 50%;
+	background-color: rgba(5,20,31,.4);
+	border: 2px solid #fff;
+	color: #fff;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	position: absolute;
+	left: calc(50% - 30px);
+	top: calc(50% - 30px);
+	z-index: 1;
+	transition: 0.2s ease;
+	transform: scale(1);
+	&:hover{
+		transform: scale(1.1);
+	}
+}
 button{
 	background-color: transparent;
 	border: none;
