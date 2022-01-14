@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="description" content="">
+	@@include('./app/src/components/_favicons.html')
+	@@include('./app/src/components/_scripts_head.html')
+	<title>Renault Uzbekistan</title>
+</head>
+
+<body>
+
+
+
+	<div id="page">
+		@@include('./app/src/components/_header.html')
+		<main class="main" data-aos="fade" id="main">
+			<section>
+				<div class="container pv-8">
+					<div class="news">
+						<div class="entry-header text-center box-lg-7 mh-auto">
+							<div>14 Января 2022</div>
+							<h1>С Днем защитников Родины!</h1>
+						</div>
+						<div class="news-content hover-underline">
+							<div class="text-item">
+								<div class="swiper-alone swiper-init-block mv-8">
+									<div class="swiper-wrapper model-complectations-items">
+										<div class="swiper-slide">
+											<img src="/img/news/20220114-1-1.jpg" width="100%">
+										</div>
+									</div>
+								</div>
+                <p>Дорогие друзья, коллектив RENAULT Uzbekistan выражает свои поздравления с Днём защитников Родины!</p>
+                <p>Хотим от всего сердца поблагодарить тех, кто гордо несёт службу на благо страны. Желаем вам сил и мужества</p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+
+			@@include('./app/src/components/_yur-accordion.html')
+		</main>
+		@@include('./app/src/components/_footer.html')
+	</div>
+	<!-- SCRIPTS -->
+	@@include('./app/src/components/_scripts_footer.html')
+</body>
+
+</html>
