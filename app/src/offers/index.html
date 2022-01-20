@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="description" content="">
+	@@include('./app/src/components/_favicons.html')
+	@@include('./app/src/components/_scripts_head.html')
+	<title>Renault Uzbekistan</title>
+</head>
+
+<body>
+
+	<div id="page">
+		@@include('./app/src/components/_header.html')
+		<main class="main" data-aos="fade" id="main">
+			<div class="bnr-page">
+				<div class="wrapper">
+					<div class="entry-header">
+						<div class="img-content">
+							<picture class="pic-absolute is-covered opacity-3">
+								<img src="/img/other/showroom/bnr-page-bg.jpg">
+							</picture>
+						</div>
+						<div class="desc-content">
+							<h1>Специальные предложения на Renault</h1>
+							<div class="text-summary">Приобретайте Renault на выгодных условиях!</div>
+						</div>
+					</div>					
+				</div>
+			</div>
+			<section>
+				<div class="container pv-8">
+					<div class="news-items boxes-3 jc-center figure-mv-3 img-ratio-2">
+						<figure>
+							<a href="/offers/20220120-1.html">
+								<picture>
+									<img src="/img/other/index/bnr-4-0120.jpg" width="100%" class="of-cover">
+								</picture>
+								<div class="desc-content">
+									<div class="text-x4-b mv-3">Спешите воспользоваться программой RENAULT LEASING! </div>
+									<hr class="style-2 ml-0">
+								</div>
+							</a>
+						</figure>
+					</div>
+				</div>
+			</section>
+			@@include('./app/src/components/_yur-accordion.html')
+		</main>
+		@@include('./app/src/components/_footer.html')
+	</div>
+	<!-- SCRIPTS -->
+	@@include('./app/src/components/_scripts_footer.html')
+</body>
+
+</html>
