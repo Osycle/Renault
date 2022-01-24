@@ -508,9 +508,23 @@
 					watch: {
 						current_step(){
 							setTimeout(() => {
-								swiperInit();
-							}, 1);
-							console.log(this, "watch");
+
+								// step 1
+								if(this.current_step == 1){
+									swiperInit();
+								}
+
+								// step 2
+								if(this.current_step == 2){
+									swiperInit();
+								}
+
+								// step 3
+								if(this.current_step == 3){
+									window.CI360.init();
+								}
+
+						}, 1);
 						}
 					},
 					async mounted(){
@@ -520,6 +534,7 @@
 						this.req = await axios.get("/data/complectations.json")
 						this.page_data = this.req.data
 						console.log(this.page_data);
+
 					}
 				})
 			</script>
