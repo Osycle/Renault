@@ -1,146 +1,67 @@
 {
-	"complectations": [
+	"models": [
 		{
-			"name": "Life",
-			"acceleration": "12.4",
-			"consumption": "7.0",
-			"co2_emissions": "161",
-			"image": "/img/other/arkana/arkana-4-1.webp",
-			"types_engine": [
+			"name": "arkana",
+			"min_price": 239046500,
+			"complectations": [
 				{
+					"name": "Life",
 					"min_price": 239046500,
-					"engine_id": "engine_0",
-					"drive_id": "drive_0",
-					"transmission_id": "transmission_0"
+					"image": "https://renault.uz/img/other/arkana/arkana-4-1.webp",
+					"types":[
+						{
+							"name": "1,6 л, 114 л. с., 4х2, МКП5",
+							"type_fuel": "Бензин",
+							"transmission": "МКП5",
+							"price": 239046500
+						},
+						{
+							"name": "1,6 л, 114 л. с., 4х2, CVT X-Tronic",
+							"type_fuel": "Бензин",
+							"transmission": "CVT X-Tronic",
+							"price": 249966800
+						}
+					]
 				},
 				{
-					"min_price": 249966800,
-					"engine_id": "engine_0",
-					"drive_id": "drive_0",
-					"transmission_id": "transmission_1"
-				}
-			]
-		},
-		{
-			"name": "Drive",
-			"acceleration": "12.4",
-			"consumption": "7.0",
-			"co2_emissions": "161",
-			"image": "/img/other/arkana/arkana-4-1.webp",
-			"types_engine": [
-				{
-					"min_price": 249966800,
-					"engine_id": "engine_0",
-					"drive_id": "drive_0",
-					"transmission_id": "transmission_1"
+					"name": "Drive",
+					"min_price": 239046500,
+					"image": "https://renault.uz/img/other/arkana/arkana-4-2.webp",
+					"types":[
+						{
+							"name": "1,6 л, 114 л. с., 4х2, CVT X-Tronic",
+							"type_fuel": "Бензин",
+							"transmission": "CVT X-Tronic",
+							"price": 262759200
+						},
+						{
+							"name": "TCe 150, 150 л. с., 4х2, CVT X-Tronic",
+							"type_fuel": "Бензин",
+							"transmission": "CVT X-Tronic",
+							"price": 283819900
+						}
+					]
 				},
 				{
-					"min_price": 283819900,
-					"engine_id": "engine_1",
-					"drive_id": "drive_0",
-					"transmission_id": "transmission_1"
-				}
-			]
-		},
-		{
-			"name": "Style",
-			"acceleration": "12.4",
-			"consumption": "7.0",
-			"co2_emissions": "161",
-			"image": "/img/other/arkana/arkana-4-1.webp",
-			"types_engine": [
-				{
+					"name": "Style",
 					"min_price": 281947800,
-					"engine_id": "engine_0",
-					"drive_id": "drive_0",
-					"transmission_id": "transmission_1"
-				},
-				{
-					"min_price": 320169100,
-					"engine_id": "engine_1",
-					"drive_id": "drive_2",
-					"transmission_id": "transmission_1"
+					"image": "https://renault.uz/img/other/arkana/arkana-4-3.webp",
+					"types":[
+						{
+							"name": "1,6 л, 114 л. с., 4х2, CVT X-Tronic",
+							"type_fuel": "Бензин",
+							"transmission": "CVT X-Tronic",
+							"price": 281947800
+						},
+						{
+							"name": "TCe 150, 150 л. с., 4х2, CVT X-Tronic",
+							"type_fuel": "Бензин",
+							"transmission": "CVT X-Tronic",
+							"price": 320169100
+						}
+					]
 				}
 			]
 		}
-	],
-	"engines": [
-		{
-			"id": "engine_0",
-			"name": "1,6 л, 114 л. с.",
-			"capacity": "1598",
-			"powerCh": "114",
-			"torque": "156",
-			"fueltype": "Бензин"
-		},
-		{
-			"id": "engine_1",
-			"name": "TCe 150, 150 л. с.",
-			"capacity": "1332",
-			"powerCh": "150",
-			"torque": "250",
-			"fueltype": "Бензин"
-		}
-	],
-	"transmissions": [
-		{
-			"id": "transmission_0",
-			"name": "МКП5",
-			"gears_number": 5
-		},
-		{
-			"id": "transmission_1",
-			"name": "CVT X-Tronic",
-			"gears_number": 6
-		}
-	],
-	"drives": [
-		{
-			"id": "drive_0",
-			"name": "4x2",
-			"description": "Передний"
-		},
-		{
-			"id": "drive_1",
-			"name": "4x4",
-			"description": "Полный"
-		}
-	],
-	"exterior": [
-    {
-      "code": "NV676",
-      "label": "Черный металлик",
-      "price": 0
-    },
-    {
-      "code": "OV369",
-      "label": "Белый неметаллик",
-      "price": 0
-    },
-    {
-      "code": "TECNW",
-      "label": "Серо-коричневый металлик Tenakuru",
-      "price": 0
-    },
-    {
-      "code": "TED69",
-      "label": "Серебристый металлик",
-      "price": 0
-    },
-    {
-      "code": "TEKAD",
-      "label": "Темно-серый металлик",
-      "price": 0
-    },
-    {
-      "code": "TENPI",
-      "label": "Красный металлик",
-      "price": 0
-    },
-    {
-      "code": "TERQH",
-      "label": "Синий металлик",
-      "price": 0
-    }
 	]
 }

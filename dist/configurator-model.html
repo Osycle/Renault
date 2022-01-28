@@ -1,0 +1,595 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="description" content="">
+		<link rel="shortcut icon" href="/img/favicon/favicon.ico" type="image/x-icon">
+	<link rel="apple-touch-icon" href="/img/favicon/favicon.png">
+
+	<link rel="apple-touch-icon" sizes="57x57" href="/img/favicon/apple-icon-57x57.png">
+	<link rel="apple-touch-icon" sizes="60x60" href="/img/favicon/apple-icon-60x60.png">
+	<link rel="apple-touch-icon" sizes="72x72" href="/img/favicon/apple-icon-72x72.png">
+	<link rel="apple-touch-icon" sizes="76x76" href="/img/favicon/apple-icon-76x76.png">
+	<link rel="apple-touch-icon" sizes="114x114" href="/img/favicon/apple-icon-114x114.png">
+	<link rel="apple-touch-icon" sizes="120x120" href="/img/favicon/apple-icon-120x120.png">
+	<link rel="apple-touch-icon" sizes="144x144" href="/img/favicon/apple-icon-144x144.png">
+	<link rel="apple-touch-icon" sizes="152x152" href="/img/favicon/apple-icon-152x152.png">
+	<link rel="apple-touch-icon" sizes="180x180" href="/img/favicon/apple-icon-180x180.png">
+	<link rel="icon" type="image/png" sizes="192x192"  href="/img/favicon/android-icon-192x192.png">
+	<link rel="icon" type="image/png" sizes="32x32" href="/img/favicon/favicon-32x32.png">
+	<link rel="icon" type="image/png" sizes="96x96" href="/img/favicon/favicon-96x96.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="/img/favicon/favicon-16x16.png">
+	<link rel="manifest" href="/img/favicon/manifest.json">
+	<meta name="msapplication-TileColor" content="#ffffff">
+	<meta name="msapplication-TileImage" content="/img/favicon/ms-icon-144x144.png">
+	<meta name="theme-color" content="#ffffff">
+	<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-211871187-1">
+</script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-211871187-1');
+</script>
+
+<!-- Yandex.Metrika counter -->
+<script type="text/javascript" >
+  (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
+  m[i].l=1*new Date();k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})
+  (window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
+
+  ym(86637588, "init", {
+       clickmap:true,
+       trackLinks:true,
+       accurateTrackBounce:true,
+       webvisor:true
+  });
+</script>
+<noscript><div><img src="https://mc.yandex.ru/watch/86637588" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+<!-- /Yandex.Metrika counter -->
+
+
+
+<!-- CSS -->
+
+<link rel="stylesheet" href="/css/fonts.css">
+<link rel="stylesheet" href="/fonts/NouvelR/stylesheet.css">
+<link rel="stylesheet" href="/css/plugins.css">
+<link rel="stylesheet" type="text/css" href="/js/plugins/jquery-ui/jquery-ui.min.css">
+<link rel="stylesheet" href="/js/plugins/choices-js/public/assets/styles/choices.css"/> <!-- Choices CSS -->
+<link rel="stylesheet" type="text/css" href="/js/plugins/selectize/selectize.css" />
+
+<link rel="stylesheet" href="/css/main.css">
+
+<link rel="stylesheet" href="/css/additional.css">
+
+
+
+
+<!-- Vue link -->
+<script src="/js/vue/vue.js"></script>
+<script src="/js/vue/axios.min.js"></script>
+<!-- multiselect -->
+<script src="/js/vue/vue-multiselect/vue-multiselect.min.js"></script>
+<link rel="stylesheet" href="/js/vue/vue-multiselect/vue-multiselect.css">
+
+
+
+<!-- SCRIPTS -->
+<script src="/js/plugins/jquery.min.js"></script>
+<script src="/js/plugins/bootstrap.min.js"></script>
+<script src="/js/plugins/aos.js"></script>
+<script src="/js/plugins/owl.carousel.min.js"></script>
+<script src="/js/plugins/jquery.fancybox.js"></script>
+<script src="/js/plugins/jquery.mmenu.all.js"></script>
+<script src="/js/plugins/smooth-scroll.js"></script>
+<script src="/js/plugins/ion.rangeSlider.min.js"></script>
+<script src="/js/plugins/ResizeSensor.min.js"></script>
+<script src="/js/plugins/theia-sticky-sidebar.min.js"></script>
+<script src="/js/plugins/swiper-bundle.min.js"></script>
+<script src="/js/plugins/jquery.responsiveTabs.js"></script>
+<script src="/js/plugins/flickity.js"></script>
+<script src="/js/plugins/select2.min.js"></script>
+<script src="/js/plugins/jquery.validate.js"></script>
+
+<script src="/js/plugins/jquery-ui/jquery-ui.min.js"></script> <!-- JQUERY UI -->
+
+
+
+
+<script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU&apikey=f06d738e-1a2e-4ca2-91cc-d23a3bbb9e09"></script>
+<script src="/js/map.panel.js"></script>
+
+
+<!--  RTB  Counter all_site -->
+<script>
+  (function (w, d, n, u, s) {
+  w[n]=w[n]||function(){(w[n].q=w[n].q||[]).push(arguments)};
+  var a=d.createElement(s),m=d.getElementsByTagName(s)[0];
+  a.async=true;a.src=u;m.parentNode.insertBefore(a,m)
+  })(window, document, 'DSPCounter', '//counter.reddigital.ru/DSPCounter.js', 'script');
+</script>
+<script type="text/javascript">
+    DSPCounter('send', {
+      'sid'     : '223575',
+      'user_id' : ''
+    });
+</script>
+<!--  RTB  Counter end -->
+
+
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-CHPFNKGF8F"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+
+gtag('config', 'G-CHPFNKGF8F');
+</script>
+	<title>Renault Uzbekistan</title>
+</head>
+
+<body>
+
+	<div id="page">
+		<main class="main" data-aos="fade" id="main">
+			<div id="configurator" class="configurator">
+				<div v-if="statusHash">				
+					<div class="nav-sub">
+						<div class="nav-sub-title text-uppercase">
+							RENAULT {{ current_model.name}}
+							<a href="/configurator.html" class="btn-back">
+								<svg xmlns="http://www.w3.org/2000/svg" enable-background="new 0 0 24 24" viewBox="0 0 24 24"><path d="M19.8534546,19.1465454L12.7069092,12l7.1465454-7.1465454c0.1871948-0.1937256,0.1871948-0.5009155,0-0.6947021c-0.1918335-0.1986084-0.5083618-0.2041016-0.7069702-0.0122681l-7.1465454,7.1465454L4.8534546,4.1465454c-0.1937256-0.1871338-0.5009155-0.1871338-0.6947021,0C3.960144,4.3383789,3.9546509,4.6549072,4.1464844,4.8535156L11.2929688,12l-7.1464844,7.1464844c-0.09375,0.09375-0.1464233,0.2208862-0.1464233,0.3534546C4,19.776062,4.223877,19.999939,4.5,20c0.1326294,0.0001221,0.2598267-0.0526123,0.3534546-0.1465454l7.1464844-7.1464844l7.1465454,7.1465454C19.2401123,19.9474487,19.3673706,20.0001831,19.5,20c0.1325073-0.000061,0.2595825-0.0526733,0.3533325-0.1463623C20.048645,19.6583862,20.0487061,19.3417969,19.8534546,19.1465454z"/></svg>
+							</a>
+						</div>
+						<div class="conf-steps-nav" v-if="statusHash">
+							<ul class="list">
+								<li :class="{'active': current_step.step_number == step.step_number}" v-for="(step, key) in steps" :key="key">
+									<button type="button" class="this-btn" @click="currentStep(step.step_number)">0{{key+1}}. {{step.name}}</button>
+								</li>
+							</ul>
+						</div>
+					</div>
+					<section class="conf">
+						<div class="step-1" v-if="current_step.step_number == 1">
+							<div class="container pv-8">
+								<div class="swiper-def ph-4" 
+									swiper-init="{
+										slidesPerView: 1, 
+										spaceBetween: 25,
+										breakpoints: {
+											991: {
+												slidesPerView: 3
+											}
+										}
+									}">
+									<div class="swiper-wrapper model-complectations-items bg-color-transparent" v-if="current_model">
+										<div class="swiper-slide"  v-for="(complectation, key) in current_model.complectations" :key="key">
+											<figure>
+												<div class="img-content">
+													<picture>
+														<img :src="complectation.image">
+													</picture>
+												</div>
+												<div class="desc-content ph-5">
+													<div class="text-content">
+														<div class="title-content text-center mv-3">
+															<div class="text-x8-b">{{complectation.name}}</div>
+															<div class="text-x3">{{complectation.name}}</div>
+															<div class="text-x3">Цена от {{complectation.min_price | spaceBetweenNum}} сум</div>
+														</div>
+													</div>
+													<div class="btn-content mv-3 mobile:ph-5 desktop:ph-7">
+														<div class="btn-def hovered mv-2">
+															<a href="javascript:;" @click="current_complectation = complectation; currentStep(2)">выбрать</a>
+														</div>
+													</div>
+												</div>
+											</figure>
+										</div>
+									</div>
+									
+									<div class="swiper-pagination"></div>
+								
+									<div class="swiper-btns">
+										<div class="swiper-button swiper-button-prev"></div>
+										<div class="swiper-button swiper-button-next"></div>
+									</div>
+								
+								</div>
+							</div>
+						</div>
+						<div class="step-2" v-if="current_step.step_number == 2">
+							<div class="container pv-8">
+								<div class="swiper-def ph-1" 
+									swiper-init="{
+										slidesPerView: 1, 
+										spaceBetween: 0,
+										breakpoints: {
+											991: {
+												slidesPerView: 3
+											}
+										}
+									}">
+									<div class="swiper-wrapper model-drives-items bg-color-transparent asd">
+										<div class="swiper-slide"  v-for="(type, key) in current_complectation.types" :key="key">
+											<figure>
+												<div class="title-content text-center mv-3">
+													<div class="cap">{{type.name}}</div>
+													<div class="price-content">Цена от {{type.price | spaceBetweenNum}} сум</div>
+												</div>
+												<div class="img-content">
+													<div class="icons-content flex jc-between">
+														<div class="model-drives-icon">
+															<svg viewBox="0 0 30 30" width="24px" fill="#8c8c8b"><path d="M14.215 5.261H7.101v5.424h7.113V5.261h.001zM5.432 3.635h10.451v8.679H5.432V3.635zm10.451-1.873h-10.5c-1.275 0-1.767.542-1.767 1.825V28.24H17.65V3.586c0-1.282-.491-1.825-1.767-1.825v.001zm3.484 8.923c2.355 0 3.533 1.184 3.533 3.503v7.347c0 2.022 1.03 3.252 2.747 3.252s2.552-.983 2.552-2.956c0-3.207-3.533-5.918-3.533-11.194v-1.53c0-4.633-.883-6.507-3.533-7.345V.083c3.73.739 6.232 3.701 6.968 8.728h-1.717v1.331c0 5.326 3.533 8.333 3.533 11.689 0 2.958-1.521 4.633-4.269 4.633-2.65 0-4.464-1.971-4.464-4.929V14.09c0-1.282-.491-1.778-1.816-1.778V28.24h1.767v1.677H.083V28.24h1.816V3.586c0-2.368 1.128-3.503 3.484-3.503h10.5c2.355 0 3.484 1.135 3.484 3.503v7.099z"></path></svg>
+															<span>{{type.type_fuel}}</span>
+														</div>
+														<div class="model-drives-icon">
+															<svg viewBox="0 0 30 30" width="24px" fill="#8c8c8b"><path d="M16.624 4.119c-3.127 0-4.894 1.642-4.894 4.753 0 3.11 1.767 4.752 4.894 4.752 3.127 0 4.895-1.641 4.895-4.752 0-3.111-1.768-4.753-4.895-4.753zm-1.36 10.888l-1.586 6.222h-1.676l1.722-6.654c-2.266-.864-3.58-2.852-3.58-5.703 0-3.889 2.447-6.222 6.48-6.222 4.034 0 6.481 2.333 6.481 6.222 0 3.24-1.722 5.444-4.668 6.049l-1.314 6.308h-1.677l1.36-6.136h-.182c-.453 0-.634 0-1.36-.086zm-6.752 9.29h12.962v-1.47H8.512v1.47zm-3.218 3.067h19.397v-1.47H5.294v1.47z"></path></svg>
+															<span>{{type.transmission}}</span>
+														</div>
+													</div>
+												</div>
+												<div class="desc-content">
+													<div class="mt-2 flex jc-between ai-center">
+														<div class="mt-1">Количество передач</div>
+														<div><b>5</b></div>
+													</div>
+													<div class="mt-2 flex jc-between ai-center">
+														<div class="mt-1">Максимальный крутящий момент (Нм/об/мин)</div>
+														<div><b>156</b></div>
+													</div>
+													<div class="mt-2 flex jc-between ai-center">
+														<div class="mt-1">Выбросы CO2 (г/км)</div>
+														<div><b>161</b></div>
+													</div>
+													<div class="mt-2 flex jc-between ai-center">
+														<div class="mt-1">Смешанный цикл (л/100км)</div>
+														<div><b>7.0</b></div>
+													</div>
+												</div>
+												<hr>
+												<div class="btn-content mt-3">
+													<div class="input-content">
+														<label class="flex ai-center jc-center" role="button">
+															<input type="radio" name="engine" class="hide">
+															<span class="radio-style-1"></span>
+															<span class="ml-2">Выбрать</span>
+														</label>
+													</div>
+												</div>
+											</figure>
+										</div>
+									</div>
+									<div class="swiper-pagination"></div>
+									<div class="swiper-btns">
+										<div class="swiper-button swiper-button-prev"></div>
+										<div class="swiper-button swiper-button-next"></div>
+									</div>
+								
+								</div>
+							</div>
+						</div>
+            <div class="step-3" v-if="current_step.step_number == 3">
+							<div class="container">
+                <div class="form-content pv-8 ph-10">
+                  <div>
+                    
+                  </div>
+                  <form action="https://www.life-style.uz/renaultuz.php" method="POST" formaj>
+                    <div class="entry-header text-center mb-3">
+                      <div class="text-x10">Отправить заявку</div>
+                    </div>
+                    <div class="field-content mv-3">
+                      <div class="text-x4 mb-1">Ваше имя</div>
+                      <div class="input-content">
+                        <input type="text" name="name" class="form-control" required>
+                      </div>
+                    </div>
+                    <div class="field-content mv-3">
+                      <div class="text-x4 mb-1">Ваш номер телефона</div>
+                      <div class="input-content">
+                        <input type="phone" name="phone" class="form-control" required>
+                      </div>
+                    </div>
+                    <div class="btn-content mt-6">
+                      <span class="btn-def">
+                        <button type="submit">Отправить</button>
+                      </span>
+                    </div>
+                  </form>
+                  <div class="form-success-block">
+                    <div class="form-success-block-wrapper pv-10">
+                      <h3>Заявка успешно отправлена!</h3>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+						<div class="step-3" v-if="current_step.step_number == 90">
+							<div class="container">
+								<div class="exterior row">
+									<div
+										class="cloudimage-360 exterior-warpper"
+										ratio="1280/450"
+										logo-src="/img/exterior/360_logo.svg"
+										folder="/img/exterior/arkana/360/"
+										filename="{index}.jpg"
+										spin-reverse
+										amount="24">
+									</div>
+								</div>
+								<div>
+									<div class="nav-def responsive-tab pb-5">
+										<ul class="list flex text-center link-li-1 jc-center" >
+											<li>
+												<a class="pb-3" href="#responsive-tab-1">
+													<picture class="img-contain"><img src="/img/other/corporate/corporate-advert-1.svg"></picture>
+													<div class="text mt-4">Цвет кузова</div>
+												</a>
+											</li>
+										</ul>
+				
+										<div class="pantab" id="responsive-tab-1">
+											<div class="wrapper text-center">
+												<div>Серебристый металлик</div>
+												<div class="flex desktop:jc-center">
+													<div>
+														<div class="exterior-color-items desktop:mh-5 mv-3">
+															<figure class="active">
+																<span class="checked-icon">
+																	<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 30 30"><path d="M29 9.182L23.91 4 12.03 16.092l-5.94-6.046L1 15.228l11.03 11.228z"></path></svg>
+																</span>
+																<div class="img-content">
+																	<img src="/img/exterior/arkana/1.jpg" alt="">
+																</div>
+															</figure>
+														</div>
+														<div>
+															Бесплатно
+														</div>
+													</div>
+													<div>
+														<div class="exterior-color-items desktop:mh-5 mv-3">
+															<figure>
+																<span class="checked-icon">
+																	<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 30 30"><path d="M29 9.182L23.91 4 12.03 16.092l-5.94-6.046L1 15.228l11.03 11.228z"></path></svg>
+																</span>
+																<div class="img-content">
+																	<img src="/img/exterior/arkana/2.jpg" alt="">
+																</div>
+															</figure>
+															<figure>
+																<span class="checked-icon">
+																	<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 30 30"><path d="M29 9.182L23.91 4 12.03 16.092l-5.94-6.046L1 15.228l11.03 11.228z"></path></svg>
+																</span>
+																<div class="img-content">
+																	<img src="/img/exterior/arkana/3.jpg" alt="">
+																</div>
+															</figure>
+															<figure>
+																<span class="checked-icon">
+																	<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 30 30"><path d="M29 9.182L23.91 4 12.03 16.092l-5.94-6.046L1 15.228l11.03 11.228z"></path></svg>
+																</span>
+																<div class="img-content">
+																	<img src="/img/exterior/arkana/4.jpg" alt="">
+																</div>
+															</figure>
+															<figure>
+																<span class="checked-icon">
+																	<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 30 30"><path d="M29 9.182L23.91 4 12.03 16.092l-5.94-6.046L1 15.228l11.03 11.228z"></path></svg>
+																</span>
+																<div class="img-content">
+																	<img src="/img/exterior/arkana/5.jpg" alt="">
+																</div>
+															</figure>
+															<figure>
+																<span class="checked-icon">
+																	<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 30 30"><path d="M29 9.182L23.91 4 12.03 16.092l-5.94-6.046L1 15.228l11.03 11.228z"></path></svg>
+																</span>
+																<div class="img-content">
+																	<img src="/img/exterior/arkana/6.jpg" alt="">
+																</div>
+															</figure>
+														</div>
+														<div class="fw-7">
+															+ 5 000 000 сум
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</section>
+					<div class="summary-steps">
+						<div class="wrapper">
+							<div>
+								<div class="price-content" v-if="current_type">
+									Цена конфигурации: {{current_type.price | spaceBetweenNum}} сум
+								</div>
+							</div>
+							<div class="btn-content">
+								<button class="flex ai-center" type="button" @click="currentStep(current_step.step_number+1)">
+									<span class="mr-1">Далее</span>
+									<span class="base-arrow-r"></span>
+								</button>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+		</main>
+	</div>
+	<script>window.CI360 = { notInitOnLoad: true }</script>
+	<script src="/js/plugins/js-cloudimage-360-view.min.js"></script>
+	<!-- Vue scripts -->
+	<script>
+		//import main from "../js/main.js";
+		var app = new Vue({
+			el: "#page",
+			data: {
+				hash: "",
+				statusHash: false,
+				current_step: { 
+					name: "Комплектация",
+					step_number: 1
+				},
+				current_model: {},
+				current_complectation: {},
+        current_type: {},
+				page_data: {
+					
+				}, 
+				steps: [
+					{ 
+						name: "Комплектация",
+						step_number: 1
+					},
+					{ 
+						name: "Двигатель",
+						step_number: 2
+					},
+					{ 
+						name: "Результат",
+						step_number: 3
+					},
+				],
+				
+			},
+			watch: {
+				current_model(){
+					this.current_complectation = this.current_model.complectations[0];
+				},
+				hash(){
+					this.page_data.models.forEach(el => {
+						if(el.name == this.hash){
+							this.statusHash = true;
+							this.current_model = el
+							this.currentStep(1);
+						}else{
+							this.statusHash = false;
+						}
+					});
+					
+				}
+			},
+			methods: {
+				currentStep(n){
+					console.log(n)
+					setTimeout(() => {
+						swiperInit();	
+					}, 1);
+					
+					if(this.current_step.step_number+1 < n)
+						return
+					if(n){
+						for (let i = 0; i < this.steps.length; i++) {
+							const el = this.steps[i];
+							if(el.step_number == n)
+								this.current_step = el;
+						}	
+					}
+					setTimeout(() => {
+						// step 1
+						if(this.current_step.step_number == 1){
+							swiperInit();
+							swiperInit();
+						}
+
+						// step 2
+						if(this.current_step.step_number == 2){
+							swiperInit();
+							swiperInit();
+						}
+
+						// step 3
+						if(this.current_step.step_number == 3){
+							window.CI360.init();
+						}
+
+					}, 1);
+				}
+			},
+			async mounted(){
+				//this.models = await axios.get("https://api.kia-motors.uz/api/public/configurator/get/3/978/0/6AT/FWD")
+				this.req = await axios.get("/data/complectations.json")
+				this.page_data = this.req.data
+				var that = this
+				window.onhashchange = function () {
+					that.hash = location.hash.replace(/#/, "")
+				}
+				that.hash = location.hash.replace(/#/, "")
+        
+        setTimeout(() => {
+          that.current_type = that.current_complectation.types[0]
+          console.log(that.current_complectation); 
+        }, 1);
+        
+				//window.onhashchange();
+				
+			}
+		})
+	</script>
+	<!-- SCRIPTS -->
+	
+
+<script defer src="/js/main.js"></script>
+<script src="/js/postM.js"></script>
+<script defer type="text/javascript">
+
+
+  // Подключение vue компонентов
+  Vue.component('multiselect', window.VueMultiselect.default)
+
+
+  function checkSm() {
+	  return $(document).width() <= 991;
+  }
+
+
+  Vue.filter('spacePhone', (price)=>{ 
+    price = price+"";
+    return price.replace(/(\d{3})(\d{2})(\d{3})(\d{2})(\d{2})/gim, '$1 $2 $3-$4-$5'); 
+  })
+  Vue.filter('spaceBetweenNum', (price)=>{ 
+    if(!price)
+      return 0;
+    price += "";
+    var pattern = /(-?\d+)(\d{3})/;
+    while (pattern.test(price))
+      price = price.replace(pattern, "$1 $2");
+    
+    return price;      
+  })
+
+  
+/* GLOBAL MIXINS */
+
+// Vue.mixin({
+// 	methods:{
+// 		checkSm(ob) {
+// 			return _.uniqWith(ob, _.isEqual);
+//     },
+// 	}
+// })
+
+
+
+
+</script>
+
+
+
+
+</body>
+</html>

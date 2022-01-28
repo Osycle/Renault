@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="description" content="">
+	@@include('./app/src/components/_favicons.html')
+	@@include('./app/src/components/_scripts_head.html')
+	<title>Renault Uzbekistan</title>
+</head>
+
+<body>
+
+	<div id="page">
+		@@include('./app/src/components/_header.html')
+		<main class="main" data-aos="fade" id="main">
+			<div class="bnr-page" v-if="!statusHash">
+				<div class="wrapper">
+					<div class="entry-header">
+						<div class="img-content">
+							<picture class="pic-absolute is-covered opacity-3">
+								<img src="/img/other/showroom/bnr-page-bg.jpg">
+							</picture>
+						</div>
+						<div class="desc-content">
+							<h1>КОНФИГУРАТОР RENAULT</h1>
+							<div class="text-summary">Выберите для себя наиболее подходящую модель Renault</div>
+						</div>
+					</div>					
+				</div>
+			</div>
+			<section class="configurator-models">
+				<div class="container pv-5">
+					<div class="entry-header text-center mt-6">
+						<p>Выберите модель</p>
+					</div>
+					<div class="boxes-2 figure-mv-6 desktop:ph-5 desktop:jc-center box-md-8 mh-auto text-center">
+						<figure>
+							<a href="/configurator-model.html#arkana">
+								<picture>
+									<img src="/img/other/index/index-models-1.png">
+								</picture>
+							</a>
+							<div class="desc-content">
+								<div class="text-x3-bu"><a href="/personal-cars/arkana.html">Renault arkana</a></div>
+								<div>Цена от <span class="price-content fs-5-em">239 046 500 сум</span></div>
+							</div>
+						</figure>
+						<figure>
+							<a href="/configurator-model.html#kaptur">
+								<picture>
+									<img src="/img/other/index/index-models-2.png">
+								</picture>
+							</a>
+							<div class="desc-content">
+								<div class="text-x3-bu"><a href="/personal-cars/kaptur.html">RENAULT KAPTUR</a></div>
+								<div>Цена от <span class="price-content fs-5-em">228 937 300 сум</span></div>
+							</div>
+						</figure>
+						<figure>
+							<a href="/configurator-model.html#duster">
+								<picture>
+									<img src="/img/other/index/index-models-3.png">
+								</picture>
+							</a>
+							<div class="desc-content">
+								<div class="text-x3-bu"><a href="/personal-cars/newduster.html">НОВЫЙ RENAULT DUSTER</a></div>
+								<div>Цена от <span class="price-content fs-5-em">233 071 500 сум</span></div>
+							</div>
+						</figure>
+					</div>
+				</div>
+			</section>
+
+		</main>
+		@@include('./app/src/components/_footer.html')
+
+	</div>
+	<!-- SCRIPTS -->
+	@@include('./app/src/components/_scripts_footer.html')
+
+
+</body>
+</html>
