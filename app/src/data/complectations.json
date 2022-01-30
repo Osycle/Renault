@@ -62,6 +62,120 @@
 					]
 				}
 			]
+		},
+		{
+			"name": "kaptur",
+			"min_price": 228937300,
+			"complectations": [
+				{
+					"name": "Life",
+					"min_price": 228937300,
+					"image": "/img/other/kaptur/kaptur-2-1.webp",
+					"types":[
+						{
+							"name": "1,6 л, 114 л.с., 4х2, МКП5",
+							"type_fuel": "Бензин",
+							"transmission": "МКП5",
+							"price": 228937300
+						},
+						{
+							"name": "1,6 л, 114 л.с., 4х2, CVT X-Tronic",
+							"type_fuel": "Бензин",
+							"transmission": "CVT X-Tronic",
+							"price": 239857700
+						}
+					]
+				},
+				{
+					"name": "Drive",
+					"min_price": 252650100,
+					"image": "/img/other/kaptur/kaptur-2-2.webp",
+					"types":[
+						{
+							"name": "1,6 л, 114 л.с., 4х2, CVT X-Tronic",
+							"type_fuel": "Бензин",
+							"transmission": "CVT X-Tronic",
+							"price": 252650100
+						},
+						{
+							"name": "TCe 150, 150 л.с., 4х2, CVT X-Tronic",
+							"type_fuel": "Бензин",
+							"transmission": "CVT X-Tronic",
+							"price": 273710800
+						}
+					]
+				},
+				{
+					"name": "Style",
+					"min_price": 276518900,
+					"image": "/img/other/kaptur/kaptur-2-3.webp",
+					"types":[
+						{
+							"name": "1,6 л, 114 л.с., 4х2, CVT X-Tronic",
+							"type_fuel": "Бензин",
+							"transmission": "CVT X-Tronic",
+							"price": 276518900
+						},
+						{
+							"name": "TCe 150, 150 л.с., 4х4, CVT X-Tronic",
+							"type_fuel": "Бензин",
+							"transmission": "CVT X-Tronic",
+							"price": 314740100
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "duster",
+			"min_price": 233071500,
+			"complectations": [
+				{
+					"name": "Life",
+					"min_price": 233071500,
+					"image": "/img/other/newduster/complectations-items-1.png",
+					"types":[
+						{
+							"name": "1,6 л, 117 л.с., 4х4, МКП6",
+							"type_fuel": "Бензин",
+							"transmission": "МКП6",
+							"price": 233071500
+						},
+						{
+							"name": "TCe 150 л.с., 4х4, CVT X-Tronic",
+							"type_fuel": "Бензин",
+							"transmission": "CVT X-Tronic",
+							"price": 264272500
+						}
+					]
+				},
+				{
+					"name": "Drive",
+					"min_price": 267392600,
+					"image": "/img/other/newduster/complectations-items-2.png",
+					"types":[
+						{
+							"name": "TCe 150, 150 л.с., 4х4, МКП6 ",
+							"type_fuel": "Бензин",
+							"transmission": "МКП6",
+							"price": 267392600
+						}
+					]
+				},
+				{
+					"name": "Style",
+					"min_price": 287673200,
+					"image": "/img/other/newduster/complectations-items-3.png",
+					"types":[
+						{
+							"name": "TCe 150, 150 л.с., 4х4, CVT X-Tronic",
+							"type_fuel": "Бензин",
+							"transmission": "CVT X-Tronic",
+							"price": 287673200
+						}
+					]
+				}
+			]
 		}
 	]
 }

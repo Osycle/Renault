@@ -35,7 +35,7 @@
 					<section class="conf">
 						<div class="step-1" v-if="current_step.step_number == 1">
 							<div class="container pv-8">
-								<div class="swiper-def ph-4" 
+								<div class="swiper-def mt-6 ph-4" 
 									swiper-init="{
 										slidesPerView: 1, 
 										spaceBetween: 25,
@@ -83,19 +83,19 @@
 						</div>
 						<div class="step-2" v-if="current_step.step_number == 2">
 							<div class="container pv-8">
-								<div class="swiper-def ph-1" 
+								<div class="swiper-def mt-6 ph-1" 
 									swiper-init="{
 										slidesPerView: 1, 
-										spaceBetween: 0,
+										spaceBetween: 20,
 										breakpoints: {
 											991: {
-												slidesPerView: 3
+												slidesPerView: 4
 											}
 										}
 									}">
-									<div class="swiper-wrapper model-drives-items bg-color-transparent asd">
+									<div class="swiper-wrapper model-drives-items bg-color-transparent">
 										<div class="swiper-slide"  v-for="(type, key) in current_complectation.types" :key="key">
-											<figure>
+											<figure :class="{'active': current_type.name == type.name}">
 												<div class="title-content text-center mv-3">
 													<div class="cap">{{type.name}}</div>
 													<div class="price-content">Цена от {{type.price | spaceBetweenNum}} сум</div>
@@ -134,7 +134,7 @@
 												<div class="btn-content mt-3">
 													<div class="input-content">
 														<label class="flex ai-center jc-center" role="button">
-															<input type="radio" name="engine" class="hide">
+															<input type="radio" name="engine" class="hide" @click="current_type = type;" :checked="(current_type.name == type.name)">
 															<span class="radio-style-1"></span>
 															<span class="ml-2">Выбрать</span>
 														</label>
@@ -143,7 +143,6 @@
 											</figure>
 										</div>
 									</div>
-									<div class="swiper-pagination"></div>
 									<div class="swiper-btns">
 										<div class="swiper-button swiper-button-prev"></div>
 										<div class="swiper-button swiper-button-next"></div>
@@ -154,13 +153,27 @@
 						</div>
             <div class="step-3" v-if="current_step.step_number == 3">
 							<div class="container">
-                <div class="form-content pv-8 ph-10">
-                  <div>
-                    
-                  </div>
-                  <form action="https://www.life-style.uz/renaultuz.php" method="POST" formaj>
+								<div class="configurator-info mh-auto box-md-7 mt-7 desktop:mt-13">
+									<div class="mv-3">
+										<h2>Ваша конфигурация</h2>
+										<div>
+											<div class="text-x6-b text-uppercase mb-1">{{current_model.name}} {{current_complectation.name}}</div>
+											<div class="summary-list">
+												<span class="summary-list-label">{{current_type.name}}</span>
+												<span class="summary-list-dots"></span>
+												<span class="summary-list-price">{{current_type.price | spaceBetweenNum}} сум</span>
+											</div>
+										</div>
+									</div>
+									<div>
+										<div class="text-x8-b mb-3">Цена конфигурации: <span class="ws-nowrap">{{current_type.price | spaceBetweenNum}} сум</span></div>
+									</div>
+								</div>
+                <div class="form-content pv-6 mh-auto box-md-7">
+									<!-- https://www.life-style.uz/renaultuz.php -->
+                  <form action="" method="POST" formaj>
                     <div class="entry-header text-center mb-3">
-                      <div class="text-x10">Отправить заявку</div>
+                      <!-- <div class="text-x10">Отправить заявку</div> -->
                     </div>
                     <div class="field-content mv-3">
                       <div class="text-x4 mb-1">Ваше имя</div>
@@ -174,7 +187,7 @@
                         <input type="phone" name="phone" class="form-control" required>
                       </div>
                     </div>
-                    <div class="btn-content mt-6">
+                    <div class="btn-content mt-8">
                       <span class="btn-def">
                         <button type="submit">Отправить</button>
                       </span>
@@ -289,11 +302,11 @@
 					<div class="summary-steps">
 						<div class="wrapper">
 							<div>
-								<div class="price-content" v-if="current_type">
-									Цена конфигурации: {{current_type.price | spaceBetweenNum}} сум
+								<div class="price-content pr-6" v-if="current_type">
+									Цена конфигурации: <span class="ws-nowrap">{{current_type.price | spaceBetweenNum}} сум</span>
 								</div>
 							</div>
-							<div class="btn-content">
+							<div class="btn-content" v-if="current_step.step_number < 3">
 								<button class="flex ai-center" type="button" @click="currentStep(current_step.step_number+1)">
 									<span class="mr-1">Далее</span>
 									<span class="base-arrow-r"></span>
@@ -348,13 +361,13 @@
 				},
 				hash(){
 					this.page_data.models.forEach(el => {
+						
 						if(el.name == this.hash){
 							this.statusHash = true;
 							this.current_model = el
 							this.currentStep(1);
-						}else{
-							this.statusHash = false;
-						}
+							return;
+						}	
 					});
 					
 				}
@@ -386,6 +399,7 @@
 						if(this.current_step.step_number == 2){
 							swiperInit();
 							swiperInit();
+							this.current_type = this.current_complectation.types[0];
 						}
 
 						// step 3

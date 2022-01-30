@@ -1834,15 +1834,15 @@ ymaps .map-cluster{
   }
 }
 .model-drives-items{
-  justify-content: center;
+  @media (min-width: 992px){
+    justify-content: center;
+  }
   .swiper-slide{
-    padding-left: 10px;
-    padding-right: 10px;
   }
   figure{
-    border: 1px solid rgba($color-gray-1, 0.8);
     padding: 15px;
     color: $color-gray-6;
+    border: 2px solid rgba($color-gray-1, 0.8);
     &.active{
       border: 2px solid $color-1;
     }
@@ -2000,4 +2000,22 @@ ymaps .map-cluster{
       opacity: 1;
     }
   }
+}
+.summary-list{
+  display: flex;
+  align-items: baseline;
+  width: 100%;
+  .summary-list-label{
+    max-width: 70%;
+  }
+  .summary-list-dots{
+    flex: 1 0 auto;
+    border-bottom: 1px dotted rgb(0, 0, 0);
+    margin: 0px 4px;
+  }
+  .summary-list-price{
+    float: right;
+    font-size: 1.4rem;
+  }
+
 }
