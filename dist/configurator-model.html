@@ -295,10 +295,15 @@ gtag('config', 'G-CHPFNKGF8F');
 								</div>
                 <div class="form-content pv-6 mh-auto box-md-7">
 									<!-- https://www.life-style.uz/renaultuz.php -->
-                  <form action="" method="POST" formaj>
+                  <form action="https://www.life-style.uz/renaultuzconfigurator.php" method="POST" formaj>
                     <div class="entry-header text-center mb-3">
                       <!-- <div class="text-x10">Отправить заявку</div> -->
                     </div>
+										<div class="hide">
+											<input type="text" name="model" :value="current_model.name+' '+current_complectation.name">
+											<input type="text" name="engine" :value="current_type.name">
+											<input type="text" name="price" value="current_type.price">
+										</div>
                     <div class="field-content mv-3">
                       <div class="text-x4 mb-1">Ваше имя</div>
                       <div class="input-content">
