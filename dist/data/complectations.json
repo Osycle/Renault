@@ -8,6 +8,13 @@
 					"name": "Life",
 					"min_price": 239046500,
 					"image": "https://renault.uz/img/other/arkana/arkana-4-1.webp",
+					"exterior":[
+						{
+							"name": "Белый неметаллик",
+							"price": 0,
+							"image_icon": "/img/exterior/arkana/life/Белый неметаллик/icon.jpg"
+						}
+					],
 					"types":[
 						{
 							"name": "1,6 л, 114 л. с., 4х2, МКП5",
