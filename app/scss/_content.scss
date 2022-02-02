@@ -1506,6 +1506,9 @@ $yellow: #efdf00;
   }
   .img-content{
     background-color: $color-gray-1;
+    img{
+      width: 100%;
+    }
   }
 }
 
@@ -1848,8 +1851,10 @@ ymaps .map-cluster{
     }
   }
   .desc-content{
-    display: none;
     font-size: 13px;
+    .desc-item-title{
+      max-width: 75%;
+    }
   }
   .cap{
     min-height: 70px;

@@ -58,7 +58,7 @@
 														<div class="title-content text-center mv-3">
 															<div class="text-x8-b">{{complectation.name}}</div>
 															<div class="text-x3">{{complectation.name}}</div>
-															<div class="text-x3">Цена от {{complectation.min_price | spaceBetweenNum}} сум</div>
+															<div class="text-x3">Цена от {{complectation.price | spaceBetweenNum}} сум</div>
 														</div>
 													</div>
 													<div class="btn-content mv-3 mobile:ph-5 desktop:ph-7">
@@ -94,40 +94,40 @@
 										}
 									}">
 									<div class="swiper-wrapper model-drives-items bg-color-transparent">
-										<div class="swiper-slide"  v-for="(type, key) in current_complectation.types" :key="key">
+										<div class="swiper-slide"  v-for="(type, key) in current_complectation.type_engines" :key="key">
 											<figure :class="{'active': current_type.name == type.name}">
 												<div class="title-content text-center mv-3">
-													<div class="cap">{{type.name}}</div>
+													<div class="cap">{{type.name}} {{type.gears[0].name}}</div>
 													<div class="price-content">Цена от {{type.price | spaceBetweenNum}} сум</div>
 												</div>
 												<div class="img-content">
 													<div class="icons-content flex jc-between">
 														<div class="model-drives-icon">
 															<svg viewBox="0 0 30 30" width="24px" fill="#8c8c8b"><path d="M14.215 5.261H7.101v5.424h7.113V5.261h.001zM5.432 3.635h10.451v8.679H5.432V3.635zm10.451-1.873h-10.5c-1.275 0-1.767.542-1.767 1.825V28.24H17.65V3.586c0-1.282-.491-1.825-1.767-1.825v.001zm3.484 8.923c2.355 0 3.533 1.184 3.533 3.503v7.347c0 2.022 1.03 3.252 2.747 3.252s2.552-.983 2.552-2.956c0-3.207-3.533-5.918-3.533-11.194v-1.53c0-4.633-.883-6.507-3.533-7.345V.083c3.73.739 6.232 3.701 6.968 8.728h-1.717v1.331c0 5.326 3.533 8.333 3.533 11.689 0 2.958-1.521 4.633-4.269 4.633-2.65 0-4.464-1.971-4.464-4.929V14.09c0-1.282-.491-1.778-1.816-1.778V28.24h1.767v1.677H.083V28.24h1.816V3.586c0-2.368 1.128-3.503 3.484-3.503h10.5c2.355 0 3.484 1.135 3.484 3.503v7.099z"></path></svg>
-															<span>{{type.type_fuel}}</span>
+															<span>{{type.description}}</span>
 														</div>
 														<div class="model-drives-icon">
 															<svg viewBox="0 0 30 30" width="24px" fill="#8c8c8b"><path d="M16.624 4.119c-3.127 0-4.894 1.642-4.894 4.753 0 3.11 1.767 4.752 4.894 4.752 3.127 0 4.895-1.641 4.895-4.752 0-3.111-1.768-4.753-4.895-4.753zm-1.36 10.888l-1.586 6.222h-1.676l1.722-6.654c-2.266-.864-3.58-2.852-3.58-5.703 0-3.889 2.447-6.222 6.48-6.222 4.034 0 6.481 2.333 6.481 6.222 0 3.24-1.722 5.444-4.668 6.049l-1.314 6.308h-1.677l1.36-6.136h-.182c-.453 0-.634 0-1.36-.086zm-6.752 9.29h12.962v-1.47H8.512v1.47zm-3.218 3.067h19.397v-1.47H5.294v1.47z"></path></svg>
-															<span>{{type.transmission}}</span>
+															<span>{{type.gears[0].name}}</span>
 														</div>
 													</div>
 												</div>
 												<div class="desc-content">
-													<div class="mt-2 flex jc-between ai-center">
-														<div class="mt-1">Количество передач</div>
-														<div><b>5</b></div>
+													<div class="mt-2 flex jc-between ai-center" v-if="type.settings.transmission">
+														<div class="mt-1 desc-item-title">{{type.settings.transmission[1].name}}</div>
+														<div><b>{{type.settings.transmission[1].description}}</b></div>
 													</div>
-													<div class="mt-2 flex jc-between ai-center">
-														<div class="mt-1">Максимальный крутящий момент (Нм/об/мин)</div>
-														<div><b>156</b></div>
+													<div class="mt-2 flex jc-between ai-center" v-if="type.settings.engine">
+														<div class="mt-1 desc-item-title">{{type.settings.engine[1].name}}</div>
+														<div><b>{{type.settings.engine[1].description}}</b></div>
 													</div>
-													<div class="mt-2 flex jc-between ai-center">
-														<div class="mt-1">Выбросы CO2 (г/км)</div>
-														<div><b>161</b></div>
+													<div class="mt-2 flex jc-between ai-center" v-if="type.settings.fuelConsumption">
+														<div class="mt-1 desc-item-title">{{type.settings.fuelConsumption[2].name}}</div>
+														<div><b>{{type.settings.fuelConsumption[2].description}}</b></div>
 													</div>
-													<div class="mt-2 flex jc-between ai-center">
-														<div class="mt-1">Смешанный цикл (л/100км)</div>
-														<div><b>7.0</b></div>
+													<div class="mt-2 flex jc-between ai-center" v-if="type.settings.fuelConsumption">
+														<div class="mt-1 desc-item-title">{{type.settings.fuelConsumption[3].name}}</div>
+														<div><b>{{type.settings.fuelConsumption[3].description}}</b></div>
 													</div>
 												</div>
 												<hr>
@@ -151,7 +151,70 @@
 								</div>
 							</div>
 						</div>
-            <div class="step-3" v-if="current_step.step_number == 3">
+						<div class="step-3" v-if="current_step.step_number == 3">
+							<div class="container">
+								<div class="exterior row">
+									<div
+										class="cloudimage-360 exterior-warpper"
+										ratio="1280/450"
+										logo-src="/img/exterior/360_logo.svg"
+										:folder="current_exterior.folder+'/'"
+										filename="{index}.jpg"
+										spin-reverse
+										amount="24">
+									</div>
+								</div>
+								<div>
+									<div class="nav-def responsive-tab pb-5">
+										<ul class="list flex text-center link-li-1 jc-center" >
+											<li>
+												<a class="pb-3" href="#responsive-tab-1">
+													<picture class="img-contain"><img src="/img/other/corporate/corporate-advert-1.svg"></picture>
+													<div class="text mt-4">Цвет кузова</div>
+												</a>
+											</li>
+										</ul>
+				
+										<div class="pantab" id="responsive-tab-1">
+											<div class="wrapper text-center">
+												<div>{{current_exterior.name}}</div>
+												<div class="flex desktop:jc-center">
+													<div>
+														<div class="exterior-color-items desktop:mh-5 mv-3">
+															<figure class="active">
+																<span class="checked-icon">
+																	<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 30 30"><path d="M29 9.182L23.91 4 12.03 16.092l-5.94-6.046L1 15.228l11.03 11.228z"></path></svg>
+																</span>
+																<div class="img-content">
+																	<img src="/img/exterior/arkana/1.jpg" alt="">
+																</div>
+															</figure>
+														</div>
+														<div>
+															Бесплатно
+														</div>
+													</div>
+													<div>
+														<div class="exterior-color-items desktop:mh-5 mv-3">
+															<figure v-for="(exterior, key) in current_complectation.exteriors" :key="key">
+																<span class="checked-icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 30 30"><path d="M29 9.182L23.91 4 12.03 16.092l-5.94-6.046L1 15.228l11.03 11.228z"></path></svg></span>
+																<div class="img-content">
+																	<img :src="exterior.image" alt="">
+																</div>
+															</figure>
+														</div>
+														<div class="fw-7">
+															+ 5 000 000 сум
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+            <div class="step-4" v-if="current_step.step_number == 4">
 							<div class="container">
 								<div class="configurator-info mh-auto box-md-7 mt-7 desktop:mt-13">
 									<div class="mv-3">
@@ -206,103 +269,7 @@
                 </div>
               </div>
             </div>
-						<div class="step-3" v-if="current_step.step_number == 90">
-							<div class="container">
-								<div class="exterior row">
-									<div
-										class="cloudimage-360 exterior-warpper"
-										ratio="1280/450"
-										logo-src="/img/exterior/360_logo.svg"
-										folder="/img/exterior/arkana/360/"
-										filename="{index}.jpg"
-										spin-reverse
-										amount="24">
-									</div>
-								</div>
-								<div>
-									<div class="nav-def responsive-tab pb-5">
-										<ul class="list flex text-center link-li-1 jc-center" >
-											<li>
-												<a class="pb-3" href="#responsive-tab-1">
-													<picture class="img-contain"><img src="/img/other/corporate/corporate-advert-1.svg"></picture>
-													<div class="text mt-4">Цвет кузова</div>
-												</a>
-											</li>
-										</ul>
-				
-										<div class="pantab" id="responsive-tab-1">
-											<div class="wrapper text-center">
-												<div>Серебристый металлик</div>
-												<div class="flex desktop:jc-center">
-													<div>
-														<div class="exterior-color-items desktop:mh-5 mv-3">
-															<figure class="active">
-																<span class="checked-icon">
-																	<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 30 30"><path d="M29 9.182L23.91 4 12.03 16.092l-5.94-6.046L1 15.228l11.03 11.228z"></path></svg>
-																</span>
-																<div class="img-content">
-																	<img src="/img/exterior/arkana/1.jpg" alt="">
-																</div>
-															</figure>
-														</div>
-														<div>
-															Бесплатно
-														</div>
-													</div>
-													<div>
-														<div class="exterior-color-items desktop:mh-5 mv-3">
-															<figure>
-																<span class="checked-icon">
-																	<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 30 30"><path d="M29 9.182L23.91 4 12.03 16.092l-5.94-6.046L1 15.228l11.03 11.228z"></path></svg>
-																</span>
-																<div class="img-content">
-																	<img src="/img/exterior/arkana/2.jpg" alt="">
-																</div>
-															</figure>
-															<figure>
-																<span class="checked-icon">
-																	<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 30 30"><path d="M29 9.182L23.91 4 12.03 16.092l-5.94-6.046L1 15.228l11.03 11.228z"></path></svg>
-																</span>
-																<div class="img-content">
-																	<img src="/img/exterior/arkana/3.jpg" alt="">
-																</div>
-															</figure>
-															<figure>
-																<span class="checked-icon">
-																	<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 30 30"><path d="M29 9.182L23.91 4 12.03 16.092l-5.94-6.046L1 15.228l11.03 11.228z"></path></svg>
-																</span>
-																<div class="img-content">
-																	<img src="/img/exterior/arkana/4.jpg" alt="">
-																</div>
-															</figure>
-															<figure>
-																<span class="checked-icon">
-																	<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 30 30"><path d="M29 9.182L23.91 4 12.03 16.092l-5.94-6.046L1 15.228l11.03 11.228z"></path></svg>
-																</span>
-																<div class="img-content">
-																	<img src="/img/exterior/arkana/5.jpg" alt="">
-																</div>
-															</figure>
-															<figure>
-																<span class="checked-icon">
-																	<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 30 30"><path d="M29 9.182L23.91 4 12.03 16.092l-5.94-6.046L1 15.228l11.03 11.228z"></path></svg>
-																</span>
-																<div class="img-content">
-																	<img src="/img/exterior/arkana/6.jpg" alt="">
-																</div>
-															</figure>
-														</div>
-														<div class="fw-7">
-															+ 5 000 000 сум
-														</div>
-													</div>
-												</div>
-											</div>
-										</div>
-									</div>
-								</div>
-							</div>
-						</div>
+
 					</section>
 					<div class="summary-steps">
 						<div class="wrapper">
@@ -341,6 +308,7 @@
 				current_model: {},
 				current_complectation: {},
         current_type: {},
+				current_exterior: {},
 				page_data: {
 					
 				}, 
@@ -354,8 +322,12 @@
 						step_number: 2
 					},
 					{ 
-						name: "Результат",
+						name: "Дизайн",
 						step_number: 3
+					},
+					{ 
+						name: "Результат",
+						step_number: 4
 					},
 				],
 				
@@ -404,7 +376,8 @@
 						if(this.current_step.step_number == 2){
 							swiperInit();
 							swiperInit();
-							this.current_type = this.current_complectation.types[0];
+							this.current_type = this.current_complectation.type_engines[0];
+							this.current_exterior = this.current_complectation.exteriors[0]
 						}
 
 						// step 3
@@ -417,7 +390,8 @@
 			},
 			async mounted(){
 				//this.models = await axios.get("https://api.kia-motors.uz/api/public/configurator/get/3/978/0/6AT/FWD")
-				this.req = await axios.get("/data/complectations.json")
+				//this.req = await axios.get("/data/complectations.json")
+				this.req = await axios.get("https://renault.lifestyle.uz/models.php")
 				this.page_data = this.req.data
 				var that = this
 				window.onhashchange = function () {
@@ -426,7 +400,7 @@
 				that.hash = location.hash.replace(/#/, "")
         
         setTimeout(() => {
-          that.current_type = that.current_complectation.types[0]
+          that.current_type = that.current_complectation.type_engines[0]
           console.log(that.current_complectation); 
         }, 1);
         

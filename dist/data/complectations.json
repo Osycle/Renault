@@ -12,7 +12,44 @@
 						{
 							"name": "Белый неметаллик",
 							"price": 0,
-							"image_icon": "/img/exterior/arkana/life/Белый неметаллик/icon.jpg"
+							"icon": "/img/exterior/arkana/life/Белый неметаллик/icon.jpg",
+							"images_url": "/img/exterior/arkana/life/Белый неметаллик/"
+						},
+						{
+							"name": "Синий металлик",
+							"price": 0,
+							"icon": "/img/exterior/arkana/life/Синий металлик/icon.jpg",
+							"images_url": "/img/exterior/arkana/life/Синий металлик/"
+						},
+						{
+							"name": "Красный металлик",
+							"price": 0,
+							"icon": "/img/exterior/arkana/life/Красный металлик/icon.jpg",
+							"images_url": "/img/exterior/arkana/life/Красный металлик/"
+						},
+						{
+							"name": "Темно-серый металлик",
+							"price": 0,
+							"icon": "/img/exterior/arkana/life/Темно-серый металлик/icon.jpg",
+							"images_url": "/img/exterior/arkana/life/Темно-серый металлик/"
+						},
+						{
+							"name": "Серебристый металлик",
+							"price": 0,
+							"icon": "/img/exterior/arkana/life/Серебристый металлик/icon.jpg",
+							"images_url": "/img/exterior/arkana/life/Серебристый металлик/"
+						},
+						{
+							"name": "Серо-коричневый металлик Tenakuru",
+							"price": 0,
+							"icon": "/img/exterior/arkana/life/Серо-коричневый металлик Tenakuru/icon.jpg",
+							"images_url": "/img/exterior/arkana/life/Серо-коричневый металлик Tenakuru/"
+						},
+						{
+							"name": "Черный металлик",
+							"price": 0,
+							"icon": "/img/exterior/arkana/life/Черный металлик/icon.jpg",
+							"images_url": "/img/exterior/arkana/life/Черный металлик/"
 						}
 					],
 					"types":[

@@ -11403,6 +11403,8 @@ small {
     flex-direction: column; }
   .model-complectations-items .img-content {
     background-color: #f2f1f2; }
+    .model-complectations-items .img-content img {
+      width: 100%; }
 
 .kaptur-newoptions-iframe {
   overflow: hidden; }
@@ -11705,8 +11707,9 @@ ymaps .map-cluster {
     border: 2px solid #efdf00; }
 
 .model-drives-items .desc-content {
-  display: none;
   font-size: 13px; }
+  .model-drives-items .desc-content .desc-item-title {
+    max-width: 75%; }
 
 .model-drives-items .cap {
   min-height: 70px;
