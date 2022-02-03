@@ -48,7 +48,7 @@
 		  },
 		});
 
-		window.swiperInit = function(){
+		window.swiperInit = function(d){
 			$("[swiper-init]").map(function(i, el){
 				var options = $(el).attr("swiper-init")
 				.replace(/(['" \n\t])/gim, '')
@@ -62,7 +62,8 @@
 				console.log(options)
 				options = JSON.parse(options);
 				window.s = new Swiper($(el), options);
-				
+				if(d)
+					s.destroy($(el));
 			})
 		}
 		swiperInit();

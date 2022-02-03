@@ -10016,6 +10016,14 @@ small {
       transform: rotate(0);
       color: #efdf00; }
 
+.accordion-def.style-1 a {
+  border: 1px solid #f2f1f2; }
+
+.accordion-def.style-1 .accordion-def-body {
+  background-color: white;
+  padding: 35px 0;
+  color: black; }
+
 .accordion-def-body {
   padding: 35px 20px;
   background-color: #f2f1f2;
@@ -11591,8 +11599,20 @@ ymaps .map-cluster {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
+    background-color: black;
     width: 100%;
     overflow: hidden; }
+  @media (max-width: 991px) {
+    .conf-steps-nav .title-name {
+      display: none; } }
+  .conf-steps-nav .title-name-current {
+    background-color: black;
+    color: white;
+    padding: 10px;
+    text-align: center; }
+    @media (min-width: 992px) {
+      .conf-steps-nav .title-name-current {
+        display: none; } }
   .conf-steps-nav li {
     list-style: none;
     width: 100%;
@@ -11638,7 +11658,8 @@ ymaps .map-cluster {
     .conf-steps-nav li:before {
       z-index: 1;
       margin-left: -20px;
-      border-left-color: #d9d9d6; }
+      border-left-color: #d9d9d6;
+      width: 30px; }
     .conf-steps-nav li:after {
       border-left-color: black;
       z-index: 2; }
@@ -11828,17 +11849,49 @@ ymaps .map-cluster {
     .configurator .nav-sub-title .btn-back svg {
       fill: white; }
 
-.exterior .cloudimage-360-view-360-icon {
-  background-color: rgba(0, 0, 0, 0.8) !important;
-  background-size: 60% !important;
-  color: white; }
+@media (min-width: 992px) {
+  .configurator .step-3 .exterior-main {
+    overflow: inherit; } }
+
+.exterior-main {
+  height: 470px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  margin-top: 30px;
+  overflow: hidden; }
+  @media (min-width: 992px) {
+    .exterior-main .exterior-main-wrap {
+      height: 700px; } }
+  @media (max-width: 991px) {
+    .exterior-main {
+      height: 250px; } }
+  .exterior-main .cloudimage-360-loader {
+    display: none; }
+  .exterior-main .cloudimage-360-view-360-icon {
+    background-color: rgba(0, 0, 0, 0.8) !important;
+    background-size: 60% !important;
+    -webkit-transition: none !important;
+    transition: none !important;
+    color: white; }
+
+.exterior-sample {
+  position: relative; }
 
 .exterior-color-items {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   border-bottom: 1px solid black;
-  padding-bottom: 15px; }
+  padding-bottom: 15px;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap; }
   .exterior-color-items figure {
     position: relative;
     margin: 10px; }
@@ -11873,6 +11926,11 @@ ymaps .map-cluster {
       fill: white; }
   .exterior-color-items .active .checked-icon {
     opacity: 1; }
+  @media (max-width: 991px) {
+    .exterior-color-items {
+      -webkit-box-pack: center;
+      -ms-flex-pack: center;
+      justify-content: center; } }
 
 .summary-list {
   display: -webkit-box;
@@ -11892,7 +11950,29 @@ ymaps .map-cluster {
     margin: 0px 4px; }
   .summary-list .summary-list-price {
     float: right;
-    font-size: 1.4rem; }
+    font-size: 1.4rem;
+    text-transform: capitalize; }
+
+.detail-list-1 .dl-items dl {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  padding: 16px 0;
+  color: #000;
+  font-size: 14px;
+  margin-bottom: 0;
+  margin-top: 0; }
+  .detail-list-1 .dl-items dl:nth-child(odd) {
+    background-color: #f2f1f2; }
+  .detail-list-1 .dl-items dl dt {
+    width: 60%;
+    margin: 0 16px;
+    font-weight: 400;
+    font-size: 13px; }
+  .detail-list-1 .dl-items dl dd {
+    width: 40%;
+    font-weight: 700; }
 
 /* 
 		_footer.scss

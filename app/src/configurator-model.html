@@ -20,20 +20,23 @@
 					<div class="nav-sub">
 						<div class="nav-sub-title text-uppercase">
 							RENAULT {{ current_model.name}}
-							<a href="/configurator.html" class="btn-back">
+							<a href="javascript:;" class="btn-back" onclick="history.back();">
 								<svg xmlns="http://www.w3.org/2000/svg" enable-background="new 0 0 24 24" viewBox="0 0 24 24"><path d="M19.8534546,19.1465454L12.7069092,12l7.1465454-7.1465454c0.1871948-0.1937256,0.1871948-0.5009155,0-0.6947021c-0.1918335-0.1986084-0.5083618-0.2041016-0.7069702-0.0122681l-7.1465454,7.1465454L4.8534546,4.1465454c-0.1937256-0.1871338-0.5009155-0.1871338-0.6947021,0C3.960144,4.3383789,3.9546509,4.6549072,4.1464844,4.8535156L11.2929688,12l-7.1464844,7.1464844c-0.09375,0.09375-0.1464233,0.2208862-0.1464233,0.3534546C4,19.776062,4.223877,19.999939,4.5,20c0.1326294,0.0001221,0.2598267-0.0526123,0.3534546-0.1465454l7.1464844-7.1464844l7.1465454,7.1465454C19.2401123,19.9474487,19.3673706,20.0001831,19.5,20c0.1325073-0.000061,0.2595825-0.0526733,0.3533325-0.1463623C20.048645,19.6583862,20.0487061,19.3417969,19.8534546,19.1465454z"/></svg>
 							</a>
 						</div>
 						<div class="conf-steps-nav" v-if="statusHash">
 							<ul class="list">
 								<li :class="{'active': current_step.step_number == step.step_number}" v-for="(step, key) in steps" :key="key">
-									<button type="button" class="this-btn" @click="currentStep(step.step_number)">0{{key+1}}. {{step.name}}</button>
+									<button type="button" class="this-btn" @click="currentStep(step.step_number)">0{{key+1}}. <span class="title-name">{{step.name}}</span></button>
 								</li>
 							</ul>
+							<div class="title-name-current">
+								{{current_step.name}} 
+							</div>
 						</div>
 					</div>
 					<section class="conf">
-						<div class="step-1" v-if="current_step.step_number == 1">
+						<div class="step-1" v-if="current_step.step_number === 1">
 							<div class="container pv-8">
 								<div class="swiper-def mt-6 ph-4" 
 									swiper-init="{
@@ -81,7 +84,7 @@
 								</div>
 							</div>
 						</div>
-						<div class="step-2" v-if="current_step.step_number == 2">
+						<div class="step-2" v-else-if="current_step.step_number === 2">
 							<div class="container pv-8">
 								<div class="swiper-def mt-6 ph-1" 
 									swiper-init="{
@@ -151,60 +154,64 @@
 								</div>
 							</div>
 						</div>
-						<div class="step-3" v-if="current_step.step_number == 3">
-							<div class="container">
-								<div class="exterior row">
-									<div
-										class="cloudimage-360 exterior-warpper"
-										ratio="1280/450"
-										logo-src="/img/exterior/360_logo.svg"
-										:folder="current_exterior.folder+'/'"
-										filename="{index}.jpg"
-										spin-reverse
-										amount="24">
+						<div class="step-3">
+							<div class="container" v-if="current_step.step_number === 3">
+								<div class="exterior">
+									<div class="exterior-main row">
+										<span
+											class="cloudimage-360 exterior-main-wrap"
+											
+											:data-folder="current_exterior.folder+'/'"
+											data-filename="{index}.jpg"
+											data-spin-reverse
+											data-amount="24">
+										</span>
 									</div>
-								</div>
-								<div>
-									<div class="nav-def responsive-tab pb-5">
-										<ul class="list flex text-center link-li-1 jc-center" >
-											<li>
-												<a class="pb-3" href="#responsive-tab-1">
-													<picture class="img-contain"><img src="/img/other/corporate/corporate-advert-1.svg"></picture>
-													<div class="text mt-4">Цвет кузова</div>
-												</a>
-											</li>
-										</ul>
-				
-										<div class="pantab" id="responsive-tab-1">
-											<div class="wrapper text-center">
-												<div>{{current_exterior.name}}</div>
-												<div class="flex desktop:jc-center">
-													<div>
-														<div class="exterior-color-items desktop:mh-5 mv-3">
-															<figure class="active">
-																<span class="checked-icon">
-																	<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 30 30"><path d="M29 9.182L23.91 4 12.03 16.092l-5.94-6.046L1 15.228l11.03 11.228z"></path></svg>
-																</span>
-																<div class="img-content">
-																	<img src="/img/exterior/arkana/1.jpg" alt="">
-																</div>
-															</figure>
+									<div class="exterior-sample">
+										<div class="nav-def responsive-tab pb-5">
+											<ul class="list flex text-center link-li-1 jc-center" >
+												<li class="active">
+													<a class="pb-3" href="#responsive-tab-1">
+														<!-- <picture class="img-contain"><img src="/img/other/corporate/corporate-advert-1.svg"></picture> -->
+														<div class="text mt-4">Цвет кузова</div>
+													</a>
+												</li>
+											</ul>
+					
+											<div class="pantab" id="responsive-tab-1">
+												<div class="wrapper text-center">
+													<div>{{current_exterior.name}}</div>
+													<div class="flex desktop:jc-center">
+														<div class="hide">
+															<div class="exterior-color-items desktop:mh-5 mv-3">
+																<figure class="active">
+																	<span class="checked-icon">
+																		<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 30 30"><path d="M29 9.182L23.91 4 12.03 16.092l-5.94-6.046L1 15.228l11.03 11.228z"></path></svg>
+																	</span>
+																	<div class="img-content">
+																		<img src="/img/exterior/arkana/1.jpg" alt="">
+																	</div>
+																</figure>
+															</div>
+															<div>
+																Бесплатно
+															</div>
 														</div>
 														<div>
-															Бесплатно
-														</div>
-													</div>
-													<div>
-														<div class="exterior-color-items desktop:mh-5 mv-3">
-															<figure v-for="(exterior, key) in current_complectation.exteriors" :key="key">
-																<span class="checked-icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 30 30"><path d="M29 9.182L23.91 4 12.03 16.092l-5.94-6.046L1 15.228l11.03 11.228z"></path></svg></span>
-																<div class="img-content">
-																	<img :src="exterior.image" alt="">
-																</div>
-															</figure>
-														</div>
-														<div class="fw-7">
-															+ 5 000 000 сум
+															<div class="exterior-color-items desktop:mh-5 mv-3">
+																<figure v-for="(exterior, key) in current_complectation.exteriors" :key="key" 
+																				@click="changeExterior(exterior)" 
+																				:class="{'active': current_exterior.name == exterior.name}"
+																				role="button">
+																	<span class="checked-icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 30 30"><path d="M29 9.182L23.91 4 12.03 16.092l-5.94-6.046L1 15.228l11.03 11.228z"></path></svg></span>
+																	<div class="img-content">
+																		<img :src="exterior.image" alt="">
+																	</div>
+																</figure>
+															</div>
+															<div class="fw-7 hide">
+																+ 5 000 000 сум
+															</div>
 														</div>
 													</div>
 												</div>
@@ -214,71 +221,255 @@
 								</div>
 							</div>
 						</div>
-            <div class="step-4" v-if="current_step.step_number == 4">
-							<div class="container">
-								<div class="configurator-info mh-auto box-md-7 mt-7 desktop:mt-13">
-									<div class="mv-3">
-										<h2>Ваша конфигурация</h2>
+            <div class="step-4">
+							<div class="container" v-if="current_step.step_number == 4">
+								<div class="row">
+									<div class="col-md-8 ph-3 exterior">
+										<div class="exterior-main row">
+											<span
+												class="cloudimage-360 exterior-main-wrap"
+												:data-folder="current_exterior.folder+'/'"
+												data-filename="{index}.jpg"
+												data-spin-reverse
+												data-amount="24">
+											</span>
+										</div>
+									</div>
+									<div class="col-md-4 ph-3 configurator-info mh-auto desktop:mt-13">
+										<div class="mv-3">
+											<h2>Ваша конфигурация</h2>
+											<div>
+												<div class="text-x6-b text-uppercase mb-2">{{current_model.name}} {{current_complectation.name}}</div>
+												<div class="summary-list">
+													<span class="summary-list-label">Модель</span>
+													<span class="summary-list-dots"></span>
+													<span class="summary-list-price">{{current_model.name}}</span>
+												</div>
+												<div class="summary-list">
+													<span class="summary-list-label">Комплектация</span>
+													<span class="summary-list-dots"></span>
+													<span class="summary-list-price">{{current_complectation.name}}</span>
+												</div>
+												<div class="summary-list">
+													<span class="summary-list-label">Двигатель</span>
+													<span class="summary-list-dots"></span>
+													<span class="summary-list-price">{{current_type.name}} {{current_type.gears[0].name}}</span>
+												</div>
+												<div class="summary-list">
+													<span class="summary-list-label">Экстерьер</span>
+													<span class="summary-list-dots"></span>
+													<span class="summary-list-price">{{current_exterior.name}}</span>
+												</div>
+											</div>
+										</div>
 										<div>
-											<div class="text-x6-b text-uppercase mb-1">{{current_model.name}} {{current_complectation.name}}</div>
-											<div class="summary-list">
-												<span class="summary-list-label">{{current_type.name}}</span>
-												<span class="summary-list-dots"></span>
-												<span class="summary-list-price">{{current_type.price | spaceBetweenNum}} сум</span>
+											<div class="text-x7-b mb-3">
+												Цена конфигурации: <br>
+												<span class="ws-nowrap">{{current_type.price | spaceBetweenNum}} сум</span>
+											</div>
+										</div>
+										<div class="btn-content mv-6">
+											<span class="btn-def ph-10">
+												<a href="#form-conf" data-fancybox>
+													Отправить заявку
+												</a>
+											</span>
+										</div>
+									</div>
+								</div>
+								<div class="pb-10">
+									<div class="accordion-def style-1 desktop:ph-4" id="option-base">
+										<div class="panel">
+											<a role="button" data-toggle="collapse" aria-expanded="true" data-parent="#option-base" href="#option-base-1">
+												<span>Технические характеристики</span><i class="fa fa-angle-up"></i>
+											</a>
+											<div id="option-base-1" class="panel-collapse collapse in" aria-expanded="true">
+												<div class="accordion-def-body">
+													<div class="detail-list-1">
+														<div class="text-x5-b mb-2 mh-2">Топливный бак</div>
+														<div class="dl-items">
+															<dl v-for="(item, key) in current_type.settings.fuelTank" :key="key" v-if="item.description.length">
+																<dt>{{item.name}}</dt>
+																<dd>{{item.description}}</dd>
+															</dl>
+														</div>
+													</div>
+													<div class="detail-list-1">
+														<div class="text-x5-b mb-2 mh-2">Динамические характеристики</div>
+														<div class="dl-items">
+															<dl v-for="(item, key) in current_type.settings.characteristics" :key="key" v-if="item.description.length">
+																<dt>{{item.name}}</dt>
+																<dd>{{item.description}}</dd>
+															</dl>
+														</div>
+													</div>
+													<div class="detail-list-1">
+														<div class="text-x5-b mb-2 mh-2">Привод</div>
+														<div class="dl-items">
+															<dl v-for="(item, key) in current_type.settings.driveUnit" :key="key" v-if="item.description.length">
+																<dt>{{item.name}}</dt>
+																<dd>{{item.description}}</dd>
+															</dl>
+														</div>
+													</div>
+													<div class="detail-list-1">
+														<div class="text-x5-b mb-2 mh-2">Тип кузова</div>
+														<div class="dl-items">
+															<dl v-for="(item, key) in current_type.settings.bodyType" :key="key" v-if="item.description.length">
+																<dt>{{item.name}}</dt>
+																<dd>{{item.description}}</dd>
+															</dl>
+														</div>
+													</div>
+													<div class="detail-list-1">
+														<div class="text-x5-b mb-2 mh-2">Рулевое управление</div>
+														<div class="dl-items">
+															<dl v-for="(item, key) in current_type.settings.steering" :key="key" v-if="item.description.length">
+																<dt>{{item.name}}</dt>
+																<dd>{{item.description}}</dd>
+															</dl>
+														</div>
+													</div>
+													<div class="detail-list-1">
+														<div class="text-x5-b mb-2 mh-2">Расход топлива</div>
+														<div class="dl-items">
+															<dl v-for="(item, key) in current_type.settings.fuelConsumption" :key="key" v-if="item.description.length">
+																<dt>{{item.name}}</dt>
+																<dd>{{item.description}}</dd>
+															</dl>
+														</div>
+													</div>
+													<div class="detail-list-1">
+														<div class="text-x5-b mb-2 mh-2">Тормозная система</div>
+														<div class="dl-items">
+															<dl v-for="(item, key) in current_type.settings.brakeSystem" :key="key" v-if="item.description.length">
+																<dt>{{item.name}}</dt>
+																<dd>{{item.description}}</dd>
+															</dl>
+														</div>
+													</div>
+													<div class="detail-list-1">
+														<div class="text-x5-b mb-2 mh-2">Шины</div>
+														<div class="dl-items">
+															<dl v-for="(item, key) in current_type.settings.tires" :key="key" v-if="item.description.length">
+																<dt>{{item.name}}</dt>
+																<dd>{{item.description}}</dd>
+															</dl>
+														</div>
+													</div>
+													<div class="detail-list-1">
+														<div class="text-x5-b mb-2 mh-2">Массовые характеристики (кг)</div>
+														<div class="dl-items">
+															<dl v-for="(item, key) in current_type.settings.massCharacteristics" :key="key" v-if="item.description.length">
+																<dt>{{item.name}}</dt>
+																<dd>{{item.description}}</dd>
+															</dl>
+														</div>
+													</div>
+													<div class="detail-list-1">
+														<div class="text-x5-b mb-2 mh-2">Двигатель</div>
+														<div class="dl-items">
+															<dl v-for="(item, key) in current_type.settings.engine" :key="key" v-if="item.description.length">
+																<dt>{{item.name}}</dt>
+																<dd>{{item.description}}</dd>
+															</dl>
+														</div>
+													</div>
+													<div class="detail-list-1">
+														<div class="text-x5-b mb-2 mh-2">Габаритные размеры (мм)</div>
+														<div class="dl-items">
+															<dl v-for="(item, key) in current_type.settings.overallDimensions" :key="key" v-if="item.description.length">
+																<dt>{{item.name}}</dt>
+																<dd>{{item.description}}</dd>
+															</dl>
+														</div>
+													</div>
+													<div class="detail-list-1">
+														<div class="text-x5-b mb-2 mh-2">Подвеска</div>
+														<div class="dl-items">
+															<dl v-for="(item, key) in current_type.settings.suspension" :key="key" v-if="item.description.length">
+																<dt>{{item.name}}</dt>
+																<dd>{{item.description}}</dd>
+															</dl>
+														</div>
+													</div>
+													<div class="detail-list-1">
+														<div class="text-x5-b mb-2 mh-2">Коробка передач</div>
+														<div class="dl-items">
+															<dl v-for="(item, key) in current_type.settings.transmission" :key="key" v-if="item.description.length">
+																<dt>{{item.name}}</dt>
+																<dd>{{item.description}}</dd>
+															</dl>
+														</div>
+													</div>
+													<div class="detail-list-1">
+														<div class="text-x5-b mb-2 mh-2">Объем багажника</div>
+														<div class="dl-items">
+															<dl v-for="(item, key) in current_type.settings.trunkVolume" :key="key" v-if="item.description.length">
+																<dt>{{item.name}}</dt>
+																<dd>{{item.description}}</dd>
+															</dl>
+														</div>
+													</div>
+												</div>
 											</div>
 										</div>
 									</div>
-									<div>
-										<div class="text-x8-b mb-3">Цена конфигурации: <span class="ws-nowrap">{{current_type.price | spaceBetweenNum}} сум</span></div>
+								</div>
+								<div class="hide">
+									<div id="form-conf" class="box-xs-10 box-md-6 box-lg-5">
+										<div class="form-content pv-6 mh-auto">
+											<!-- https://www.life-style.uz/renaultuz.php -->
+											<form action="https://www.life-style.uz/renaultuzconfigurator.php" method="POST" formaj>
+												<div class="entry-header text-center mb-3">
+													<div class="text-x10">Оставить заявку на <b class="text-capitalize">{{current_model.name}} {{current_complectation.name}}</b></div>
+												</div>
+												<div class="hide">
+													<input type="text" name="model" :value="current_model.name+' '+current_complectation.name">
+													<input type="text" name="engine" :value="current_type.name">
+													<input type="text" name="price" :value="current_type.price">
+													<input type="text" name="exterior" :value="current_exterior.name">
+												</div>
+												<div class="field-content mv-3">
+													<div class="text-x4 mb-1">Ваше имя</div>
+													<div class="input-content">
+														<input type="text" name="name" class="form-control" required>
+													</div>
+												</div>
+												<div class="field-content mv-3">
+													<div class="text-x4 mb-1">Ваш номер телефона</div>
+													<div class="input-content">
+														<input type="phone" name="phone" class="form-control" required>
+													</div>
+												</div>
+												<div class="btn-content mt-8">
+													<span class="btn-def">
+														<button type="submit">Отправить</button>
+													</span>
+												</div>
+											</form>
+											<div class="form-success-block">
+												<div class="form-success-block-wrapper pv-10 mobile:text-center">
+													<h3>Заявка успешно отправлена!</h3>
+												</div>
+											</div>
+										</div>
 									</div>
 								</div>
-                <div class="form-content pv-6 mh-auto box-md-7">
-									<!-- https://www.life-style.uz/renaultuz.php -->
-                  <form action="https://www.life-style.uz/renaultuzconfigurator.php" method="POST" formaj>
-                    <div class="entry-header text-center mb-3">
-                      <!-- <div class="text-x10">Отправить заявку</div> -->
-                    </div>
-										<div class="hide">
-											<input type="text" name="model" :value="current_model.name+' '+current_complectation.name">
-											<input type="text" name="engine" :value="current_type.name">
-											<input type="text" name="price" value="current_type.price">
-										</div>
-                    <div class="field-content mv-3">
-                      <div class="text-x4 mb-1">Ваше имя</div>
-                      <div class="input-content">
-                        <input type="text" name="name" class="form-control" required>
-                      </div>
-                    </div>
-                    <div class="field-content mv-3">
-                      <div class="text-x4 mb-1">Ваш номер телефона</div>
-                      <div class="input-content">
-                        <input type="phone" name="phone" class="form-control" required>
-                      </div>
-                    </div>
-                    <div class="btn-content mt-8">
-                      <span class="btn-def">
-                        <button type="submit">Отправить</button>
-                      </span>
-                    </div>
-                  </form>
-                  <div class="form-success-block">
-                    <div class="form-success-block-wrapper pv-10">
-                      <h3>Заявка успешно отправлена!</h3>
-                    </div>
-                  </div>
-                </div>
+								
+
               </div>
             </div>
 
 					</section>
-					<div class="summary-steps">
+					<div class="summary-steps" v-if="current_step.step_number < steps.length">
 						<div class="wrapper">
 							<div>
 								<div class="price-content pr-6" v-if="current_type">
 									Цена конфигурации: <span class="ws-nowrap">{{current_type.price | spaceBetweenNum}} сум</span>
 								</div>
 							</div>
-							<div class="btn-content" v-if="current_step.step_number < 3">
+							<div class="btn-content">
 								<button class="flex ai-center" type="button" @click="currentStep(current_step.step_number+1)">
 									<span class="mr-1">Далее</span>
 									<span class="base-arrow-r"></span>
@@ -352,6 +543,10 @@
 			methods: {
 				currentStep(n){
 					console.log(n)
+					// this.current_type = this.current_complectation.type_engines[0];
+					// this.current_exterior = this.current_complectation.exteriors[0]
+					// //this.current_step.step_number = 2
+					// //return;
 					setTimeout(() => {
 						swiperInit();	
 					}, 1);
@@ -369,13 +564,13 @@
 						// step 1
 						if(this.current_step.step_number == 1){
 							swiperInit();
-							swiperInit();
+							//swiperInit();
 						}
 
 						// step 2
 						if(this.current_step.step_number == 2){
 							swiperInit();
-							swiperInit();
+							//swiperInit();
 							this.current_type = this.current_complectation.type_engines[0];
 							this.current_exterior = this.current_complectation.exteriors[0]
 						}
@@ -385,7 +580,21 @@
 							window.CI360.init();
 						}
 
+						// step 4
+						if(this.current_step.step_number == 4){
+							window.CI360.init();
+						}
+
+
 					}, 1);
+				},
+				changeExterior(exterior, parentClass){
+					this.current_exterior = exterior;
+					parentClass = parentClass || ".exterior";
+					window.CI360.destroy();
+					$(parentClass+" [data-folder]").attr('data-folder', this.current_exterior.folder+'/')
+					$(parentClass+" [data-amount]").attr('data-amount', 24)
+					window.CI360.init();
 				}
 			},
 			async mounted(){

@@ -117,6 +117,16 @@ small {
       }
     }
   }
+  &.style-1{
+    a{
+      border: 1px solid $color-gray-1;
+    }
+    .accordion-def-body{
+      background-color: white;
+      padding: 35px 0;
+      color: black;
+    }
+  }
 }
 .accordion-def-body {
   padding: 35px 20px;
@@ -1699,8 +1709,24 @@ ymaps .map-cluster{
    border-top: 1px solid white;
    ul{
      display: flex;
+     //background-color: $color-gray-5;
+     background-color: black;
      width: 100%;
      overflow: hidden;
+   }
+   .title-name{
+     @media (max-width: 991px){
+      display: none;
+     }
+   }
+   .title-name-current{
+    background-color: black;
+    color: white;
+    padding: 10px;
+    text-align: center;
+     @media (min-width: 992px){
+       display: none;
+     }
    }
    li{
      list-style: none;
@@ -1748,10 +1774,11 @@ ymaps .map-cluster{
       z-index: 1;
       margin-left: -20px;
       border-left-color: #d9d9d6;
+      width: 30px
      }
      &:after{
       border-left-color: black;
-      z-index: 2;
+      z-index: 2;;
      }
      &.active{
       z-index: 2;
@@ -1953,23 +1980,51 @@ ymaps .map-cluster{
       }
     }
   }
+  .step-3{
+    .exterior-main{
+      @media (min-width:992px){
+        overflow: inherit;
+      }
+    }
+  }
 }
 
-.exterior{
-  .exterior-warpper{
+.exterior-main{
+  height: 470px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 30px;
+  overflow: hidden;
+  .exterior-main-wrap{
     //max-width: 1280px;
     //max-height: 440px;
+    @media(min-width: 992px){
+      height: 700px;
+    }
+  }
+  @media(max-width: 991px){
+    height: 250px;
+  }
+  .cloudimage-360-loader{
+    display: none;
   }
   .cloudimage-360-view-360-icon{
     background-color: rgba(black, 0.8) !important;
     background-size: 60% !important;
+    transition: none !important;
     color: white;
   }
+}
+.exterior-sample{
+  position: relative;
 }
 .exterior-color-items{
   display: flex;
   border-bottom: 1px solid black;
   padding-bottom: 15px;
+  flex-wrap: wrap;
+  
   figure{
     position: relative;
     margin: 10px;
@@ -2005,6 +2060,9 @@ ymaps .map-cluster{
       opacity: 1;
     }
   }
+  @media (max-width: 991px){
+    justify-content: center;
+  }
 }
 .summary-list{
   display: flex;
@@ -2021,6 +2079,34 @@ ymaps .map-cluster{
   .summary-list-price{
     float: right;
     font-size: 1.4rem;
+    text-transform: capitalize;
   }
 
+}
+
+.detail-list-1{
+  .dl-items{
+    dl{
+      display: flex;
+      width: 100%;
+      padding: 16px 0;
+      color: #000;
+      font-size: 14px;
+      margin-bottom: 0;
+      margin-top: 0;
+      &:nth-child(odd){
+        background-color: $color-gray-1;
+      }
+      dt{
+        width: 60%;
+        margin: 0 16px;
+        font-weight: 400;
+        font-size: 13px;
+      }
+      dd{
+        width: 40%;
+        font-weight: 700;
+      }
+    }
+  }
 }
