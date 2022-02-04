@@ -85,7 +85,8 @@
 <script src="/js/plugins/bootstrap.min.js"></script>
 <script src="/js/plugins/aos.js"></script>
 <script src="/js/plugins/owl.carousel.min.js"></script>
-<script src="/js/plugins/jquery.fancybox.js"></script>
+
+
 <script src="/js/plugins/jquery.mmenu.all.js"></script>
 <script src="/js/plugins/smooth-scroll.js"></script>
 <script src="/js/plugins/ion.rangeSlider.min.js"></script>
@@ -99,6 +100,11 @@
 
 <script src="/js/plugins/jquery-ui/jquery-ui.min.js"></script> <!-- JQUERY UI -->
 
+
+<!-- fancybox -->
+<!-- <script src="/js/plugins/jquery.fancybox.js"></script> -->
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.js"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.css">
 
 
 
@@ -603,145 +609,145 @@ gtag('config', 'G-CHPFNKGF8F');
 					</div>
 				</div>
 			</div>
-
+			<script>window.CI360 = { notInitOnLoad: true }</script>
+			<script src="/js/plugins/js-cloudimage-360-view.min.js"></script>
+			<!-- Vue scripts -->
+			<script>
+				//import main from "../js/main.js";
+				var app = new Vue({
+					el: "#configurator",
+					data: {
+						hash: "",
+						statusHash: false,
+						current_step: { 
+							name: "Комплектация",
+							step_number: 1
+						},
+						current_model: {},
+						current_complectation: {},
+						current_type: {},
+						current_exterior: {},
+						page_data: {
+							
+						}, 
+						steps: [
+							{ 
+								name: "Комплектация",
+								step_number: 1
+							},
+							{ 
+								name: "Двигатель",
+								step_number: 2
+							},
+							{ 
+								name: "Дизайн",
+								step_number: 3
+							},
+							{ 
+								name: "Результат",
+								step_number: 4
+							},
+						],
+						
+					},
+					watch: {
+						current_model(){
+							this.current_complectation = this.current_model.complectations[0];
+						},
+						hash(){
+							this.page_data.models.forEach(el => {
+								
+								if(el.name == this.hash){
+									this.statusHash = true;
+									this.current_model = el
+									this.currentStep(1);
+									return;
+								}	
+							});
+							
+						}
+					},
+					methods: {
+						currentStep(n){
+							console.log(n)
+							// this.current_type = this.current_complectation.type_engines[0];
+							// this.current_exterior = this.current_complectation.exteriors[0]
+							// //this.current_step.step_number = 2
+							// //return;
+							setTimeout(() => {
+								swiperInit();	
+							}, 1);
+							
+							if(this.current_step.step_number+1 < n)
+								return
+							if(n){
+								for (let i = 0; i < this.steps.length; i++) {
+									const el = this.steps[i];
+									if(el.step_number == n)
+										this.current_step = el;
+								}	
+							}
+							setTimeout(() => {
+								// step 1
+								if(this.current_step.step_number == 1){
+									swiperInit();
+									//swiperInit();
+								}
+		
+								// step 2
+								if(this.current_step.step_number == 2){
+									swiperInit();
+									//swiperInit();
+									this.current_type = this.current_complectation.type_engines[0];
+									this.current_exterior = this.current_complectation.exteriors[0]
+								}
+		
+								// step 3
+								if(this.current_step.step_number == 3){
+									window.CI360.init();
+								}
+		
+								// step 4
+								if(this.current_step.step_number == 4){
+									window.CI360.init();
+								}
+		
+		
+							}, 1);
+						},
+						changeExterior(exterior, parentClass){
+							this.current_exterior = exterior;
+							parentClass = parentClass || ".exterior";
+							window.CI360.destroy();
+							$(parentClass+" [data-folder]").attr('data-folder', this.current_exterior.folder+'/')
+							$(parentClass+" [data-amount]").attr('data-amount', 24)
+							window.CI360.init();
+						}
+					},
+					async mounted(){
+						//this.models = await axios.get("https://api.kia-motors.uz/api/public/configurator/get/3/978/0/6AT/FWD")
+						//this.req = await axios.get("/data/complectations.json")
+						this.req = await axios.get("https://renault.lifestyle.uz/models.php")
+						this.page_data = this.req.data
+						var that = this
+						window.onhashchange = function () {
+							that.hash = location.hash.replace(/#/, "")
+						}
+						that.hash = location.hash.replace(/#/, "")
+						
+						setTimeout(() => {
+							that.current_type = that.current_complectation.type_engines[0]
+							console.log(that.current_complectation); 
+						}, 1);
+						
+						//window.onhashchange();
+						
+					}
+				})
+			</script>
 		</main>
 	</div>
-	<script>window.CI360 = { notInitOnLoad: true }</script>
-	<script src="/js/plugins/js-cloudimage-360-view.min.js"></script>
-	<!-- Vue scripts -->
-	<script>
-		//import main from "../js/main.js";
-		var app = new Vue({
-			el: "#page",
-			data: {
-				hash: "",
-				statusHash: false,
-				current_step: { 
-					name: "Комплектация",
-					step_number: 1
-				},
-				current_model: {},
-				current_complectation: {},
-        current_type: {},
-				current_exterior: {},
-				page_data: {
-					
-				}, 
-				steps: [
-					{ 
-						name: "Комплектация",
-						step_number: 1
-					},
-					{ 
-						name: "Двигатель",
-						step_number: 2
-					},
-					{ 
-						name: "Дизайн",
-						step_number: 3
-					},
-					{ 
-						name: "Результат",
-						step_number: 4
-					},
-				],
-				
-			},
-			watch: {
-				current_model(){
-					this.current_complectation = this.current_model.complectations[0];
-				},
-				hash(){
-					this.page_data.models.forEach(el => {
-						
-						if(el.name == this.hash){
-							this.statusHash = true;
-							this.current_model = el
-							this.currentStep(1);
-							return;
-						}	
-					});
-					
-				}
-			},
-			methods: {
-				currentStep(n){
-					console.log(n)
-					// this.current_type = this.current_complectation.type_engines[0];
-					// this.current_exterior = this.current_complectation.exteriors[0]
-					// //this.current_step.step_number = 2
-					// //return;
-					setTimeout(() => {
-						swiperInit();	
-					}, 1);
-					
-					if(this.current_step.step_number+1 < n)
-						return
-					if(n){
-						for (let i = 0; i < this.steps.length; i++) {
-							const el = this.steps[i];
-							if(el.step_number == n)
-								this.current_step = el;
-						}	
-					}
-					setTimeout(() => {
-						// step 1
-						if(this.current_step.step_number == 1){
-							swiperInit();
-							//swiperInit();
-						}
 
-						// step 2
-						if(this.current_step.step_number == 2){
-							swiperInit();
-							//swiperInit();
-							this.current_type = this.current_complectation.type_engines[0];
-							this.current_exterior = this.current_complectation.exteriors[0]
-						}
-
-						// step 3
-						if(this.current_step.step_number == 3){
-							window.CI360.init();
-						}
-
-						// step 4
-						if(this.current_step.step_number == 4){
-							window.CI360.init();
-						}
-
-
-					}, 1);
-				},
-				changeExterior(exterior, parentClass){
-					this.current_exterior = exterior;
-					parentClass = parentClass || ".exterior";
-					window.CI360.destroy();
-					$(parentClass+" [data-folder]").attr('data-folder', this.current_exterior.folder+'/')
-					$(parentClass+" [data-amount]").attr('data-amount', 24)
-					window.CI360.init();
-				}
-			},
-			async mounted(){
-				//this.models = await axios.get("https://api.kia-motors.uz/api/public/configurator/get/3/978/0/6AT/FWD")
-				//this.req = await axios.get("/data/complectations.json")
-				this.req = await axios.get("https://renault.lifestyle.uz/models.php")
-				this.page_data = this.req.data
-				var that = this
-				window.onhashchange = function () {
-					that.hash = location.hash.replace(/#/, "")
-				}
-				that.hash = location.hash.replace(/#/, "")
-        
-        setTimeout(() => {
-          that.current_type = that.current_complectation.type_engines[0]
-          console.log(that.current_complectation); 
-        }, 1);
-        
-				//window.onhashchange();
-				
-			}
-		})
-	</script>
 	<!-- SCRIPTS -->
 	
 

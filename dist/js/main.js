@@ -128,7 +128,14 @@
 		/*FANCYBOX*/
 		if ($("[data-fancybox]").length != 0)
 			$("[data-fancybox]").fancybox({
-				afterShow: function(instance, current) {},
+				afterShow: function(instance, current) {
+					// // After the show-slide-animation has ended - play the vide in the current slide
+					// this.content.find('video').trigger('play')
+					// // Attach the ended callback to trigger the fancybox.next() once the video has ended.
+					// this.content.find('video').on('ended', function() {
+					// 	$.fancybox.next();
+					// });
+				},
 				animationEffect : "zoom",
 				animationDuration : 800,
 				toolbar : true,
