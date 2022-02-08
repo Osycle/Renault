@@ -727,13 +727,11 @@ gtag('config', 'G-CHPFNKGF8F');
 					async mounted(){
 						//this.models = await axios.get("https://api.kia-motors.uz/api/public/configurator/get/3/978/0/6AT/FWD")
 						//this.req = await axios.get("/data/complectations.json")
+						console.log(this)
 						this.req = await axios.get("https://renault.lifestyle.uz/models.php")
 						this.page_data = this.req.data
 						var that = this
-						window.onhashchange = function () {
-							that.hash = location.hash.replace(/#/, "")
-						}
-						that.hash = location.hash.replace(/#/, "")
+						that.hash = getUrlParameter("model")
 						
 						setTimeout(() => {
 							that.current_type = that.current_complectation.type_engines[0]
