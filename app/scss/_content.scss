@@ -1855,12 +1855,21 @@ ymaps .map-cluster{
         height: auto;
       }
     }
+    img{
+      margin-bottom: 20px;
+    }
+    .swiper-slide{
+      img{
+        margin-bottom: 0;
+      }
+    }
     [style*='float: left']{
       margin: 15px 15px 15px 0;
     }
     [style*='float: right']{
       margin: 15px 0 15px 15px;
     }
+
   }
 }
 .model-drives-items{

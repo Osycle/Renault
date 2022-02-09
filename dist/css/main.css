@@ -9183,7 +9183,7 @@ label.error {
     .header-icons ul svg {
       height: 20px; }
   .header-icons li {
-    min-width: 95px; }
+    min-width: 75px; }
     @media (min-width: 991px) {
       .header-icons li {
         margin-left: 5px; } }
@@ -11707,6 +11707,12 @@ ymaps .map-cluster {
       height: auto; }
       .news .text-item video[width] {
         width: 100%; } }
+
+.news .text-item img {
+  margin-bottom: 20px; }
+
+.news .text-item .swiper-slide img {
+  margin-bottom: 0; }
 
 .news .text-item [style*='float: left'] {
   margin: 15px 15px 15px 0; }
