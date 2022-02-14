@@ -1168,7 +1168,7 @@ html{
 	
 	.form-control{
 		background-color: transparent;
-		border: 1px solid $color-gray-3;
+		border: 1px solid $color-gray-2;
 		border-radius: 0;
 		color: black;
 		box-shadow: none;
@@ -1253,39 +1253,47 @@ html{
 //checkbox
 input[type="checkbox"]:checked{
 	&~.checkbox-style-1, &~label .checkbox-style-1{
-		background-color: black;
-		border-radius: 50%;
+		//background-color: black;
 		&.bg-color-1{
-			background-color: $color-1;
+			//background-color: $color-1;
 		}
 		&:before{
-			border-color: transparent;
+			//border-color: $color-1;
 			display: flex;
 			align-items: center;
 			justify-content: center;
-			color: white;
+			font-size: 10px;
+			font-family: FontAwesome;
+			content: "\f00c";
+			color: $color-2;
 		}
 	}		
 }
 .checkbox-style-1{
 	width: 20px;
 	height: 20px;
-	border-radius: 50%;
+	min-width: 20px;
 	display: inline-block;
 	//transition: all 0.05s ease;
 	background-color: transparent;
 	position: relative;
+	border-radius: 0;
 	&:hover{
 		cursor: pointer;
 	}
 	&:before{
-		@extend .clafclear;
+		@extend .claf;
 		@extend .trans-center;
-		border-radius: 50%;
-		width: 15px;
-		height: 15px;
+		border-radius: 0;
 		border: 1px solid $color-gray-5;
 	}
+}
+[type="checkbox"][required].hide{
+	display: inline-block !important;
+	width: 10px;
+	opacity: 0;
+	padding: 0;
+	height: 10px;
 }
 //radio
 input[type="radio"]:checked, .radio-style-1:checked{
@@ -1299,13 +1307,15 @@ label{
 	font-weight: inherit;
 }
 .radio-style-1{
-	width: 16px;
+	width: 20px;
 	flex-shrink: 0;
-	height: 16px;
+	height: 20px;
+	border-radius: 3px;
 	display: inline-block;
-	background-color: white;
+	//transition: all 0.05s ease;
+	background-color: $color-gray-2;
 	position: relative;
-	border: 1px solid $color-gray-5;
+	border: 2px solid $color-gray-5;
 	border-radius: 50%;
 	&:hover{
 		cursor: pointer;
@@ -1326,6 +1336,9 @@ label{
 	width: 12px;
 	height: 12px;
 }
+
+
+
 
 label.error{
 	color: $color-red;
@@ -1359,5 +1372,3 @@ label.error{
 		margin-bottom: 0;
 	}
 }
-
-

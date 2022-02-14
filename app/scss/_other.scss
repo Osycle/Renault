@@ -244,7 +244,7 @@ html{
 .select2-container--default{
 	[class*="_rendered"]{
 		line-height: 50px;
-		border: 1px solid $color-gray-3;
+		border: 1px solid $color-gray-2;
 	}
 	[class*="_arrow"]{
 		background-color: transparent;
@@ -263,7 +263,7 @@ html{
 			@extend .clafclear;
 			height: 100%;
 			width: 1px;
-			background-color: black;
+			background-color: $color-gray-2;
 			transform: scaleY(0.7);
 			left: 0;
 			top: 0;
@@ -300,7 +300,7 @@ html{
 }
 
 .select2-dropdown{
-	@extend .shadow-def;
+	box-shadow: 0 0 9px -3px rgba(#000, 0.1);
 	font-size: em(14);
 	border-color: $color-gray-1;
 }

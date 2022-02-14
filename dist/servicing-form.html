@@ -2,10 +2,10 @@
 <html lang="ru">
 
 <head>
-	<meta charset="utf-8">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<meta name="description" content="">
+	<meta charset="utf-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<meta name="description" content="" />
 		<link rel="shortcut icon" href="/img/favicon/favicon.ico" type="image/x-icon">
 	<link rel="apple-touch-icon" href="/img/favicon/favicon.png">
 
@@ -142,39 +142,6 @@ gtag('config', 'G-CHPFNKGF8F');
 </head>
 
 <body>
-	<div class="hide">
-		<div class="form-def" id="les-form">
-			<div class="form-content pv-8 ph-10">
-				<form action="https://www.life-style.uz/renaultuz.php" method="POST" formaj>
-					<div class="entry-header text-center mb-3">
-						<div class="text-x10">Отправить заявку</div>
-					</div>
-					<div class="field-content mv-3">
-						<div class="text-x4 mb-1">Ваше имя</div>
-						<div class="input-content">
-							<input type="text" name="name" class="form-control" required>
-						</div>
-					</div>
-					<div class="field-content mv-3">
-						<div class="text-x4 mb-1">Ваш номер телефона</div>
-						<div class="input-content">
-							<input type="phone" name="phone" class="form-control" required>
-						</div>
-					</div>
-					<div class="btn-content mt-6">
-						<span class="btn-def">
-							<button type="submit">Отправить</button>
-						</span>
-					</div>
-				</form>
-				<div class="form-success-block">
-					<div class="form-success-block-wrapper pv-10">
-						<h3>Заявка успешно отправлена!</h3>
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
 	<div id="page">
 		    <!-- HEADER -->
     <div class="header-hidden" id="header-hidden"></div>
@@ -490,280 +457,97 @@ gtag('config', 'G-CHPFNKGF8F');
         </div>
       </div>
     </div>
-		<main class="main" data-aos="fade" id="main">
-			<div class="nav-sub">
-				<div class="wrapper link-li-1">
-					<ul class="jc-center">
-						<li class="active"><a href="/leasing.html">лизинговые программы</a></li>
-					</ul>
-				</div>
-			</div>
+		<main class="main" data-aos="fade">
 			<div class="bnr-page">
 				<div class="wrapper">
 					<div class="entry-header">
-						<div class="img-content">	
-							<picture class="pic-absolute is-covered">
-								<img src="/img/other/leasing/leasing-bnr.webp">
+						<div class="img-content">
+							<picture class="pic-absolute is-covered opacity-3">
+								<img src="/img/other/finance/finance-bnr.webp" />
 							</picture>
 						</div>
 						<div class="desc-content">
-							<h1>Лизинговая программа Renault Leasing</h1>
+							<h1>ЗАПРОС СЕРВИСНОГО ОБСЛУЖИВАНИЯ</h1>
+							<div class="text-summary"></div>
 						</div>
-					</div>					
+					</div>
 				</div>
 			</div>
 			<section>
 				<div class="container pv-5 pv-8">
-					<div class="entry-header text-center box-md-6 mh-auto mb-5">
-						<h2>АВТОМОБИЛИ</h2>
-						<p>с ежемесячным платежом</p>
-						<br>
-						<div>Программа Renault Leasing предлагает выгодные условия приобретения автомобилей Renault. Подберите наиболее подходящую для ваших задач модель и получите персональный расчет ежемесячного платежа.</div>
-					</div>
-					<div class="boxes-4 figure-mv-6 desktop:ph-9 img-ratio-1 jc-center">
-						<figure>
-							<picture>
-								<img src="/img/other/index/index-models-1.png">
-							</picture>
-							<div class="desc-content">
-								<div class="text-x4-b mv-3">Renault Arkana</div>
-								<hr class="style-1 ml-0">
-								<p>Цена от 239 046 500 сум</p>
-								<div class="btn-def mt-4 hide">
-									<a href="javascript:;">получить персональное предложение</a>
+					<div class="form-content box-md-6 mh-auto">
+						<form action="" method="POST" formaj>
+							<div class="entry-header text-center mb-3 desktop:mb-8">
+								<div class="text-x10">Запись на сервис</div>
+							</div>
+							<div class="field-content mv-6">
+								<div class="text-x4 mb-1">Данные автомобиля</div>
+								<select class="js-select box-xs-10" required>
+									<option value="">Модельный ряд</option>
+									<option>Arkana</option>
+									<option>Kaptur</option>
+									<option>Duster</option>
+								</select>
+							</div>
+							<div class="field-content mv-6">
+								<div class="text-x4 mb-1">Филиал</div>
+								<select class="js-select box-xs-10">
+									<option>Kia Sergeli</option>
+									<option>Kia Yakkasaray</option>
+								</select>
+							</div>
+							<div class="field-content mv-6">
+								<div class="text-x4 mb-1">Тип работы</div>
+								<select class="js-select box-xs-10">
+									<option value="">Выберите тип работы</option>
+									<option>ТО</option>
+									<option>Механический ремонт</option>
+									<option>Кузовной ремонт</option>
+									<option>Комплексная диагностика</option>
+									<option>Шиномонтаж</option>
+								</select>
+							</div>
+							<div class="field-content mv-6">
+								<div class="text-x4 mb-1">Ваше имя</div>
+								<div class="input-content">
+									<input type="text" name="name" class="form-control" placeholder="Имя *" required>
 								</div>
 							</div>
-						</figure>
-						<figure>
-							<picture>
-								<img src="/img/other/index/index-models-2.png">
-							</picture>
-							<div class="desc-content">
-								<div class="text-x4-b mv-3">Renault Kaptur</div>
-								<hr class="style-1 ml-0">
-								<p>Цена от 228 937 300 сум</p>
-								<div class="btn-def mt-4 hide">
-									<a href="javascript:;">получить персональное предложение</a>
+							<div class="field-content mv-6">
+								<div class="text-x4 mb-1">Ваш номер телефона</div>
+								<div class="input-content">
+									<input type="tel" name="phone" class="form-control" placeholder="Номер телефона *" required>
 								</div>
 							</div>
-						</figure>
-						<figure>
-							<picture>
-								<img src="/img/other/index/index-models-3.png">
-							</picture>
-							<div class="desc-content">
-								<div class="text-x4-b mv-3">Renault Duster</div>
-								<hr class="style-1 ml-0">
-								<p>Цена от 233 071 500 сум</p>
-								<div class="btn-def mt-4 hide">
-									<a href="javascript:;">получить персональное предложение</a>
+							<div class="field-content mv-8">								
+								<div class="input-content">
+									<textarea type="text" placeholder="Ваш комментарий или вопрос" name="comments" class="form-control"></textarea>
 								</div>
 							</div>
-						</figure>
-					</div>
-				</div>
-			</section>
-			<section>
-				<div class="container pv-5 pv-8">
-					<div class="entry-header text-center">
-						<h2>Покупатель</h2>
-					</div>
-					<div class="boxes-5 jc-center figure-mv-7 mt-8 text-center desktop:ph-24">
-						<figure>
-							<div class="img-content">
-								<img src="/img/other/finance/leasing-type-1.svg" alt="">
-							</div>
-							<div class="desc-content mt-4">
-								<p><b>Физические лица</b></p>
-							</div>
-						</figure>
-						<figure>
-							<div class="img-content">
-								<img src="/img/other/finance/leasing-type-2.svg" alt="">
-							</div>
-							<div class="desc-content mt-4">
-								<p><b>Юридические лица</b></p>
-							</div>
-						</figure>
-					</div>
-				</div>
-			</section>
-			<section>
-				<div class="container pv-8">
-					<div class="entry-header text-center box-lg-5 mh-auto">
-						<h2>Как это работает?</h2>
-					</div>
-					<div class="credit-steps mv-10">
-						<div class="credit-steps-items">
-							<figure>
-								<div class="img-content">
-									<picture>
-										<img src="/img/other/finance/leasing-steps-1.svg">
-									</picture>
-								</div>
-								<div class="desc-content">
-									<h4>Выбор автомобиля</h4>
-									Выберите понравившийся Вам автомобиль RENAULT онлайн или обратитесь в дилерский центр.  
-								</div>
-							</figure>
-							<figure>
-								<div class="img-content">
-									<picture>
-										<img src="/img/other/finance/leasing-steps-2.svg">
-									</picture>
-								</div>
-								<div class="desc-content">
-									<h4>Получение одобрения</h4>
-									Окончательный расчет можно получить у специалиста в дилерском центре RENAULT. Получите одобрение за 1 час.
-								</div>
-							</figure>
-							<figure>
-								<div class="img-content">
-									<picture>
-										<img src="https://cdn.group.renault.com/pictograms/s113-0_process/document.svg.asset.svg/1564491808898.svg">
-									</picture>
-								</div>
-								<div class="desc-content">
-									<h4>Подачи заявки</h4>
-									Оставьте заявку на лизинг, наши менеджеры свяжутся с Вами и подберут оптимальную для Вас программу лизинга.
-								</div>
-							</figure>
-							<figure>
-								<div class="img-content">
-									<picture>
-										<img src="/img/other/finance/leasing-steps-3.svg">
-									</picture>
-								</div>
-								<div class="desc-content">
-									<h4>Выдача автомобиля</h4>
-									Оформите полис страхования и заберите свой автомобиль. Теперь он ваш!
-								</div>
-							</figure>
-						</div>
-					</div>
-				</div>
-			</section>
-			<section>
-				<div class="container pv-5 pv-8">
-					<div class="entry-header text-center box-md-6 mh-auto mb-5">
-						<h2>ПРОГРАММЫ</h2>
-					</div>
-					<div class="boxes-3 figure-mv-6 desktop:ph-9 jc-center">
-						<figure>
-							<picture>
-								<img src="/img/other/leasing/leasing-programs-1.webp">
-							</picture>
-							<div class="desc-content">
-								<div class="text-x4-b mv-3">Программа 1</div>
-								<hr class="style-1 ml-0">
-								<div class="text-content">
-									<ul>
-										<li>Предоплата от 20%</li>
-										<li>Процентная ставка 29,9%</li>
-										<li>Срок лизинга до 36 мес.</li>
-										<li>Разовая комиссия 3%</li>
-									</ul>
-								</div>
-								<div class="text-center">
-									<span class="btn-def mt-4">
-										<a href="#les-form" data-fancybox>получить персональное предложение</a>
-									</span>
+							<div class="field-content mv-3">								
+								<div class="iagree m-v-30">
+									<label role="button" class="flex">
+										<input type="checkbox" name="iagree" required="required" class="hide"> 
+										<span class="checkbox-style-1"></span> 
+										<span class="pl-3">Отправляя сообщение, я выражаю свое согласие и разрешаю ООО 'Roodell', а также, по их поручению, третьим лицам осуществлять обработку моих персональных данных (фамилия, имя, отчество, год, месяц, дата и место рождения; адрес, номер паспорта и сведения о дате выдачи паспорта и выдавшем его органе; образование, профессия, место работы и должность; домашний, рабочий и мобильный телефоны; адрес электронной почты и другие данные, требуемые для отправки сообщения), включая сбор, систематизацию, накопление, хранение, уточнение, использование, распространение (в том числе трансграничную передачу), обезличивание, уничтожение персональных данных), в целях связанных с возможностью предоставления информации о товарах и услугах, которые потенциально могут представлять интерес, а также в целях сбора и обработки статистической информации и проведения маркетинговых исследований. Согласие на обработку персональных данных в соответствии с указанными выше условиями я предоставляю на 10 (десять) лет. Я уведомлен и согласен с тем, что указанное согласие может быть мной отозвано посредством направления письменного заявления заказным почтовым отправлением с описью вложения, либо вручено лично под подпись.</span>
+									</label>
 								</div>
 							</div>
-						</figure>
-						<figure>
-							<picture>
-								<img src="/img/other/leasing/leasing-programs-2.webp">
-							</picture>
-							<div class="desc-content">
-								<div class="text-x4-b mv-3">Программа 2</div>
-								<hr class="style-1 ml-0">
-								<div class="text-content">
-									<ul>
-										<li>Предоплата 30%</li>
-										<li>Процентная ставка 29,9%</li>
-										<li>Срок лизинга до 42 мес.</li>
-										<li>Разовая комиссия 4%</li>
-									</ul>
-								</div>
-								<div class="text-center">
-									<span class="btn-def mt-4">
-										<a href="#les-form" data-fancybox>получить персональное предложение</a>
-									</span>
-								</div>
-							</div>
-						</figure>
-						<figure>
-							<picture>
-								<img src="/img/other/leasing/leasing-programs-3.webp">
-							</picture>
-							<div class="desc-content">
-								<div class="text-x4-b mv-3">Программа 3</div>
-								<hr class="style-1 ml-0">
-								<div class="text-content">
-									<ul>
-										<li>Предоплата от 40%</li>
-										<li>Процентная ставка 26,9%</li>
-										<li>Срок лизинга на 13 мес.</li>
-										<li>Разовая комиссия 3%</li>
-									</ul>
-								</div>
-								<div class="text-center">
-									<span class="btn-def mt-4">
-										<a href="#les-form" data-fancybox>получить персональное предложение</a>
-									</span>
-								</div>
-							</div>
-						</figure>
-					</div>
-				</div>
-			</section>
-			<section>
-				<div class="container pv-5">
-					<div class="wrapper">
-						<div class="flex mv-3 mobile:fd-column">
-							<div class="fb-md-6 mv-3 desktop:mh-3">
-								<div class="img-content">
-									<picture>
-										<img src="/img/other/corporate/img-1.webp">
-									</picture>
-								</div>
-							</div>
-							<div class="fb-md-6 mv-3 desktop:mh-3">
-								<div class="desc-content">
-									<p class="text-x6-b mb-4 text-uppercase">Преимущества лизинга</p>
-									<p><b>Приобретите автомобиль Renault по программе лизинга с выгодой 5 000 000 сум </b></p>
-									<br>
-									<ul>
-										<li>минимальный пакет документов;</li>
-										<li>оперативное принятие решения;</li>
-										<li>выбор оптимального первоначального взноса и срока;</li>
-										<li>минимальная предоплата от 20%;</li>
-										<li>возможность изменения графика в течение действия договора.</li>
-									</ul>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-			</section>
 
-						<!-- <section>
-				<div class="container pv-8">
-					<div class="accordion-def desktop:ph-4" id="yur-accordion">
-					  <div class="panel">
-					    <a role="button" data-toggle="collapse" data-parent="#yur-accordion" href="#yur-accordion-1">
-					    	<span>ЮРИДИЧЕСКАЯ ИНФОРМАЦИЯ</span><i class="fa fa-angle-up"></i>
-					    </a>
-					    <div id="yur-accordion-1" class="panel-collapse collapse">
-					      <div class="accordion-def-body">
-									<p></p> 
-					      </div>
-					    </div>
-					  </div>
+							<div class="btn-content mt-6 desktop:text-right">
+								<span class="btn-def">
+									<button type="submit">Отправить</button>
+								</span>
+							</div>
+						</form>
+						<div class="form-success-block">
+							<div class="form-success-block-wrapper pv-10">
+								<h3>Заявка успешно отправлена!</h3>
+							</div>
+						</div>
 					</div>
 				</div>
-			</section> -->
+			</section>
 		</main>
 		
 		<footer id="footer" class="footer">
