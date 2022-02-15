@@ -694,6 +694,19 @@ small {
       }
     }
   }
+  .btn-content{
+    @media (max-width: 991px){
+      top: calc(100vh - 60px);
+      width: 100%;
+      position: absolute;
+      justify-content: center;
+      .btn-opacity{
+        background-color: $color-2;
+        color: white;
+        border: 0;
+      }
+    }
+  }
 }
 .nav-def {
   .img-contain {

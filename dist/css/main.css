@@ -8919,7 +8919,7 @@ html {
   html textarea.form-control {
     height: 130px;
     padding: 10px 15px;
-    border: 1px solid #8c8c8b;
+    border: 1px solid #d9d9d6;
     resize: none; }
 
 .ant-type {
@@ -8987,7 +8987,8 @@ input[type="checkbox"]:checked ~ .checkbox-style-1:before, input[type="checkbox"
   font-size: 10px;
   font-family: FontAwesome;
   content: "\f00c";
-  color: #000000; }
+  color: #000000;
+  border-color: #8c8c8b; }
 
 .checkbox-style-1 {
   width: 20px;
@@ -8996,12 +8997,12 @@ input[type="checkbox"]:checked ~ .checkbox-style-1:before, input[type="checkbox"
   display: inline-block;
   background-color: transparent;
   position: relative;
-  border-radius: 0; }
+  border-radius: 4px; }
   .checkbox-style-1:hover {
     cursor: pointer; }
   .checkbox-style-1:before {
     border-radius: 0;
-    border: 1px solid #3e3f40; }
+    border: 1px solid #d9d9d6; }
 
 [type="checkbox"][required].hide {
   display: inline-block !important;
@@ -10599,6 +10600,18 @@ small {
         display: -webkit-box;
         display: -ms-flexbox;
         display: flex; }
+  @media (max-width: 991px) {
+    .nav-sub .btn-content {
+      top: calc(100vh - 60px);
+      width: 100%;
+      position: absolute;
+      -webkit-box-pack: center;
+      -ms-flex-pack: center;
+      justify-content: center; }
+      .nav-sub .btn-content .btn-opacity {
+        background-color: #000000;
+        color: white;
+        border: 0; } }
 
 .nav-def .img-contain {
   display: block;

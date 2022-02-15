@@ -1184,7 +1184,7 @@ html{
 	textarea.form-control{
 		height: 130px;
 		padding: 10px 15px;
-		border: 1px solid $color-gray-3;
+		border: 1px solid $color-gray-2;
 		resize: none;
 	}
 }
@@ -1266,6 +1266,7 @@ input[type="checkbox"]:checked{
 			font-family: FontAwesome;
 			content: "\f00c";
 			color: $color-2;
+			border-color: $color-gray-3;
 		}
 	}		
 }
@@ -1277,7 +1278,7 @@ input[type="checkbox"]:checked{
 	//transition: all 0.05s ease;
 	background-color: transparent;
 	position: relative;
-	border-radius: 0;
+	border-radius: 4px;
 	&:hover{
 		cursor: pointer;
 	}
@@ -1285,7 +1286,7 @@ input[type="checkbox"]:checked{
 		@extend .claf;
 		@extend .trans-center;
 		border-radius: 0;
-		border: 1px solid $color-gray-5;
+		border: 1px solid $color-gray-2;
 	}
 }
 [type="checkbox"][required].hide{
