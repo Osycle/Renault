@@ -283,7 +283,6 @@
   }
   multiDefault();
 
-
 	$("form").validate({
 		rules: {
 			name: {

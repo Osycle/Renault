@@ -1973,7 +1973,7 @@ ymaps .map-cluster{
 .conf{
   min-height: 80vh;
 }
-.configurator{
+.basic-page, .configurator{
   .nav-sub-title{
     background-color: black;
     color: white;
@@ -2002,6 +2002,8 @@ ymaps .map-cluster{
       }
     }
   }
+}
+.configurator{
   .step-3{
     .exterior-main{
       @media (min-width:992px){
@@ -2129,6 +2131,123 @@ ymaps .map-cluster{
         width: 40%;
         font-weight: 700;
       }
+    }
+  }
+}
+.FunnelStepper{
+  background-color: #000;
+  position: relative;
+  padding: 8px 0 16px;
+  border-bottom: 1px solid #f2f2f2;
+  border-top: 1px solid rgba(#f2f2f2, 0.3);
+  flex: 1 0 auto;
+  ul{
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    padding: 16px 8px 0;
+    counter-reset: step;
+    .FunnelStepper__steptitle{
+      color: #d9d9d6;
+      font-size: 12px;
+      display: inline-block;
+      padding-bottom: 20px;
+    }
+    .FunnelStepper__icon{
+      position: absolute;
+      z-index: 2;
+      bottom: -8px;
+      left: calc(50% - 8px);
+      height: 16px;
+    }
+    li{
+      position: relative;
+      flex: 1;
+      max-width: 180px;
+      margin-bottom: 12px;
+      color: #656666;
+      text-align: center; 
+      &:after{
+        background-color: #8c8c8b;
+      }
+      &:after{
+        content: "";
+        position: absolute;
+        z-index: 1;
+        bottom: -10px;
+        left: calc(50% - 10px);
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        width: 20px;
+        height: 20px;
+        border-radius: 50%;
+        color: #000;
+        font-size: 1.2rem;
+        line-height: 1;
+        counter-increment: step; 
+      }
+      &:not(:first-child):before{
+        content: "";
+        position: absolute;
+        bottom: 0;
+        left: -50%;
+        width: 100%;
+        border-bottom: 1px solid #8c8c8b;
+      }
+      &.is-active{
+        &~li svg, svg{
+          display: none;
+        }
+        &:after{
+          color: #000;
+          content: counter(step);
+          bottom: -12px;
+          left: calc(50% - 12px);
+          width: 24px;
+          height: 24px;
+          background-color: #efdf00;
+          font-weight: 700;
+        }
+        &~li{
+          &:after{
+            background-color: #000;
+            color: #d9d9d6;
+            border-color: #d9d9d6;
+            content: counter(step);
+            border: 1px solid;
+          }
+        }
+      }
+    }
+    @media (min-width: 1024px){
+      padding: 0;
+      ul{
+        padding: 0;
+      }
+      .FunnelStepper__steptitle{
+        display: inline-block;
+        padding-bottom: 16px;
+      }
+      li{
+        margin-top: 16px;
+      }
+    }
+  }
+}
+.basic-page{
+  .steps-wrapper{
+    display: flex;
+    justify-content: space-between;
+    @media (max-width: 991px){
+      flex-direction: column-reverse;
+    }
+  }
+  .right-bar{
+    background-color: $color-gray-1;
+    padding: 30px;
+    @media (min-width: 992px){
+      margin-right: -15px;
     }
   }
 }

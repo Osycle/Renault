@@ -11833,7 +11833,7 @@ ymaps .map-cluster {
 .conf {
   min-height: 80vh; }
 
-.configurator .nav-sub-title {
+.basic-page .nav-sub-title, .configurator .nav-sub-title {
   background-color: black;
   color: white;
   display: -webkit-box;
@@ -11849,7 +11849,7 @@ ymaps .map-cluster {
   font-weight: 700;
   height: 70px;
   position: relative; }
-  .configurator .nav-sub-title .btn-back {
+  .basic-page .nav-sub-title .btn-back, .configurator .nav-sub-title .btn-back {
     position: absolute;
     right: 15px;
     width: 30px;
@@ -11869,7 +11869,7 @@ ymaps .map-cluster {
     -webkit-box-pack: center;
     -ms-flex-pack: center;
     justify-content: center; }
-    .configurator .nav-sub-title .btn-back svg {
+    .basic-page .nav-sub-title .btn-back svg, .configurator .nav-sub-title .btn-back svg {
       fill: white; }
 
 @media (min-width: 992px) {
@@ -11996,6 +11996,128 @@ ymaps .map-cluster {
   .detail-list-1 .dl-items dl dd {
     width: 40%;
     font-weight: 700; }
+
+.FunnelStepper {
+  background-color: #000;
+  position: relative;
+  padding: 8px 0 16px;
+  border-bottom: 1px solid #f2f2f2;
+  border-top: 1px solid rgba(242, 242, 242, 0.3);
+  -webkit-box-flex: 1;
+  -ms-flex: 1 0 auto;
+  flex: 1 0 auto; }
+  .FunnelStepper ul {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: end;
+    -ms-flex-align: end;
+    align-items: flex-end;
+    padding: 16px 8px 0;
+    counter-reset: step; }
+    .FunnelStepper ul .FunnelStepper__steptitle {
+      color: #d9d9d6;
+      font-size: 12px;
+      display: inline-block;
+      padding-bottom: 20px; }
+    .FunnelStepper ul .FunnelStepper__icon {
+      position: absolute;
+      z-index: 2;
+      bottom: -8px;
+      left: calc(50% - 8px);
+      height: 16px; }
+    .FunnelStepper ul li {
+      position: relative;
+      -webkit-box-flex: 1;
+      -ms-flex: 1;
+      flex: 1;
+      max-width: 180px;
+      margin-bottom: 12px;
+      color: #656666;
+      text-align: center; }
+      .FunnelStepper ul li:after {
+        background-color: #8c8c8b; }
+      .FunnelStepper ul li:after {
+        content: "";
+        position: absolute;
+        z-index: 1;
+        bottom: -10px;
+        left: calc(50% - 10px);
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+        flex-direction: column;
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
+        justify-content: center;
+        width: 20px;
+        height: 20px;
+        border-radius: 50%;
+        color: #000;
+        font-size: 1.2rem;
+        line-height: 1;
+        counter-increment: step; }
+      .FunnelStepper ul li:not(:first-child):before {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        left: -50%;
+        width: 100%;
+        border-bottom: 1px solid #8c8c8b; }
+      .FunnelStepper ul li.is-active ~ li svg, .FunnelStepper ul li.is-active svg {
+        display: none; }
+      .FunnelStepper ul li.is-active:after {
+        color: #000;
+        content: counter(step);
+        bottom: -12px;
+        left: calc(50% - 12px);
+        width: 24px;
+        height: 24px;
+        background-color: #efdf00;
+        font-weight: 700; }
+      .FunnelStepper ul li.is-active ~ li:after {
+        background-color: #000;
+        color: #d9d9d6;
+        border-color: #d9d9d6;
+        content: counter(step);
+        border: 1px solid; }
+    @media (min-width: 1024px) {
+      .FunnelStepper ul {
+        padding: 0; }
+        .FunnelStepper ul ul {
+          padding: 0; }
+        .FunnelStepper ul .FunnelStepper__steptitle {
+          display: inline-block;
+          padding-bottom: 16px; }
+        .FunnelStepper ul li {
+          margin-top: 16px; } }
+
+.basic-page .steps-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between; }
+  @media (max-width: 991px) {
+    .basic-page .steps-wrapper {
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: reverse;
+      -ms-flex-direction: column-reverse;
+      flex-direction: column-reverse; } }
+
+.basic-page .right-bar {
+  background-color: #f2f1f2;
+  padding: 30px; }
+  @media (min-width: 992px) {
+    .basic-page .right-bar {
+      margin-right: -15px; } }
 
 /* 
 		_footer.scss
