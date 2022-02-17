@@ -30,11 +30,11 @@
                 <span class="FunnelStepper__steptitle">Контактные данные</span>
                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 30 30" class="FunnelStepper__icon"><path fill-rule="evenodd" d="M14.58 23.136h-1.23a76.002 76.002 0 0 1-5.85-9.3l1.11-.661a78.321 78.321 0 0 0 5.31 8.521c2.97-5.07 5.31-9.54 7.831-14.821l1.17.57c-2.7 5.67-5.1 10.231-8.34 15.691"></path></svg>
               </li>
-              <li class="FunnelStepper__step is-active">
+              <li class="FunnelStepper__step">
                 <span class="FunnelStepper__steptitle">Дата и время</span>
                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 30 30" class="FunnelStepper__icon"><path fill-rule="evenodd" d="M14.58 23.136h-1.23a76.002 76.002 0 0 1-5.85-9.3l1.11-.661a78.321 78.321 0 0 0 5.31 8.521c2.97-5.07 5.31-9.54 7.831-14.821l1.17.57c-2.7 5.67-5.1 10.231-8.34 15.691"></path></svg>
               </li>
-              <li class="FunnelStepper__step">
+              <li class="FunnelStepper__step is-active">
                 <span class="FunnelStepper__steptitle">Подтверждение</span>
                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 30 30" class="FunnelStepper__icon"><path fill-rule="evenodd" d="M14.58 23.136h-1.23a76.002 76.002 0 0 1-5.85-9.3l1.11-.661a78.321 78.321 0 0 0 5.31 8.521c2.97-5.07 5.31-9.54 7.831-14.821l1.17.57c-2.7 5.67-5.1 10.231-8.34 15.691"></path></svg>
               </li>
@@ -43,72 +43,24 @@
         </div>
         <section>
           <div class="container-fluid">
-            <div class="steps-wrapper">
-              <div class="col-md-8 step-1 mv-3 ph-6">
-                <div class="form-content box-md-6 mv-8">
-                  <form action="form-model-steps-3.html" method="get" id="form-model-steps">
-                    <div class="entry-header mb-3 desktop:mv-5">
-                      <div class="text-x8">Выберите дату</div>
-                    </div>
-
-                    <div class="field-content mv-6">
-                      <div class="flex">
-                        <div class="mv-3 desktop:mr-6">
-                          <div id="datepicker">
-                            <div class="hide">
-                              <input type="date" name="date" class="datepicker-input">
-                            </div>
-                          </div>
-                        </div>
-                        <div class="mv-3">
-                          <div class="datepicker-date-selected text-x3-b mb-2 desktop:ml-2"></div>
-                          <div class="block-pick-time">
-                            <label class="mh-2">
-                              <input name="time" type="radio" value="11:00" class="hide">
-                              <span class="pick-time">11:00</span>
-                            </label>
-                            <label class="mh-2">
-                              <input name="time" type="radio" value="11:00" class="hide">
-                              <span class="pick-time">14:00</span>
-                            </label>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </form>
-                  <div class="form-success-block">
-                    <div class="form-success-block-wrapper pv-10">
-                      <h3>Заявка успешно отправлена!</h3>
-                    </div>
-                  </div>
+            <div class="ty-wrapper text-center mv-10">
+              <div class="text-content mv-3">
+                <div class="text-x5-b mb-1">Спасибо</div>
+                <div>Ваш запрос отправлен</div>
+                <div class="icon-checked mt-6">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 30 30" class="VerticalConfirmationBlock__checkedIcon"><path d="M29 9.182 23.91 4 12.03 16.092l-5.94-6.046L1 15.228l11.03 11.228z"></path></svg>
                 </div>
+                <div>Дилер свяжется с вами в ближайшее время.</div>
               </div>
-              <div class="col-md-4 right-bar">
-                <div class="img-content mv-5">
-                  <img src="https://www.renault.ru/agg/vn/unique/ONE_DACIA_PP_XLARGE_DENSITY1/r_brandSite_carPicker_1.png?uri=https%3A%2F%2Fru.co.rplug.renault.com%2Fproduct%2Fmodel%2FHAH%2Frenault-kaptur%2Fc%2FA-ENS_0MDL2P1SERIELIM4_-BIYRB" alt="">
-                </div>
-                <div class="desc-content text-center mv-5">
-                  <div class="mb-1">Выбранная модель</div>
-                  <div class="text-x8 fw-5">RENAULT KAPTUR</div>
-                </div>
+              <div class="btn-content mv-5">
+                <span class="btn-def">
+                  <a href="/index.html">Вернуться на главную страницу</a>
+                </span>
               </div>
-
             </div>
           </div>
         </section>
-        <div class="summary-steps">
-          <div class="wrapper">
-            <div>
-              <div class="price-content pr-6"></div>
-            </div>
-            <div class="btn-content">
-              <button class="flex ai-center" type="submit" form="form-model-steps">
-                <span class="mr-1">Далее</span>
-                <span class="base-arrow-r"></span>
-              </button>
-            </div>
-          </div>
-        </div>
+
 
 			</div>
 		</main>

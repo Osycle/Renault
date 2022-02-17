@@ -335,7 +335,30 @@
 			console.log(el.remove())
 		})
 
-
+	var dayMilliseconds = 24*60*60*1000;
+	var currentDate = new Date();
+	var OldDate = currentDate.setTime(currentDate.getTime() - dayMilliseconds);
+	$( function() {
+		window.a = 	$( "#datepicker" ).datepicker({
+			monthNames : ['Январь','Февраль','Март','Апрель','Май','Июнь','Июль','Август','Сентябрь','Октябрь','Ноябрь','Декабрь'],
+			monthNamesSpecial : ['Января','Февраля','Марта','Апреля','Мая','Июня','Июля','Августа','Сентября','Октября','Ноября','Декабря'],
+			dayNamesMin : ['Вс','Пн','Вт','Ср','Чт','Пт','Сб'],
+			minDate: new Date(OldDate),
+			onUpdateDatepicker: function (d) {
+				var currentDateSelected = 
+					d.currentDay+" "+
+					d.settings.monthNamesSpecial[d.currentMonth]+" "+
+					d.currentYear;
+				$(".datepicker-date-selected").text(currentDateSelected);
+				d.currentDay = d.currentDay<10 ? "0"+d.currentDay : d.currentDay;
+				d.currentMonth = d.currentMonth<10 ? "0"+d.currentMonth : d.currentMonth;
+				console.log(d.currentYear+"-0"+d.currentMonth+"-"+d.currentDay);
+				$(d.input[0]).find(".datepicker-input")
+					.val(d.currentYear+"-"+d.currentMonth+"-"+d.currentDay);
+				//console.log(d);
+			}
+		});
+	});
 
 });})(jQuery);
 
