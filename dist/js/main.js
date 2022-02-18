@@ -337,7 +337,7 @@
 
 	var dayMilliseconds = 24*60*60*1000;
 	var currentDate = new Date();
-	var OldDate = currentDate.setTime(currentDate.getTime() - dayMilliseconds);
+	var OldDate = currentDate.setTime(currentDate.getTime() - 0);
 	$( function() {
 		window.a = 	$( "#datepicker" ).datepicker({
 			monthNames : ['Январь','Февраль','Март','Апрель','Май','Июнь','Июль','Август','Сентябрь','Октябрь','Ноябрь','Декабрь'],

@@ -334,7 +334,12 @@ html{
 	min-width: 370px;
 	padding: 10px;
 	border-radius: 0;
-	
+	@media (max-width: 991px){
+		min-width: 250px;
+	}
+	@media (max-width: 991px){
+		min-width: 100%;
+	}
 	&.ui-widget-content{
 		border: 2px solid $color-gray-2;
 	}

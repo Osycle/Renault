@@ -58,6 +58,9 @@
 	}
 }
 .footer-icons{
+	@media(min-width: 992px){
+		justify-content: center;
+	}
 	figure{
 		width: 230px;
 	}
