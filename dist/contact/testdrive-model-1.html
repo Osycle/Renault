@@ -1,0 +1,559 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="description" content="">
+		<link rel="shortcut icon" href="/img/favicon/favicon.ico" type="image/x-icon">
+	<link rel="apple-touch-icon" href="/img/favicon/favicon.png">
+
+	<link rel="apple-touch-icon" sizes="57x57" href="/img/favicon/apple-icon-57x57.png">
+	<link rel="apple-touch-icon" sizes="60x60" href="/img/favicon/apple-icon-60x60.png">
+	<link rel="apple-touch-icon" sizes="72x72" href="/img/favicon/apple-icon-72x72.png">
+	<link rel="apple-touch-icon" sizes="76x76" href="/img/favicon/apple-icon-76x76.png">
+	<link rel="apple-touch-icon" sizes="114x114" href="/img/favicon/apple-icon-114x114.png">
+	<link rel="apple-touch-icon" sizes="120x120" href="/img/favicon/apple-icon-120x120.png">
+	<link rel="apple-touch-icon" sizes="144x144" href="/img/favicon/apple-icon-144x144.png">
+	<link rel="apple-touch-icon" sizes="152x152" href="/img/favicon/apple-icon-152x152.png">
+	<link rel="apple-touch-icon" sizes="180x180" href="/img/favicon/apple-icon-180x180.png">
+	<link rel="icon" type="image/png" sizes="192x192"  href="/img/favicon/android-icon-192x192.png">
+	<link rel="icon" type="image/png" sizes="32x32" href="/img/favicon/favicon-32x32.png">
+	<link rel="icon" type="image/png" sizes="96x96" href="/img/favicon/favicon-96x96.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="/img/favicon/favicon-16x16.png">
+	<link rel="manifest" href="/img/favicon/manifest.json">
+	<meta name="msapplication-TileColor" content="#ffffff">
+	<meta name="msapplication-TileImage" content="/img/favicon/ms-icon-144x144.png">
+	<meta name="theme-color" content="#ffffff">
+	<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-211871187-1">
+</script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-211871187-1');
+</script>
+
+<!-- Yandex.Metrika counter -->
+<script type="text/javascript" >
+  (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
+  m[i].l=1*new Date();k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})
+  (window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
+
+  ym(86637588, "init", {
+       clickmap:true,
+       trackLinks:true,
+       accurateTrackBounce:true,
+       webvisor:true
+  });
+</script>
+<noscript><div><img src="https://mc.yandex.ru/watch/86637588" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+<!-- /Yandex.Metrika counter -->
+
+
+
+<!-- CSS -->
+
+<link rel="stylesheet" href="/css/fonts.css">
+<link rel="stylesheet" href="/fonts/NouvelR/stylesheet.css">
+<link rel="stylesheet" href="/css/plugins.css">
+<link rel="stylesheet" type="text/css" href="/js/plugins/jquery-ui/jquery-ui.min.css">
+<link rel="stylesheet" href="/js/plugins/choices-js/public/assets/styles/choices.css"/> <!-- Choices CSS -->
+<link rel="stylesheet" type="text/css" href="/js/plugins/selectize/selectize.css" />
+
+<link rel="stylesheet" href="/css/main.css">
+
+<link rel="stylesheet" href="/css/additional.css">
+
+
+
+
+<!-- Vue link -->
+<script src="/js/vue/vue.js"></script>
+<script src="/js/vue/axios.min.js"></script>
+<!-- multiselect -->
+<script src="/js/vue/vue-multiselect/vue-multiselect.min.js"></script>
+<link rel="stylesheet" href="/js/vue/vue-multiselect/vue-multiselect.css">
+
+
+
+<!-- SCRIPTS -->
+<script src="/js/plugins/jquery.min.js"></script>
+<script src="/js/plugins/bootstrap.min.js"></script>
+<script src="/js/plugins/aos.js"></script>
+<script src="/js/plugins/owl.carousel.min.js"></script>
+
+
+<script src="/js/plugins/jquery.mmenu.all.js"></script>
+<script src="/js/plugins/smooth-scroll.js"></script>
+<script src="/js/plugins/ion.rangeSlider.min.js"></script>
+<script src="/js/plugins/ResizeSensor.min.js"></script>
+<script src="/js/plugins/theia-sticky-sidebar.min.js"></script>
+<script src="/js/plugins/swiper-bundle.min.js"></script>
+<script src="/js/plugins/jquery.responsiveTabs.js"></script>
+<script src="/js/plugins/flickity.js"></script>
+<script src="/js/plugins/select2.min.js"></script>
+<script src="/js/plugins/jquery.validate.js"></script>
+
+<script src="/js/plugins/jquery-ui/jquery-ui.min.js"></script> <!-- JQUERY UI -->
+
+
+<!-- fancybox -->
+<!-- <script src="/js/plugins/jquery.fancybox.js"></script> -->
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.js"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.css">
+
+
+
+<script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU&apikey=f06d738e-1a2e-4ca2-91cc-d23a3bbb9e09"></script>
+<script src="/js/map.panel.js"></script>
+
+
+<!--  RTB  Counter all_site -->
+<script>
+  (function (w, d, n, u, s) {
+  w[n]=w[n]||function(){(w[n].q=w[n].q||[]).push(arguments)};
+  var a=d.createElement(s),m=d.getElementsByTagName(s)[0];
+  a.async=true;a.src=u;m.parentNode.insertBefore(a,m)
+  })(window, document, 'DSPCounter', '//counter.reddigital.ru/DSPCounter.js', 'script');
+</script>
+<script type="text/javascript">
+    DSPCounter('send', {
+      'sid'     : '223575',
+      'user_id' : ''
+    });
+</script>
+<!--  RTB  Counter end -->
+
+
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-CHPFNKGF8F"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+
+gtag('config', 'G-CHPFNKGF8F');
+</script>
+	<title>Renault Uzbekistan</title>
+</head>
+
+<body>
+
+	<div id="page">
+		<main class="main" data-aos="fade" id="main">
+			<div class="page-steps basic-page">
+			
+        <div class="nav-sub">
+          <div class="nav-sub-title">
+            <div class="text-uppercase">
+              RENAULT KAPTUR
+            </div>
+            <a href="javascript:;" class="btn-back" onclick="history.back();">
+              <svg xmlns="http://www.w3.org/2000/svg" enable-background="new 0 0 24 24" viewBox="0 0 24 24"><path d="M19.8534546,19.1465454L12.7069092,12l7.1465454-7.1465454c0.1871948-0.1937256,0.1871948-0.5009155,0-0.6947021c-0.1918335-0.1986084-0.5083618-0.2041016-0.7069702-0.0122681l-7.1465454,7.1465454L4.8534546,4.1465454c-0.1937256-0.1871338-0.5009155-0.1871338-0.6947021,0C3.960144,4.3383789,3.9546509,4.6549072,4.1464844,4.8535156L11.2929688,12l-7.1464844,7.1464844c-0.09375,0.09375-0.1464233,0.2208862-0.1464233,0.3534546C4,19.776062,4.223877,19.999939,4.5,20c0.1326294,0.0001221,0.2598267-0.0526123,0.3534546-0.1465454l7.1464844-7.1464844l7.1465454,7.1465454C19.2401123,19.9474487,19.3673706,20.0001831,19.5,20c0.1325073-0.000061,0.2595825-0.0526733,0.3533325-0.1463623C20.048645,19.6583862,20.0487061,19.3417969,19.8534546,19.1465454z"/></svg>
+            </a>
+            <div class="text-x3 bg-color-black fw-4 color-white text-center">
+              Связаться с кредитным специалистом
+            </div>
+          </div>
+          <div class="FunnelStepper">
+            <ul class="FunnelStepper__steps">
+              <li class="FunnelStepper__step is-active">
+                <span class="FunnelStepper__steptitle">Выберите дилерский центр</span>
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 30 30" class="FunnelStepper__icon"><path fill-rule="evenodd" d="M14.58 23.136h-1.23a76.002 76.002 0 0 1-5.85-9.3l1.11-.661a78.321 78.321 0 0 0 5.31 8.521c2.97-5.07 5.31-9.54 7.831-14.821l1.17.57c-2.7 5.67-5.1 10.231-8.34 15.691"></path></svg>
+              </li>
+              <li class="FunnelStepper__step">
+                <span class="FunnelStepper__steptitle">Контактные данные</span>
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 30 30" class="FunnelStepper__icon"><path fill-rule="evenodd" d="M14.58 23.136h-1.23a76.002 76.002 0 0 1-5.85-9.3l1.11-.661a78.321 78.321 0 0 0 5.31 8.521c2.97-5.07 5.31-9.54 7.831-14.821l1.17.57c-2.7 5.67-5.1 10.231-8.34 15.691"></path></svg>
+              </li>
+              <li class="FunnelStepper__step">
+                <span class="FunnelStepper__steptitle">Подтверждение</span>
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 30 30" class="FunnelStepper__icon"><path fill-rule="evenodd" d="M14.58 23.136h-1.23a76.002 76.002 0 0 1-5.85-9.3l1.11-.661a78.321 78.321 0 0 0 5.31 8.521c2.97-5.07 5.31-9.54 7.831-14.821l1.17.57c-2.7 5.67-5.1 10.231-8.34 15.691"></path></svg>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <section class="dealers-testdrive">
+          <div class="container-fluid">
+            <div class="steps-wrapper">
+              <div class="col-md-8 step-1 mv-3 ph-6">
+                <div id="dealers-map" class="dealers-map">
+
+                  <form action="" id="dealerForm" method="get" class="hide"> <!-- hide -->
+                    <input type="text" name="dealer" :value="select_current_dealer.name">
+                  </form>
+                  <div class="entry-header pt-4 pb-2">
+                    <h4>Выберите дилерский центр</h4>
+                  </div>
+                  <div class="dealers-bar-top flex ai-center jc-center hide"><!-- hidden -->
+                    <div class="btn-content">
+                      <span class="btn-def-2 ph-3">
+                        <div class="flex ai-center" @click="switchMaplist('hide')">
+                          <svg xmlns="http://www.w3.org/2000/svg" width="22px" viewBox="0 0 30 30"><path fill-rule="evenodd" d="M14.995 10.606c-1.08 0-1.83.81-1.83 1.95s.75 1.92 1.83 1.92c1.11 0 1.89-.78 1.89-1.92s-.78-1.95-1.89-1.95m0-1.201c1.86 0 3.15 1.29 3.15 3.15 0 1.83-1.29 3.12-3.15 3.12-1.8 0-3.09-1.29-3.09-3.12 0-1.86 1.29-3.15 3.09-3.15m.03 13.981c3.93-4.5 5.55-7.77 5.55-10.92 0-3.21-2.1-5.611-5.55-5.611-3.45 0-5.55 2.4-5.55 5.61 0 3.151 1.62 6.421 5.55 10.921m6.9-10.92c0 3.75-2.16 7.65-6.33 11.94h-1.17c-4.14-4.29-6.3-8.19-6.3-11.94 0-4.231 2.73-6.841 6.9-6.841s6.9 2.61 6.9 6.84"></path></svg>
+                          <button>Найти поблизости</button>
+                        </div>
+                      </span>
+                    </div>
+                    <div class="ph-3">или</div>
+                    <div class="select-content">
+                      <multiselect   
+                        v-model="select_search" 
+                        @input="update()"
+                        :options="addresses"
+                        :searchable="true"
+                        :hide-selected="true"
+                        track-by="name"
+                        
+                        deselect-label=""
+                        select-label=""
+                        selected-label=""
+                        placeholder="Найти">
+                        <template slot-scope="{ name }">
+                          <span>{{ name }}</span>
+                        </template>
+                      </multiselect>
+                    </div>
+                  </div>
+                  <div class="dealers-map-wrapper">
+                    <div class="dealers-bar" :class="{'list-active': !view_list}">
+                      <div class="cap-content flex ai-center jc-between">
+                        <div class="title-content">
+                          {{this.dealerships.length}} дилеров
+                        </div>
+                        <div class="btn-switch-map">
+                          <button type="button" class="this-btn switch-maplist" @click="switchMaplist">
+                            <template v-if="view_list">
+                              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 30 30"><path fill-rule="evenodd" d="M7.5 9.415h15.001v-1.29H7.5v1.29zm0 6.24h15.001v-1.29H7.5v1.29zm0 6.241h15.001v-1.29H7.5v1.29z"></path></svg>
+                              <span class="ml-2">список</span>
+                            </template>
+                            <template v-else>
+                              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 30 30"><path fill-rule="evenodd" d="M16.836 7.74c-.51 0-.871.39-.871.9 0 .48.36.87.87.87.54 0 .84-.39.84-.87 0-.51-.3-.9-.84-.9zm0-1.05c1.2 0 1.92.78 1.92 1.95 0 1.171-.72 1.921-1.92 1.921s-1.92-.75-1.92-1.92.72-1.95 1.92-1.95zm.03 8.851c2.61-2.97 3.75-5.07 3.75-6.87 0-2.28-1.44-3.72-3.75-3.72-2.251 0-3.78 1.44-3.78 3.72 0 1.83 1.169 3.93 3.78 6.87zm4.95-6.87c0 2.31-1.62 5.07-4.41 7.98h-1.14c-2.7-2.91-4.381-5.67-4.381-7.98 0-3.001 1.92-4.921 4.98-4.921 3.06 0 4.951 1.92 4.951 4.92zm-17.462.48v13.71l6.27 1.98v-13.68l-6.27-2.01zm-1.229 14.55V7.532l7.71 2.46c.06.78.57 2.16 1.02 2.73v12.12l6.27-2.16v-5.13l1.23-1.38v6.51l6.27 1.98v-13.71l-2.789-.9c.12-.39.18-.78.21-1.17l3.81 1.23v16.172l-8.16-2.581-7.411 2.58-8.16-2.58z"></path></svg>
+                              <span class="ml-2">карта</span>
+                            </template>
+                            </button>
+                        </div>
+                      </div>
+                      <div class="item-content">
+                        <div class="dealers-items" style="display: none;">
+                          <ul class="list">
+                            <li v-for="(item, key) in dealerships" :key="key">
+                              <div class="item" @click="selectDealer(item, key, $event)" role="button">
+                                <div class="item-wrapper">
+                                  <div class="mr-3 fsh-0">
+                                    <span class="i-marker">{{key+1}}</span>
+                                  </div>
+                                  <div>
+                                    <div class="_name mb-1">{{item.name}}</div>
+                                    <div class="_address mb-1">
+                                      {{item.address}}
+                                    </div>
+                                    <div class="_phone mb-1 ai-center flex">
+                                      <svg xmlns="http://www.w3.org/2000/svg" width="14px" viewBox="0 0 24 24"><path d="M12.784 17.469c0 .48-.24.792-.792.792-.528 0-.792-.312-.792-.792 0-.504.264-.792.792-.792.552 0 .792.288.792.792zM10.768 6.524h2.472V5.516h-2.472v1.008zM8.656 19.509h6.673c.48 0 .672-.264.672-.887V5.348c0-.624-.193-.888-.672-.888H8.656c-.48 0-.672.264-.672.888v13.274c0 .623.192.887.672.887zM7 5.204C7 4.052 7.551 3.5 8.704 3.5h6.576c1.153 0 1.705.552 1.705 1.704v13.585c0 1.152-.552 1.704-1.704 1.704H8.704C7.551 20.494 7 19.942 7 18.79V5.204z"></path></svg>
+                                      <a href="tel:998993533226" class="ml-1"><u>Телефон: +{{item.phone | spacePhone}}</u></a>
+                                    </div>
+                                    <div class="_phone mb-1 ai-center flex">
+                                      <svg viewBox="0 0 30 30" width="14px" ><path d="M17.996 11.316c0-1.842-1.156-3-2.996-3s-2.996 1.157-2.996 3c0 1.841 1.156 3 2.996 3s2.996-1.158 2.996-3m1.788 0c0 2.684-2.05 4.738-4.784 4.738S10.216 14 10.216 11.316c0-2.738 2.05-4.738 4.784-4.738s4.784 2.001 4.784 4.738m4.574-.526c0-5.316-3.785-9-9.358-9s-9.358 3.684-9.358 9c0 4.789 3.523 11.42 9.358 17.474 5.835-6.054 9.358-12.685 9.358-17.474m-20.608 0C3.75 4.318 8.271 0 15 0s11.25 4.316 11.25 10.79c0 5.315-3.995 12.737-10.304 19.21h-1.892C7.745 23.526 3.75 16.105 3.75 10.79"></path></svg>
+                                      <a :href="'http://maps.yandex.ru/?text='+item.coords[0]+','+item.coords[1]" target="_blank" class="ml-1"><u>Найти на карте</u></a>
+                                    </div>
+                                  </div>
+                                  <div class="btn-content as-center ml-5">
+                                    <span class="btn-opacity">
+                                      <button class="this-btn" @click="selectCurrentDealer(item)">Выбрать</button>
+                                    </span>
+                                  </div>
+                                </div>
+                              </div>
+                            </li>
+                          </ul>
+                        </div>
+                      </div>
+                      <div class="dealer-more" :class="{'active': dealer_more}">
+                        <div v-if="current_dealer && dealer_more">
+                          <div class="bg-color-gray-2 pv-2 ph-3 flex ai-center" role="button" @click="dealer_more = false;current_dealer = false">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16px" viewBox="0 0 34.075 34.075" class="SvgIcon DealerDetails__IconArrowLeft"><path d="M24.57 34.075a1.964 1.964 0 0 1-1.396-.577L8.11 18.432a1.972 1.972 0 0 1 0-2.79L23.174.578a1.973 1.973 0 1 1 2.791 2.79l-13.67 13.669 13.67 13.669a1.974 1.974 0 0 1-1.395 3.369z"></path></svg>
+                            <span class="ml-2">Вернуться</span>
+                          </div>
+                          <div class="dealers-items">
+                            <div class="item">
+                              <div class="item-wrapper">
+                                <div class="mr-3 fsh-0">
+                                  <span class="i-marker">{{select_dealer_index+1}}</span>
+                                </div>
+                                <div>
+                                  <div class="_name mb-1">{{current_dealer.name}}</div>
+                                  <div class="_address mb-1">
+                                    {{current_dealer.address}}
+                                  </div>
+                                  <div class="_phone mb-1 ai-center flex">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="14px" viewBox="0 0 24 24"><path d="M12.784 17.469c0 .48-.24.792-.792.792-.528 0-.792-.312-.792-.792 0-.504.264-.792.792-.792.552 0 .792.288.792.792zM10.768 6.524h2.472V5.516h-2.472v1.008zM8.656 19.509h6.673c.48 0 .672-.264.672-.887V5.348c0-.624-.193-.888-.672-.888H8.656c-.48 0-.672.264-.672.888v13.274c0 .623.192.887.672.887zM7 5.204C7 4.052 7.551 3.5 8.704 3.5h6.576c1.153 0 1.705.552 1.705 1.704v13.585c0 1.152-.552 1.704-1.704 1.704H8.704C7.551 20.494 7 19.942 7 18.79V5.204z"></path></svg>
+                                    <a href="tel:998993533226" class="ml-1"><u>Телефон: +{{current_dealer.phone | spacePhone}}</u></a>
+                                  </div>
+                                  <div class="_phone mb-1 ai-center flex">
+                                    <svg viewBox="0 0 30 30" width="14px" ><path d="M17.996 11.316c0-1.842-1.156-3-2.996-3s-2.996 1.157-2.996 3c0 1.841 1.156 3 2.996 3s2.996-1.158 2.996-3m1.788 0c0 2.684-2.05 4.738-4.784 4.738S10.216 14 10.216 11.316c0-2.738 2.05-4.738 4.784-4.738s4.784 2.001 4.784 4.738m4.574-.526c0-5.316-3.785-9-9.358-9s-9.358 3.684-9.358 9c0 4.789 3.523 11.42 9.358 17.474 5.835-6.054 9.358-12.685 9.358-17.474m-20.608 0C3.75 4.318 8.271 0 15 0s11.25 4.316 11.25 10.79c0 5.315-3.995 12.737-10.304 19.21h-1.892C7.745 23.526 3.75 16.105 3.75 10.79"></path></svg>
+                                    <a :href="'http://maps.yandex.ru/?text='+current_dealer.coords[0]+','+current_dealer.coords[1]" target="_blank" class="ml-1"><u>Найти на карте</u></a>
+                                  </div>
+                                </div>
+                                <div class="btn-content as-center">
+                                  <span class="btn-opacity">
+                                    <button class="this-btn" @click="selectCurrentDealer(current_dealer)">Выбрать</button>
+                                  </span>
+                                </div>
+                              </div>
+                              <hr>
+                              <div class="dealer-services" v-if="current_dealer.services.length">
+                                <p><b>Услуги:</b></p>
+                                <ul class="list flex fw-wrap mt-2">
+                                  <li v-for="(item, key) in current_dealer.services" :key="key">{{item}}</li>
+                                </ul>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="map-content m-t-30 relative">
+                      <div id="ymap_ctrl_display" style="display: none; width: 100%; height: 100%; position: absolute; background-color: rgba(0, 0, 0, 0.5); z-index: 100; pointer-events: none;">
+                        <div style="position: relative; top: 50%; left: 0; right: 0; color: white; text-align: center; font-size: 1.8em; pointer-events: none;">Чтобы изменить масштаб, прокручивайте карту, удерживая клавишу Ctrl.</div>
+                      </div>
+                      <div id="map"></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-4 right-bar">
+                <div class="img-content mv-5">
+                  <img src="https://www.renault.ru/agg/vn/unique/ONE_DACIA_PP_XLARGE_DENSITY1/r_brandSite_carPicker_1.png?uri=https%3A%2F%2Fru.co.rplug.renault.com%2Fproduct%2Fmodel%2FHAH%2Frenault-kaptur%2Fc%2FA-ENS_0MDL2P1SERIELIM4_-BIYRB" alt="">
+                </div>
+                <div class="desc-content text-center mv-5">
+                  <div class="mb-1">Выбранная модель</div>
+                  <div class="text-x8 fw-5">RENAULT KAPTUR</div>
+                </div>
+              </div>
+
+            </div>
+          </div>
+        </section>
+        <!-- Скрипты страницы дилеров -->
+        <script>
+          // Подключение vue компонентов
+          Vue.component('multiselect', window.VueMultiselect.default)
+          Vue.filter('spacePhone', (price)=>{ 
+            price = price+"";
+            return price.replace(/(\d{3})(\d{2})(\d{3})(\d{2})(\d{2})/gim, '$1 $2 $3-$4-$5'); 
+          })
+          Vue.filter('spaceBetweenNum', (price)=>{ 
+            if(!price)
+              return 0;
+            price += "";
+            var pattern = /(-?\d+)(\d{3})/;
+            while (pattern.test(price))
+              price = price.replace(pattern, "$1 $2");
+            
+            return price;      
+          })
+
+          var v = new Vue({
+            el: '#dealers-map',
+            data: {
+              view_list: true,
+              current_dealer: {},
+              dealer_more: false,
+              select_search: null,
+              select_dealer_index: null,
+              select_current_dealer: {},
+              dealerships: [],
+              addresses: [],
+            },
+            methods: {
+              update(){
+                console.log(1);
+              },
+              selectCurrentDealer(dealer){
+                this.select_current_dealer = dealer
+                setTimeout(() => {
+                  $("#dealerForm").trigger("submit")
+                }, 1);
+                
+              },
+              switchMaplist: function(bool){
+                if(bool == "hide"){
+                  $(".dealers-items").slideUp()
+                  this.view_list = true
+                }else{
+                  this.view_list = !this.view_list
+                  if(this.view_list)
+                    $(".dealers-items").slideUp()
+                  else
+                    $(".dealers-items").slideDown()
+                }
+              },
+              selectDealer(dealer, index, $event){
+                if($event && $event.target.tagName == "BUTTON")
+                  return
+                this.current_dealer = dealer;
+                this.select_dealer_index = index;
+                this.dealer_more = true;
+              }
+            },
+            mounted(){
+              var v = this;
+              // $(document).on("click", ".marker-area-content", function(){
+              //   console.log(this)
+              // })
+              this.dealerships = [
+                {
+                  "name": "ROHAT RENAULT",
+                  "address": "г. Ташкент, Бектемирский район, ТКАД-1 (напротив ЖБИ-2)",
+                  "phone": "998993533226",
+                  "coords": ["41.251831", "69.344402"],
+                  "services": [
+                    "Кузовной ремонт",
+                    "Продажа з/ч и аксессуаров",
+                    "Автосервис",
+                    "Продажа новых автомобилей",
+                    "Продажа автомобилей с пробегом"
+                  ]
+                },
+                {
+                  "name": "SERGELI RENAULT",
+                  "address": "Узбекистан, г.Ташкент, Сергелийский район, ул.Янги Сергели 7",
+                  "phone": "998993533221",
+                  "coords": ["41.236726", "69.214532"],
+                  "services": [
+
+                  ]
+                }
+              ]
+              var dealerships = this.dealerships;
+                
+              this.dealerships.forEach(function(el, i){
+                v.addresses.push(el.address)
+              })
+
+              ymaps.ready(function() {
+                window.myMap = new ymaps.Map('map', {
+                  center: [41.234893, 69.207893],
+                  controls: [],
+                  zoom: 11
+                }, {
+                  searchControlProvider: 'yandex#search'
+                })
+        
+        
+                  // Создаём макет содержимого.
+                var MyIconContentLayout = ymaps.templateLayoutFactory.createClass(
+                    `<div class="marker-area">
+                      <div class="marker-area-content" dealer-index="$[properties.iconContent]">
+                        <span>
+                          $[properties.iconContent]
+                        </span>
+                      </div>
+                    </div>`
+                  )
+        
+                for (let i = 0; i < dealerships.length; i++) {
+                  const item = dealerships[i];
+                  var myPlacemark = new ymaps.Placemark(item.coords, {
+                    //hintContent: 'Собственный значок метки',
+                    //balloonContent: 'Это красивая метка',
+                    iconContent: dealerships[i].name
+                  }, {
+                    // Опции.
+                    iconLayout: 'default#imageWithContent', // Необходимо указать данный тип макета
+                    //iconImageHref: 'https://www.kia.ru/images/map/map_pin.svg',
+                    iconImageHref: '', // Своё изображение иконки метки.
+                    iconImageSize: [100, 36], // Размеры метки.
+                    iconContentLayout: MyIconContentLayout, // Макет содержимого.
+                    iconImageOffset: [-50, -18] // Смещение левого верхнего угла иконки относительно её "ножки" (точки привязки)
+                  })
+                  myPlacemark.events.add("click", function (params) {
+                    console.log(params, item)
+                    v.current_dealer = item;
+                    v.dealer_more = true
+                    // v.selectDealer(item, i)
+                  })
+        
+                  myMap.geoObjects.add(myPlacemark)
+                }
+                  
+        
+              });
+        
+
+            }
+          })
+        </script>
+        <div class="summary-steps">
+          <div class="wrapper">
+            <div>
+              <div class="price-content pr-6"></div>
+            </div>
+            <div class="btn-content">
+              <button class="flex ai-center" type="submit" form="form-model-steps">
+                <span class="mr-1">Далее</span>
+                <span class="base-arrow-r"></span>
+              </button>
+            </div>
+          </div>
+        </div>
+
+			</div>
+		</main>
+	</div>
+
+	<!-- SCRIPTS -->
+	
+
+<script defer src="/js/main.js"></script>
+<script src="/js/postM.js"></script>
+<script type="text/javascript">
+
+
+  // Подключение vue компонентов
+  Vue.component('multiselect', window.VueMultiselect.default)
+
+
+  function checkSm() {
+	  return $(document).width() <= 991;
+  }
+
+
+  Vue.filter('spacePhone', (price)=>{ 
+    price = price+"";
+    return price.replace(/(\d{3})(\d{2})(\d{3})(\d{2})(\d{2})/gim, '$1 $2 $3-$4-$5'); 
+  })
+  Vue.filter('spaceBetweenNum', (price)=>{ 
+    if(!price)
+      return 0;
+    price += "";
+    var pattern = /(-?\d+)(\d{3})/;
+    while (pattern.test(price))
+      price = price.replace(pattern, "$1 $2");
+    
+    return price;      
+  })
+
+  
+/* GLOBAL MIXINS */
+
+// Vue.mixin({
+// 	methods:{
+// 		checkSm(ob) {
+// 			return _.uniqWith(ob, _.isEqual);
+//     },
+// 	}
+// })
+
+
+
+
+</script>
+
+
+
+
+</body>
+</html>

@@ -459,422 +459,64 @@ gtag('config', 'G-CHPFNKGF8F');
       </div>
     </div>
 		<main class="main" data-aos="fade" id="main">
-			<div class="nav-sub">
-				<div class="wrapper link-li-1">
-					<ul class="jc-center">
-						<li><a href="/finance.html">Программы Renault Finance</a></li>
-						<li><a href="/classic-credit.html">Классический кредит</a></li>
-						<li class="active"><a href="/credit-go.html">Программа "Поехали"</a></li>
-						<li><a href="/credit-approval.html">Получить одобрение онлайн</a></li>
-					</ul>
-				</div>
-			</div>
-			<div class="bnr-page">
+			<div class="bnr-page" v-if="!statusHash">
 				<div class="wrapper">
 					<div class="entry-header">
 						<div class="img-content">
 							<picture class="pic-absolute is-covered opacity-3">
-								<img src="/img/other/finance/finance-bnr.webp">
+								<img src="/img/other/showroom/bnr-page-bg.jpg">
 							</picture>
 						</div>
 						<div class="desc-content">
-							<h1>КРЕДИТНАЯ ПРОГРАММА "ПОЕХАЛИ!"</h1>
-							<div class="text-summary">Это отличная возможность купить новый Renault уже сейчас, воспользовавшись уникальными преимуществами программы.</div>
+							<h1>ЗАПИСАТЬСЯ НА ТЕСТ-ДРАЙВ</h1>
+							<div class="text-summary">Выбираете новый автомобиль? Пройдите тест-драйв на автомобилях Renault, чтобы убедиться в их ходовых характеристиках и эргономике.</div>
 						</div>
 					</div>					
 				</div>
 			</div>
-			<section class="credit-slider">
-				<div class="wrapper pv-10">
-					<div class="view">
-						<div class="background">
-							<img class="bg bg-1 bg--active" src="/img/other/credit_go_slider/bg-1.jpg" alt="" />
-							<img class="bg bg-2" src="/img/other/credit_go_slider/bg-2.jpg" alt="" />
-							<img class="bg bg-3" src="/img/other/credit_go_slider/bg-3.jpg" alt="" />
-						</div>
-						<div class="car car-1 car--active">
-							<img class="car__image" src="/img/other/credit_go_slider/car-1.png" alt="DUSTER" />
-							<img class="car__wheel car__wheel-1" src="/img/other/credit_go_slider/car-1-wheel.png" alt="wheel" />
-							<img class="car__wheel car__wheel-2" src="/img/other/credit_go_slider/car-1-wheel.png" alt="wheel" />
-						</div>
-						<div class="car car-2">
-							<img class="car__image" src="/img/other/credit_go_slider/car-2.png" alt="KAPTUR" />
-							<img class="car__wheel car__wheel-1" src="/img/other/credit_go_slider/car-2-wheel.png" alt="wheel" />
-							<img class="car__wheel car__wheel-2" src="/img/other/credit_go_slider/car-2-wheel.png" alt="wheel" />
-						</div>
-						<div class="car car-3">
-							<img class="car__image" src="/img/other/credit_go_slider/car-3.png" alt="ARKANA" />
-							<img class="car__wheel car__wheel-1" src="/img/other/credit_go_slider/car-3-wheel.png" alt="wheel" />
-							<img class="car__wheel car__wheel-2" src="/img/other/credit_go_slider/car-3-wheel.png" alt="wheel" />
-						</div>
-						<div class="info info-1 active">
-							<div class="info-list">
-								<div class="info-list__item">
-									<div class="info-list__item-icon">
-										<img src="/img/other/credit_go_slider/car-1-icon-1.png" alt="balance" />
-									</div>
-									<div class="info-list__item-title">Легкий <br />старт</div>
-									<div class="info-list__item-description">
-										Приобретайте автомобиль более высокой комплектации.<br />Внесите
-										первоначальный взнос от 10%
-									</div>
-								</div>
-							</div>
-						</div>
-						<div class="info info-2">
-							<div class="info-list">
-								<div class="info-list__item">
-									<div class="info-list__item-icon">
-										<img src="/img/other/credit_go_slider/car-2-icon-1.png" alt="payment" />
-									</div>
-									<div class="info-list__item-title">Равные <br />платежи</div>
-									<div class="info-list__item-description">
-										Размер ежемесячных выплат до двух раз ниже, чем при классическом
-										кредите.<br />Платите равными минимальными платежами в течение 3
-										лет
-									</div>
-								</div>
-							</div>
-						</div>
-						<div class="info info-3">
-							<div class="info-list">
-								<div class="info-list__item">
-									<div class="info-list__item-icon">
-										<img src="/img/other/credit_go_slider/car-3-icon-1.png" alt="key" width="48" />
-									</div>
-									<div class="info-list__item-title">Оставьте <br />авто себе</div>
-									<div class="info-list__item-teaser">
-										Оставьте автомобиль себе выплатив весь отложенный платеж.<br /><a href="" target="_parent">подробнее<img src="/img/other/credit_go_slider/icon-angle-down.png" alt="down" /></a>
-									</div>
-								</div>
-								<div class="info-list__item">
-									<div class="info-list__item-icon">
-										<img src="/img/other/credit_go_slider/car-3-icon-2.png" alt="calendar" width="46" />
-									</div>
-									<div class="info-list__item-title">Продлить<br />кредит</div>
-									<div class="info-list__item-teaser">
-										Выплачивайте остаток по кредиту еще 2 года.<br /><a href="" target="_parent">подробнее<img src="/img/other/credit_go_slider/icon-angle-down.png" alt="down" /></a>
-									</div>
-								</div>
-								<div class="info-list__item">
-									<div class="info-list__item-icon">
-										<img src="/img/other/credit_go_slider/car-3-icon-3.png" alt="car" width="48" />
-									</div>
-									<div class="info-list__item-title">
-										Обменяйте <br />автомобиль
-									</div>
-									<div class="info-list__item-teaser">
-										Обменяйте на новый автомобиль по программе “Поехали”<br /><a href="" target="_parent">подробнее<img src="/img/other/credit_go_slider/icon-angle-down.png" alt="down" /></a>
-									</div>
-								</div>
-							</div>
-						</div>
-						<div class="play-btn hide">
-							<img src="/img/other/credit_go_slider/play.png" alt="play" />
-						</div>
-					</div>
-					<div class="thumbs credit-swiper swiper-container">
-						<div class="swiper-wrapper">
-							<div class="slide-item-nav thumbs__item swiper-slide active animate swiper-slide-active" data-slide="1">
-								<div class="thumbs__title">ЛЕГКИЙ<br />СТАРТ</div>
-								<img class="thumbs__car" src="/img/other/credit_go_slider/car-1-min.png" alt="" />
-								<div class="thumbs__progressbar progressbar"><span></span></div>
-							</div>
-							<div class="slide-item-nav thumbs__item swiper-slide swiper-slide-next" data-slide="2">
-								<div class="thumbs__title">РАВНЫЕ <br />ПЛАТЕЖИ</div>
-								<img class="thumbs__car" src="/img/other/credit_go_slider/car-2-min.png" alt="" />
-								<div class="thumbs__progressbar progressbar"><span></span></div>
-							</div>
-							<div class="slide-item-nav thumbs__item swiper-slide" data-slide="3">
-								<div class="thumbs__title">Через <br />3 года</div>
-								<img class="thumbs__car" src="/img/other/credit_go_slider/car-3-min.png" alt="" />
-								<div class="thumbs__progressbar progressbar"><span></span></div>
-							</div>
-						</div>
-						<span class="swiper-notification" aria-live="assertive" aria-atomic="true"></span>
-					</div>
-				</div>
-			</section>
-			<section>
-				<div class="container pv-8">
-					<div class="entry-header text-center box-md-7 box-lg-5 mh-auto">
-						<h2>КАК КУПИТЬ АВТОМОБИЛЬ ПО ПРОГРАММЕ «ПОЕХАЛИ!»?</h2>
-						<p>Несколько простых действий, и подходящий автомобиль будет у вас!</p>
-					</div>
-					<div class="credit-steps mv-10">
-						<div class="credit-steps-items">
-							<figure>
-								<div class="img-content">
-									<picture>
-										<img src="/img/other/finance/credit-steps-1-1.svg">
-									</picture>
-								</div>
-								<div class="desc-content">
-									Выберите подходящий вам автомобиль
-								</div>
-							</figure>
-							<figure>
-								<div class="img-content">
-									<picture>
-										<img src="/img/other/finance/credit-steps-1.svg">
-									</picture>
-								</div>
-								<div class="desc-content">
-									Выберите подходящие условия кредитования
-								</div>
-							</figure>
-							<figure>
-								<div class="img-content">
-									<picture>
-										<img src="/img/other/finance/credit-steps-3.svg">
-									</picture>
-								</div>
-								<div class="desc-content">
-									Получите одобрение и заберите свой автомобиль
-								</div>
-							</figure>
-						</div>
-					</div>
-					<div class="btn-content text-center">
-						<span class="btn-def hovered">
-							<a href="">получите одобрение кредита онлайн</a>
-						</span>
-					</div>
-				</div>
-			</section>
-			<section>
-				<div class="container-min pv-8">
-					<div class="entry-header text-center mb-8">
-						<h2>ПО ОКОНЧАНИИ ПРОГРАММЫ </h2>
-						<p>У вас есть возможность воспользоваться одной из трех опций:</p>
-					</div>
-	  			<div class="corporate-advert-items">
-	    			<figure class="flex">
-	    				<div class="img-content">
-	    					<img src="/img/other/corporate/corporate-advert-1-1.svg">
-	    				</div>
-	    				<div class="desc-content">
-	    					<div class="text-x4-bu mb-2">ОБМЕНЯЙТЕ АВТОМОБИЛЬ</div>
-	    					<p>Все варианты приобретен­ия Renault для корпоратив­ных клиентов, включая подбор моделей и структурир­ование сделки.</p>
-	    				</div>
-	    			</figure>
-	    			<figure class="flex">
-	    				<div class="img-content">
-	    					<img src="/img/other/corporate/corporate-advert-1-2.svg">
-	    				</div>
-	    				<div class="desc-content">
-	    					<div class="text-x4-bu mb-2">ОСТАВЬТЕ АВТОМОБИЛЬ СЕБЕ</div>
-	    					<p>Мы предоставим вам коммерческ­ое предложени­е (включая услуги по финансиров­анию) в течение 48 часов.</p>
-	    				</div>
-	    			</figure>
-	    			<figure class="flex">
-	    				<div class="img-content">
-	    					<img src="/img/other/corporate/corporate-advert-1-3.svg">
-	    				</div>
-	    				<div class="desc-content">
-	    					<div class="text-x4-bu mb-2">ПРОДЛИТЕ КРЕДИТ</div>
-	    					<p>Вам доступны особые предложени­я программы Renault Leasing.</p>
-	    				</div>
-	    			</figure>
-	  			</div>
-				</div>
-			</section>
-			<section>
-				<div class="container pv-8">
-					<div class="entry-header text-center mb-8">
-						<h2>КРЕДИТНЫЙ КАЛЬКУЛЯТОР</h2>
-						<p>Узнайте свой ежемесячный платеж по программе «Поехали!»*</p>
-					</div>
-					<div class="credit-calc">
-						<div class="wrapper">
-							<div class="text-x5-b mb-5">Модель</div>
-							<div class="credit-calc__models mv-4">
-								<div class="credit-calc__models-items">
-									<figure v-for="(item, key) in models" 
-										:key="key" @click="selectModel(item); update()"
-										:class="{active: item.full_name === currentModel.full_name}">
-										<div class="img-content">
-											<img :src="item.image">
-										</div>
-										<div class="desc-content">
-											<div class="title-content">{{item.full_name}}</div>
-										</div>
-									</figure>
-								</div>
-							</div>
-							<div class="credit-calc__conf mv-4">
-								<div class="cells row">
-									<div class="fb-lg-4 ph-3">
-										<div class="select-content mb-10">
-											<div class="text-x5-b mb-2">Версия</div>
-	
-												<multiselect   
-													v-model="currentModelVersion" 
-													@input="(currentModelComplectation = currentModelVersion.complectations[0]); update()"
-													:options="currentModel.versions"
-													:searchable="false"
-													:hide-selected="true"
-													track-by="name"
-													label="name"
-													deselect-label=""
-													select-label=""
-													selected-label=""
-													placeholder="Выберите">
-													<template slot-scope="{ name }">
-														<span>{{ name }}</span>
-													</template>
-												</multiselect>
-		
-										</div>
-										<div class="select-content mb-10">
-											<div class="text-x5-b mb-2">Комплектация</div>
-											<multiselect   
-												v-model="currentModelComplectation" 
-												@input="update()"
-												:options="currentModelVersion.complectations"
-												:searchable="false"
-												:hide-selected="true"
-												track-by="name"
-												label="name"
-												deselect-label=""
-												select-label=""
-												selected-label=""
-												placeholder="Выберите">
-												<template slot-scope="{ name }">
-													<span>{{ name }}</span>
-												</template>
-											</multiselect>
-										</div>
-									</div>
-									<div class="fb-lg-4 ph-3">
-										
-									</div>
-									<div class="fb-lg-4 ph-3">
-										<div>
-											<div class="text-x5-b mb-2">Цена</div>
-											<div class="price-content">
-												<big v-if="currentModelComplectation.price">{{currentModelComplectation.price | spaceBetweenNum}}</big> руб.
-											</div>
-										</div>
-									</div>
-								</div>
-								<hr class="row-5">
-								<div class="mt-8">
-									<div class="text-x5-b mb-2">Первоначальный взнос</div>
-				          <div class="irs-content mv-10">
-				            <div class="calc-range box-xs-10 active">
-				              <input type="text" id="range" name="">
-				            </div>
-				          </div>
-			          </div>
-							</div>
-							<div class="credit-calc__summary">
-								<div class="cells boxes-3">
-									<div class="cell">
-										<div class="wrapper">
-											<div class="icon-content">
-												
-											</div>
-										</div>
-									</div>
-								</div>
-							</div>
-	          </div>
-					</div>
-				</div>
-			</section>
-			<section class="offers-icolinks">
+			<section class="testdrive">
 				<div class="container pv-5">
-					<div class="offers-icolinks-items">
+					<div class="entry-header text-center mt-6">
+						<p>Выберите модель</p>
+					</div>
+					<div class="boxes-2 figure-mv-6 desktop:ph-5 desktop:jc-center box-md-8 mh-auto text-center mb-12">
 						<figure>
-							<a href="">
-								<div class="wrapper">
-									<picture>
-										<img src="/img/other/finance/creditgo-icolinks-1.svg">
-									</picture>
-									<div class="desc-content">получить одобрение кредита онлайн</div>
-								</div>
+							<a href="testdrive-model.html">
+								<picture>
+									<img src="/img/other/index/index-models-1.png">
+								</picture>
 							</a>
+							<div class="desc-content">
+								<div class="text-x3-bu"><a href="/personal-cars/arkana.html">Renault arkana</a></div>
+								<div>Цена от <span class="price-content fs-5-em">239 046 500 сум</span></div>
+							</div>
 						</figure>
 						<figure>
-							<a href="">
-								<div class="wrapper">
-									<picture>
-										<img src="/img/other/finance/creditgo-icolinks-2.svg">
-									</picture>
-									<div class="desc-content">связаться с кредитным специалистом</div>
-								</div>
+							<a href="testdrive-model.html">
+								<picture>
+									<img src="/img/other/index/index-models-2.png">
+								</picture>
 							</a>
+							<div class="desc-content">
+								<div class="text-x3-bu"><a href="/personal-cars/kaptur.html">RENAULT KAPTUR</a></div>
+								<div>Цена от <span class="price-content fs-5-em">228 937 300 сум</span></div>
+							</div>
+						</figure>
+						<figure>
+							<a href="testdrive-model.html">
+								<picture>
+									<img src="/img/other/index/index-models-3.png">
+								</picture>
+							</a>
+							<div class="desc-content">
+								<div class="text-x3-bu"><a href="/personal-cars/newduster.html">НОВЫЙ RENAULT DUSTER</a></div>
+								<div>Цена от <span class="price-content fs-5-em">233 071 500 сум</span></div>
+							</div>
 						</figure>
 					</div>
 				</div>
 			</section>
-			<section>
-				<div class="container pv-8">
-					<div class="accordion-def" id="creditgo">
-					  <div class="panel border-1">
-					    <a role="button" data-toggle="collapse" data-parent="#creditgo" href="#creditgo-1">
-					    	<span>Что такое программа "Поехали!"?</span><i class="fa fa-angle-up"></i>
-					    </a>
-					    <div id="creditgo-1" class="panel-collapse collapse">
-					      <div class="accordion-def-body">
-					      	<p>«Поехали!» — это финансовая программа с низкими ежемесячными платежами и гарантированным обратным выкупом автомобиля.</p>
-					      	<p>«Поехали!» позволяет обновлять ваш автомобиль каждые 3 (в зависимости от сегмента модели) года на самых выгодных условиях.</p>
-					      </div>
-					    </div>
-					  </div>
-					  <div class="panel border-1">
-					    <a role="button" data-toggle="collapse" data-parent="#creditgo" href="#creditgo-2">
-					    	<span>Чем «Поехали!» отличается от классического кредита?</span><i class="fa fa-angle-up"></i>
-					    </a>
-					    <div id="creditgo-2" class="panel-collapse collapse">
-					      <div class="accordion-def-body">
-					      	<p>«Поехали!» — это финансовая программа с низкими ежемесячными платежами и гарантированным обратным выкупом автомобиля.</p>
-					      	<p>«Поехали!» позволяет обновлять ваш автомобиль каждые 3 (в зависимости от сегмента модели) года на самых выгодных условиях.</p>
-					      </div>
-					    </div>
-					  </div>
-					  <div class="panel border-1">
-					    <a role="button" data-toggle="collapse" data-parent="#creditgo" href="#creditgo-3">
-					    	<span>Какие преимущества программы «Поехали!»?</span><i class="fa fa-angle-up"></i>
-					    </a>
-					    <div id="creditgo-3" class="panel-collapse collapse">
-					      <div class="accordion-def-body">
-					      	<p>«Поехали!» — это финансовая программа с низкими ежемесячными платежами и гарантированным обратным выкупом автомобиля.</p>
-					      	<p>«Поехали!» позволяет обновлять ваш автомобиль каждые 3 (в зависимости от сегмента модели) года на самых выгодных условиях.</p>
-					      </div>
-					    </div>
-					  </div>
-					  <div class="panel border-1">
-					    <a role="button" data-toggle="collapse" data-parent="#creditgo" href="#creditgo-4">
-					    	<span>Кому подойдет программа "Поехали!"?</span><i class="fa fa-angle-up"></i>
-					    </a>
-					    <div id="creditgo-4" class="panel-collapse collapse">
-					      <div class="accordion-def-body">
-					      	<p>«Поехали!» — это финансовая программа с низкими ежемесячными платежами и гарантированным обратным выкупом автомобиля.</p>
-					      	<p>«Поехали!» позволяет обновлять ваш автомобиль каждые 3 (в зависимости от сегмента модели) года на самых выгодных условиях.</p>
-					      </div>
-					    </div>
-					  </div>
-					</div>
-				</div>
-			</section>
-						<!-- <section>
-				<div class="container pv-8">
-					<div class="accordion-def desktop:ph-4" id="yur-accordion">
-					  <div class="panel">
-					    <a role="button" data-toggle="collapse" data-parent="#yur-accordion" href="#yur-accordion-1">
-					    	<span>ЮРИДИЧЕСКАЯ ИНФОРМАЦИЯ</span><i class="fa fa-angle-up"></i>
-					    </a>
-					    <div id="yur-accordion-1" class="panel-collapse collapse">
-					      <div class="accordion-def-body">
-									<p></p> 
-					      </div>
-					    </div>
-					  </div>
-					</div>
-				</div>
-			</section> -->
+
 		</main>
 		
 		<footer id="footer" class="footer">
@@ -989,6 +631,7 @@ gtag('config', 'G-CHPFNKGF8F');
 				</div>
 			</div>
 		</footer>
+
 	</div>
 	<!-- SCRIPTS -->
 	
@@ -1039,239 +682,7 @@ gtag('config', 'G-CHPFNKGF8F');
 </script>
 
 
-	<script type="text/javascript" src="/js/credit-go-slider.js"></script>
-	<script type="text/javascript">
-
-		window.app = new Vue({
-		  el: '#main',
-		  data: {
-				payment:{
-					price: 1140000,
-					credit_price: 0,
-					ante: 627000,
-					term: 36,
-					rate: 55,
-					rate_one: 0,
-					mpay: 0,
-				},
-		  	currentModel: {},
-        currentModelComplectation: {},
-		  	currentModelVersion: {},
-		  	models: [
-  {
-    "full_name": "renault KAPTUR",
-    "image": "/img/models/kaptur_90.png",
-    "versions": [
-      {
-        "name": "Life",
-        "complectations": [
-          {
-            "price": "1140000",
-            "name": "1,6 л, 114 л.с., 4х2, МКП5"
-          },
-          {
-            "price": "1195000",
-            "name": "1,6 л, 114 л.с., 4х2, CVT X-Tronic"
-          }
-        ]
-      },
-      {
-        "name": "Drive",
-        "complectations": [
-          {
-            "price": "1210000",
-            "name": "1,6 л, 114 л.с., 4х2, МКП5"
-          },
-          {
-            "price": "1265000",
-            "name": "1,6 л, 114 л.с., 4х2, CVT X-Tronic"
-          },
-          {
-            "price": "1375000",
-            "name": "TCe 150, 150 л.с., 4х2, CVT X-Tronic"
-          },
-          {
-            "price": "1450000",
-            "name": "TCe 150, 150 л.с., 4х4, CVT X-Tronic"
-          }
-        ]
-      },
-      {
-        "name": "Style",
-        "complectations": [
-          {
-            "price": "1352000",
-            "name": "1,6 л, 114 л.с., 4х2, CVT X-Tronic"
-          }
-        ]
-      },
-      {
-        "name": "Style TCe 150",
-        "complectations": [
-          {
-            "price": "1462000",
-            "name": "TCe 150, 150 л.с., 4х2, CVT X-Tronic"
-          },
-          {
-            "price": "1537000",
-            "name": "TCe 150, 150 л.с., 4х4, CVT X-Tronic"
-          }
-        ]
-      },
-      {
-        "name": "Prime",
-        "complectations": [
-          {
-            "price": "1557000",
-            "name": "TCe 150, 150 л.с., 4х2, CVT X-Tronic"
-          },
-          {
-            "price": "1632000",
-            "name": "TCe 150, 150 л.с., 4х4, CVT X-Tronic"
-          }
-        ]
-      }
-    ]
-  },
-  {
-    "full_name": "Renault ARKANA",
-    "image": "/img/models/arkana_90.png",
-    "versions": [
-      {
-        "name": "Life",
-        "complectations": [
-          {
-            "price": "1211000",
-            "name": "1,6 л, 114 л.с., МКП5, 4х2"
-          },
-          {
-            "price": "1266000",
-            "name": "1,6 л, 114 л.с., 4х2, CVT X-Tronic"
-          }
-        ]
-      },
-      {
-        "name": "Drive",
-        "complectations": [
-          {
-            "price": "1291000",
-            "name": "1,6 л, 114 л.с., МКП5, 4х2"
-          },
-          {
-            "price": "1346000",
-            "name": "1,6 л, 114 л.с., 4х2, CVT X-Tronic"
-          },
-          {
-            "price": "1371000",
-            "name": "1,6 л, 114 л.с., МКП6, 4х4"
-          }
-        ]
-      },
-      {
-        "name": "Drive TCe 150",
-        "complectations": [
-          {
-            "price": "1456000",
-            "name": "TCe 150, 150 л.с., 4х2, CVT X-Tronic"
-          }
-        ]
-      },
-      {
-        "name": "Style",
-        "complectations": [
-          {
-            "price": "1446000",
-            "name": "1,6 л, 114 л.с., 4х2, CVT X-Tronic"
-          },
-          {
-            "price": "1471000",
-            "name": "1,6 л, 114 л.с., МКП6, 4х4"
-          }
-        ]
-      },
-      {
-        "name": "Style TCe 150",
-        "complectations": [
-          {
-            "price": "1556000",
-            "name": "TCe 150, 150 л.с., 4х2, CVT X-Tronic"
-          },
-          {
-            "price": "1636000",
-            "name": "TCe 150, 150 л.с., 4х4, CVT X-Tronic"
-          }
-        ]
-      }
-    ]
-  }
-]
-
-		  },
-			created: function(){
-				this.selectModel(this.models[0])
-			},
-			mounted: function(){
-				var vm = this
-				window.ante = $("#range").ionRangeSlider({
-					skin: "round",
-					min: 0,
-					max: this.currentModelComplectation.price, //1140000
-					from: this.currentModelComplectation.price*0.55,
-					to: 0,
-					//from_min: 0,
-					from_max: this.currentModelComplectation.price*0.55, //627000
-					postfix: " сум",
-					step: 1000,
-					grid: true,
-					grid_num: 20,
-					//grid_snap: false,
-					prettify_enabled: true,
-					prettify_separator: " ",
-					grid_margin: false,
-					force_edges: true,
-					onChange: function (data) {
-						//console.log(data)
-						vm.payment.ante = data.from
-						vm.calc();
-					},
-				}).data("ionRangeSlider");
-
-				//this.$emit('currentModelComplectation', function(){console.log(11)})
-				// this.updateRange = function(){
-				// 	ante.update({from: v.payment.ante,});
-				// 	ante.callOnChange()
-				// }
-			},
-		  methods: {
-				update(){
-					console.log("update");
-					ante.update({max: this.currentModelComplectation.price});
-				},
-				calc(){
-					var result;
-					var term = 36 //this.payment.term // Срок
-      		var credit_price = this.payment.credit_price; // Сумма кредита
-      		var rateone = this.payment.rate_one;
-
-					this.payment.credit_price = this.payment.price - this.payment.ante
-					this.payment.rate_one = this.payment.rate/100/12
-					
-					result = credit_price*(rateone + ( rateone / (((1+rateone)**term) - 1) ) )
-					this.payment.mpay = Math.round(result);
-					console.log(this.payment.mpay);
-				},
-		  	selectModel(model){
-					var v = this
-		  		this.currentModel = model;
-					this.currentModelVersion = this.currentModel.versions[0]
-					this.currentModelComplectation = this.currentModelVersion.complectations[0]
-					//ante.update({from: v.payment.ante,});
-		  	}
-		  }
-		})
-	</script>
 
 
 </body>
-
 </html>

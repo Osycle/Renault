@@ -702,7 +702,14 @@ button{
 		}
 	}
 }
-
+.btn-def-2{
+	@extend .btn-def;
+	background-color: $color-1;
+	color: black;
+	&:hover, &.hovered{
+		background-color: lighten($color-1, 4%)
+	}
+}
 .btn-opacity{
 	@extend .btn-style;
 	background-color: transparent;

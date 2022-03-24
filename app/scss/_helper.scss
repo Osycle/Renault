@@ -187,7 +187,9 @@
 .fd-row-reverse		{flex-direction: row-reverse;}
 .fw-wrap					{flex-wrap: wrap;}
 
-
+.as-center				{align-self: center;}
+.as-start					{align-self: flex-start;}
+.as-end						{align-self: flex-end;}
 
 @media (min-width: 992px){
 	.desktop\:flex						{display: flex}
@@ -200,6 +202,10 @@
 	.desktop\:ai-center				{align-items: center;}
 	.desktop\:ai-start				{align-items: flex-start;}
 	.desktop\:ai-end					{align-items: flex-end;}
+
+	.desktop\:as-center				{align-self: center;}
+	.desktop\:as-start				{align-self: flex-start;}
+	.desktop\:as-end					{align-self: flex-end;}
 
 	.desktop\:fd-column				{flex-direction: column;}
 	.desktop\:fd-row					{flex-direction: row;}
@@ -225,6 +231,10 @@
 	.mobile\:ai-center			{align-items: center;}
 	.mobile\:ai-start				{align-items: flex-start;}
 	.mobile\:ai-end					{align-items: flex-end;}
+
+	.mobile\:as-center			{align-self: center;}
+	.mobile\:as-start				{align-self: flex-start;}
+	.mobile\:as-end					{align-self: flex-end;}
 
 	.mobile\:fd-column			{flex-direction: column;}
 	.mobile\:fd-row					{flex-direction: row;}
