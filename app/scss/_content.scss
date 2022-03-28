@@ -1608,6 +1608,9 @@ ymaps .map-cluster{
   background-color: white;
   height: 100%;
   overflow-y: auto;
+  .btn-content{
+    margin-left: 15px;
+  }
   .item{
     background-color: white;
     padding: 15px 20px;
@@ -1618,6 +1621,11 @@ ymaps .map-cluster{
       display: flex;
       padding-top: 10px;
       padding-bottom: 10px;
+      @media (max-width: 991px){
+        div:nth-child(2){
+          width: 100%;
+        }
+      }
     }
     ._name{
       font-weight: 700;
@@ -1633,7 +1641,43 @@ ymaps .map-cluster{
     }
   }
 }
+.dealers{
+  @media (max-width: 991px){
+    .map-bar{
+      width: 100%;
+    }
+  }
+}
 .dealers-testdrive{
+  .dealers-items{
+    height: calc(100% - 60px);
+  }
+  @media (max-width: 991px){      
+    #map{
+      height: 380px;
+    }
+    .step-1{
+      padding-left: 0;
+      padding-right: 0;
+    }
+    .right-bar{
+      display: none;
+    }
+    .dealers-map-wrapper{
+      .cap-content{
+        padding-left: 15px;
+        padding-right: 15px;
+      }
+      .dealers-items .item{
+        padding-left: 15px;
+        padding-right: 15px;
+        font-size: 0.85em;
+      }
+      .btn-content{
+        align-self: flex-start;
+      }
+    }
+  }
   .marker-area-content{
     width: 100px;
     border: 1px solid white;
@@ -1718,7 +1762,9 @@ ymaps .map-cluster{
     transform: translateY(0);
   }
   .item-wrapper{
-    max-width: 450px;
+    @media(min-width: 992px){
+      max-width: 450px;
+    }
   }
   .item{
     &:hover{
@@ -2311,6 +2357,9 @@ ymaps .map-cluster{
       font-size: 12px;
       display: inline-block;
       padding-bottom: 20px;
+      @media (max-width: 991px){
+        display: none;
+      }
     }
     .FunnelStepper__icon{
       position: absolute;
@@ -2418,7 +2467,10 @@ ymaps .map-cluster{
   min-width: 200px;
   label{
     width: auto;
+    width: 80px;
+    margin-left: 0px;
     margin-bottom: 5px;
+    margin-right: 5px;
   }
   input{
     &:checked{

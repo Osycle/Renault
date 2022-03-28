@@ -11507,6 +11507,8 @@ ymaps .map-cluster {
   background-color: white;
   height: 100%;
   overflow-y: auto; }
+  .dealers-items .btn-content {
+    margin-left: 15px; }
   .dealers-items .item {
     background-color: white;
     padding: 15px 20px; }
@@ -11518,6 +11520,9 @@ ymaps .map-cluster {
       display: flex;
       padding-top: 10px;
       padding-bottom: 10px; }
+      @media (max-width: 991px) {
+        .dealers-items .item .item-wrapper div:nth-child(2) {
+          width: 100%; } }
     .dealers-items .item ._name {
       font-weight: 700; }
     .dealers-items .item:hover {
@@ -11526,6 +11531,32 @@ ymaps .map-cluster {
       .dealers-items .item .btn-content {
         position: absolute;
         right: 30px; } }
+
+@media (max-width: 991px) {
+  .dealers .map-bar {
+    width: 100%; } }
+
+.dealers-testdrive .dealers-items {
+  height: calc(100% - 60px); }
+
+@media (max-width: 991px) {
+  .dealers-testdrive #map {
+    height: 380px; }
+  .dealers-testdrive .step-1 {
+    padding-left: 0;
+    padding-right: 0; }
+  .dealers-testdrive .right-bar {
+    display: none; }
+  .dealers-testdrive .dealers-map-wrapper .cap-content {
+    padding-left: 15px;
+    padding-right: 15px; }
+  .dealers-testdrive .dealers-map-wrapper .dealers-items .item {
+    padding-left: 15px;
+    padding-right: 15px;
+    font-size: 0.85em; }
+  .dealers-testdrive .dealers-map-wrapper .btn-content {
+    -ms-flex-item-align: start;
+    align-self: flex-start; } }
 
 .dealers-testdrive .marker-area-content {
   width: 100px;
@@ -11608,8 +11639,9 @@ ymaps .map-cluster {
   .dealer-more.active {
     -webkit-transform: translateY(0);
     transform: translateY(0); }
-  .dealer-more .item-wrapper {
-    max-width: 450px; }
+  @media (min-width: 992px) {
+    .dealer-more .item-wrapper {
+      max-width: 450px; } }
   .dealer-more .item:hover {
     background-color: transparent; }
   .dealer-more .dealer-services li {
@@ -12193,6 +12225,9 @@ ymaps .map-cluster {
       font-size: 12px;
       display: inline-block;
       padding-bottom: 20px; }
+      @media (max-width: 991px) {
+        .FunnelStepper ul .FunnelStepper__steptitle {
+          display: none; } }
     .FunnelStepper ul .FunnelStepper__icon {
       position: absolute;
       z-index: 2;
@@ -12299,7 +12334,10 @@ ymaps .map-cluster {
   min-width: 200px; }
   .block-pick-time label {
     width: auto;
-    margin-bottom: 5px; }
+    width: 80px;
+    margin-left: 0px;
+    margin-bottom: 5px;
+    margin-right: 5px; }
   .block-pick-time input:checked ~ .pick-time:before {
     opacity: 1; }
 
