@@ -1,0 +1,247 @@
+html, body, div, span,
+h1, h2, h3, h4, h5, h6, p, pre,
+a, img, small, strike, strong, sub, sup,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, section, time, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline; }
+
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block; }
+
+body {
+  line-height: 1; }
+  body * {
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box; }
+
+ol, ul {
+  list-style: none; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+@font-face {
+  font-family: 'NouvelR';
+  src: url("../newFonts/NouvelR-Light.woff2") format("woff2"), url("../newFonts/NouvelR-Light.woff") format("woff");
+  font-weight: 200;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'NouvelR';
+  src: url("../newFonts/NouvelR-Book.woff2") format("woff2"), url("../newFonts/NouvelR-Book.woff") format("woff");
+  font-weight: 300;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'NouvelR';
+  src: url("../newFonts/NouvelR-Regular.woff2") format("woff2"), url("../newFonts/NouvelR-Regular.woff") format("woff");
+  font-weight: 400;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'NouvelR';
+  src: url("../newFonts/NouvelR-Semibold.woff2") format("woff2"), url("../newFonts/NouvelR-Semibold.woff") format("woff");
+  font-weight: 600;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'NouvelR';
+  src: url("../newFonts/NouvelR-Bold.woff2") format("woff2"), url("../newFonts/NouvelR-Bold.woff") format("woff");
+  font-weight: 700;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'NouvelR';
+  src: url("NouvelR-Extrabold.woff2") format("woff2"), url("NouvelR-Extrabold.woff") format("woff");
+  font-weight: 800;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'NouvelR-Variable';
+  src: url("../newFonts/NouvelR-Variable.woff2") format("woff2"), url("../newFonts/NouvelR-Variable.woff") format("woff");
+  font-weight: 800;
+  font-style: normal; }
+
+body * {
+  font-family: 'NouvelR', Arial;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box; }
+
+@media screen and (max-width: 900px) {
+  .forDesktop {
+    display: none !important; } }
+
+.newOptions .list {
+  position: relative;
+  width: 80rem;
+  max-width: 100%;
+  height: 39rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  background: #000;
+  overflow: hidden; }
+  .newOptions .list .option {
+    width: 25%;
+    cursor: pointer;
+    color: #fff; }
+    .newOptions .list .option:hover .content:before {
+      background: #efdf00; }
+    .newOptions .list .option:hover .content .text {
+      opacity: 1;
+      -webkit-transform: translateY(0);
+      transform: translateY(0);
+      -webkit-transition: .5s .5s;
+      transition: .5s .5s; }
+    .newOptions .list .option:hover .content .shadow {
+      opacity: 1;
+      -webkit-transition: .2s .5s;
+      transition: .2s .5s; }
+    .newOptions .list .option .content {
+      position: relative;
+      z-index: 2;
+      height: 100%;
+      padding: 1.4rem 1.8rem;
+      background: url(../img/newOptions/vertical_dotts.png) repeat-y right top/1px auto, -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.8)), color-stop(50%, rgba(0, 0, 0, 0)));
+      background: url(../img/newOptions/vertical_dotts.png) repeat-y right top/1px auto, linear-gradient(to bottom, rgba(0, 0, 0, 0.8) 0%, rgba(0, 0, 0, 0) 50%); }
+      .newOptions .list .option .content .shadow {
+        content: '';
+        display: block;
+        position: absolute;
+        z-index: 1;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: -webkit-gradient(linear, left top, left bottom, from(black), to(rgba(0, 0, 0, 0.4)));
+        background: linear-gradient(to bottom, black 0%, rgba(0, 0, 0, 0.4) 100%);
+        opacity: 0;
+        pointer-events: none;
+        -webkit-transition: .1s linear;
+        transition: .1s linear; }
+      .newOptions .list .option .content:before {
+        content: '';
+        display: block;
+        position: absolute;
+        left: 0.5rem;
+        right: 0.5rem;
+        bottom: 0.5rem;
+        height: 0.25rem;
+        background: #919191;
+        opacity: 0.4;
+        z-index: 1;
+        -webkit-transition: .3s linear;
+        transition: .3s linear; }
+    .newOptions .list .option .name, .newOptions .list .option .text {
+      position: relative;
+      z-index: 3; }
+    .newOptions .list .option .name {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-align: center;
+      -ms-flex-align: center;
+      align-items: center;
+      margin-bottom: 0.7rem;
+      font-size: 1rem;
+      line-height: 1.25;
+      font-weight: 700; }
+      .newOptions .list .option .name img {
+        width: 3rem;
+        margin-top: 1rem;
+        margin-right: 1rem; }
+      .newOptions .list .option .name span {
+        margin-bottom: 0.2rem; }
+    .newOptions .list .option .text {
+      font-size: 0.875rem;
+      line-height: 1.45;
+      -webkit-transform: translateY(-1rem);
+      transform: translateY(-1rem);
+      opacity: 0;
+      pointer-events: none;
+      -webkit-transition: .3s;
+      transition: .3s; }
+    .newOptions .list .option .image {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: no-repeat center center / cover;
+      opacity: 0;
+      -webkit-transition: opacity .5s;
+      transition: opacity .5s; }
+    .newOptions .list .option.active .image {
+      opacity: 1;
+      z-index: 1; }
+
+@media screen and (max-width: 900px) {
+  .newOptions .container {
+    padding: 0;
+    padding-bottom: 15rem;
+    overflow: hidden; }
+  .newOptions .list {
+    overflow: visible;
+    height: 21rem;
+    /*&:after{
+        content: '';
+        display: block;
+        position: absolute;
+        top: calc(100% + 1.25rem);
+        left: 0;
+        right: 0;
+        height: 1.25rem;
+        background: url(../img/newOptions/bracket.png) no-repeat center /95vmin auto;
+      }*/ }
+    .newOptions .list .option .content {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-align: end;
+      -ms-flex-align: end;
+      align-items: flex-end;
+      padding: 1.4rem 0 1rem .5rem;
+      background: -webkit-gradient(linear, left bottom, left top, from(rgba(0, 0, 0, 0.8)), color-stop(50%, rgba(0, 0, 0, 0)));
+      background: linear-gradient(to top, rgba(0, 0, 0, 0.8) 0%, rgba(0, 0, 0, 0) 50%); }
+      .newOptions .list .option .content .name {
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+        flex-direction: column;
+        -webkit-box-align: start;
+        -ms-flex-align: start;
+        align-items: flex-start;
+        width: 100%;
+        height: 8.4rem;
+        font-size: .55rem; }
+        .newOptions .list .option .content .name img {
+          margin-bottom: 1rem; }
+      .newOptions .list .option .content:before {
+        display: none; }
+      .newOptions .list .option .content .shadow {
+        background: -webkit-gradient(linear, left bottom, left top, from(black), to(rgba(0, 0, 0, 0)));
+        background: linear-gradient(to top, black 0%, rgba(0, 0, 0, 0) 100%); }
+    .newOptions .list .option .text {
+      position: absolute;
+      top: 100%;
+      left: 0;
+      right: 0;
+      color: #000;
+      padding: 3rem 1.2rem;
+      -webkit-transform: translateY(0);
+      transform: translateY(0);
+      font-size: 14px; }
+    .newOptions .list .option.active .text, .newOptions .list .option.active .shadow {
+      opacity: 1; } }

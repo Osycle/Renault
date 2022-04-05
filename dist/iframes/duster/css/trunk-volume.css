@@ -1,0 +1,290 @@
+html, body, div, span,
+h1, h2, h3, h4, h5, h6, p, pre,
+a, img, small, strike, strong, sub, sup,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, section, time, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline; }
+
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block; }
+
+body {
+  line-height: 1; }
+  body * {
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box; }
+
+ol, ul {
+  list-style: none; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+@font-face {
+  font-family: 'NouvelR';
+  src: url("../newFonts/NouvelR-Light.woff2") format("woff2"), url("../newFonts/NouvelR-Light.woff") format("woff");
+  font-weight: 200;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'NouvelR';
+  src: url("../newFonts/NouvelR-Book.woff2") format("woff2"), url("../newFonts/NouvelR-Book.woff") format("woff");
+  font-weight: 300;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'NouvelR';
+  src: url("../newFonts/NouvelR-Regular.woff2") format("woff2"), url("../newFonts/NouvelR-Regular.woff") format("woff");
+  font-weight: 400;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'NouvelR';
+  src: url("../newFonts/NouvelR-Semibold.woff2") format("woff2"), url("../newFonts/NouvelR-Semibold.woff") format("woff");
+  font-weight: 600;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'NouvelR';
+  src: url("../newFonts/NouvelR-Bold.woff2") format("woff2"), url("../newFonts/NouvelR-Bold.woff") format("woff");
+  font-weight: 700;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'NouvelR';
+  src: url("NouvelR-Extrabold.woff2") format("woff2"), url("NouvelR-Extrabold.woff") format("woff");
+  font-weight: 800;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'NouvelR-Variable';
+  src: url("../newFonts/NouvelR-Variable.woff2") format("woff2"), url("../newFonts/NouvelR-Variable.woff") format("woff");
+  font-weight: 800;
+  font-style: normal; }
+
+html {
+  font-size: 16px; }
+  @media all and (max-width: 1366px) {
+    html {
+      font-size: 15px; } }
+  @media all and (max-width: 1280px) {
+    html {
+      font-size: 15px; } }
+  @media all and (max-width: 1024px) {
+    html {
+      font-size: 13px; } }
+  @media all and (max-width: 960px) {
+    html {
+      font-size: 12px; } }
+
+* {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  -webkit-tap-highlight-color: transparent; }
+
+body {
+  font-family: NouvelR, sans-serif; }
+
+.fade-enter-active, .fade-leave-active {
+  -webkit-transition: opacity .5s;
+  transition: opacity .5s; }
+
+.fade-enter, .fade-leave-to {
+  opacity: 0; }
+
+.trunk-volume {
+  position: relative;
+  width: 80rem;
+  height: 59.375rem;
+  margin: 0 auto;
+  overflow: hidden;
+  background: url("../img/trunk-volume/trunk.png") no-repeat top 54.81% left 49.76%/33.1% auto, url("../img/trunk-volume/trunk2.png") no-repeat center center/100% auto, url("../img/trunk-volume/back_img.png") no-repeat center center/100% auto;
+  -webkit-transition: background .3s;
+  transition: background .3s; }
+  .trunk-volume.right {
+    background-image: url("../img/trunk-volume/1.png"), url("../img/trunk-volume/trunk2.png"), url("../img/trunk-volume/back_img.png"); }
+  .trunk-volume h1 {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    width: 40rem;
+    margin: 8.1rem auto 0;
+    font-size: 5.125rem;
+    text-align: center;
+    font-weight: 700;
+    text-transform: uppercase; }
+    .trunk-volume h1 .left {
+      font-size: 2.0625rem;
+      text-align: right;
+      color: #efdf00; }
+    .trunk-volume h1 .center {
+      margin: 0 0.9rem; }
+    .trunk-volume h1 .right {
+      font-size: 2.0625rem;
+      text-align: left; }
+  .trunk-volume .content {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    width: 88.4%;
+    margin: 11.5rem auto; }
+    .trunk-volume .content > div {
+      position: relative;
+      width: 26%;
+      -webkit-transition: opacity 0.3s;
+      transition: opacity 0.3s; }
+      .trunk-volume .content > div:before {
+        content: '';
+        position: absolute;
+        top: 0.5rem;
+        left: 88%;
+        width: 11rem;
+        height: 2px;
+        background: url("../img/trunk-volume/line.svg") repeat-x left center/cover; }
+    .trunk-volume .content .right-text {
+      width: 27%;
+      margin-top: 7.3rem; }
+      .trunk-volume .content .right-text:before {
+        left: -11rem; }
+    .trunk-volume .content h2 {
+      font-size: 1.125rem;
+      line-height: 1.2;
+      font-weight: 700; }
+    .trunk-volume .content p {
+      margin-top: 0.8rem;
+      font-family: Arial;
+      font-size: 0.875rem;
+      line-height: 1.45; }
+    .trunk-volume .content .inactive {
+      opacity: 0.5; }
+  .trunk-volume .actionBlock {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 50%; }
+    .trunk-volume .actionBlock.right {
+      left: 50%;
+      right: 0; }
+
+@media screen and (max-width: 1023px) {
+  .trunk-volume {
+    background-image: none, url("../img/trunk-volume/trunk1.png"), url("../img/trunk-volume/back_img.png");
+    width: 100%;
+    height: auto;
+    background-size: 170% auto;
+    background-position: top 85vw center, top 44vw center; }
+    .trunk-volume h1 {
+      width: 100%;
+      margin-top: 5vw;
+      font-size: 15vw; }
+      .trunk-volume h1 .left {
+        width: 30vw;
+        font-size: 5.9vw; }
+      .trunk-volume h1 .right {
+        display: none; }
+    .trunk-volume .actionBlock {
+      display: none; }
+    .trunk-volume .content {
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+      flex-direction: column;
+      -webkit-box-align: center;
+      -ms-flex-align: center;
+      align-items: center;
+      margin: 11vw auto; }
+      .trunk-volume .content > div {
+        width: 100%;
+        text-align: center; }
+        .trunk-volume .content > div:before {
+          left: 50%;
+          top: 100%;
+          width: 21vw;
+          -webkit-transform: rotate(90deg);
+          transform: rotate(90deg);
+          -webkit-transform-origin: left center;
+          transform-origin: left center; }
+      .trunk-volume .content h2 {
+        font-size: 5.7vw; }
+      .trunk-volume .content p {
+        font-size: 3.6vw; }
+      .trunk-volume .content .right-text {
+        width: 100%;
+        margin-top: 80vw; }
+        .trunk-volume .content .right-text:before {
+          left: 50%;
+          top: -41vw;
+          width: 40vw; }
+      .trunk-volume .content .inactive {
+        opacity: 1; } }
+
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+  .trunk-volume {
+    background-size: 130% auto;
+    background-position: top 50vw center, top 13vw center; }
+    .trunk-volume .content h2 {
+      font-size: 3.3vw; }
+    .trunk-volume .content p {
+      font-size: 2.1vw; }
+    .trunk-volume .content .right-text {
+      margin-top: 60vw; }
+  .trunk-volume .content .right-text:before {
+    top: -31vw;
+    width: 30vw; }
+  .trunk-volume .content > div:before {
+    width: 13vw; } }
+
+@media screen and (max-width: 1023px) and (min-width: 500px) {
+  .trunk-volume {
+    background-size: 150% auto;
+    background-position: top 43vw center, top 0vw center; }
+  .trunk-volume .content .right-text {
+    margin-top: 54vw; }
+  .trunk-volume .content h2 {
+    font-size: 30px; }
+  .trunk-volume .content p {
+    font-size: 12px; }
+  .trunk-volume .content > div:before {
+    width: 14vw; }
+  .trunk-volume .content .right-text:before {
+    top: -23vw;
+    width: 21vw; }
+  .trunk-volume .content {
+    margin: 10px auto; } }
+
+@media screen and (width: 768px) {
+  .trunk-volume .content {
+    margin: 60px auto; } }
+
+@media screen and (max-width: 600px) and (min-width: 450px) {
+  .trunk-volume .content p {
+    font-size: 10px; }
+  .trunk-volume {
+    background-position: 60vw center, top 20vw center; } }
+
+@media screen and (max-width: 700px) and (min-width: 600px) {
+  .trunk-volume {
+    background-position: 55vw center, top 10vw center; } }

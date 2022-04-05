@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="
+">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport"
+		content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>slider</title>
+	<link rel="stylesheet" href="css/slider.css">
+
+	<script src="/js/vue/vue.js"></script>
+	<script src="/js/vue/vuelidate.js"></script>
+	<script src="/js/vue/vue-scrollto.js"></script>
+	<script src="js/slider.js" defer></script>
+
+	<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+	<link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+</head>
+
+<body>
+	<div id="app">
+		<div class="slider">
+			<h1>Максимально широкая линейка двигателей</h1>
+			<div class="btn next"></div>
+			<div class="btn pre"></div>
+			<div class="swiper-container">
+				<div class="swiper-wrapper">
+					<div class="swiper-slide slide">
+						<div class="left">
+							<img src="./img/slider/tech_2.jpg" alt="">
+						</div>
+						<ul class="right row first">
+							<li class="nb">
+								<h3>Бензиновый турбодвигатель ТСе 150</h3>
+							</li>
+							<li class="nb">Главная новинка Renault DUSTER — бензиновый турбомотор ТСе 150,
+								который обладает самым высоким в линейке крутящим моментом 250Нм, который доступен
+								уже на низких оборотах, а также великолепной экономичностью — всего
+								6,7л/100км в смешанном цикле. Этот двигатель прекрасно подходит для любых условий,
+								в том числе и длительной эксплуатации на бездорожье. Он доступен
+								с полным приводом в паре как с 6-ступенчатой механической коробкой
+								передач, так и с новой автоматической трансмиссией CVT X-Tronic, которая
+								получила специальный алгоритм работы гидротрансформатора.</li>
+							<h4>Допустимые комбинации:</h4>
+							<ul class="row last">
+								<li>
+									4×4 и 6-ступенчатая МКП
+								</li>
+								<li>
+									4×4 и автоматическая трансмиссия CVT X-Tronic
+								</li>
+							</ul>
+						</ul>
+					</div>
+					<div class="swiper-slide slide">
+						<div class="left">
+							<img src="./img/slider/tech_4.jpg" alt="">
+						</div>
+						<ul class="right row first">
+							<li class="nb">
+								<h3>Бензиновый двигатель 1,6</h3>
+							</li>
+							<li class="nb">Один из самых массовых двигателей в России был модернизирован для
+								версии с полным приводом, благодаря чему мощность возросла до 117 л.с.
+								Двигатель обеспечивает оптимальное соотношение цены, динамики, проходимости
+								и экономичности.</li>
+							<h4>Допустимые комбинации:</h4>
+							<ul class="row last">
+								<li>
+									4×4 и 6-ступенчатая МКП (117 л.с.)
+								</li>
+							</ul>
+						</ul>
+					</div>
+				</div>
+			</div>
+			<div class="tabs" :class="{t1: activeSlide>=2}">
+				<div class="tab" @click="swiper.slideTo(0)" :class="{active: activeSlide===0}">
+					Турбированный Tce 150
+				</div>
+				<div class="tab" @click="swiper.slideTo(1)" :class="{active: activeSlide===1}">
+					Бензиновый 1.6
+				</div>
+			</div>
+		</div>
+	</div>
+</body>
+
+</html>

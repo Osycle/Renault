@@ -312,7 +312,7 @@
 	$(".iframe-el").map(function(i, el){
 		$(el).on("load", function(){
 			var h = this.contentDocument.body.offsetHeight;
-			$(this).css("min-height", h)
+			$(this).css("min-height", h+1)
 			//console.log(this.contentDocument.body.offsetHeight);
 		})
 		//console.log(el.contentDocument);

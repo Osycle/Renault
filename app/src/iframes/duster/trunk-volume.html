@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="css/trunk-volume.css">
+
+    <script src="/js/vue/vue.js"></script>
+    <script src="/js/vue/vuelidate.js"></script>
+    <script src="/js/vue/vue-scrollto.js"></script>
+    <script src="js/trunk-volume.js" defer></script>
+</head>
+
+<body>
+
+    <div id="app">
+        <div class="trunk-volume" :class="{right: !activeLeft}">
+            <h1>
+                <span class="left">
+                    Еще
+                    больше
+                </span>
+                <span class="center">
+                    Местa
+                </span>
+                <span class="right">
+                    для
+                    хранения
+                </span>
+            </h1>
+            <div class="content">
+                <div class="left-text" :class="{inactive: !activeLeft}">
+                    <h2>Максимальный объем багажника&nbsp;1720&nbsp;л</h2>
+                    <p>В&nbsp;Renault DUSTER багажник имеет подсветку, доступ к&nbsp;розетке 12В задних пассажиров
+                        и&nbsp;возможность складывать задние сиденья. В&nbsp;такой конфигурации версии с&nbsp;полным
+                        приводом могут похвастаться объемом до&nbsp;1720&nbsp;литров. Пол багажника теперь
+                        двухсекционный, что облегчает доступ к&nbsp;полноразмерному запасному колесу с&nbsp;контейнером
+                        для мелочей</p>
+                </div>
+
+                <div class="right-text" :class="{inactive: activeLeft}">
+                    <h2>Объем багажника 428&nbsp;л до шторки и&nbsp;662&nbsp;л до&nbsp;потолка</h2>
+                    <p>Багажное отделение Renault DUSTER стало еще эргономичнее. До&nbsp;полки багажника объем версий
+                        4&times;4 составит 428&nbsp;литров, что на&nbsp;20&nbsp;литров больше прошлого поколения.
+                        Уберите полку, чтобы увеличить объем до&nbsp;662&nbsp;литров. А&nbsp;если этого объема
+                        не&nbsp;хватает, то&nbsp;всегда можно установить дополнительный багажник на&nbsp;рейлинги
+                        на&nbsp;крыше.</p>
+                </div>
+            </div>
+            <div class="actionBlock" @mouseenter="activeLeft=true"></div>
+            <div class="actionBlock right" @mouseenter="activeLeft=false"></div>
+        </div>
+    </div>
+
+
+
+
+</body>
+
+</html>

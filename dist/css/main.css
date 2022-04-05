@@ -8072,6 +8072,248 @@ html .bg-color-transparent {
     font-weight: 700;
     text-transform: uppercase; } }
 
+@media (min-width: 992px) {
+  .desktop\:text-x1,
+  .desktop\:text-x1-u,
+  .desktop\:text-x1-b,
+  .desktop\:text-x1-bu {
+    font-size: 10px; }
+  .desktop\:text-x1-b {
+    font-weight: 700; }
+  .desktop\:text-x1-u {
+    text-transform: uppercase; }
+  .desktop\:text-x1-bu {
+    font-weight: 700;
+    text-transform: uppercase; }
+  .desktop\:text-x2,
+  .desktop\:text-x2-u,
+  .desktop\:text-x2-b,
+  .desktop\:text-x2-bu {
+    font-size: 12px; }
+  .desktop\:text-x2-b {
+    font-weight: 700; }
+  .desktop\:text-x2-u {
+    text-transform: uppercase; }
+  .desktop\:text-x2-bu {
+    font-weight: 700;
+    text-transform: uppercase; }
+  .desktop\:text-x3,
+  .desktop\:text-x3-u,
+  .desktop\:text-x3-b,
+  .desktop\:text-x3-bu {
+    font-size: 14px; }
+  .desktop\:text-x3-b {
+    font-weight: 700; }
+  .desktop\:text-x3-u {
+    text-transform: uppercase; }
+  .desktop\:text-x3-bu {
+    font-weight: 700;
+    text-transform: uppercase; }
+  .desktop\:text-x4,
+  .desktop\:text-x4-u,
+  .desktop\:text-x4-b,
+  .desktop\:text-x4-bu {
+    font-size: 16px; }
+  .desktop\:text-x4-b {
+    font-weight: 700; }
+  .desktop\:text-x4-u {
+    text-transform: uppercase; }
+  .desktop\:text-x4-bu {
+    font-weight: 700;
+    text-transform: uppercase; }
+  .desktop\:text-x5,
+  .desktop\:text-x5-u,
+  .desktop\:text-x5-b,
+  .desktop\:text-x5-bu {
+    font-size: 18px; }
+  .desktop\:text-x5-b {
+    font-weight: 700; }
+  .desktop\:text-x5-u {
+    text-transform: uppercase; }
+  .desktop\:text-x5-bu {
+    font-weight: 700;
+    text-transform: uppercase; }
+  .desktop\:text-x6,
+  .desktop\:text-x6-u,
+  .desktop\:text-x6-b,
+  .desktop\:text-x6-bu {
+    font-size: 20px; }
+  .desktop\:text-x6-b {
+    font-weight: 700; }
+  .desktop\:text-x6-u {
+    text-transform: uppercase; }
+  .desktop\:text-x6-bu {
+    font-weight: 700;
+    text-transform: uppercase; }
+  .desktop\:text-x7,
+  .desktop\:text-x7-u,
+  .desktop\:text-x7-b,
+  .desktop\:text-x7-bu {
+    font-size: 22px; }
+  .desktop\:text-x7-b {
+    font-weight: 700; }
+  .desktop\:text-x7-u {
+    text-transform: uppercase; }
+  .desktop\:text-x7-bu {
+    font-weight: 700;
+    text-transform: uppercase; }
+  .desktop\:text-x8,
+  .desktop\:text-x8-u,
+  .desktop\:text-x8-b,
+  .desktop\:text-x8-bu {
+    font-size: 24px; }
+  .desktop\:text-x8-b {
+    font-weight: 700; }
+  .desktop\:text-x8-u {
+    text-transform: uppercase; }
+  .desktop\:text-x8-bu {
+    font-weight: 700;
+    text-transform: uppercase; }
+  .desktop\:text-x9,
+  .desktop\:text-x9-u,
+  .desktop\:text-x9-b,
+  .desktop\:text-x9-bu {
+    font-size: 26px; }
+  .desktop\:text-x9-b {
+    font-weight: 700; }
+  .desktop\:text-x9-u {
+    text-transform: uppercase; }
+  .desktop\:text-x9-bu {
+    font-weight: 700;
+    text-transform: uppercase; }
+  .desktop\:text-x10,
+  .desktop\:text-x10-u,
+  .desktop\:text-x10-b,
+  .desktop\:text-x10-bu {
+    font-size: 28px; }
+  .desktop\:text-x10-b {
+    font-weight: 700; }
+  .desktop\:text-x10-u {
+    text-transform: uppercase; }
+  .desktop\:text-x10-bu {
+    font-weight: 700;
+    text-transform: uppercase; }
+  .desktop\:text-x11,
+  .desktop\:text-x11-u,
+  .desktop\:text-x11-b,
+  .desktop\:text-x11-bu {
+    font-size: 30px; }
+  .desktop\:text-x11-b {
+    font-weight: 700; }
+  .desktop\:text-x11-u {
+    text-transform: uppercase; }
+  .desktop\:text-x11-bu {
+    font-weight: 700;
+    text-transform: uppercase; }
+  .desktop\:text-x12,
+  .desktop\:text-x12-u,
+  .desktop\:text-x12-b,
+  .desktop\:text-x12-bu {
+    font-size: 32px; }
+  .desktop\:text-x12-b {
+    font-weight: 700; }
+  .desktop\:text-x12-u {
+    text-transform: uppercase; }
+  .desktop\:text-x12-bu {
+    font-weight: 700;
+    text-transform: uppercase; }
+  .desktop\:text-x13,
+  .desktop\:text-x13-u,
+  .desktop\:text-x13-b,
+  .desktop\:text-x13-bu {
+    font-size: 34px; }
+  .desktop\:text-x13-b {
+    font-weight: 700; }
+  .desktop\:text-x13-u {
+    text-transform: uppercase; }
+  .desktop\:text-x13-bu {
+    font-weight: 700;
+    text-transform: uppercase; }
+  .desktop\:text-x14,
+  .desktop\:text-x14-u,
+  .desktop\:text-x14-b,
+  .desktop\:text-x14-bu {
+    font-size: 36px; }
+  .desktop\:text-x14-b {
+    font-weight: 700; }
+  .desktop\:text-x14-u {
+    text-transform: uppercase; }
+  .desktop\:text-x14-bu {
+    font-weight: 700;
+    text-transform: uppercase; }
+  .desktop\:text-x15,
+  .desktop\:text-x15-u,
+  .desktop\:text-x15-b,
+  .desktop\:text-x15-bu {
+    font-size: 38px; }
+  .desktop\:text-x15-b {
+    font-weight: 700; }
+  .desktop\:text-x15-u {
+    text-transform: uppercase; }
+  .desktop\:text-x15-bu {
+    font-weight: 700;
+    text-transform: uppercase; }
+  .desktop\:text-x16,
+  .desktop\:text-x16-u,
+  .desktop\:text-x16-b,
+  .desktop\:text-x16-bu {
+    font-size: 40px; }
+  .desktop\:text-x16-b {
+    font-weight: 700; }
+  .desktop\:text-x16-u {
+    text-transform: uppercase; }
+  .desktop\:text-x16-bu {
+    font-weight: 700;
+    text-transform: uppercase; }
+  .desktop\:text-x17,
+  .desktop\:text-x17-u,
+  .desktop\:text-x17-b,
+  .desktop\:text-x17-bu {
+    font-size: 42px; }
+  .desktop\:text-x17-b {
+    font-weight: 700; }
+  .desktop\:text-x17-u {
+    text-transform: uppercase; }
+  .desktop\:text-x17-bu {
+    font-weight: 700;
+    text-transform: uppercase; }
+  .desktop\:text-x18,
+  .desktop\:text-x18-u,
+  .desktop\:text-x18-b,
+  .desktop\:text-x18-bu {
+    font-size: 44px; }
+  .desktop\:text-x18-b {
+    font-weight: 700; }
+  .desktop\:text-x18-u {
+    text-transform: uppercase; }
+  .desktop\:text-x18-bu {
+    font-weight: 700;
+    text-transform: uppercase; }
+  .desktop\:text-x19,
+  .desktop\:text-x19-u,
+  .desktop\:text-x19-b,
+  .desktop\:text-x19-bu {
+    font-size: 46px; }
+  .desktop\:text-x19-b {
+    font-weight: 700; }
+  .desktop\:text-x19-u {
+    text-transform: uppercase; }
+  .desktop\:text-x19-bu {
+    font-weight: 700;
+    text-transform: uppercase; }
+  .desktop\:text-x20,
+  .desktop\:text-x20-u,
+  .desktop\:text-x20-b,
+  .desktop\:text-x20-bu {
+    font-size: 48px; }
+  .desktop\:text-x20-b {
+    font-weight: 700; }
+  .desktop\:text-x20-u {
+    text-transform: uppercase; }
+  .desktop\:text-x20-bu {
+    font-weight: 700;
+    text-transform: uppercase; } }
+
 .border-1 {
   border: 1px solid #f2f1f2; }
 
@@ -8764,6 +9006,14 @@ h2,
   line-height: 140%;
   font-weight: 700; }
 
+div > h1:nth-child(1), div > .h1:nth-child(1),
+div > h2:nth-child(1),
+div > .h2:nth-child(1),
+div > h3:nth-child(1),
+div > h4:nth-child(1),
+div > h5:nth-child(1) {
+  margin-top: 0; }
+
 h1, .h1,
 h2,
 .h2, h3 {
@@ -9075,6 +9325,18 @@ label.error {
     width: 120px;
     margin-top: 3px;
     margin-bottom: 0; } }
+
+@media (min-width: 992px) {
+  .block-row-left .flex:nth-child(odd) {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: reverse;
+    -ms-flex-direction: row-reverse;
+    flex-direction: row-reverse; }
+  .block-row-right .flex:nth-child(even) {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: reverse;
+    -ms-flex-direction: row-reverse;
+    flex-direction: row-reverse; } }
 
 /*
 										 ---HEADER---
@@ -12408,6 +12670,125 @@ ymaps .map-cluster {
   font-weight: 700; }
   .icon-checked svg path {
     fill: white; }
+
+.model-other-items figure * {
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden; }
+
+.model-other-items figure .img-content {
+  overflow: hidden;
+  position: relative; }
+
+.model-other-items figure img {
+  -webkit-transition: 0.2s linear;
+  transition: 0.2s linear;
+  -webkit-transform: scale(1);
+  transform: scale(1); }
+
+.model-other-items figure:hover img {
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  -webkit-transform: scale(1.05);
+  transform: scale(1.05); }
+
+select.form-control {
+  background-color: white; }
+
+.tech-form {
+  background-color: #f2f1f2; }
+
+.tech-summary .item {
+  border-top: 1px solid #d9d9d6;
+  padding: 45px 20px; }
+
+.tech-summary .dl-content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  margin-left: -15px;
+  margin-right: -15px; }
+  @media (max-width: 991px) {
+    .tech-summary .dl-content {
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+      flex-direction: column; } }
+
+.tech-summary dl {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  margin-bottom: 15px;
+  padding: 0 15px;
+  width: 100%; }
+  @media (min-width: 992px) {
+    .tech-summary dl {
+      width: 50%; } }
+
+.tech-summary dt {
+  font-weight: 500;
+  margin-right: 5px;
+  color: #3e3f40;
+  -webkit-box-flex: 0;
+  -ms-flex: 0 1 60%;
+  flex: 0 1 60%; }
+
+.tech-summary dd {
+  font-weight: 800;
+  font-size: 16px;
+  -webkit-box-flex: 1;
+  -ms-flex: 1 1 auto;
+  flex: 1 1 auto;
+  text-align: right; }
+
+.offroad-online .entry-header {
+  font-size: 1.2em; }
+  .offroad-online .entry-header h2, .offroad-online .entry-header .h2, .offroad-online .entry-header p {
+    line-height: 160%; }
+
+.offroad-online .wrapper {
+  overflow: hidden;
+  background-size: cover;
+  padding: 70px;
+  color: white;
+  min-height: 650px;
+  position: relative; }
+  @media (max-width: 991px) {
+    .offroad-online .wrapper {
+      padding: 20px 30px;
+      min-height: 400px; } }
+  .offroad-online .wrapper:before {
+    background: -webkit-gradient(linear, left top, left bottom, from(rgba(78, 102, 129, 0.2)), to(transparent)), #0c1217;
+    background: linear-gradient(180deg, rgba(78, 102, 129, 0.2), transparent), #0c1217;
+    bottom: 0;
+    content: "";
+    -webkit-filter: blur(200px);
+    filter: blur(200px);
+    position: absolute;
+    top: 0;
+    width: 50%; }
+
+.offroad-online .text-content, .offroad-online .entry-header {
+  position: relative;
+  z-index: 1; }
+
+.offroad-online .text-content {
+  margin-top: 150px; }
+  @media (max-width: 991px) {
+    .offroad-online .text-content {
+      margin-top: 50px; } }
+  .offroad-online .text-content h4 {
+    font-size: 20px; }
+  .offroad-online .text-content p {
+    font-size: 13px;
+    line-height: 180%; }
+  .offroad-online .text-content .link-def:hover {
+    color: white; }
 
 /* 
 		_footer.scss

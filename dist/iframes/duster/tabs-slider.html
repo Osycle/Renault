@@ -1,0 +1,158 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport"
+    content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+
+  <link rel="stylesheet" href="css/tabs-slider.css">
+  
+  <script src="/js/vue/vue.js"></script>
+	<script src="/js/vue/vuelidate.js"></script>
+	<script src="/js/vue/vue-scrollto.js"></script>
+  <script src="js/tabs-slider.js" defer></script>
+
+</head>
+
+<body>
+  <div id="app">
+    <div class="tabs-slider" :class="{openSlide: activeSlide}">
+
+      <div class="start-block">
+        <h1>Новый уровень комфорта и&nbsp;эргономики</h1>
+
+        <transition name="fade">
+          <div class="slides" key="1" v-if="activeSlide">
+            <transition name="fade" mode="out-in">
+              <div class="slide" key="1" v-if="activeSlide === 1">
+                <img src="./img/tabs-slider/img3.jpg" alt="">
+
+                <div class="back" @click="activeSlide=null">
+                  <img src="./img/tabs-slider/back_arrow.svg" alt="">
+                  назад
+                </div>
+                <div class="bottom">
+                  <h2>Новый мультифункциональный руль с&nbsp;регулировкой по&nbsp;вылету</h2>
+                  <div class="hr"></div>
+                  <p>
+                    Новый руль должен быть удобным и&nbsp;приятным. В&nbsp;Renault DUSTER руль имеет кожаную отделку,
+                    регулировку в&nbsp;двух направлениях, по&nbsp;высоте и&nbsp;по&nbsp;вылету, и&nbsp;два блока
+                    кнопок&nbsp;&mdash; слева для управления круиз-контролем и&nbsp;ограничителем скорости.
+                    И&nbsp;справа для управления бортовым компьютером и&nbsp;голосовым управлением систем репликации
+                    смартфона.
+                  </p>
+                </div>
+              </div>
+              <div class="slide" key="2" v-else-if="activeSlide === 2">
+                <img src="./img/tabs-slider/img2.jpg" alt="">
+
+                <div class="back" @click="activeSlide=null">
+                  <img src="./img/tabs-slider/back_arrow.svg" alt="">
+                  назад
+                </div>
+                <div class="bottom">
+                  <h2>Климат-контроль</h2>
+                  <div class="hr"></div>
+                  <p>
+                    Renault DUSTER получил новую климатическую систему, включая автоматический климат-контроль
+                    с&nbsp;тремя стильными круглыми регуляторами. Теперь достаточно настроить нужную температуру
+                    и&nbsp;включить режим AUTO&nbsp;&mdash; и&nbsp;система будет поддерживать в&nbsp;салоне нужный
+                    климат.
+                  </p>
+                </div>
+              </div>
+              <div class="slide" key="3" v-else-if="activeSlide === 3">
+                <img src="./img/tabs-slider/img4.jpg" alt="">
+
+                <div class="back" @click="activeSlide=null">
+                  <img src="./img/tabs-slider/back_arrow.svg" alt="">
+                  назад
+                </div>
+                <div class="bottom">
+                  <h2>Водительское сиденье
+                    с&nbsp;поясничной поддержкой</h2>
+                  <div class="hr"></div>
+                  <p>
+                    В&nbsp;Renault DUSTER помимо центрального подлокотника, важную роль играют новые сиденья
+                    с&nbsp;новыми обивками и&nbsp;наполнителями. Водительское кресло теперь имеет регулируемую
+                    поясничную поддержку, регулируется по&nbsp;высоте в&nbsp;широком диапазоне и&nbsp;имеет хорошую
+                    боковую поддержку.
+                  </p>
+                </div>
+              </div>
+              <div class="slide" key="4" v-else-if="activeSlide === 4">
+                <img src="./img/tabs-slider/img5.jpg" alt="">
+
+                <div class="back" @click="activeSlide=null">
+                  <img src="./img/tabs-slider/back_arrow.svg" alt="">
+                  назад
+                </div>
+                <div class="bottom">
+                  <h2>5&nbsp;разъемов USB и&nbsp;2&nbsp;розетки 12В</h2>
+                  <div class="hr"></div>
+                  <p>
+                    В&nbsp;Renault DUSTER возможно иметь до&nbsp;5-ти разъемов USB. При наличии 8-дюймового экрана
+                    с&nbsp;разъемом USB для передачи данных, спереди в&nbsp;нише для мелочей доступны два разъема USB
+                    для подзарядки. А&nbsp;при заказе подогрева задних сидений, два разъема USB доступны и&nbsp;для
+                    задних пассажиров. В&nbsp;автомобиле также сохранились две классические розетки 12В, включая заднюю,
+                    которую можно использовать и&nbsp;для подзарядки электроприборов из&nbsp;багажника.
+                  </p>
+                </div>
+              </div>
+              <div class="slide" key="5" v-else-if="activeSlide === 5">
+                <img src="./img/tabs-slider/img1.jpg" alt="">
+                <video playsinline autoplay muted loop src="./img/tabs-slider/renault_siteanim.mp4"></video>
+
+                <div class="back" @click="activeSlide=null">
+                  <img src="./img/tabs-slider/back_arrow.svg" alt="">
+                  назад
+                </div>
+                <div class="bottom">
+                  <h2>Выдвижной регулируемый подлокотник</h2>
+                  <div class="hr"></div>
+                  <p>
+                    Центральным элементом нового интерьера является новый регулируемый подлокотник. Он&nbsp;важен
+                    в&nbsp;первую очередь для водителя во&nbsp;время длительных и&nbsp;дальних путешествий, чтобы иметь
+                    возможность облокотиться и&nbsp;немного расслабиться.
+                  </p>
+                </div>
+              </div>
+            </transition>
+          </div>
+        </transition>
+
+
+        <div class="tabs">
+          <div class="tab" @click="activeSlide=3" :class="{active: activeSlide===3}">
+            Водительское сиденье&nbsp;с&nbsp;поясничной поддержкой
+          </div>
+          <div class="tab" @click="activeSlide=5" :class="{active: activeSlide===5}">
+            Выдвижной регулируемый подлокотник
+          </div>
+          <div class="tab" @click="activeSlide=1" :class="{active: activeSlide===1}">
+            Новый мульти-функциональный руль
+          </div>
+          <div class="tab" @click="activeSlide=2" :class="{active: activeSlide===2}">
+            Климат-контроль
+          </div>
+          <div class="tab" @click="activeSlide=4" :class="{active: activeSlide===4}">
+            5 разъемов USB
+            и&nbsp;2&nbsp;розетки 12В
+          </div>
+        </div>
+        <div class="dots" v-if="!activeSlide">
+          <div class="dot" @click="activeSlide=1"></div>
+          <div class="dot" @click="activeSlide=2"></div>
+          <div class="dot" @click="activeSlide=3"></div>
+          <div class="dot" @click="activeSlide=4"></div>
+          <div class="dot" @click="activeSlide=5"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>

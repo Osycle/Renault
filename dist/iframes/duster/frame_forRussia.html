@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport"
+		content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<link rel="stylesheet" href="css/for-russia.css">
+
+
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.4.1/js/swiper.js" defer></script>
+
+	<script src="/js/vue/vue.js"></script>
+	<script src="/js/vue/vuelidate.js"></script>
+	<script src="/js/vue/vue-scrollto.js"></script>
+	<script src="js/frame_for_russia.js" defer></script>
+
+
+	<title>Frame 1</title>
+</head>
+
+<body>
+	<div id="app">
+		<section class="forRussia show" :class="{show: canShow('.forRussia', 0.35)}">
+
+			<div class="slider">
+				<div class="tabs">
+					<div class="tab" :class="{active:forRussiaActiveSlide===0}" @mouseover="forRussiaActiveSlide=0">
+						Интеллектуальная система полного привода All-Mode 4&times;4i</div>
+					<div class="tab" :class="{active:forRussiaActiveSlide===1}" @mouseover="forRussiaActiveSlide=1">Рулевой
+						механизм с&nbsp;электроусилителем</div>
+				</div>
+				<div class="content">
+					<transition-group name="show">
+						<div class="item" v-show="forRussiaActiveSlide===0" key="0">
+							<div class="itemWrapper">
+								<div class="text">
+									Популярная полноприводная трансмиссия All-Mode 4x4i
+									зарекомендовала себя как
+									исключительно надежная и&nbsp;долговечная даже в&nbsp;суровых условиях длительной эксплуатации
+									на&nbsp;бездорожье. Она прекрасно работает как в&nbsp;режиме автоматического распределения тяги
+									(AUTO), так и&nbsp;при принудительной блокировке (LOCK), а&nbsp;также прекрасно сочетается
+									с&nbsp;традиционной для DUSTER механической 6-ступенчатой коробкой передач со&nbsp;сверхкороткой
+									первой передачей, позволяющей уверенно двигаться по&nbsp;участкам бездорожья.</div>
+								<div class="img" style="background-image: url(img/forRussia/d2.jpg)"></div>
+							</div>
+						</div>
+						<div class="item" v-show="forRussiaActiveSlide===1" key="1">
+							<div class="itemWrapper">
+								<div class="text">
+									Новый рулевой механизм с&nbsp;электроусилителем подарит настоящее удовольствие от&nbsp;вождения, как
+									на&nbsp;скоростных магистралях, так и&nbsp;на&nbsp;разбитых проселках и&nbsp;бездорожье. DUSTER стал
+									значительно маневреннее и&nbsp;легче в&nbsp;управлении в&nbsp;парковочных режимах, а&nbsp;также
+									информативнее на&nbsp;высокой скорости по&nbsp;сравнению с&nbsp;предшественником. Кроме того, дорожные
+									неровности теперь не&nbsp;передаются на&nbsp;руль вибрациями, что обеспечивает высокий комфорт
+									в&nbsp;любых условиях.
+								</div>
+								<div class="img" style="background-image: url(img/forRussia/d1.jpg)"></div>
+							</div>
+						</div>
+					</transition-group>
+				</div>
+			</div>
+		</section>
+	</div>
+
+</body>
+
+</html>

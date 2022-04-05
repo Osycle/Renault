@@ -1,0 +1,95 @@
+<!doctype html>
+<html lang="
+">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport"
+		content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>Document</title>
+	<script src="/js/vue/vue.js"></script>
+	<script src="/js/vue/vuelidate.js"></script>
+	<script src="/js/vue/vue-scrollto.js"></script>
+	<script src="js/modes.js" defer></script>
+
+	<link rel="stylesheet" href="css/modes.css">
+</head>
+
+<body style="overflow: hidden;">
+	<div id="app">
+		<div class="modes">
+			<div class="slides">
+				<transition name="fade" mode="out-in">
+					<div v-if="active===1" key="1" class="mode">
+						<img src="./img/modes/Rotary_4x4b.jpg" alt="" class="forDesktop">
+						<img src="./img/modes/Rotary_4x4b.jpg" alt="" class="forMobile">
+						<div class="text">
+							<h2>LOCK - принудительный полный привод</h2>
+							<p>Многодисковая муфта заблокирована, крутящий момент распределяется поровну между осями.
+								Оптимальный режим для сложных участков бездорожья. Режим активируется на&nbsp;скорости
+								до&nbsp;80&nbsp;км/ч.</p>
+						</div>
+					</div>
+					<div v-if="active===2" key="2" class="mode">
+						<img src="./img/modes/Rotary_4x4a.jpg" alt="" class="forDesktop">
+						<img src="./img/modes/Rotary_4x4a.jpg" alt="" class="forMobile">
+						<div class="text">
+							<h2>AUTO - автоматически подключаемый полный привод</h2>
+							<p>При возникновении пробуксовки передних колес электронный блок управления многодисковой
+								муфты автоматически определяет необходимую степень ее&nbsp;блокировки, перераспределяя
+								крутящий момент двигателя между передней и&nbsp;задней осями. Оптимальный режим для
+								повседневной эксплуатации и&nbsp;легкого бездорожья.</p>
+						</div>
+					</div>
+					<div v-if="active===3" key="3" class="mode">
+						<img src="./img/modes/Rotary_4x4c.jpg" alt="" class="forDesktop">
+						<img src="./img/modes/Rotary_4x4c.jpg" alt="" class="forMobile">
+						<div class="text">
+							<h2>2WD - передний привод</h2>
+							<p>Крутящий момент двигателя распределен только между передними колесами, питание
+								многодисковой муфты полного привода отключено, что оптимизирует расход топлива.
+								Оптимальный режим для дальних поездок по&nbsp;сухим покрытиям.</p>
+						</div>
+					</div>
+				</transition>
+			</div>
+			<div class="tabs">
+				<div class="tab" :class="{active: active===1}" @mouseenter="active=1" @click="active=1">
+					<h3>LOCK - принудительный полный привод</h3>
+					<div class="text">
+						<p>
+							<span>Многодисковая муфта заблокирована, крутящий момент распределяется поровну между осями.
+								Оптимальный режим для сложных участков бездорожья. Режим активируется на&nbsp;скорости
+								до&nbsp;80&nbsp;км/ч.</span>
+						</p>
+					</div>
+				</div>
+				<div class="tab" :class="{active: active===2}" @mouseenter="active=2" @click="active=2">
+					<h3>AUTO - автоматически подключаемый полный привод</h3>
+					<div class="text">
+						<p>
+							<span>При возникновении пробуксовки передних колес элекронный блок управления многодисковой
+								муфты автоматически определяет необходимую степень ее&nbsp;блокировки, перераспределяя
+								крутящий момент двигателя между передней и&nbsp;задней осями. Оптимальный режим для
+								повседневной эксплуатации и&nbsp;легкого бездорожья.</span>
+						</p>
+					</div>
+				</div>
+				<div class="tab" :class="{active: active===3}" @mouseenter="active=3" @click="active=3">
+					<h3>2WD - передний привод</h3>
+					<div class="text">
+						<p>
+							<span>Крутящий момент двигателя распределен только между передними колесами, питание
+								многодисковой муфты полного привода отключено, что оптимизирует расход топлива.
+								Оптимальный режим для дальних поездок по&nbsp;сухим покрытиям.</span>
+						</p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+</body>
+
+</html>

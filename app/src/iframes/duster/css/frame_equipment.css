@@ -1,0 +1,629 @@
+@font-face {
+  font-family: NouvelR;
+  font-style: normal;
+  font-weight: 200;
+  src: url(../newFonts/NouvelR-Light.woff2?1009eebb5f69b8227656) format("woff2"),url(../newFonts/NouvelR-Light.woff?8cc59f3eb62630988a50) format("woff")
+}
+
+@font-face {
+  font-family: NouvelR;
+  font-style: normal;
+  font-weight: 300;
+  src: url(../newFonts/NouvelR-Book.woff2?3a860c05e68083d092c3) format("woff2"),url(../newFonts/NouvelR-Book.woff?962c439537b19981c149) format("woff")
+}
+
+@font-face {
+  font-family: NouvelR;
+  font-style: normal;
+  font-weight: 400;
+  src: url(../newFonts/NouvelR-Regular.woff2?bb37b10065409e5b4246) format("woff2"),url(../newFonts/NouvelR-Regular.woff?af2a5ab5c1855412f307) format("woff")
+}
+
+@font-face {
+  font-family: NouvelR;
+  font-style: normal;
+  font-weight: 600;
+  src: url(../newFonts/NouvelR-Semibold.woff2?7bb5128e9203e7b8750b) format("woff2"),url(../newFonts/NouvelR-Semibold.woff?e142ad4223cb853abfc4) format("woff")
+}
+
+@font-face {
+  font-family: NouvelR;
+  font-style: normal;
+  font-weight: 700;
+  src: url(../newFonts/NouvelR-Bold.woff2?e6fb3ec44e92d5143f60) format("woff2"),url(../newFonts/NouvelR-Bold.woff?45bcf6c33d6ab6d51ead) format("woff")
+}
+
+@font-face {
+  font-family: NouvelR;
+  font-style: normal;
+  font-weight: 800;
+  src: url(../newFonts/NouvelR-Extrabold.woff2?059a65b407bae53d852e) format("woff2"),url(../newFonts/NouvelR-Extrabold.woff?16ce52f79851f173fc8a) format("woff")
+}
+
+@font-face {
+  font-family: NouvelR-Variable;
+  font-style: normal;
+  font-weight: 800;
+  src: url(../newFonts/NouvelR-Variable.woff2?36ca24c20aeb61150bc8) format("woff2"),url(../newFonts/NouvelR-Variable.woff?5cfc76e9c76c82e3d2ad) format("woff")
+}
+
+body {
+  margin: 0;
+  padding: 0
+}
+
+html {
+  overflow: hidden
+}
+
+@media screen and (max-width: 1200px) {
+  html {
+      font-size:14px
+  }
+}
+
+@media screen and (max-width: 1023px) {
+  html {
+      font-size:16px
+  }
+}
+
+body * {
+  box-sizing: border-box;
+  font-family: NouvelR,Arial
+}
+
+.forMobile {
+  display: none!important
+}
+
+@media screen and (max-width: 900px) {
+  html {
+      font-size:2.5vw
+  }
+
+  .forDesktop {
+      display: none!important
+  }
+
+  .forMobile {
+      display: block!important
+  }
+}
+
+.benefits {
+  margin: 0 auto;
+  max-width: 1280px
+}
+
+.benefits .container {
+  width: 100%
+}
+
+.benefits .app_title {
+  font-size: 2.2rem;
+  margin-bottom: 1.7rem;
+  padding-top: 4.8rem;
+  text-align: center
+}
+
+.benefits hr {
+  margin-bottom: 1.6rem
+}
+
+.benefits .row {
+  display: flex
+}
+
+.benefits .item {
+  align-items: center;
+  display: flex
+}
+
+.benefits .item img {
+  display: block
+}
+
+.benefits .item .text {
+  background: #efdf00;
+  padding: 3.25rem 3.5rem .9rem 2.9rem
+}
+
+.benefits .item .text h3 {
+  font-size: 1.625rem;
+  font-weight: 700;
+  letter-spacing: -.25px;
+  margin-bottom: .5rem
+}
+
+.benefits .item .text p {
+  font-size: 1rem;
+  line-height: 1.45;
+  margin-bottom: 3.85rem
+}
+
+.benefits .row1 {
+  margin-bottom: 1.2rem
+}
+
+.benefits .row1 .item1 {
+  max-width: 100%
+}
+
+.benefits .row1 .item1 img {
+  width: 53.0125rem
+}
+
+.benefits .row1 .item1 .text {
+  margin-left: -1.7rem;
+  margin-top: -6.5rem;
+  width: 29rem
+}
+
+.benefits .row2 {
+  justify-content: space-between;
+  margin-bottom: 1.4rem
+}
+
+.benefits .row2 .item img {
+  object-fit: cover;
+  width: 100%
+}
+
+.benefits .row2 .item2 {
+  margin-right: .8rem;
+  width: 100%
+}
+
+.benefits .row2 .item2 #par_item_4 {
+  height: 100%;
+  width: 100%
+}
+
+.benefits .row2 .item3 {
+  margin-right: .9rem;
+  width: 100%
+}
+
+.benefits .row2 .item4 {
+  height: 39rem;
+  margin-top: -8.8rem;
+  position: relative;
+  width: 26rem
+}
+
+.benefits .row2 .item4 .text {
+  padding: 5rem 3.3rem 4.5rem;
+  position: absolute;
+  right: 93.2%;
+  top: 9.7rem;
+  width: 28.8rem
+}
+
+.benefits .row2 .col {
+  width: 26.125rem
+}
+
+.benefits .row2 .col img {
+  margin-bottom: .5rem
+}
+
+.benefits .row3 {
+  margin-bottom: 1.9rem;
+  position: relative;
+  z-index: 1
+}
+
+.benefits .row3 .item4 {
+  margin-right: 1.9rem
+}
+
+.benefits .row3 .item4 img {
+  width: 21.875rem
+}
+
+.benefits .row3 .item5 {
+  flex-direction: row-reverse;
+  justify-content: space-between;
+  width: 100%
+}
+
+.benefits .row3 .item5 img {
+  margin-top: -12.4rem;
+  object-fit: cover;
+  width: 53rem
+}
+
+.benefits .row3 .item5 .text {
+  margin-left: 0;
+  margin-right: -1.6rem;
+  margin-top: -2.1rem;
+  padding: 1.8rem 2.4rem 0;
+  width: 29.6rem
+}
+
+.benefits .row4 {
+  justify-content: space-between;
+  margin-bottom: 3.9rem;
+  margin-top: -1rem;
+  width: 100%
+}
+
+.benefits .row4 .col {
+  display: flex;
+  flex-direction: column;
+  width: 32.6%
+}
+
+.benefits .row4 img {
+  margin-bottom: 1rem;
+  width: 100%
+}
+
+.benefits .row4 .text {
+  margin-left: -2.7rem;
+  margin-top: 1rem;
+  padding: 1.5rem 2.4rem
+}
+
+.benefits .row4 .text p {
+  margin-bottom: 0
+}
+
+@media screen and (max-width: 1023px) {
+  .benefits .container {
+      padding:0 2rem
+  }
+
+  .benefits .item .text h3 {
+      font-size: 1.145835rem
+  }
+
+  .benefits .item .text p {
+      font-size: .729165rem
+  }
+
+  .benefits .row img {
+      object-fit: cover
+  }
+
+  .benefits .row.row1 .item {
+      display: flex;
+      justify-content: space-between
+  }
+
+  .benefits .row.row1 .item>div {
+      width: 49%
+  }
+
+  .benefits .row.row1 .item .text {
+      height: 14.3rem;
+      margin: 0;
+      padding-top: 2.25rem
+  }
+
+  .benefits .row.row1 .item img {
+      height: 14.3rem;
+      width: 100%
+  }
+
+  .benefits .row.row2 .col {
+      width: 49%
+  }
+
+  .benefits .row.row2 .item3 {
+      height: 14.3rem;
+      width: 100%
+  }
+
+  .benefits .row.row2 .item3 img {
+      margin-bottom: 0
+  }
+
+  .benefits .row.row2 .item2 {
+      margin-left: calc(100% + .8rem);
+      margin-top: .55rem
+  }
+
+  .benefits .row.row2 .item4 {
+      flex-direction: column;
+      margin-top: 0;
+      width: 49%
+  }
+
+  .benefits .row.row2 .item4 .text {
+      height: 14.3rem;
+      padding: 1.15rem 1rem .9rem 1.2rem;
+      position: static;
+      width: 100%
+  }
+
+  .benefits .row.row2 .item4 img {
+      margin-left: calc(-200% - 1.5rem);
+      margin-top: .55rem
+  }
+
+  .benefits .row.row3 .item5 {
+      flex-direction: row
+  }
+
+  .benefits .row.row3 .item5>div {
+      height: 14.3rem;
+      width: 49%
+  }
+
+  .benefits .row.row3 .item5 img {
+      margin-top: 6.3rem;
+      width: 100%
+  }
+
+  .benefits .row.row3 .item5 .text {
+      margin: calc(-50% + .8rem) 0 0;
+      padding: .1rem 3rem 0 1.4rem
+  }
+
+  .benefits .row.row4 {
+      flex-direction: row-reverse;
+      flex-wrap: wrap;
+      margin-top: 7.6rem
+  }
+
+  .benefits .row.row4 .col {
+      width: 49%
+  }
+
+  .benefits .row.row4 .col:first-child {
+      margin-top: -15.6rem
+  }
+
+  .benefits .row.row4 .col:first-child img {
+      height: 15rem;
+      margin-bottom: .6rem
+  }
+
+  .benefits .row.row4 .col.item img {
+      height: 13.4rem;
+      margin-bottom: 0;
+      margin-top: -14.4rem
+  }
+
+  .benefits .row.row4 .col.item .text {
+      margin-left: calc(-200% - 1.5rem);
+      margin-top: .6rem;
+      padding: .35rem .8rem .9rem 1.6rem;
+      width: 100%
+  }
+}
+
+@media screen and (max-width: 900px) {
+  .benefits .item .text {
+      padding:.75rem 1rem .9rem 1.2rem
+  }
+
+  .benefits .row1 {
+      margin-bottom: .55rem
+  }
+
+  .benefits .row1 .item1 img {
+      width: 22.75rem
+  }
+
+  .benefits .row1 .item1 .text {
+      margin-left: -.6rem;
+      margin-top: 4rem
+  }
+
+  .benefits .row1 .item1 .text p {
+      margin-bottom: 0
+  }
+
+  .benefits .row2 {
+      flex-wrap: wrap;
+      height: auto;
+      justify-content: space-between;
+      margin-bottom: -3.8rem;
+      margin-top: 0;
+      padding-left: 0
+  }
+
+  .benefits .row2 .item2 {
+      height: 23rem;
+      margin-bottom: 4rem;
+      margin-right: 0;
+      margin-top: 1.4rem;
+      order: 3;
+      width: 100%
+  }
+
+  .benefits .row2 .item2 .text {
+      margin-right: -.6rem;
+      width: 17rem
+  }
+
+  .benefits .row2 .item2 img {
+      width: 100%
+  }
+
+  .benefits .row2 .item3 {
+      height: 15rem;
+      margin: 0;
+      order: 1;
+      width: 73%
+  }
+
+  .benefits .row2 .item3 img {
+      object-fit: cover;
+      width: 100%
+  }
+
+  .benefits .row2 .item4 {
+      height: 15rem;
+      order: 2;
+      width: 25%
+  }
+
+  .benefits .row2 .item4 img {
+      width: 100%
+  }
+
+  .benefits .row3 {
+      justify-content: space-between;
+      margin-bottom: 2.4rem;
+      padding-left: 0;
+      width: 100%
+  }
+
+  .benefits .row3 .item4 {
+      margin-right: 0
+  }
+
+  .benefits .row3 .item4 img {
+      width: 16.875rem
+  }
+
+  .benefits .row3 .item5 {
+      justify-content: space-between;
+      width: 100%
+  }
+
+  .benefits .row3 .item5 img {
+      height: 15rem;
+      margin-top: 4.3rem;
+      width: 24rem
+  }
+
+  .benefits .row3 .item5 .text {
+      margin-left: 0;
+      margin-top: 1.35rem;
+      width: 16.5rem
+  }
+}
+
+.benefits #par_item_1,.benefits #par_item_2,.benefits #par_item_3,.benefits #par_item_4,.benefits #par_item_5,.benefits #par_item_6,.benefits #par_item_7,.benefits #par_item_8,.benefits #par_item_9,.benefits #par_item_10,.benefits #par_item_11,.benefits #par_item_12,.benefits #par_item_13,.benefits #par_item_14 {
+  transition: opacity .5s
+}
+
+.benefits #par_item_1.show,.benefits #par_item_2.show,.benefits #par_item_3.show,.benefits #par_item_4.show,.benefits #par_item_5.show,.benefits #par_item_6.show,.benefits #par_item_7.show,.benefits #par_item_8.show,.benefits #par_item_9.show,.benefits #par_item_10.show,.benefits #par_item_11.show,.benefits #par_item_12.show,.benefits #par_item_13.show,.benefits #par_item_14.show {
+  opacity: 1;
+  transition: opacity .9s
+}
+
+@media screen and (max-width: 530px) {
+  .benefits .item .text {
+      padding:1rem 3.6rem!important
+  }
+
+  .benefits .item .text h3 {
+      font-size: 2.75rem
+  }
+
+  .benefits .item .text p {
+      font-size: 1.75rem;
+      line-height: 1.3
+  }
+
+  .benefits .row.row1 .item {
+      flex-direction: column
+  }
+
+  .benefits .row.row1 .item>div {
+      width: 100%
+  }
+
+  .benefits .row.row1 .item .text {
+      height: 30.3rem;
+      margin-top: 1.2rem
+  }
+
+  .benefits .row.row1 .item img {
+      height: 22.3rem;
+      width: 100%
+  }
+
+  .benefits .row.row2 {
+      display: block;
+      margin-top: 1.7rem
+  }
+
+  .benefits .row.row2 .col {
+      width: 100%
+  }
+
+  .benefits .row.row2 .col .item2 {
+      margin-left: 0;
+      margin-top: 1.7rem
+  }
+
+  .benefits .row.row2 .item {
+      height: 28rem
+  }
+
+  .benefits .row.row2 .item4 {
+      height: auto;
+      margin-top: -1.7rem;
+      width: 100%
+  }
+
+  .benefits .row.row2 .item4 .text {
+      height: 38.3rem
+  }
+
+  .benefits .row.row2 .item4 img {
+      margin-left: 0;
+      margin-top: 1.4rem
+  }
+
+  .benefits .row.row3 {
+      margin-top: 1.7rem
+  }
+
+  .benefits .row.row3 .item5 {
+      flex-direction: column-reverse
+  }
+
+  .benefits .row.row3 .item5>div {
+      width: 100%
+  }
+
+  .benefits .row.row3 .item5 .text {
+      height: 35.5rem;
+      margin-top: 3.6rem
+  }
+
+  .benefits .row.row3 .item5 img {
+      height: 22.2rem;
+      margin-top: 1.3rem
+  }
+
+  .benefits .row.row4 {
+      flex-direction: column;
+      margin-bottom: 2rem;
+      margin-top: 26.2rem
+  }
+
+  .benefits .row.row4 .col {
+      width: 100%
+  }
+
+  .benefits .row.row4 .col:first-child img {
+      height: 29rem;
+      margin-bottom: 1.3rem
+  }
+
+  .benefits .row.row4 .col.item img {
+      height: 29rem;
+      margin-top: .6rem
+  }
+
+  .benefits .row.row4 .col.item .text {
+      height: 44rem;
+      margin-left: 0;
+      margin-top: 1.7rem
+  }
+}
+
+@media screen and (max-width: 1100px) and (min-width:900px) {
+  html {
+      font-size:1.225vw
+  }
+}
