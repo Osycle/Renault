@@ -696,7 +696,9 @@ button{
 	//hover
 	&:hover, &.hovered{
 		background-color: $color-1;
-		color: $color-2;
+		a, .this-btn, button{
+			color: $color-2;
+		}
 	}
 	&.reverse{
 		background-color: $color-1;
@@ -735,7 +737,9 @@ button{
 	}
 	&:hover{
 		background-color: black;
-		color: white;
+		a, .this-btn, button{
+			color: white;
+		}
 		svg{
 			fill: white;
 		}

@@ -2247,6 +2247,29 @@ ymaps .map-cluster{
 }
 .exterior-sample{
   position: relative;
+  .nav-def{
+    text-transform: uppercase;
+  }
+}
+.checked-icon{
+  opacity: 0;
+  display: inline-block;
+  position: absolute;
+  right: 0;
+  top: 0;
+  border-radius: 50%;
+  width: 20px;
+  height: 20px;
+  background-color: $color-1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  svg{
+    width: 10px;
+    height: 10px;
+    color: white;
+    fill: white;
+  }
 }
 .exterior-color-items{
   display: flex;
@@ -2264,25 +2287,34 @@ ymaps .map-cluster{
     height: 46px;
     overflow: hidden;
   }
-  .checked-icon{
-    opacity: 0;
-    display: inline-block;
-    position: absolute;
-    right: 0;
-    top: 0;
-    border-radius: 50%;
-    width: 20px;
-    height: 20px;
-    background-color: $color-1;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    svg{
-      width: 10px;
-      height: 10px;
-      color: white;
-      fill: white;
+  .active{
+    .checked-icon{
+      opacity: 1;
     }
+  }
+  @media (max-width: 991px){
+    justify-content: center;
+  }
+}
+.wheels-items{
+  display: flex;
+  padding-bottom: 15px;
+  flex-wrap: wrap;
+  justify-content: center;
+  figure{
+    position: relative;
+    margin: 10px;
+    max-width: 70px;
+    border: 2px solid transparent;
+    &.active{
+      border-color: $color-1;
+    }
+  }
+  .img-content{
+    border-radius: 0;
+    width: 46px;
+    height: 46px;
+    overflow: hidden;
   }
   .active{
     .checked-icon{

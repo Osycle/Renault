@@ -8749,8 +8749,9 @@ button {
   color: white;
   font-size: 1.6rem; }
   .btn-def:hover, .btn-def-2:hover, .btn-def.hovered, .hovered.btn-def-2 {
-    background-color: #efdf00;
-    color: #000000; }
+    background-color: #efdf00; }
+    .btn-def:hover a, .btn-def-2:hover a, .btn-def:hover .this-btn, .btn-def-2:hover .this-btn, .btn-def:hover button, .btn-def-2:hover button, .btn-def.hovered a, .hovered.btn-def-2 a, .btn-def.hovered .this-btn, .hovered.btn-def-2 .this-btn, .btn-def.hovered button, .hovered.btn-def-2 button {
+      color: #000000; }
   .btn-def.reverse, .reverse.btn-def-2 {
     background-color: #efdf00;
     color: black; }
@@ -8779,8 +8780,9 @@ button {
   .btn-opacity svg {
     fill: black; }
   .btn-opacity:hover {
-    background-color: black;
-    color: white; }
+    background-color: black; }
+    .btn-opacity:hover a, .btn-opacity:hover .this-btn, .btn-opacity:hover button {
+      color: white; }
     .btn-opacity:hover svg {
       fill: white; }
 
@@ -12370,6 +12372,33 @@ ymaps .map-cluster {
 
 .exterior-sample {
   position: relative; }
+  .exterior-sample .nav-def {
+    text-transform: uppercase; }
+
+.checked-icon {
+  opacity: 0;
+  display: inline-block;
+  position: absolute;
+  right: 0;
+  top: 0;
+  border-radius: 50%;
+  width: 20px;
+  height: 20px;
+  background-color: #efdf00;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center; }
+  .checked-icon svg {
+    width: 10px;
+    height: 10px;
+    color: white;
+    fill: white; }
 
 .exterior-color-items {
   display: -webkit-box;
@@ -12387,34 +12416,40 @@ ymaps .map-cluster {
     width: 46px;
     height: 46px;
     overflow: hidden; }
-  .exterior-color-items .checked-icon {
-    opacity: 0;
-    display: inline-block;
-    position: absolute;
-    right: 0;
-    top: 0;
-    border-radius: 50%;
-    width: 20px;
-    height: 20px;
-    background-color: #efdf00;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-align: center;
-    -ms-flex-align: center;
-    align-items: center;
-    -webkit-box-pack: center;
-    -ms-flex-pack: center;
-    justify-content: center; }
-    .exterior-color-items .checked-icon svg {
-      width: 10px;
-      height: 10px;
-      color: white;
-      fill: white; }
   .exterior-color-items .active .checked-icon {
     opacity: 1; }
   @media (max-width: 991px) {
     .exterior-color-items {
+      -webkit-box-pack: center;
+      -ms-flex-pack: center;
+      justify-content: center; } }
+
+.wheels-items {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding-bottom: 15px;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center; }
+  .wheels-items figure {
+    position: relative;
+    margin: 10px;
+    max-width: 70px;
+    border: 2px solid transparent; }
+    .wheels-items figure.active {
+      border-color: #efdf00; }
+  .wheels-items .img-content {
+    border-radius: 0;
+    width: 46px;
+    height: 46px;
+    overflow: hidden; }
+  .wheels-items .active .checked-icon {
+    opacity: 1; }
+  @media (max-width: 991px) {
+    .wheels-items {
       -webkit-box-pack: center;
       -ms-flex-pack: center;
       justify-content: center; } }
