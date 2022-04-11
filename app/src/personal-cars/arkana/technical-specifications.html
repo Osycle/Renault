@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="description" content="">
+	@@include('./app/src/components/_favicons.html')
+	@@include('./app/src/components/_scripts_head.html')
+	<title>Renault Uzbekistan</title>
+</head>
+
+<body>
+
+	<div id="page">
+		@@include('./app/src/components/_header.html')
+		<main class="main" data-aos="fade" id="main">
+			<div class="nav-sub">
+				<div class="wrapper link-li-1 jc-between flex ai-center ph-3">
+					<ul class="jc-start fs-2-em">
+						<li><a href="/personal-cars/arkana.html">ARKANA</a></li>
+						<li><a href="/personal-cars/arkana/design.html">ДИЗАЙН</a></li>
+						<li><a href="/personal-cars/arkana/equipment.html">ОБОРУДОВАНИЕ</a></li>
+						<li><a href="/personal-cars/arkana/multimedia.html">МУЛЬТИМЕДИА</a></li>
+            <li class="active"><a href="/personal-cars/arkana/technical-specifications.html">Технические характеристики</a></li>
+					</ul>
+				</div>
+			</div>
+			<div class="bnr-page full-style">
+				<div class="wrapper">
+					<div class="entry-header">
+						<div class="img-content">
+							<picture>
+								<img src="/img/other/arkana/arkana-bnr-design.webp">
+							</picture>
+						</div>
+					</div>					
+				</div>
+			</div>
+			<section id="tech_form_section">
+				<div class="container pv-8 pt-13">
+					<div class="entry-header box-lg-7 text-center mh-auto desktop:mb-15">
+            <h1 class="desktop:text-x20">ТЕХНИЧЕСКИЕ ХАРАКТЕРИСТИКИ</h1>
+            <h2><span class="fw-4">RENAULT ARKANA</span></h2>
+					</div>
+          <iframe src="/iframes/arkana/tech_new/index.html" frameborder="0" class="iframe-el mt-8 mb-2"></iframe>
+          <div class="tech-form clearfix">
+            <div class="wrapper box-md-8 mh-auto">
+              <form action="#tech_form_section" id="tech_form">
+                <div class="flex ai-center">
+                  <div class="col-md-4 ph-3 mv-4 select-fields">
+                    <select name="name1" id="" class="form-control mv-2" onchange="tech_form.submit()">
+                      <option>Бензин(5)</option>
+                    </select>
+                    <select name="name2" id="" class="form-control mv-2" onchange="tech_form.submit()">
+                      <option>1,6 4х4 МКП6</option>
+                      <option>TCe 150 4x4 МКП6</option>
+                      <option>TCe 150 4x4 CVT X-Tronic</option>
+                    </select>
+                  </div>
+                  <div class="col-md-8 ph-3 mv-4 text-center">
+                    <img src="https://www.renault.ru/agg/vn/unique/ONE_DACIA_PP_LARGE_DENSITY1/r_brandSite_carPicker_1.png?uri=https%3A%2F%2Fru.co.rplug.renault.com%2Fproduct%2Fmodel%2FJD1%2Frenault-duster%2Fc%2FA-ENS_0MDL2P1SERIELIM4_-TECNW" alt="">
+                  </div>
+                </div>
+                <div class="tech-summary pb-5">
+                  <div class="item flex mobile:fd-column">
+                    <div class="text-x3-bu col-md-3 fsh-0 desktop:pr-3 mobile:mb-4">
+                      ТЕХНИЧЕСКИЕ ХАРАКТЕРИСТИКИ :
+                    </div>
+                    <div class="col-md-12 dl-content">
+                      <dl>
+                        <dt>Тип топлива :</dt>
+                        <dd>Дизель</dd>
+                      </dl>
+                      <dl>
+                        <dt>Тип коробки передач :</dt>
+                        <dd>Механическая</dd>
+                      </dl>
+                      <dl>
+                        <dt>Количество передач :</dt>
+                        <dd>6</dd>
+                      </dl>
+                      <dl>
+                        <dt>Тип привода :</dt>
+                        <dd>Полный привод</dd>
+                      </dl>
+                    </div>
+                  </div>
+                  <div class="item flex mobile:fd-column">
+                    <div class="text-x3-bu col-md-3 fsh-0 desktop:pr-3 mobile:mb-4">
+                      ХАРАКТЕРИСТИКИ ДВИГАТЕЛЯ :
+                    </div>
+                    <div class="col-md-12 dl-content">
+                      <dl>
+                        <dt>Время разгона 0-100 км/ч (с) :</dt>
+                        <dd>13,3</dd>
+                      </dl>
+                      <dl>
+                        <dt>Рабочий объем (см3) :</dt>
+                        <dd>1461</dd>
+                      </dl>
+                      <dl>
+                        <dt>Максимальная мощность, кВт (л.с.) / об/мин :</dt>
+                        <dd>109 / 4000</dd>
+                      </dl>
+                      <dl>
+                        <dt>Максимальный крутящий момент (Нм/об/мин) :</dt>
+                        <dd>240 / 1750</dd>
+                      </dl>
+                    </div>
+                  </div>
+                  <div class="item flex mobile:fd-column">
+                    <div class="text-x3-bu col-md-3 fsh-0 desktop:pr-3 mobile:mb-4">
+                      РАСХОД ТОПЛИВА :
+                    </div>
+                    <div class="col-md-12 dl-content">
+                      <dl>
+                        <dt>Выбросы CO2 (г/км) :</dt>
+                        <dd>139</dd>
+                      </dl>
+                      <dl>
+                        <dt>Смешанный цикл (л/100км) :</dt>
+                        <dd>5,3</dd>
+                      </dl>
+                    </div>
+                  </div>
+                </div>
+              </form>
+            </div>
+          </div>
+				</div>
+			</section>
+
+			@@include('./app/src/components/_yur-accordion.html')
+		</main>
+		@@include('./app/src/components/_footer.html')
+	</div>
+
+	<!-- SCRIPTS -->
+	@@include('./app/src/components/_scripts_footer.html')
+
+
+</body>
+</html>

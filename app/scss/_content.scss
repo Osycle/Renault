@@ -2217,7 +2217,21 @@ ymaps .map-cluster{
     }
   }
 }
-
+.link-media{
+  position: absolute;
+  right: 20px;
+  bottom: 20px;
+  a{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;;
+    width: 44px;
+    height: 44px;
+    border: 1px solid currentColor;
+    border-radius: 50%;
+  }
+}
 .exterior-main{
   height: 470px;
   display: flex;

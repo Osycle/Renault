@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<head>
+  <title>arkana</title>
+  <meta charset="utf8">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0">
+  <link rel="stylesheet" href="https://unpkg.com/vue-select@latest/dist/vue-select.css">
+  <link rel="stylesheet" href="css/main.css">
+  <script src="https://developers.google.com/maps/documentation/javascript/examples/markerclusterer/markerclusterer.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-core/5.6.15/browser-polyfill.min.js" defer></script>
+  <script src="https://cdn.jsdelivr.net/npm/promise-polyfill@8/dist/polyfill.min.js" defer></script>
+  <script src="https://cdn.jsdelivr.net/npm/fetch-polyfill@0.8.2/fetch.min.js" defer></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.5.15/vue.min.js" defer></script>
+  <script src="https://cdn.jsdelivr.net/npm/v-mask/dist/v-mask.min.js" defer></script>
+  <script src="https://unpkg.com/vue-select@latest" defer></script>
+  <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" defer></script>
+  <script src="js/main.js" defer></script>
+  <script>window.RenaultShowroom=window.RenaultShowroom||[]</script>
+</head>
+<body>
+  <div class="wrapper">
+    <div class="equipment">
+      <div class="container">
+        <div class="title">Технологии Renault arkana <br><span>RENAULT Arkana доступен с&nbsp;турбодвигателем TCe-150&nbsp;в сочетании с&nbsp;автоматической трансмиссией CVT X-Tronic и&nbsp;интеллектуальной системой полного привода.</span></div>
+        <div class="motorBlock">
+          <div class="motor">
+            <canvas id="motor" width="440px" height="426px" :class="{'hide':currentPosition == positions.length-1&amp;&amp; currentImg===positions[positions.length-1]}"></canvas>
+            <transition name="showCircle" mode="in-out">
+              <div class="hovers" v-for="(item, ind) in motorItems" v-if="currentPosition === ind &amp;&amp; currentImg===positions[ind]">
+                <div class="transmission" v-if="currentPosition == positions.length-1"></div>
+                <div class="circle" v-for="hover in item.hovers" :style="{left: hover.position.x+'%',top:hover.position.y+'%',}">
+                  <div class="plus" @mouseover="lightenText(hover.id)" @mouseleave="hideLightenText(hover.id)"></div>
+                  <div class="gif">
+                    <div class="decor left"></div>
+                    <div class="decor right"></div><img :src="'img/gif/'+hover.gif">
+                  </div>
+                </div>
+              </div>
+            </transition>
+            <div class="buttons">
+              <div class="prev" ref="motorPrev" @click="updatePosition('prev')"></div>
+              <div class="next" ref="motorNext" @click="updatePosition('next')"></div>
+            </div>
+          </div>
+          <div class="itemsContainer">
+            <div class="items">
+              <div class="item" v-for="(item, ind) in motorItems " :class="{'open':currentPosition===ind}"><a @click="updatePosition('next', ind)" v-html="item.a"></a>
+                <div class="content">
+                  <div class="stats">
+                    <div class="stat" v-for="stat in item.stats">
+                      <div class="statImg" :class="stat.img"></div>
+                      <div class="statText" v-html="stat.text"></div>
+                    </div>
+                  </div>
+                  <div class="text">
+                    <p v-for="p in item.text" v-html="p"></p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="platform">
+      <div class="platformTitle">
+        <div class="container">
+          <div class="title">С ЗАБОТОЙ О БЕЗОПАСНОСТИ</div>
+          <div class="subtitle">Для российского рынка RENAULT Arkana вышла с базой на модульной платформе SUV</div>
+        </div>
+      </div>
+      <div class="platform_slider">
+        <div class="spec__characteristic">
+          <div class="chrtc__mainbg">
+            <picture>
+              <source srcset="img/platform/feature_main_mobile.jpg" media="(max-width: 640px)"><img class="chrtc__image main-img active" src="img/platform/feature_main.jpg">
+            </picture>
+            <picture>
+              <source srcset="img/platform/feature_steel_mobile.jpg" media="(max-width: 640px)"><img class="chrtc__image" data-image="1" src="img/platform/feature_steel.jpg">
+            </picture>
+            <picture>
+              <source srcset="img/platform/feature_safety_mobile.jpg" media="(max-width: 640px)"><img class="chrtc__image" data-image="2" src="img/platform/feature_safety.jpg">
+            </picture>
+            <picture>
+              <source srcset="img/platform/feature_comfort_mobile.jpg" media="(max-width: 640px)"><img class="chrtc__image" data-image="3" src="img/platform/feature_comfort.jpg">
+            </picture>
+            <picture>
+              <source srcset="img/platform/feature_manage_mobile.jpg" media="(max-width: 640px)"><img class="chrtc__image" data-image="4" src="img/platform/feature_manage.jpg">
+            </picture>
+          </div>
+          <div class="chrtc__container">
+            <div class="chrtc__box chrtc__box--normal" data-image="1">
+              <div class="chrtc__descr">
+                <div class="chrtc__descr__title">Высокопрочная<br class="desktop"> сталь</div>
+                <div class="chrtc__descr__text">Жесткий кузов RENAULT Arkana не&nbsp;только обеспечивает высокий уровень безопасности, но&nbsp;и&nbsp;вносит значительный вклад в&nbsp;улучшение комфорта и&nbsp;управляемости, а&nbsp;также снижение уровня шумов и&nbsp;вибраций.</div>
+                <div class="chrtc__descr__othertext">Обширное использование высокопрочных марок стали, локальные усилители кузова и&nbsp;новый моторный щит обеспечивают кузову кроссовера высокую жесткость на&nbsp;кручение.<br> Компания Renault известна своим бескомпромиссным подходом к&nbsp;пассивной безопасности, Renault ARKANA не&nbsp;является исключением. В&nbsp;платформе SUV используются высокопрочные и&nbsp;сверхвысокопрочные марки стали, их&nbsp;доля в&nbsp;кузове автомобиля составляет 35%. Это дает гарантию надежности и&nbsp;выносливости.</div>
+              </div>
+              <div class="chrtc__detail">
+                <div class="chrtc__detail__icon"></div>
+                <div class="chrtc__detail__text" data-default="подробнее" data-active="закрыть"></div>
+              </div>
+            </div>
+            <div class="chrtc__box chrtc__box--normal" data-image="2">
+              <div class="chrtc__descr">
+                <div class="chrtc__descr__title">Безопасность<br class="desktop"> под контролем</div>
+                <div class="chrtc__descr__text">Современные системы активной и&nbsp;пассивной безопасности обеспечивают уверенность водителя и&nbsp;спокойствие пассажиров в&nbsp;любой поездке.</div>
+                <div class="chrtc__descr__othertext">В&nbsp;зависимости от&nbsp;комплектации оснащение RENAULT Arkana включает в&nbsp;себя до&nbsp;шести подушек безопасности, а&nbsp;также преднатяжители ремней безопасности на&nbsp;передних сиденьях. Активная безопасность Renault ARKANA обеспечивается применением системы динамической стабилизации Bosch&nbsp;9.3&nbsp;с функцией электронной блокировки дифференциала, которая отличается улучшенной эффективностью благодаря повышенному рабочему давлению и&nbsp;увеличенной частоте работы, а&nbsp;также сниженным шумом и&nbsp;вибрациями.</div>
+              </div>
+              <div class="chrtc__detail">
+                <div class="chrtc__detail__icon"></div>
+                <div class="chrtc__detail__text" data-default="подробнее" data-active="закрыть"></div>
+              </div>
+            </div>
+            <div class="chrtc__box chrtc__box--normal" data-image="3">
+              <div class="chrtc__descr">
+                <div class="chrtc__descr__title">Комфорт<br class="desktop"> за&nbsp;рулем</div>
+                <div class="chrtc__descr__text">Благодаря отличной геометрической проходимости, энергоемкой подвеске и интеллектуальной полноприводной трансмиссии, автомобиль позволяет уверенно передвигаться по любому покрытию.</div>
+                <div class="chrtc__descr__othertext">В полноприводных версиях RENAULT Arkana установлена новая многорычажная подвеска и стойки амортизаторов, которые вместе со специальным настройками позволяют уменьшить крены кузова при поворотах, сохранив энергоемкость шасси.</div>
+              </div>
+              <div class="chrtc__detail">
+                <div class="chrtc__detail__icon"></div>
+                <div class="chrtc__detail__text" data-default="подробнее" data-active="закрыть"></div>
+              </div>
+            </div>
+            <div class="chrtc__box chrtc__box--normal" data-image="4">
+              <div class="chrtc__descr">
+                <div class="chrtc__descr__title">Точное<br class="desktop"> управление</div>
+                <div class="chrtc__descr__text">Комфортное управление на низкой и высокой скорости за счет полностью обновленной системы рулевого управления.</div>
+                <div class="chrtc__descr__othertext">RENAULT Arkana легко управлять на&nbsp;любой скорости за&nbsp;счет системы рулевого механизма с&nbsp;электроусилителем переменной производительности. Это решение позволяет комфортно управлять автомобилем на&nbsp;высокой скорости и&nbsp;в&nbsp;то&nbsp;же время сокращает усилия на&nbsp;парковочных скоростях на&nbsp;40% по&nbsp;сравнению с&nbsp;гидроусилителем.</div>
+              </div>
+              <div class="chrtc__detail">
+                <div class="chrtc__detail__icon"></div>
+                <div class="chrtc__detail__text" data-default="подробнее" data-active="закрыть"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>

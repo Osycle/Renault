@@ -6,10 +6,12 @@ new Vue({
   data: {
     hash: "",
     statusHash: false,
+    tab_index: 0,
     current_complectation: {},
     current_exterior: {},
   },
   async mounted(){
+    var vm = this
     var response = await axios.get("https://renault.uz/models.php")
     this.current_complectation = response.data.models[0].complectations[0]
     this.current_exterior = this.current_complectation.exteriors[0]
@@ -21,8 +23,14 @@ new Vue({
     ]
     setTimeout(() => {
       window.CI360.init();	
+      window.az = $('.responsive-tab-model').responsiveTabs({
+        startCollapsed: 'accordion',
+        click: function(event, tab){
+          vm.tab_index = tab.id
+          console.log(vm.tab_index, vm)
+        }
+      });
     }, 1);
-    
   },
   methods: {
     changeExterior(exterior, parentClass){
