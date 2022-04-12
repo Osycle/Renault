@@ -31,61 +31,6 @@ table {
   border-spacing: 0; }
 
 
-@font-face {
-  font-family:'NouvelR';
-  src:	url('../newFonts/NouvelR-Light.woff2') format('woff2'),
-  url('../newFonts/NouvelR-Light.woff') format('woff');
-  font-weight: 200;
-  font-style: normal;
-}
-
-@font-face {
-  font-family:'NouvelR';
-  src:	url('../newFonts/NouvelR-Book.woff2') format('woff2'),
-  url('../newFonts/NouvelR-Book.woff') format('woff');
-  font-weight: 300;
-  font-style: normal;
-}
-
-@font-face {
-  font-family:'NouvelR';
-  src:	url('../newFonts/NouvelR-Regular.woff2') format('woff2'),
-  url('../newFonts/NouvelR-Regular.woff') format('woff');
-  font-weight: 400;
-  font-style: normal;
-}
-
-@font-face {
-  font-family:'NouvelR';
-  src:	url('../newFonts/NouvelR-Semibold.woff2') format('woff2'),
-  url('../newFonts/NouvelR-Semibold.woff') format('woff');
-  font-weight: 600;
-  font-style: normal;
-}
-
-@font-face {
-  font-family:'NouvelR';
-  src:	url('../newFonts/NouvelR-Bold.woff2') format('woff2'),
-  url('../newFonts/NouvelR-Bold.woff') format('woff');
-  font-weight: 700;
-  font-style: normal;
-}
-
-@font-face {
-  font-family:'NouvelR';
-  src:	url('NouvelR-Extrabold.woff2') format('woff2'),
-  url('NouvelR-Extrabold.woff') format('woff');
-  font-weight: 800;
-  font-style: normal;
-}
-
-@font-face {
-  font-family:'NouvelR-Variable';
-  src:	url('../newFonts/NouvelR-Variable.woff2') format('woff2'),
-  url('../newFonts/NouvelR-Variable.woff') format('woff');
-  font-weight: 800;
-  font-style: normal;
-}
 
 
 
@@ -1672,6 +1617,7 @@ body {
   width: 100%;
   min-height: 100%;
   font-family: NouvelR, sans-serif;
+  overflow: hidden;
   background: #000; }
 
 html {

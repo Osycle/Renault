@@ -8776,7 +8776,8 @@ button {
   border: 1px solid currentColor;
   color: black;
   -webkit-transition: all 0.3s ease-in-out;
-  transition: all 0.3s ease-in-out; }
+  transition: all 0.3s ease-in-out;
+  font-size: 1.6rem; }
   .btn-opacity svg {
     fill: black; }
   .btn-opacity:hover {
