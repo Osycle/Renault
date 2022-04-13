@@ -535,7 +535,7 @@ table {
 	}
 }
 
-[class*="boxes-"]{
+[class*="boxes"]{
 	margin-left: -10px;
 	margin-right: -10px;
 	&:not(.serried){
@@ -550,7 +550,9 @@ table {
 	}
 	&:not(.owl-carousel){
 		display: flex;
-		flex-wrap: wrap;
+		&:not(.nowrap){
+			flex-wrap: wrap;
+		}
 		@media (max-width: 991px){
 		  width: 100%;
     	margin: auto;
@@ -564,7 +566,7 @@ table {
 		}
 	}
 }
-[class*="boxes-"].boxes-xs-2{
+[class*="boxes"].boxes-xs-2{
 	@media (max-width: 991px){
 		flex-direction: row;
 		margin-left: -10px;
@@ -578,7 +580,6 @@ table {
 		}
 	}
 }
-
 
 
 .cells{
