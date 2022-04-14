@@ -1891,7 +1891,7 @@ button.swiper-pagination-bullet {
   align-items: center;
   padding-bottom: 6.2rem;
   /*  animations  */
-  opacity: 0;
+  opacity: 1;
   -webkit-transition: opacity 1s;
   transition: opacity 1s; }
   .engine .app_title {

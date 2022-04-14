@@ -15,25 +15,28 @@
 <body>
 <div id="app">
 	<section class="forRussia" :class="{show: canShow('.forRussia', 0.35)}">
-		<div class="app_title">Создан для России</div>
+		<div class="app_title">Полноприводный городской автомобиль</div>
 		<hr>
 		<div class="slider">
 			<div class="tabs">
-				<div class="tab" :class="{active:forRussiaActiveSlide===0}" @mouseover="forRussiaActiveSlide=0">Надежная подвеска</div>
-				<div class="tab" :class="{active:forRussiaActiveSlide===1}" @mouseover="forRussiaActiveSlide=1">Внедорожная геометрия</div>
+				<div class="tab" :class="{active:forRussiaActiveSlide===0}" @mouseover="forRussiaActiveSlide=0">Интеллектуальная система полного привода</div>
 			</div>
 			<div class="content">
 				<transition-group name="show">
 					<div class="item" v-show="forRussiaActiveSlide===0" key="0">
 						<div class="itemWrapper">
-							<div class="text">Эффектный дизайн Renault KAPTUR великолепно сочетается с&nbsp;надежной и&nbsp;энергоемкой подвеской, которая позволяет с&nbsp;комфортом передвигаться по&nbsp;дорогам любого качества.<br><br> Многочисленные испытания подтвердили не&nbsp;только прекрасную плавность хода, но&nbsp;и&nbsp;образцовую долговечность элементов ходовой части, в&nbsp;том числе и&nbsp;при частом движении по&nbsp;грунтовым дорогам и&nbsp;пересеченной местности.</div>
-							<div class="img" style="background-image: url(img/forRussia/kaptur-tech-01.jpg)"></div>
-						</div>
-					</div>
-					<div class="item" v-show="forRussiaActiveSlide===1" key="1">
-						<div class="itemWrapper">
-							<div class="text">Renault KAPTUR обладает отличной геометрией: большие углы преодоления препятствий (угол въезда — 20 градусов, угол съезда — 31 градус) и рекордный в классе дорожный просвет (205 мм при снаряженной массе). Такая конструкция обеспечивает комфортную высокую посадку водителя в городском потоке, которая в сочетании с большими углами обзора дает дополнительное чувство уверенности на дороге и при парковке.</div>
-							<div class="img" style="background-image: url(img/forRussia/kaptur-tech-03.jpg)"></div>
+							<div class="text">
+								<p>Полноприводные версии Renault KAPTUR оснащаются интеллектуальной системой полного привода, которая отличается высокой надежностью и отлично приспособлена к тяжелым условиям бездорожья.</p>
+								<br>
+								<p>Система работает в трех режимах:</p>
+								<br>
+								<p>
+									– режим 2WD: привод осуществляется только на передние колеса, что оптимизирует потребление топлива <br>
+									– режим 4WD Lock: крутящий момент поровну распределяется между передней и задней осью, чтобы автомобиль мог уверенно преодолевать препятствия (например, скользкие затяжные подъемы и т. п.) <br>
+									– режим AUTO: крутящий момент автоматически распределяется между передними и задними колесами в зависимости от типа и качества дороги и скорости автомобиля <br>
+								</p>
+							</div>
+							<div class="img" style="background-image: url(img/forRussia/kaptur-tech-02.jpg)"></div>
 						</div>
 					</div>
 				</transition-group>

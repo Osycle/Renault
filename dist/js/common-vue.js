@@ -1,5 +1,6 @@
 
 
+
 // exterior-model
 if($("[vue-area='exterior-model']").length)
   new Vue({
@@ -10,18 +11,27 @@ if($("[vue-area='exterior-model']").length)
       tab_index: 0,
       current_complectation: {},
       current_exterior: {},
+      wheels: [],
+      current_wheel: {}
     },
     async mounted(){
       var vm = this
-      var response = await axios.get("https://renault.uz/models.php")
-      this.current_complectation = response.data.models[0].complectations[0]
-      this.current_exterior = this.current_complectation.exteriors[0]
-      this.current_complectation.wheels = [
-        {
-          name: "17-дюймовые двухцветные легкосплавные диски MONTIS с эффектом алмазной шлифовки",
-          price: 0,
-        }
-      ]
+      const api_url = $(vm.$el).attr("api-url");
+      var response = await axios.get(api_url)
+      vm.current_complectation = response.data.complectations[0]
+      
+      this.current_complectation.uniq_exteriors =  _.uniqBy(vm.current_complectation.exteriors, "name")
+      vm.current_exterior = vm.current_complectation.uniq_exteriors[0]
+
+      vm.current_complectation.exteriors.forEach(exterior => {
+        if(exterior.wheel)
+          vm.wheels.push(exterior.wheel)
+      })
+      if(vm.wheels.length > 0){
+        vm.wheels = _.uniqBy(vm.wheels, "id")
+        vm.current_wheel = vm.current_exterior.wheel;
+      }
+
       setTimeout(() => {
         window.CI360.init();	
         window.az = $('.responsive-tab-model').responsiveTabs({
@@ -36,6 +46,18 @@ if($("[vue-area='exterior-model']").length)
     methods: {
       changeExterior(exterior, parentClass){
         this.current_exterior = exterior;
+        parentClass = parentClass || ".exterior";
+        window.CI360.destroy();
+        $(parentClass+" [data-folder]").attr('data-folder', this.current_exterior.folder+'/')
+        $(parentClass+" [data-amount]").attr('data-amount', 24)
+        window.CI360.init();
+      },
+      changeWheel(wheel, parentClass){
+        this.current_wheel = wheel;
+        this.current_complectation.exteriors.forEach(exterior => {
+          if(exterior.wheel.id == wheel.id && this.current_exterior.name == exterior.name)
+            this.current_exterior = exterior
+        })
         parentClass = parentClass || ".exterior";
         window.CI360.destroy();
         $(parentClass+" [data-folder]").attr('data-folder', this.current_exterior.folder+'/')

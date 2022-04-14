@@ -78,6 +78,7 @@
 <script src="/js/vue/vue-multiselect/vue-multiselect.min.js"></script>
 <link rel="stylesheet" href="/js/vue/vue-multiselect/vue-multiselect.css">
 
+<script src="https://cdn.jsdelivr.net/npm/lodash@4.17.21/lodash.min.js"></script>
 
 
 <!-- SCRIPTS -->
@@ -561,7 +562,7 @@ gtag('config', 'G-CHPFNKGF8F');
 					</div>
 				</div>
 			</section>
-			<section vue-area="exterior-model">
+			<section vue-area="exterior-model" api-url="https://renault.uz/models.php?id=5">
 				<div class="container pb-8" v-if="current_complectation.exteriors">
 					<div class="entry-header box-lg-7 text-center mh-auto">
 						<h2>{{current_complectation.exteriors.length}} УНИКАЛЬНЫХ РАСЦВЕТОК</h2>
@@ -583,7 +584,7 @@ gtag('config', 'G-CHPFNKGF8F');
 							<div class="nav-def responsive-tab-model">
 								<ul class="list flex text-center link-li-1 jc-center" >
 									<li class="r-tabs-state-active"><a class="pb-3" href="#responsive-tab-1"><div class="text mt-4">Цвет кузова</div></a></li>
-									<li><a class="pb-3" href="#responsive-tab-2"><div class="text mt-4">Колеса</div></a></li>
+									<li v-if="wheels.length"><a class="pb-3" href="#responsive-tab-2"><div class="text mt-4">Колеса</div></a></li>
 									<!-- <li><a class="pb-3" href="#responsive-tab-3"><div class="text mt-4">Салон</div></a></li> -->
 								</ul>
 								<div class="pantab" id="responsive-tab-1">
@@ -592,7 +593,7 @@ gtag('config', 'G-CHPFNKGF8F');
 										<div class="flex desktop:jc-center">
 											<div>
 												<div class="exterior-color-items desktop:mh-5 mv-3">
-													<figure v-for="(exterior, key) in current_complectation.exteriors" :key="key" 
+													<figure v-for="(exterior, key) in current_complectation.uniq_exteriors" :key="key" 
 																	@click="changeExterior(exterior)" 
 																	:class="{'active': current_exterior.name == exterior.name}"
 																	role="button">
@@ -612,12 +613,12 @@ gtag('config', 'G-CHPFNKGF8F');
 								</div>
 								<div class="pantab" id="responsive-tab-2">
 									<div class="text-center">
-										<div class="mb-3">17-дюймовые чёрные легкосплавные диски MONTIS</div>
+										<div class="mb-3">{{current_wheel.name}}</div>
 										<div class="wheels-items">
-											<figure class="active">
+											<figure v-for="(wheel, key) in wheels" :key="key" @click="changeWheel(wheel)" :class="{'active': current_wheel.id == wheel.id}" role="button">
 												<span class="checked-icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 30 30"><path d="M29 9.182L23.91 4 12.03 16.092l-5.94-6.046L1 15.228l11.03 11.228z"></path></svg></span>
-												<div class="img-ontent">
-													<img src="https://3dv.renault.com/ImageFromBookmark?configuration=LJC%2FEA2%2FESS%2FDG%2FTR4X2%2FRV%2FCA01%2FPBNCH%2FVT%2FCPE%2FRET03%2FPROJAB%2FRALU17%2FDRAP01%2FATAR02%2FOV369%2FABLAV%2FESPHSA%2FALEVA%2FSSPTPR%2FSOP03C%2FVLCUIR%2FRETC%2FSGACHA%2FVOLRHP%2FRA408%2FBVM5%2FRDIF03%2FENPB01%2FSANACF%2FPRODIS%2FH4M%2FSECAMH%2FRCALL%2FSDANGM%2FECOMOD%2FITPK1%2FSSMLEX%2FPERG02%2FVOLNCH%2FEV1GA1%2FWOSRE%2FNOCAM&databaseId=65cec607-8d3e-441a-bde7-e231179471e2&bookmarkSet=Ext_Wheel&bookmark=Ext_Wheel&profile=JANTE" alt="">
+												<div class="img-content">
+													<img :src="wheel.image" alt="">
 												</div>
 											</figure>
 										</div>
@@ -688,7 +689,7 @@ gtag('config', 'G-CHPFNKGF8F');
 			</section>
 			<section>
 				<div class="container pv-5 desktop:pb-15">
-					<div class="model-other-items boxes-5 jc-center img-ratio-1 mv-8 figure-mv-3">
+					<div class="model-other-items boxes nowrap jc-center img-ratio-1 mv-8 figure-mv-3">
 						<figure>
 							<a href="/personal-cars/arkana/equipment.html">
 								<div class="img-content">

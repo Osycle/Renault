@@ -337,8 +337,11 @@ window.aplex = new Vue({
 
     window.addEventListener('load', function () {
       _this5.initComfortSliders();
-
-      _this5.init_get_metrix();
+      try{
+        _this5.init_get_metrix();
+      }catch(e){
+        console.info(e)
+      }
     });
     this.initMotorEvents();
   }
