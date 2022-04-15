@@ -20,25 +20,17 @@ if($("[vue-area='exterior-model']").length)
       var response = await axios.get(api_url)
       vm.current_complectation = response.data.complectations[0]
       
-      this.current_complectation.uniq_exteriors =  _.uniqBy(vm.current_complectation.exteriors, "name")
-      vm.current_exterior = vm.current_complectation.uniq_exteriors[0]
-
-      vm.current_complectation.exteriors.forEach(exterior => {
-        if(exterior.wheel)
-          vm.wheels.push(exterior.wheel)
-      })
-      if(vm.wheels.length > 0){
-        vm.wheels = _.uniqBy(vm.wheels, "id")
-        vm.current_wheel = vm.current_exterior.wheel;
-      }
+      vm.current_exterior = vm.current_complectation.exteriors[0]
+      vm.current_wheel = vm.current_exterior.wheels[0];
 
       setTimeout(() => {
         window.CI360.init();	
-        window.az = $('.responsive-tab-model').responsiveTabs({
+        $('.responsive-tab-model').responsiveTabs({
+          active: 0, 
           startCollapsed: 'accordion',
           click: function(event, tab){
             vm.tab_index = tab.id
-            console.log(vm.tab_index, vm)
+            window.CI360.init();
           }
         });
       }, 1);
@@ -48,19 +40,17 @@ if($("[vue-area='exterior-model']").length)
         this.current_exterior = exterior;
         parentClass = parentClass || ".exterior";
         window.CI360.destroy();
-        $(parentClass+" [data-folder]").attr('data-folder', this.current_exterior.folder+'/')
+        $(parentClass+" [data-folder]").attr('data-folder', this.current_exterior.wheels[0].folder+'/')
         $(parentClass+" [data-amount]").attr('data-amount', 24)
         window.CI360.init();
       },
       changeWheel(wheel, parentClass){
+        var vm = this;
         this.current_wheel = wheel;
-        this.current_complectation.exteriors.forEach(exterior => {
-          if(exterior.wheel.id == wheel.id && this.current_exterior.name == exterior.name)
-            this.current_exterior = exterior
-        })
+
         parentClass = parentClass || ".exterior";
         window.CI360.destroy();
-        $(parentClass+" [data-folder]").attr('data-folder', this.current_exterior.folder+'/')
+        $(parentClass+" [data-folder]").attr('data-folder', vm.current_wheel.folder+'/')
         $(parentClass+" [data-amount]").attr('data-amount', 24)
         window.CI360.init();
       }

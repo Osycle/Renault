@@ -571,20 +571,20 @@ gtag('config', 'G-CHPFNKGF8F');
 						<div class="exterior-main row" v-show="tab_index === 0">
 							<span
 								class="cloudimage-360 exterior-main-wrap"
-								:data-folder="current_exterior.folder+'/'"
+								:data-folder="current_wheel.folder+'/'"
 								data-filename="{index}.jpg"
 								data-spin-reverse
 								data-amount="24">
 							</span>
 						</div>
 						<div v-show="tab_index === 1" class="exterior-main">
-							<img :src="current_exterior.folder+'/4.jpg'">
+							<img :src="current_wheel.folder+'/4.jpg'">
 						</div>
 						<div class="exterior-sample">
 							<div class="nav-def responsive-tab-model">
 								<ul class="list flex text-center link-li-1 jc-center" >
-									<li class="r-tabs-state-active"><a class="pb-3" href="#responsive-tab-1"><div class="text mt-4">Цвет кузова</div></a></li>
-									<li v-if="wheels.length"><a class="pb-3" href="#responsive-tab-2"><div class="text mt-4">Колеса</div></a></li>
+									<li><a class="pb-3" href="#responsive-tab-1"><div class="text mt-4">Цвет кузова</div></a></li>
+									<li><a class="pb-3" href="#responsive-tab-2"><div class="text mt-4">Колеса</div></a></li>
 									<!-- <li><a class="pb-3" href="#responsive-tab-3"><div class="text mt-4">Салон</div></a></li> -->
 								</ul>
 								<div class="pantab" id="responsive-tab-1">
@@ -593,7 +593,7 @@ gtag('config', 'G-CHPFNKGF8F');
 										<div class="flex desktop:jc-center">
 											<div>
 												<div class="exterior-color-items desktop:mh-5 mv-3">
-													<figure v-for="(exterior, key) in current_complectation.uniq_exteriors" :key="key" 
+													<figure v-for="(exterior, key) in current_complectation.exteriors" :key="key" 
 																	@click="changeExterior(exterior)" 
 																	:class="{'active': current_exterior.name == exterior.name}"
 																	role="button">
@@ -613,9 +613,9 @@ gtag('config', 'G-CHPFNKGF8F');
 								</div>
 								<div class="pantab" id="responsive-tab-2">
 									<div class="text-center">
-										<div class="mb-3">{{current_wheel.name}}</div>
+										<div class="mb-3">{{current_wheel.description}}</div>
 										<div class="wheels-items">
-											<figure v-for="(wheel, key) in wheels" :key="key" @click="changeWheel(wheel)" :class="{'active': current_wheel.id == wheel.id}" role="button">
+											<figure v-for="(wheel, key) in current_exterior.wheels" :key="key" @click="changeWheel(wheel)" :class="{'active': current_wheel.id == wheel.id}" role="button">
 												<span class="checked-icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 30 30"><path d="M29 9.182L23.91 4 12.03 16.092l-5.94-6.046L1 15.228l11.03 11.228z"></path></svg></span>
 												<div class="img-content">
 													<img :src="wheel.image" alt="">
