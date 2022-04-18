@@ -122,7 +122,10 @@
     $('.responsive-tab').responsiveTabs({
     	startCollapsed: 'accordion'
 		});
-
+    $('.responsive-tab-leftbar').responsiveTabs({
+    	startCollapsed: 'accordion',
+			active: 0
+		});
 
 
 		/*FANCYBOX*/

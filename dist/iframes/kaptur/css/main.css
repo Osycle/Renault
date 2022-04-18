@@ -1686,7 +1686,7 @@ button.swiper-pagination-bullet {
           left: 15%;
           right: 15%;
           height: 5px;
-          background: #ffcc33;
+          background: #f8eb4c;
           opacity: 0;
           -webkit-transition: .3s;
           transition: .3s; }
@@ -1772,7 +1772,7 @@ button.swiper-pagination-bullet {
         left: 0;
         right: 0;
         height: 0.4375rem;
-        background: #ffcc33;
+        background: #f8eb4c;
         -webkit-transform: scaleY(0);
         transform: scaleY(0);
         -webkit-transform-origin: center top;
@@ -1959,14 +1959,14 @@ button.swiper-pagination-bullet {
         left: 0;
         right: 0;
         height: 3px;
-        background: #ffcc33;
+        background: #f8eb4c;
         opacity: 0;
         -webkit-transition: .3s;
         transition: .3s; }
     .engine .tabs .tab.active span:after, .engine .tabs .tab:hover span:after {
       opacity: 1; }
   .engine .tab {
-    font-family: Read, Arial;
+    font-family: "NouvelR";
     font-size: 0.875rem;
     line-height: 1.2;
     text-transform: uppercase; }
@@ -2266,7 +2266,7 @@ button.swiper-pagination-bullet {
         font-weight: 700;
         background: #e1e1e1; }
         .laptop .content .tabs .tab.active {
-          background: #ffcc33; }
+          background: #f8eb4c; }
     .laptop .content .bottom {
       display: -webkit-box;
       display: -ms-flexbox;
@@ -2673,7 +2673,7 @@ button.swiper-pagination-bullet {
           margin-bottom: 0.4rem;
           font-size: 1.125rem;
           font-weight: 700;
-          color: #ffcc33; }
+          color: #f8eb4c; }
         .multimedia .slider .infoBlock .info p {
           max-width: 80%;
           margin-bottom: 2rem;
@@ -2971,7 +2971,7 @@ button.swiper-pagination-bullet {
   bottom: 0;
   z-index: 100;
   background: rgba(255, 255, 255, 0.8);
-  font-family: Renault;
+  font-family: "NouvelR";
   display: none;
   opacity: 0;
   -webkit-transition: .3s;
@@ -3019,7 +3019,7 @@ button.swiper-pagination-bullet {
     -webkit-transition: .3s;
     transition: .3s; }
     .my_popup .closer:hover {
-      background-color: #ffcc33; }
+      background-color: #f8eb4c; }
   .my_popup .top {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -3090,8 +3090,8 @@ button.swiper-pagination-bullet {
       height: 50px;
       padding: 0 23px;
       border-radius: 3px;
-      background: #FFCC33;
-      font-family: Read, Arial;
+      background: #f8eb4c;
+      font-family: "NouvelR";
       font-size: 14px;
       line-height: 1.15;
       font-weight: 700;
@@ -3229,7 +3229,7 @@ html, body {
 
 body {
   background: #fff;
-  font-family: 'Renault', sans-serif; }
+  font-family: "NouvelR" }
 
 a {
   text-decoration: none; }
@@ -3264,8 +3264,8 @@ a {
   height: 3.125rem;
   padding: 0 1.4375rem;
   border-radius: 3px;
-  background: #ffcc33;
-  font-family: Read, Arial;
+  background: #f8eb4c;
+  font-family: "NouvelR";
   font-size: 0.875rem;
   line-height: 1.15;
   font-weight: 700;
@@ -3278,7 +3278,7 @@ a {
     background: #ffda66; }
   .app_btn.white {
     background: #fff;
-    border: 1px solid #ffcc33; }
+    border: 1px solid #f8eb4c; }
     .app_btn.white:hover {
       background: #fff;
       border-color: #000; }
