@@ -92,8 +92,9 @@ small {
 }
 .accordion-def {
   .panel {
-    margin-bottom: 0;
-    border-bottom: 1px solid $color-gray-1;
+    margin-top: 0;
+    margin-bottom: 10px;
+    border: 1px solid $color-gray-1;
     box-shadow: none;
   }
   [data-toggle="collapse"] {
@@ -104,6 +105,7 @@ small {
     line-height: 17px;
     text-transform: uppercase;
     padding: 15px 15px;
+    align-items: center;
     .fa {
       font-size: 25px;
       transform: rotate(180deg);
@@ -118,22 +120,37 @@ small {
     }
   }
   &.style-1{
-    a{
-      border: 1px solid $color-gray-1;
-    }
-    .accordion-def-body{
-      background-color: white;
-      padding: 35px 0;
-      color: black;
-    }
+
   }
 }
 .accordion-def-body {
-  padding: 35px 20px;
-  background-color: $color-gray-1;
-  color: $color-gray-4;
-  p {
-    font-size: 11px;
+  padding: 20px 30px;
+  background-color: white;
+  color: black;
+  font-size: 13px;
+  a{
+    color: black;
+    font-weight: 700;
+    text-decoration: underline;
+  }
+  iframe{
+    border: none;
+    width: auto;
+    height: auto;
+    @media (max-width: 991px){
+      width: 100%;
+    }
+  }
+  &>div{
+    display: flex;
+    justify-content: center;
+
+    &>div{
+      margin: 10px;
+    }
+  }
+  p{
+    
   }
 }
 :root {
@@ -300,6 +317,9 @@ small {
   position: relative;
 }
 .entry-header {
+  h3{
+    font-size: 2.4rem;
+  }
   p {
     font-size: 1.8rem;
   }
@@ -728,6 +748,7 @@ small {
     text-align: left;
     margin-left: 0;
     margin-right: 0;
+    text-transform: uppercase;
     a {
       display: flex;
       align-items: center;
@@ -2729,6 +2750,16 @@ select.form-control{
     .link-def{
       &:hover{
         color: white;
+      }
+    }
+  }
+}
+.faq-sectors{
+  .pantab{
+    @media (max-width: 991px){
+      &.r-tabs-panel{
+        margin-top: 10px;
+        padding: 0;
       }
     }
   }

@@ -15,6 +15,8 @@
 			});
 			setTimeout(function() { AOS.refresh(); }, 1);
 		}
+		/*SmoothScroll*/
+		var scroll = new SmoothScroll('smooth-scroll');
 
 		/* bootstrap tooltip*/		
 		$('[data-toggle="tooltip"]').tooltip({

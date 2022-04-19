@@ -493,7 +493,7 @@ table {
 	box-shadow: 0px 0px 30px -4px rgba($color-1, 0.6);	
 }
 .border-default{
-	border: 1px solid $color-gray-3;
+	border: 1px solid $color-gray-2;
 }
 .border-style-1{
 	border-radius: 15px;
@@ -730,12 +730,18 @@ button{
 .btn-opacity{
 	@extend .btn-style;
 	background-color: transparent;
-	border: 1px solid currentColor;
 	color: black;
 	transition: all 0.3s ease-in-out;
 	font-size: 1.6rem;
+	position: relative;
 	svg{
 		fill: black;
+	}
+	&:before{
+		@extend .clafclear;
+		border: 1px solid currentColor;
+		left: 0;
+		top: 0;
 	}
 	&:hover{
 		background-color: black;
@@ -1055,6 +1061,7 @@ div>h4:nth-child(1),
 div>h5:nth-child(1){
 	margin-top: 0;
 }
+
 h1, h2, h3{
 	line-height: 120%;
 }
@@ -1077,7 +1084,9 @@ h2{
 	text-transform: uppercase;
 } 
 h3{
-	font-size: 2.4rem;
+	font-size: 2rem;
+	line-height: 140%;
+	margin-bottom: 16px;
 }
 h4{
 	font-size: 1.6rem;
@@ -1133,7 +1142,7 @@ main{
 	}
 
 	p{
-		line-height: 20px;
+		line-height: 150%;
 	}
 
 }
@@ -1422,4 +1431,7 @@ label.error{
 			flex-direction: row-reverse;
 		} 
 	}
+}
+.faq-blocks{
+
 }

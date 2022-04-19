@@ -30,17 +30,21 @@ if($("[vue-area='exterior-model']").length)
           startCollapsed: 'accordion',
           click: function(event, tab){
             vm.tab_index = tab.id
-            window.CI360.init();
+            setTimeout(() => {
+              vm.changeWheel(vm.current_wheel)
+            }, 1);
           }
         });
       }, 1);
     },
     methods: {
       changeExterior(exterior, parentClass){
-        this.current_exterior = exterior;
+        var vm = this
+        vm.current_exterior = exterior;
+        vm.changeWheel(vm.current_exterior.wheels[0])
         parentClass = parentClass || ".exterior";
         window.CI360.destroy();
-        $(parentClass+" [data-folder]").attr('data-folder', this.current_exterior.wheels[0].folder+'/')
+        $(parentClass+" [data-folder]").attr('data-folder', vm.current_wheel.folder+'/')
         $(parentClass+" [data-amount]").attr('data-amount', 24)
         window.CI360.init();
       },

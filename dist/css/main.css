@@ -8529,7 +8529,7 @@ table {
   box-shadow: 0px 0px 30px -4px rgba(239, 223, 0, 0.6); }
 
 .border-default {
-  border: 1px solid #8c8c8b; }
+  border: 1px solid #d9d9d6; }
 
 .border-style-1 {
   border-radius: 15px;
@@ -8546,7 +8546,7 @@ table {
   left: 0;
   content: " "; }
 
-.clafclear, .radio-style-1:before, .radio-style-2:before, .subdown .bg-shadow, .subdown-menu-items .item:not(:last-child):after, .hover-underline a:before, .footer-menu ul:not([class]) a a:before, .hover-underline .this-btn:before, .footer-menu ul:not([class]) a .this-btn:before, .link-li-1 li:before, .link-li-2 li:before, .credit-steps-items .img-content:before, .credit-steps-items .img-content:after, .online-app nav a:before, .select2-container--default [class*="_arrow"]:after {
+.clafclear, .btn-opacity:before, .radio-style-1:before, .radio-style-2:before, .subdown .bg-shadow, .subdown-menu-items .item:not(:last-child):after, .hover-underline a:before, .footer-menu ul:not([class]) a a:before, .hover-underline .this-btn:before, .footer-menu ul:not([class]) a .this-btn:before, .link-li-1 li:before, .link-li-2 li:before, .credit-steps-items .img-content:before, .credit-steps-items .img-content:after, .online-app nav a:before, .select2-container--default [class*="_arrow"]:after {
   content: " ";
   height: 100%;
   width: 100%;
@@ -8774,13 +8774,17 @@ button {
 
 .btn-opacity {
   background-color: transparent;
-  border: 1px solid currentColor;
   color: black;
   -webkit-transition: all 0.3s ease-in-out;
   transition: all 0.3s ease-in-out;
-  font-size: 1.6rem; }
+  font-size: 1.6rem;
+  position: relative; }
   .btn-opacity svg {
     fill: black; }
+  .btn-opacity:before {
+    border: 1px solid currentColor;
+    left: 0;
+    top: 0; }
   .btn-opacity:hover {
     background-color: black; }
     .btn-opacity:hover a, .btn-opacity:hover .this-btn, .btn-opacity:hover button {
@@ -9046,7 +9050,9 @@ h2,
   text-transform: uppercase; }
 
 h3 {
-  font-size: 2.4rem; }
+  font-size: 2rem;
+  line-height: 140%;
+  margin-bottom: 16px; }
 
 h4 {
   font-size: 1.6rem;
@@ -9096,7 +9102,7 @@ main {
   main .line-height-def, main .line-height-def p {
     line-height: 100%; }
   main p {
-    line-height: 20px; }
+    line-height: 150%; }
 
 hr {
   border-color: rgba(165, 165, 165, 0.3); }
@@ -10267,8 +10273,9 @@ small {
   object-fit: contain; }
 
 .accordion-def .panel {
-  margin-bottom: 0;
-  border-bottom: 1px solid #f2f1f2;
+  margin-top: 0;
+  margin-bottom: 10px;
+  border: 1px solid #f2f1f2;
   -webkit-box-shadow: none;
   box-shadow: none; }
 
@@ -10283,7 +10290,10 @@ small {
   font-size: 14px;
   line-height: 17px;
   text-transform: uppercase;
-  padding: 15px 15px; }
+  padding: 15px 15px;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center; }
   .accordion-def [data-toggle="collapse"] .fa, .accordion-def [data-toggle="collapse"] .select2-container--default [class*="_arrow"], .select2-container--default .accordion-def [data-toggle="collapse"] [class*="_arrow"] {
     font-size: 25px;
     -webkit-transform: rotate(180deg);
@@ -10296,20 +10306,31 @@ small {
       transform: rotate(0);
       color: #efdf00; }
 
-.accordion-def.style-1 a {
-  border: 1px solid #f2f1f2; }
-
-.accordion-def.style-1 .accordion-def-body {
-  background-color: white;
-  padding: 35px 0;
-  color: black; }
-
 .accordion-def-body {
-  padding: 35px 20px;
-  background-color: #f2f1f2;
-  color: #656666; }
-  .accordion-def-body p {
-    font-size: 11px; }
+  padding: 20px 30px;
+  background-color: white;
+  color: black;
+  font-size: 13px; }
+  .accordion-def-body a {
+    color: black;
+    font-weight: 700;
+    text-decoration: underline; }
+  .accordion-def-body iframe {
+    border: none;
+    width: auto;
+    height: auto; }
+    @media (max-width: 991px) {
+      .accordion-def-body iframe {
+        width: 100%; } }
+  .accordion-def-body > div {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center; }
+    .accordion-def-body > div > div {
+      margin: 10px; }
 
 :root {
   --swiper-theme-color: #efdf00; }
@@ -10468,6 +10489,9 @@ small {
 .text-summary {
   font-size: 1.8rem;
   position: relative; }
+
+.entry-header h3 {
+  font-size: 2.4rem; }
 
 .entry-header p {
   font-size: 1.8rem; }
@@ -10901,7 +10925,8 @@ small {
 .nav-def .r-tabs-accordion-title {
   text-align: left;
   margin-left: 0;
-  margin-right: 0; }
+  margin-right: 0;
+  text-transform: uppercase; }
   .nav-def .r-tabs-accordion-title a {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -12871,6 +12896,11 @@ select.form-control {
     line-height: 180%; }
   .offroad-online .text-content .link-def:hover {
     color: white; }
+
+@media (max-width: 991px) {
+  .faq-sectors .pantab.r-tabs-panel {
+    margin-top: 10px;
+    padding: 0; } }
 
 /* 
 		_footer.scss
@@ -16656,6 +16686,10 @@ html .fancybox-show-thumbs .fancybox-thumbs {
   align-self: flex-end; }
 
 @media (min-width: 992px) {
+  .desktop\:block {
+    display: block; }
+  .desktop\:none {
+    display: none; }
   .desktop\:flex {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -16753,6 +16787,10 @@ html .fancybox-show-thumbs .fancybox-thumbs {
     margin-right: -50px; } }
 
 @media (max-width: 991px) {
+  .mobile\:block {
+    display: block; }
+  .mobile\:none {
+    display: none; }
   .mobile\:flex {
     display: -webkit-box;
     display: -ms-flexbox;

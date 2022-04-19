@@ -192,7 +192,11 @@
 .as-end						{align-self: flex-end;}
 
 @media (min-width: 992px){
+
+	.desktop\:block						{display: block;}
+	.desktop\:none						{display: none;}
 	.desktop\:flex						{display: flex}
+	
 	.desktop\:jc-center				{justify-content: center;}
 	.desktop\:jc-between			{justify-content: space-between;}
 	.desktop\:jc-around				{justify-content: space-around;}
@@ -220,6 +224,9 @@
 	}
 }
 @media (max-width: 991px){
+
+	.mobile\:block					{display: block;}
+	.mobile\:none						{display: none;}
 	.mobile\:flex						{display: flex}
 
 	.mobile\:jc-center			{justify-content: center;}
