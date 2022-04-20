@@ -120,7 +120,14 @@ small {
     }
   }
   &.style-1{
-
+    .panel{
+      border-color: transparent;
+      border-bottom-color: $color-gray-1;
+    }
+    .accordion-def-body{
+      background-color: $color-gray-1;
+      color: $color-gray-5;
+    }
   }
 }
 .accordion-def-body {
@@ -153,6 +160,7 @@ small {
     
   }
 }
+
 :root {
   --swiper-theme-color: #efdf00;
 }
