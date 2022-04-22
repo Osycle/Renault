@@ -8885,6 +8885,9 @@ main {
   main p {
     line-height: 150%; }
 
+.desc-content p {
+  margin-bottom: 15px; }
+
 hr {
   border-color: rgba(165, 165, 165, 0.3); }
 
