@@ -787,7 +787,35 @@ button{
 		}
 	}
 }
-
+.link-down{
+	color: black;
+	font-weight: 700;
+	position: relative;
+	a, .this-link, button{
+		padding-bottom: 3px;
+		position: relative;
+		&:after, &:before{
+			content: "";
+			width: 100%;
+			height: 2px;
+			background-color: $color-1;
+			bottom: 0;
+			left: 0;
+			position: absolute;
+		}
+		&:before{
+			width: 0;
+			z-index: 1;
+			background-color: $color-2;
+			transition: 0.3s ease;
+		}
+		&:hover{
+			&:before{
+				width: 100%;
+			}
+		}
+	}
+}
 
 
 
@@ -927,8 +955,16 @@ button{
 	line-height: 100%;
 }
 
-
-
+.parag-lh{
+	p{
+		line-height: 100%;
+	}
+}
+.parag-fs{
+	p{
+		font-size: 16px;
+	}
+}
 .parag-gray{
 	p:not([class*="color"]){
 		color: #666666;
@@ -993,9 +1029,8 @@ ul{
 }
 ol{
 	text-align: left;
-	padding-left: 0;
+	padding-left: 15px;
 	margin-top: 10px;
-	list-style-position: inside;
 	li{
 		line-height: 150%;
 	}

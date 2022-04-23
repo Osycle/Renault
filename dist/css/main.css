@@ -8597,6 +8597,30 @@ button {
     .link-def a:hover:after, .link-def .this-link:hover:after {
       border-color: #000000; }
 
+.link-down {
+  color: black;
+  font-weight: 700;
+  position: relative; }
+  .link-down a, .link-down .this-link, .link-down button {
+    padding-bottom: 3px;
+    position: relative; }
+    .link-down a:after, .link-down a:before, .link-down .this-link:after, .link-down .this-link:before, .link-down button:after, .link-down button:before {
+      content: "";
+      width: 100%;
+      height: 2px;
+      background-color: #efdf00;
+      bottom: 0;
+      left: 0;
+      position: absolute; }
+    .link-down a:before, .link-down .this-link:before, .link-down button:before {
+      width: 0;
+      z-index: 1;
+      background-color: #000000;
+      -webkit-transition: 0.3s ease;
+      transition: 0.3s ease; }
+    .link-down a:hover:before, .link-down .this-link:hover:before, .link-down button:hover:before {
+      width: 100%; }
+
 [data-flicker]:before {
   opacity: 0.1;
   top: 0;
@@ -8685,6 +8709,12 @@ button {
   padding-bottom: 0;
   line-height: 100%; }
 
+.parag-lh p {
+  line-height: 100%; }
+
+.parag-fs p {
+  font-size: 16px; }
+
 .parag-gray p:not([class*="color"]) {
   color: #666666; }
 
@@ -8736,9 +8766,8 @@ ul {
 
 ol {
   text-align: left;
-  padding-left: 0;
-  margin-top: 10px;
-  list-style-position: inside; }
+  padding-left: 15px;
+  margin-top: 10px; }
   ol li {
     line-height: 150%; }
 
