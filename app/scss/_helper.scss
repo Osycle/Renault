@@ -172,49 +172,51 @@
 
 .flex{display: flex;}
 
-.jc-center				{justify-content: center;}
-.jc-between				{justify-content: space-between;}
-.jc-around				{justify-content: space-around;}
-.jc-start					{justify-content: flex-start;}
-.jc-end						{justify-content: flex-end;}
+.jc-center							{justify-content: center;}
+.jc-between							{justify-content: space-between;}
+.jc-around							{justify-content: space-around;}
+.jc-start								{justify-content: flex-start;}
+.jc-end									{justify-content: flex-end;}
 
-.ai-center				{align-items: center;}
-.ai-start					{align-items: flex-start;}
-.ai-end						{align-items: flex-end;}
+.ai-center							{align-items: center;}
+.ai-start								{align-items: flex-start;}
+.ai-end									{align-items: flex-end;}
 
-.fd-column				{flex-direction: column;}
-.fd-row						{flex-direction: row;}
-.fd-row-reverse		{flex-direction: row-reverse;}
-.fw-wrap					{flex-wrap: wrap;}
+.fd-column							{flex-direction: column;}
+.fd-column-reverse			{flex-direction: column-reverse;}
+.fd-row									{flex-direction: row;}
+.fd-row-reverse					{flex-direction: row-reverse;}
+.fw-wrap								{flex-wrap: wrap;}
 
-.as-center				{align-self: center;}
-.as-start					{align-self: flex-start;}
-.as-end						{align-self: flex-end;}
+.as-center							{align-self: center;}
+.as-start								{align-self: flex-start;}
+.as-end									{align-self: flex-end;}
 
 @media (min-width: 992px){
 
-	.desktop\:block						{display: block;}
-	.desktop\:none						{display: none;}
-	.desktop\:flex						{display: flex}
-	
-	.desktop\:jc-center				{justify-content: center;}
-	.desktop\:jc-between			{justify-content: space-between;}
-	.desktop\:jc-around				{justify-content: space-around;}
-	.desktop\:jc-start				{justify-content: flex-start;}
-	.desktop\:jc-end					{justify-content: flex-end;}
+	.desktop\:block									{display: block;}
+	.desktop\:none									{display: none;}
+	.desktop\:flex									{display: flex}
 
-	.desktop\:ai-center				{align-items: center;}
-	.desktop\:ai-start				{align-items: flex-start;}
-	.desktop\:ai-end					{align-items: flex-end;}
+	.desktop\:jc-center							{justify-content: center;}
+	.desktop\:jc-between						{justify-content: space-between;}
+	.desktop\:jc-around							{justify-content: space-around;}
+	.desktop\:jc-start							{justify-content: flex-start;}
+	.desktop\:jc-end								{justify-content: flex-end;}
 
-	.desktop\:as-center				{align-self: center;}
-	.desktop\:as-start				{align-self: flex-start;}
-	.desktop\:as-end					{align-self: flex-end;}
+	.desktop\:ai-center							{align-items: center;}
+	.desktop\:ai-start							{align-items: flex-start;}
+	.desktop\:ai-end								{align-items: flex-end;}
 
-	.desktop\:fd-column				{flex-direction: column;}
-	.desktop\:fd-row					{flex-direction: row;}
-	.desktop\:fd-row-reverse	{flex-direction: row-reverse;}
-	.desktop\:fw-wrap					{flex-wrap: wrap;}
+	.desktop\:as-center							{align-self: center;}
+	.desktop\:as-start							{align-self: flex-start;}
+	.desktop\:as-end								{align-self: flex-end;}
+
+	.desktop\:fd-column-reverse			{flex-direction: column-reverse;}
+	.desktop\:fd-column							{flex-direction: column;}
+	.desktop\:fd-row								{flex-direction: row;}
+	.desktop\:fd-row-reverse				{flex-direction: row-reverse;}
+	.desktop\:fw-wrap								{flex-wrap: wrap;}
 
 	@for $i from 0 through 10{
 		.desktop\:row-#{$i}{
@@ -225,28 +227,29 @@
 }
 @media (max-width: 991px){
 
-	.mobile\:block					{display: block;}
-	.mobile\:none						{display: none;}
-	.mobile\:flex						{display: flex}
+	.mobile\:block								{display: block;}
+	.mobile\:none									{display: none;}
+	.mobile\:flex									{display: flex}
 
-	.mobile\:jc-center			{justify-content: center;}
-	.mobile\:jc-between			{justify-content: space-between;}
-	.mobile\:jc-around			{justify-content: space-around;}
-	.mobile\:jc-start				{justify-content: flex-start;}
-	.mobile\:jc-end					{justify-content: flex-end;}
+	.mobile\:jc-center						{justify-content: center;}
+	.mobile\:jc-between						{justify-content: space-between;}
+	.mobile\:jc-around						{justify-content: space-around;}
+	.mobile\:jc-start							{justify-content: flex-start;}
+	.mobile\:jc-end								{justify-content: flex-end;}
 
-	.mobile\:ai-center			{align-items: center;}
-	.mobile\:ai-start				{align-items: flex-start;}
-	.mobile\:ai-end					{align-items: flex-end;}
+	.mobile\:ai-center						{align-items: center;}
+	.mobile\:ai-start							{align-items: flex-start;}
+	.mobile\:ai-end								{align-items: flex-end;}
 
-	.mobile\:as-center			{align-self: center;}
-	.mobile\:as-start				{align-self: flex-start;}
-	.mobile\:as-end					{align-self: flex-end;}
+	.mobile\:as-center						{align-self: center;}
+	.mobile\:as-start							{align-self: flex-start;}
+	.mobile\:as-end								{align-self: flex-end;}
 
-	.mobile\:fd-column			{flex-direction: column;}
-	.mobile\:fd-row					{flex-direction: row;}
-	.mobile\:fd-row-reverse	{flex-direction: row-reverse;}
-	.mobile\:fw-wrap				{flex-wrap: wrap;}
+	.mobile\:fd-column-reverse		{flex-direction: column-reverse;}
+	.mobile\:fd-column						{flex-direction: column;}
+	.mobile\:fd-row								{flex-direction: row;}
+	.mobile\:fd-row-reverse				{flex-direction: row-reverse;}
+	.mobile\:fw-wrap							{flex-wrap: wrap;}
 
 	@for $i from 0 through 10{
 		.mobile\:row-#{$i}{
@@ -302,8 +305,8 @@
 	}
 }
 @for $i from 1 through 12 {
-	.fs-#{1*$i}-em { 
-		font-size: (0.7+($i/10))#{"em"};
+	.fs-#{$i} { 
+		font-size: (12+(2*$i))+px;
 	}
 }
 @for $i from 0 through 6 {

@@ -8513,7 +8513,7 @@ button {
   padding-left: 56px; }
 
 .btn-icon svg {
-  fill: white;
+  fill: currentColor;
   position: absolute;
   -webkit-transform: translateY(-50%);
   transform: translateY(-50%);
@@ -10549,7 +10549,10 @@ small {
   flex-wrap: wrap;
   -webkit-box-pack: center;
   -ms-flex-pack: center;
-  justify-content: center; }
+  justify-content: center;
+  font-size: 16px; }
+  .offers-icolinks-items.fs-1 {
+    font-size: 18px; }
   .offers-icolinks-items figure {
     margin: 10px; }
     @media (max-width: 991px) {
@@ -10621,7 +10624,6 @@ small {
           flex-basis: 70%;
           padding: 16px;
           color: #000;
-          font-size: 2rem;
           line-height: 1.15;
           text-align: left;
           font-weight: 700;
@@ -10631,7 +10633,6 @@ small {
     transition: all 0.25s cubic-bezier(0.645, 0.045, 0.355, 1);
     font-weight: 700;
     color: black;
-    font-size: 2rem;
     line-height: 1.15;
     display: -webkit-box;
     display: -ms-flexbox;
@@ -11686,6 +11687,9 @@ ymaps .map-cluster {
   border: 1px solid white;
   font-size: 10px;
   border-radius: 0; }
+
+.fancybox-content.bg-transparent {
+  background-color: transparent; }
 
 .dealers-bar {
   width: 100%;
@@ -16482,6 +16486,12 @@ html .fancybox-show-thumbs .fancybox-thumbs {
   -ms-flex-direction: column;
   flex-direction: column; }
 
+.fd-column-reverse {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: reverse;
+  -ms-flex-direction: column-reverse;
+  flex-direction: column-reverse; }
+
 .fd-row {
   -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
@@ -16559,6 +16569,11 @@ html .fancybox-show-thumbs .fancybox-thumbs {
   .desktop\:as-end {
     -ms-flex-item-align: end;
     align-self: flex-end; }
+  .desktop\:fd-column-reverse {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+    -ms-flex-direction: column-reverse;
+    flex-direction: column-reverse; }
   .desktop\:fd-column {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
@@ -16660,6 +16675,11 @@ html .fancybox-show-thumbs .fancybox-thumbs {
   .mobile\:as-end {
     -ms-flex-item-align: end;
     align-self: flex-end; }
+  .mobile\:fd-column-reverse {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+    -ms-flex-direction: column-reverse;
+    flex-direction: column-reverse; }
   .mobile\:fd-column {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
@@ -16958,41 +16978,41 @@ html .fancybox-show-thumbs .fancybox-thumbs {
 .fw-9 {
   font-weight: 900; }
 
-.fs-1-em {
-  font-size: 0.8em; }
+.fs-1 {
+  font-size: 14px; }
 
-.fs-2-em {
-  font-size: 0.9em; }
+.fs-2 {
+  font-size: 16px; }
 
-.fs-3-em {
-  font-size: 1em; }
+.fs-3 {
+  font-size: 18px; }
 
-.fs-4-em {
-  font-size: 1.1em; }
+.fs-4 {
+  font-size: 20px; }
 
-.fs-5-em {
-  font-size: 1.2em; }
+.fs-5 {
+  font-size: 22px; }
 
-.fs-6-em {
-  font-size: 1.3em; }
+.fs-6 {
+  font-size: 24px; }
 
-.fs-7-em {
-  font-size: 1.4em; }
+.fs-7 {
+  font-size: 26px; }
 
-.fs-8-em {
-  font-size: 1.5em; }
+.fs-8 {
+  font-size: 28px; }
 
-.fs-9-em {
-  font-size: 1.6em; }
+.fs-9 {
+  font-size: 30px; }
 
-.fs-10-em {
-  font-size: 1.7em; }
+.fs-10 {
+  font-size: 32px; }
 
-.fs-11-em {
-  font-size: 1.8em; }
+.fs-11 {
+  font-size: 34px; }
 
-.fs-12-em {
-  font-size: 1.9em; }
+.fs-12 {
+  font-size: 36px; }
 
 .radius-0 {
   border-radius: 0px; }
