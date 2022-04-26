@@ -10806,15 +10806,14 @@ small {
     .nav-def .r-tabs-accordion-title.r-tabs-state-active a:before, .nav-def .r-tabs-accordion-title.r-tabs-state-active a:after {
       background-color: #efdf00; }
 
-.nav-def li {
+.nav-def .list li {
   margin: 15px;
   position: relative; }
-  .nav-def li a {
-    display: block;
-    font-size: 1.6rem; }
-  .nav-def li.r-tabs-state-active {
+  .nav-def .list li a {
+    display: block; }
+  .nav-def .list li.r-tabs-state-active {
     font-weight: 700; }
-    .nav-def li.r-tabs-state-active:before {
+    .nav-def .list li.r-tabs-state-active:before {
       opacity: 1; }
 
 @media (max-width: 991px) {
