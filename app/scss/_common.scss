@@ -766,6 +766,7 @@ button{
 	a, .this-link{
 		padding-right: 15px;
 		position: relative;
+		display: inline-block;
 		&:after{
 			content: "";
 	    transform: rotate(45deg);
@@ -1472,12 +1473,12 @@ label.error{
 }
 @media (min-width: 992px){
 	.block-row-left{
-		.flex:nth-child(odd){
+		&>.flex:nth-child(odd){
 			flex-direction: row-reverse;
 		} 
 	}
 	.block-row-right{
-		.flex:nth-child(even){
+		&>.flex:nth-child(even){
 			flex-direction: row-reverse;
 		} 
 	}

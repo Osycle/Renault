@@ -8579,7 +8579,8 @@ button {
   position: relative; }
   .link-def a, .link-def .this-link {
     padding-right: 15px;
-    position: relative; }
+    position: relative;
+    display: inline-block; }
     .link-def a:after, .link-def .this-link:after {
       content: "";
       -webkit-transform: rotate(45deg);
@@ -9157,12 +9158,12 @@ label.error {
   position: relative; }
 
 @media (min-width: 992px) {
-  .block-row-left .flex:nth-child(odd) {
+  .block-row-left > .flex:nth-child(odd) {
     -webkit-box-orient: horizontal;
     -webkit-box-direction: reverse;
     -ms-flex-direction: row-reverse;
     flex-direction: row-reverse; }
-  .block-row-right .flex:nth-child(even) {
+  .block-row-right > .flex:nth-child(even) {
     -webkit-box-orient: horizontal;
     -webkit-box-direction: reverse;
     -ms-flex-direction: row-reverse;
