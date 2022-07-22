@@ -2777,6 +2777,11 @@ select.form-control{
   }
 }
 .banks-items{
+  figure{
+    .wrapper{
+      height: 100%;
+    }
+  }
   .img-content{
     padding: 25px 50px;
     height: 200px;
