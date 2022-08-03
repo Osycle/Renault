@@ -544,6 +544,84 @@
 	</div>
 	<!-- SCRIPTS -->
 	@@include('./app/src/components/_scripts_footer.html')
+
+	<div class="offers-modal ph-6" id="offers-modal">
+		<div class="back-cover" onclick="$('#offers-modal').fadeOut()"></div>
+		<div class="offers-modal-content bg-color-white relative z-index-1">
+			<div class="offers-modal-close">
+				<a href="javascript:;" onclick="$('#offers-modal').fadeOut()">
+					<svg viewBox="0 0 30 30" fill="white" width="20px"><path d="M29.999 2.512L27.5.012 14.999 12.504 2.498.012l-2.497 2.5L12.5 15.001.001 27.488l2.497 2.5 12.501-12.49L27.5 29.988l2.497-2.5-12.499-12.487z"></path></svg>
+				</a>
+			</div>
+			<div class="wrapper flex mobile:fd-column">
+				<div class="img-content box-md-4 box-lg-6">
+					<div class="img" style="background-image: url(https://www.renault.uz/uploads/files/%D0%A0%D0%95%D0%BD%D0%BE.jpg);"></div>
+				</div>
+				<div class="desc-content box-md-6 box-lg-4 ph-8 pv-6 flex jc-center ai-center text-center">
+					<div>            
+						<h3 class="mt-4"><p>RENAULT Uzbekistan объявляет предложение недели!</p></h3>
+						<div class="btn-content mt-4">
+							<div class="btn-link mh-1 mv-1">
+								<a href="#" tabindex="0"><em>Узнать подробнее по ссылке</em></a>
+							</div>
+							<span class="btn-def mh-1 mt-5 desktop:mt-6">
+								<a href="tel:+998710000000" tabindex="0">Позвонить</a>
+							</span>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<style>
+			.back-cover{
+				background-color: rgba(0,0,0, 80%);
+				position: absolute;
+				width: 100%;
+				height: 100%;
+			}
+			.offers-modal-close{
+				position: absolute;
+				right: -30px;
+				top: -30px;
+			}
+			.offers-modal-content{
+				
+			}
+			.offers-modal{
+				position: fixed;
+				z-index: 1000;
+				width: 100%;
+				height: 100%;
+				left: 0;
+				top: 0;
+				display: flex;
+				justify-content: center;
+				align-items: center;
+			}
+			.offers-modal .img{
+				background-size: cover;
+				width: 100%;
+				height: 100%;
+				min-height: 180px;
+			}
+			@media (min-width: 1440px){
+				.offers-modal-content{
+					width: 1200px;
+				}
+			}
+			@media (min-width: 992px){
+				.offers-modal-content{
+					width: 900px;
+				}
+			}
+			@media (max-width: 991px){
+				.offers-modal-close{
+					right: 10px;
+					top: 10px;
+				}
+			}
+		</style>
+	</div>
 </body>
 
 </html>
